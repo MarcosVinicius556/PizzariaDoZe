@@ -39,6 +39,9 @@
 
         private void InitializeComponent()
         {
+
+            this.CenterToScreen();
+
             components = new System.ComponentModel.Container();
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -235,26 +238,25 @@
 
         private void ButtonRegisterClient_Click(object sender, EventArgs e)
         {
-            //FormPedido form = new FormPedido();
-            //form.showDialog();
+            FormCadastroCliente form = new FormCadastroCliente();
+            form.ShowDialog();
         }
 
         private void ButtonRegisterOrders_Click(object sender, EventArgs e)
         {
-            //FormPedido form = new FormPedido();
-            //form.showDialog();
+            MessageBox.Show("Função ainda não implementada!");
         }
 
         private void RegisterProducts_Click(object sender, EventArgs e)
         {
-            //FormProducts form = new FormProducts();
-            //form.showDialog();
+            FormProdutos form = new FormProdutos();
+            form.ShowDialog();
         }
 
         private void ButtonPizzaValues_Click(object sender, EventArgs e)
         {
-            //FormPizzaValues form = new FormPizzaValues();
-            //form.showDialog();
+            FormValores form = new FormValores();
+            form.ShowDialog();
         }
 
         private void ButtonRegisterFlavors_Click(object sender, EventArgs e)

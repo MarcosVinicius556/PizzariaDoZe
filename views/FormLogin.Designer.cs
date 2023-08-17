@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.CenterToScreen();
+
             btnEntrar = new Button();
             txtLogin = new TextBox();
             txtSenha = new TextBox();

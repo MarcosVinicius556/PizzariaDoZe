@@ -10,9 +10,8 @@ namespace PizzariaDoZe.views
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             FormPrincipal form = new FormPrincipal();
-            form.ShowDialog();
-            this.Dispose();
-            this.Close();
+            form.Show();
+            this.Hide();
         }
     }
 }
