@@ -119,6 +119,8 @@
             buttonRegisterOrders.TabIndex = 7;
             buttonRegisterOrders.Text = "Pedidos";
             buttonRegisterOrders.UseVisualStyleBackColor = true;
+            buttonRegisterOrders.Click += ButtonRegisterOrders_Click;
+
             RegisterProducts = new Button();
             RegisterProducts.Location = new Point(12, 438);
             RegisterProducts.Name = "RegisterProducts";
@@ -126,6 +128,8 @@
             RegisterProducts.TabIndex = 6;
             RegisterProducts.Text = "Produtos";
             RegisterProducts.UseVisualStyleBackColor = true;
+            RegisterProducts.Click += RegisterProducts_Click;
+
             buttonPizzaValues = new Button();
             buttonPizzaValues.Location = new Point(12, 384);
             buttonPizzaValues.Name = "buttonPizzaValues";
@@ -133,6 +137,8 @@
             buttonPizzaValues.TabIndex = 5;
             buttonPizzaValues.Text = "Valores Pizza";
             buttonPizzaValues.UseVisualStyleBackColor = true;
+            buttonPizzaValues.Click += ButtonPizzaValues_Click;
+
             buttonRegisterFlavors = new Button();
             buttonRegisterFlavors.Location = new Point(12, 330);
             buttonRegisterFlavors.Name = "buttonRegisterFlavors";
@@ -140,6 +146,8 @@
             buttonRegisterFlavors.TabIndex = 4;
             buttonRegisterFlavors.Text = "Sabores";
             buttonRegisterFlavors.UseVisualStyleBackColor = true;
+            buttonRegisterFlavors.Click += ButtonRegisterFlavors_Click;
+            
             buttonRegisterIngredients = new Button();
             buttonRegisterIngredients.Location = new Point(12, 276);
             buttonRegisterIngredients.Name = "buttonRegisterIngredients";
@@ -147,6 +155,8 @@
             buttonRegisterIngredients.TabIndex = 3;
             buttonRegisterIngredients.Text = "Ingredientes";
             buttonRegisterIngredients.UseVisualStyleBackColor = true;
+            buttonRegisterIngredients.Click += ButtonRegisterIngredients_Click;
+
             buttonRegisterClient = new Button();
             buttonRegisterClient.Location = new Point(12, 222);
             buttonRegisterClient.Name = "buttonRegisterClient";
@@ -154,6 +164,8 @@
             buttonRegisterClient.TabIndex = 2;
             buttonRegisterClient.Text = "Clientes";
             buttonRegisterClient.UseVisualStyleBackColor = true;
+            buttonRegisterClient.Click += ButtonRegisterClient_Click;
+
             buttonRegisterEmployees = new Button();
             buttonRegisterEmployees.Location = new Point(12, 168);
             buttonRegisterEmployees.Name = "buttonRegisterEmployees";
@@ -161,6 +173,7 @@
             buttonRegisterEmployees.TabIndex = 1;
             buttonRegisterEmployees.Text = "Funcionários";
             buttonRegisterEmployees.UseVisualStyleBackColor = true;
+            buttonRegisterEmployees.Click += Employees_Click;
 
             buttonAdressRegister = new Button();
             buttonAdressRegister.Location = new Point(12, 114);
@@ -220,10 +233,54 @@
             Controls.Add(panelInf);
         }
 
+        private void ButtonRegisterClient_Click(object sender, EventArgs e)
+        {
+            //FormPedido form = new FormPedido();
+            //form.showDialog();
+        }
+
+        private void ButtonRegisterOrders_Click(object sender, EventArgs e)
+        {
+            //FormPedido form = new FormPedido();
+            //form.showDialog();
+        }
+
+        private void RegisterProducts_Click(object sender, EventArgs e)
+        {
+            //FormProducts form = new FormProducts();
+            //form.showDialog();
+        }
+
+        private void ButtonPizzaValues_Click(object sender, EventArgs e)
+        {
+            //FormPizzaValues form = new FormPizzaValues();
+            //form.showDialog();
+        }
+
+        private void ButtonRegisterFlavors_Click(object sender, EventArgs e)
+        {
+            FormSabores form = new FormSabores();
+            form.ShowDialog();
+        }
+
+        private void ButtonRegisterIngredients_Click(object sender, EventArgs e)
+        {
+            FormIngredientes form = new FormIngredientes();
+            form.ShowDialog();
+        }
+
         private void AdressClick_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Teste");
+            FormEndereco form = new FormEndereco();
+            form.ShowDialog();
         }
+
+        private void Employees_Click(object sender, EventArgs e)
+        {
+            FormFuncionario form = new FormFuncionario();
+            form.ShowDialog();
+        }
+
     }
 
         #endregion

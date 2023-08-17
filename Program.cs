@@ -9,7 +9,7 @@ namespace PizzariaDoZe
         {
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new FormPrincipal());
+            Application.Run(new FormLogin());
 
         }
     }

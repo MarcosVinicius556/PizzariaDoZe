@@ -30,3 +30,8 @@ C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\refint\P
 C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.pdb
 C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.genruntimeconfig.cache
 C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\ref\PizzariaDoZe.dll
+C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.views.FormEndereco.resources
+C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.views.FormFuncionario.resources
+C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.views.FormIngredientes.resources
+C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.views.FormLogin.resources
+C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.views.FormSabores.resources
