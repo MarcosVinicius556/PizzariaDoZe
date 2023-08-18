@@ -29,165 +29,173 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIngredientes));
-            btn_salvar = new Button();
-            btn_edit = new Button();
-            btn_deletar = new Button();
-            btn_fechar = new Button();
+            btnSalvar = new Button();
+            btnEditar = new Button();
+            btnDeletar = new Button();
+            btnFechar = new Button();
             lblCadastroIngredientes = new Label();
             textId = new TextBox();
-            lbl_id = new Label();
-            textBox1 = new TextBox();
+            lblId = new Label();
+            txtNome = new TextBox();
             lblNome = new Label();
-            panel1 = new Panel();
-            panel1.SuspendLayout();
+            panelIngredientes = new Panel();
+            panelIngredientes.SuspendLayout();
             SuspendLayout();
             // 
-            // btn_salvar
+            // btnSalvar
             // 
-            btn_salvar.BackColor = Color.Green;
-            btn_salvar.ForeColor = Color.White;
-            btn_salvar.Image = (Image)resources.GetObject("btn_salvar.Image");
-            btn_salvar.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_salvar.Location = new Point(25, 320);
-            btn_salvar.Name = "btn_salvar";
-            btn_salvar.Size = new Size(168, 70);
-            btn_salvar.TabIndex = 9;
-            btn_salvar.Text = "Salvar";
-            btn_salvar.TextAlign = ContentAlignment.MiddleLeft;
-            btn_salvar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btn_salvar.UseVisualStyleBackColor = false;
+            btnSalvar.BackColor = Color.Green;
+            btnSalvar.ForeColor = Color.White;
+            btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
+            btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSalvar.Location = new Point(29, 427);
+            btnSalvar.Margin = new Padding(3, 4, 3, 4);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(192, 93);
+            btnSalvar.TabIndex = 9;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.TextAlign = ContentAlignment.MiddleLeft;
+            btnSalvar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnSalvar.UseVisualStyleBackColor = false;
             // 
-            // btn_edit
+            // btnEditar
             // 
-            btn_edit.BackColor = Color.FromArgb(0, 0, 192);
-            btn_edit.ForeColor = Color.White;
-            btn_edit.Image = (Image)resources.GetObject("btn_edit.Image");
-            btn_edit.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_edit.Location = new Point(222, 320);
-            btn_edit.Name = "btn_edit";
-            btn_edit.Size = new Size(168, 70);
-            btn_edit.TabIndex = 10;
-            btn_edit.Text = "Editar";
-            btn_edit.TextAlign = ContentAlignment.MiddleLeft;
-            btn_edit.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btn_edit.UseVisualStyleBackColor = false;
+            btnEditar.BackColor = Color.FromArgb(0, 0, 192);
+            btnEditar.ForeColor = Color.White;
+            btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
+            btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEditar.Location = new Point(254, 427);
+            btnEditar.Margin = new Padding(3, 4, 3, 4);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(192, 93);
+            btnEditar.TabIndex = 10;
+            btnEditar.Text = "Editar";
+            btnEditar.TextAlign = ContentAlignment.MiddleLeft;
+            btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnEditar.UseVisualStyleBackColor = false;
             // 
-            // btn_deletar
+            // btnDeletar
             // 
-            btn_deletar.BackColor = Color.Maroon;
-            btn_deletar.ForeColor = Color.White;
-            btn_deletar.Image = (Image)resources.GetObject("btn_deletar.Image");
-            btn_deletar.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_deletar.Location = new Point(418, 320);
-            btn_deletar.Name = "btn_deletar";
-            btn_deletar.Size = new Size(168, 70);
-            btn_deletar.TabIndex = 11;
-            btn_deletar.Text = "Deletar";
-            btn_deletar.TextAlign = ContentAlignment.MiddleLeft;
-            btn_deletar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btn_deletar.UseVisualStyleBackColor = false;
+            btnDeletar.BackColor = Color.Maroon;
+            btnDeletar.ForeColor = Color.White;
+            btnDeletar.Image = (Image)resources.GetObject("btnDeletar.Image");
+            btnDeletar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDeletar.Location = new Point(478, 427);
+            btnDeletar.Margin = new Padding(3, 4, 3, 4);
+            btnDeletar.Name = "btnDeletar";
+            btnDeletar.Size = new Size(192, 93);
+            btnDeletar.TabIndex = 11;
+            btnDeletar.Text = "Deletar";
+            btnDeletar.TextAlign = ContentAlignment.MiddleLeft;
+            btnDeletar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnDeletar.UseVisualStyleBackColor = false;
             // 
-            // btn_fechar
+            // btnFechar
             // 
-            btn_fechar.BackColor = Color.Black;
-            btn_fechar.ForeColor = Color.White;
-            btn_fechar.Image = (Image)resources.GetObject("btn_fechar.Image");
-            btn_fechar.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_fechar.Location = new Point(610, 320);
-            btn_fechar.Name = "btn_fechar";
-            btn_fechar.Size = new Size(168, 70);
-            btn_fechar.TabIndex = 12;
-            btn_fechar.Text = "Sair";
-            btn_fechar.TextAlign = ContentAlignment.MiddleLeft;
-            btn_fechar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btn_fechar.UseVisualStyleBackColor = false;
+            btnFechar.BackColor = Color.Black;
+            btnFechar.ForeColor = Color.White;
+            btnFechar.Image = (Image)resources.GetObject("btnFechar.Image");
+            btnFechar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnFechar.Location = new Point(697, 427);
+            btnFechar.Margin = new Padding(3, 4, 3, 4);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(192, 93);
+            btnFechar.TabIndex = 12;
+            btnFechar.Text = "Fechar";
+            btnFechar.TextAlign = ContentAlignment.MiddleLeft;
+            btnFechar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnFechar.UseVisualStyleBackColor = false;
             // 
             // lblCadastroIngredientes
             // 
             lblCadastroIngredientes.AutoSize = true;
             lblCadastroIngredientes.Font = new Font("Segoe UI", 24.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblCadastroIngredientes.Location = new Point(56, 39);
+            lblCadastroIngredientes.Location = new Point(64, 52);
             lblCadastroIngredientes.Name = "lblCadastroIngredientes";
-            lblCadastroIngredientes.Size = new Size(372, 45);
+            lblCadastroIngredientes.Size = new Size(473, 57);
             lblCadastroIngredientes.TabIndex = 13;
             lblCadastroIngredientes.Text = "Cadastrar Ingredientes";
             // 
             // textId
             // 
-            textId.Location = new Point(54, 46);
+            textId.Location = new Point(62, 61);
+            textId.Margin = new Padding(3, 4, 3, 4);
             textId.Name = "textId";
-            textId.Size = new Size(107, 23);
+            textId.Size = new Size(122, 27);
             textId.TabIndex = 14;
             // 
-            // lbl_id
+            // lblId
             // 
-            lbl_id.AutoSize = true;
-            lbl_id.ForeColor = Color.White;
-            lbl_id.Location = new Point(54, 15);
-            lbl_id.Name = "lbl_id";
-            lbl_id.Size = new Size(21, 15);
-            lbl_id.TabIndex = 15;
-            lbl_id.Text = "ID:";
+            lblId.AutoSize = true;
+            lblId.ForeColor = Color.White;
+            lblId.Location = new Point(62, 20);
+            lblId.Name = "lblId";
+            lblId.Size = new Size(27, 20);
+            lblId.TabIndex = 15;
+            lblId.Text = "ID:";
             // 
-            // textBox1
+            // txtNome
             // 
-            textBox1.Location = new Point(238, 46);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(258, 23);
-            textBox1.TabIndex = 16;
+            txtNome.Location = new Point(272, 61);
+            txtNome.Margin = new Padding(3, 4, 3, 4);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(294, 27);
+            txtNome.TabIndex = 16;
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
             lblNome.ForeColor = Color.White;
-            lblNome.Location = new Point(238, 15);
+            lblNome.Location = new Point(272, 20);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(43, 15);
+            lblNome.Size = new Size(53, 20);
             lblNome.TabIndex = 17;
             lblNome.Text = "Nome:";
             // 
-            // panel1
+            // panelIngredientes
             // 
-            panel1.BackColor = Color.FromArgb(64, 64, 64);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(lblNome);
-            panel1.Controls.Add(textId);
-            panel1.Controls.Add(lbl_id);
-            panel1.Location = new Point(25, 138);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(753, 97);
-            panel1.TabIndex = 18;
+            panelIngredientes.BackColor = Color.FromArgb(64, 64, 64);
+            panelIngredientes.Controls.Add(txtNome);
+            panelIngredientes.Controls.Add(lblNome);
+            panelIngredientes.Controls.Add(textId);
+            panelIngredientes.Controls.Add(lblId);
+            panelIngredientes.Location = new Point(29, 184);
+            panelIngredientes.Margin = new Padding(3, 4, 3, 4);
+            panelIngredientes.Name = "panelIngredientes";
+            panelIngredientes.Size = new Size(861, 129);
+            panelIngredientes.TabIndex = 18;
             // 
             // FormIngredientes
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(panel1);
+            ClientSize = new Size(914, 600);
+            Controls.Add(panelIngredientes);
             Controls.Add(lblCadastroIngredientes);
-            Controls.Add(btn_fechar);
-            Controls.Add(btn_deletar);
-            Controls.Add(btn_edit);
-            Controls.Add(btn_salvar);
+            Controls.Add(btnFechar);
+            Controls.Add(btnDeletar);
+            Controls.Add(btnEditar);
+            Controls.Add(btnSalvar);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormIngredientes";
             Text = "Ingredientes";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panelIngredientes.ResumeLayout(false);
+            panelIngredientes.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button btn_salvar;
-        private Button btn_edit;
-        private Button btn_deletar;
-        private Button btn_fechar;
+        private Button btnSalvar;
+        private Button btnEditar;
+        private Button btnDeletar;
+        private Button btnFechar;
         private Label lblCadastroIngredientes;
         private TextBox textId;
-        private Label lbl_id;
-        private TextBox textBox1;
+        private Label lblId;
+        private TextBox txtNome;
         private Label lblNome;
-        private Panel panel1;
+        private Panel panelIngredientes;
     }
 }

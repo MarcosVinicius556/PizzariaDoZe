@@ -20,10 +20,10 @@ public partial class FormEndereco : Form
     private void btn_salvar_Click(object sender, EventArgs e)
     {
         errorProvider1.Clear();
-        if (text_id.Text.Trim().Equals(""))
+        if (txtId.Text.Trim().Equals(""))
         {
-            errorProvider1.SetError(text_id, "Digite um e-mail registrado");
-            text_id.Focus();
+            errorProvider1.SetError(txtId, "Digite um e-mail registrado");
+            txtId.Focus();
             return;
         }
     }

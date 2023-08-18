@@ -6,7 +6,6 @@
 
         private Panel panelLeft;
         private Panel panelSup;
-        private Panel panelUserImg;
         private Button buttonRegisterOrders;
         private Button RegisterProducts;
         private Button buttonPizzaValues;
@@ -15,7 +14,7 @@
         private Button buttonRegisterClient;
         private Button buttonRegisterEmployees;
         private Button buttonAdressRegister;
-        private Label labelUserName;
+        private Label lblUserName;
         private Button buttonSearch;
         private TextBox textBoxSearch;
         private Panel panelInf;
@@ -39,160 +38,206 @@
 
         private void InitializeComponent()
         {
-
-            this.CenterToScreen();
-
-            components = new System.ComponentModel.Container();
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1015, 594);
-            Text = "Form1";
-            // GRID
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             ColumnId = new DataGridViewTextBoxColumn();
+            ColumnDescription = new DataGridViewTextBoxColumn();
+            ColumnValue = new DataGridViewTextBoxColumn();
+            dataGridViewOrders = new DataGridView();
+            buttonSearch = new Button();
+            textBoxSearch = new TextBox();
+            panelSup = new Panel();
+            lblUserName = new Label();
+            buttonRegisterOrders = new Button();
+            RegisterProducts = new Button();
+            buttonPizzaValues = new Button();
+            buttonRegisterFlavors = new Button();
+            buttonRegisterIngredients = new Button();
+            buttonRegisterClient = new Button();
+            buttonRegisterEmployees = new Button();
+            buttonAdressRegister = new Button();
+            panelLeft = new Panel();
+            buttonConfirm = new Button();
+            buttonPrint = new Button();
+            panelInf = new Panel();
+            pictureUser = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).BeginInit();
+            panelSup.SuspendLayout();
+            panelLeft.SuspendLayout();
+            panelInf.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureUser).BeginInit();
+            SuspendLayout();
+            // 
+            // ColumnId
+            // 
             ColumnId.HeaderText = "Código";
+            ColumnId.MinimumWidth = 6;
             ColumnId.Name = "ColumnId";
             ColumnId.ReadOnly = true;
             ColumnId.Width = 200;
-            ColumnDescription = new DataGridViewTextBoxColumn();
+            // 
+            // ColumnDescription
+            // 
             ColumnDescription.HeaderText = "Descrição";
+            ColumnDescription.MinimumWidth = 6;
             ColumnDescription.Name = "ColumnDescription";
             ColumnDescription.ReadOnly = true;
             ColumnDescription.Width = 350;
-            ColumnValue = new DataGridViewTextBoxColumn();
+            // 
+            // ColumnValue
+            // 
             ColumnValue.HeaderText = "Valor";
+            ColumnValue.MinimumWidth = 6;
             ColumnValue.Name = "ColumnValue";
             ColumnValue.ReadOnly = true;
             ColumnValue.Width = 200;
-            dataGridViewOrders = new DataGridView();
+            // 
+            // dataGridViewOrders
+            // 
             dataGridViewOrders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewOrders.Columns.AddRange(new DataGridViewColumn[] { ColumnId, ColumnDescription, ColumnValue });
-            dataGridViewOrders.Location = new Point(211, 66);
+            dataGridViewOrders.Location = new Point(241, 88);
+            dataGridViewOrders.Margin = new Padding(3, 4, 3, 4);
             dataGridViewOrders.Name = "dataGridViewOrders";
+            dataGridViewOrders.RowHeadersWidth = 51;
             dataGridViewOrders.RowTemplate.Height = 25;
-            dataGridViewOrders.Size = new Size(805, 490);
+            dataGridViewOrders.Size = new Size(920, 653);
             dataGridViewOrders.TabIndex = 3;
-            Controls.Add(dataGridViewOrders);
-            // PanelSuperior
-            buttonSearch = new Button();
-            buttonSearch.Location = new Point(727, 3);
+            // 
+            // buttonSearch
+            // 
+            buttonSearch.Location = new Point(831, 4);
+            buttonSearch.Margin = new Padding(3, 4, 3, 4);
             buttonSearch.Name = "buttonSearch";
-            buttonSearch.Size = new Size(75, 41);
+            buttonSearch.Size = new Size(86, 55);
             buttonSearch.TabIndex = 1;
             buttonSearch.Text = "Buscar";
             buttonSearch.UseVisualStyleBackColor = true;
-            textBoxSearch = new TextBox();
+            // 
+            // textBoxSearch
+            // 
             textBoxSearch.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxSearch.Location = new Point(396, 5);
+            textBoxSearch.Location = new Point(453, 7);
+            textBoxSearch.Margin = new Padding(3, 4, 3, 4);
             textBoxSearch.Name = "textBoxSearch";
-            textBoxSearch.Size = new Size(325, 39);
+            textBoxSearch.Size = new Size(371, 47);
             textBoxSearch.TabIndex = 0;
-            panelSup = new Panel();
-            panelSup.SuspendLayout();
+            // 
+            // panelSup
+            // 
             panelSup.BackColor = SystemColors.ControlDarkDark;
             panelSup.Controls.Add(buttonSearch);
             panelSup.Controls.Add(textBoxSearch);
-            panelSup.Location = new Point(211, 0);
+            panelSup.Location = new Point(241, 0);
+            panelSup.Margin = new Padding(3, 4, 3, 4);
             panelSup.Name = "panelSup";
-            panelSup.Size = new Size(805, 66);
+            panelSup.Size = new Size(920, 88);
             panelSup.TabIndex = 1;
-            panelSup.ResumeLayout(false);
-            panelSup.PerformLayout();
-            Controls.Add(panelSup);
-            // PanelLeft
-            labelUserName = new Label();
-            labelUserName.AutoSize = true;
-            labelUserName.BackColor = SystemColors.ControlDarkDark;
-            labelUserName.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            labelUserName.ForeColor = SystemColors.ControlLightLight;
-            labelUserName.Location = new Point(95, 15);
-            labelUserName.Name = "labelUserName";
-            labelUserName.Size = new Size(97, 25);
-            labelUserName.TabIndex = 9;
-            labelUserName.Text = "Username";
-            panelUserImg = new Panel();
-            panelUserImg.BackColor = SystemColors.Control;
-            panelUserImg.Location = new Point(10, 10);
-            panelUserImg.Name = "panelUserImg";
-            panelUserImg.Size = new Size(50, 50);
-            panelUserImg.TabIndex = 8;
-            buttonRegisterOrders = new Button();
-            buttonRegisterOrders.Location = new Point(12, 492);
+            // 
+            // lblUserName
+            // 
+            lblUserName.AutoSize = true;
+            lblUserName.BackColor = SystemColors.ControlDarkDark;
+            lblUserName.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUserName.ForeColor = SystemColors.ControlLightLight;
+            lblUserName.Location = new Point(109, 20);
+            lblUserName.Name = "lblUserName";
+            lblUserName.Size = new Size(121, 32);
+            lblUserName.TabIndex = 9;
+            lblUserName.Text = "Username";
+            // 
+            // buttonRegisterOrders
+            // 
+            buttonRegisterOrders.Location = new Point(14, 656);
+            buttonRegisterOrders.Margin = new Padding(3, 4, 3, 4);
             buttonRegisterOrders.Name = "buttonRegisterOrders";
-            buttonRegisterOrders.Size = new Size(188, 48);
+            buttonRegisterOrders.Size = new Size(215, 64);
             buttonRegisterOrders.TabIndex = 7;
             buttonRegisterOrders.Text = "Pedidos";
             buttonRegisterOrders.UseVisualStyleBackColor = true;
             buttonRegisterOrders.Click += ButtonRegisterOrders_Click;
-
-            RegisterProducts = new Button();
-            RegisterProducts.Location = new Point(12, 438);
+            // 
+            // RegisterProducts
+            // 
+            RegisterProducts.Location = new Point(14, 584);
+            RegisterProducts.Margin = new Padding(3, 4, 3, 4);
             RegisterProducts.Name = "RegisterProducts";
-            RegisterProducts.Size = new Size(188, 48);
+            RegisterProducts.Size = new Size(215, 64);
             RegisterProducts.TabIndex = 6;
             RegisterProducts.Text = "Produtos";
             RegisterProducts.UseVisualStyleBackColor = true;
             RegisterProducts.Click += RegisterProducts_Click;
-
-            buttonPizzaValues = new Button();
-            buttonPizzaValues.Location = new Point(12, 384);
+            // 
+            // buttonPizzaValues
+            // 
+            buttonPizzaValues.Location = new Point(14, 512);
+            buttonPizzaValues.Margin = new Padding(3, 4, 3, 4);
             buttonPizzaValues.Name = "buttonPizzaValues";
-            buttonPizzaValues.Size = new Size(188, 48);
+            buttonPizzaValues.Size = new Size(215, 64);
             buttonPizzaValues.TabIndex = 5;
             buttonPizzaValues.Text = "Valores Pizza";
             buttonPizzaValues.UseVisualStyleBackColor = true;
             buttonPizzaValues.Click += ButtonPizzaValues_Click;
-
-            buttonRegisterFlavors = new Button();
-            buttonRegisterFlavors.Location = new Point(12, 330);
+            // 
+            // buttonRegisterFlavors
+            // 
+            buttonRegisterFlavors.Location = new Point(14, 440);
+            buttonRegisterFlavors.Margin = new Padding(3, 4, 3, 4);
             buttonRegisterFlavors.Name = "buttonRegisterFlavors";
-            buttonRegisterFlavors.Size = new Size(188, 48);
+            buttonRegisterFlavors.Size = new Size(215, 64);
             buttonRegisterFlavors.TabIndex = 4;
             buttonRegisterFlavors.Text = "Sabores";
             buttonRegisterFlavors.UseVisualStyleBackColor = true;
             buttonRegisterFlavors.Click += ButtonRegisterFlavors_Click;
-            
-            buttonRegisterIngredients = new Button();
-            buttonRegisterIngredients.Location = new Point(12, 276);
+            // 
+            // buttonRegisterIngredients
+            // 
+            buttonRegisterIngredients.Location = new Point(14, 368);
+            buttonRegisterIngredients.Margin = new Padding(3, 4, 3, 4);
             buttonRegisterIngredients.Name = "buttonRegisterIngredients";
-            buttonRegisterIngredients.Size = new Size(188, 48);
+            buttonRegisterIngredients.Size = new Size(215, 64);
             buttonRegisterIngredients.TabIndex = 3;
             buttonRegisterIngredients.Text = "Ingredientes";
             buttonRegisterIngredients.UseVisualStyleBackColor = true;
             buttonRegisterIngredients.Click += ButtonRegisterIngredients_Click;
-
-            buttonRegisterClient = new Button();
-            buttonRegisterClient.Location = new Point(12, 222);
+            // 
+            // buttonRegisterClient
+            // 
+            buttonRegisterClient.Location = new Point(14, 296);
+            buttonRegisterClient.Margin = new Padding(3, 4, 3, 4);
             buttonRegisterClient.Name = "buttonRegisterClient";
-            buttonRegisterClient.Size = new Size(188, 48);
+            buttonRegisterClient.Size = new Size(215, 64);
             buttonRegisterClient.TabIndex = 2;
             buttonRegisterClient.Text = "Clientes";
             buttonRegisterClient.UseVisualStyleBackColor = true;
             buttonRegisterClient.Click += ButtonRegisterClient_Click;
-
-            buttonRegisterEmployees = new Button();
-            buttonRegisterEmployees.Location = new Point(12, 168);
+            // 
+            // buttonRegisterEmployees
+            // 
+            buttonRegisterEmployees.Location = new Point(14, 224);
+            buttonRegisterEmployees.Margin = new Padding(3, 4, 3, 4);
             buttonRegisterEmployees.Name = "buttonRegisterEmployees";
-            buttonRegisterEmployees.Size = new Size(188, 48);
+            buttonRegisterEmployees.Size = new Size(215, 64);
             buttonRegisterEmployees.TabIndex = 1;
             buttonRegisterEmployees.Text = "Funcionários";
             buttonRegisterEmployees.UseVisualStyleBackColor = true;
             buttonRegisterEmployees.Click += Employees_Click;
-
-            buttonAdressRegister = new Button();
-            buttonAdressRegister.Location = new Point(12, 114);
+            // 
+            // buttonAdressRegister
+            // 
+            buttonAdressRegister.Location = new Point(14, 152);
+            buttonAdressRegister.Margin = new Padding(3, 4, 3, 4);
             buttonAdressRegister.Name = "buttonAdressRegister";
-            buttonAdressRegister.Size = new Size(188, 48);
+            buttonAdressRegister.Size = new Size(215, 64);
             buttonAdressRegister.TabIndex = 0;
             buttonAdressRegister.Text = "Endereço";
             buttonAdressRegister.UseVisualStyleBackColor = true;
             buttonAdressRegister.Click += AdressClick_Click;
-
-
-            panelLeft = new Panel();
-            panelLeft.SuspendLayout();
+            // 
+            // panelLeft
+            // 
             panelLeft.BackColor = SystemColors.ControlDarkDark;
-            panelLeft.Controls.Add(labelUserName);
-            panelLeft.Controls.Add(panelUserImg);
+            panelLeft.Controls.Add(pictureUser);
+            panelLeft.Controls.Add(lblUserName);
             panelLeft.Controls.Add(buttonRegisterOrders);
             panelLeft.Controls.Add(RegisterProducts);
             panelLeft.Controls.Add(buttonPizzaValues);
@@ -202,38 +247,72 @@
             panelLeft.Controls.Add(buttonRegisterEmployees);
             panelLeft.Controls.Add(buttonAdressRegister);
             panelLeft.Location = new Point(0, 0);
+            panelLeft.Margin = new Padding(3, 4, 3, 4);
             panelLeft.Name = "panelLeft";
-            panelLeft.Size = new Size(213, 594);
+            panelLeft.Size = new Size(243, 792);
             panelLeft.TabIndex = 0;
-            panelLeft.ResumeLayout(false);
-            panelLeft.PerformLayout();
-            Controls.Add(panelLeft);
-            // PanelBottom
-            buttonConfirm = new Button();
-            buttonConfirm.Location = new Point(712, 6);
+            // 
+            // buttonConfirm
+            // 
+            buttonConfirm.Location = new Point(814, 8);
+            buttonConfirm.Margin = new Padding(3, 4, 3, 4);
             buttonConfirm.Name = "buttonConfirm";
-            buttonConfirm.Size = new Size(86, 26);
+            buttonConfirm.Size = new Size(98, 35);
             buttonConfirm.TabIndex = 1;
             buttonConfirm.Text = "Finalizar";
             buttonConfirm.UseVisualStyleBackColor = true;
-            buttonPrint = new Button();
-            buttonPrint.Location = new Point(620, 6);
+            // 
+            // buttonPrint
+            // 
+            buttonPrint.Location = new Point(709, 8);
+            buttonPrint.Margin = new Padding(3, 4, 3, 4);
             buttonPrint.Name = "buttonPrint";
-            buttonPrint.Size = new Size(86, 26);
+            buttonPrint.Size = new Size(98, 35);
             buttonPrint.TabIndex = 0;
             buttonPrint.Text = "Imprimir";
             buttonPrint.UseVisualStyleBackColor = true;
-            panelInf = new Panel();
-            panelInf.SuspendLayout();
+            // 
+            // panelInf
+            // 
             panelInf.BackColor = SystemColors.ControlDarkDark;
             panelInf.Controls.Add(buttonConfirm);
             panelInf.Controls.Add(buttonPrint);
-            panelInf.Location = new Point(211, 556);
+            panelInf.Location = new Point(241, 741);
+            panelInf.Margin = new Padding(3, 4, 3, 4);
             panelInf.Name = "panelInf";
-            panelInf.Size = new Size(805, 38);
+            panelInf.Size = new Size(920, 51);
             panelInf.TabIndex = 2;
-            panelInf.ResumeLayout(false);
+            // 
+            // pictureUser
+            // 
+            pictureUser.Image = (Image)resources.GetObject("pictureUser.Image");
+            pictureUser.Location = new Point(20, 24);
+            pictureUser.Name = "pictureUser";
+            pictureUser.Size = new Size(89, 77);
+            pictureUser.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureUser.TabIndex = 10;
+            pictureUser.TabStop = false;
+            // 
+            // FormPrincipal
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1160, 792);
+            Controls.Add(dataGridViewOrders);
+            Controls.Add(panelSup);
+            Controls.Add(panelLeft);
             Controls.Add(panelInf);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "FormPrincipal";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).EndInit();
+            panelSup.ResumeLayout(false);
+            panelSup.PerformLayout();
+            panelLeft.ResumeLayout(false);
+            panelLeft.PerformLayout();
+            panelInf.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureUser).EndInit();
+            ResumeLayout(false);
         }
 
         private void ButtonRegisterClient_Click(object sender, EventArgs e)
@@ -283,7 +362,8 @@
             form.ShowDialog();
         }
 
+        private PictureBox pictureUser;
     }
 
-        #endregion
+    #endregion
 }
