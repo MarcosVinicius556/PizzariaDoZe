@@ -40,100 +40,100 @@
             ListViewItem listViewItem22 = new ListViewItem("1000");
             ListViewItem listViewItem23 = new ListViewItem("1500");
             ListViewItem listViewItem24 = new ListViewItem("2000");
-            label1 = new Label();
-            idProduto = new TextBox();
-            nomeProduto = new TextBox();
-            valorProduto = new TextBox();
-            label2 = new Label();
-            label3 = new Label();
-            tipoProduto = new ListView();
-            mlProduto = new ListView();
-            label4 = new Label();
+            lblId = new Label();
+            txtId = new TextBox();
+            txtNome = new TextBox();
+            txtValor = new TextBox();
+            lblNome = new Label();
+            lblValor = new Label();
+            groupBoxTipo = new ListView();
+            groupBoxMl = new ListView();
+            lblTipo = new Label();
             label5 = new Label();
-            fecharTela = new Button();
-            excluirProdutos = new Button();
-            editarProdutos = new Button();
-            salvarProdutos = new Button();
+            btnFechar = new Button();
+            btnExcluir = new Button();
+            btnEditar = new Button();
+            btnSalvar = new Button();
             SuspendLayout();
             // 
-            // label1
+            // lblId
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(46, 31);
-            label1.Name = "label1";
-            label1.Size = new Size(21, 15);
-            label1.TabIndex = 0;
-            label1.Text = "ID:";
+            lblId.AutoSize = true;
+            lblId.Location = new Point(46, 31);
+            lblId.Name = "lblId";
+            lblId.Size = new Size(21, 15);
+            lblId.TabIndex = 0;
+            lblId.Text = "ID:";
             // 
-            // idProduto
+            // txtId
             // 
-            idProduto.BackColor = SystemColors.InactiveCaption;
-            idProduto.Enabled = false;
-            idProduto.Location = new Point(46, 49);
-            idProduto.Name = "idProduto";
-            idProduto.Size = new Size(67, 23);
-            idProduto.TabIndex = 1;
+            txtId.BackColor = SystemColors.InactiveCaption;
+            txtId.Enabled = false;
+            txtId.Location = new Point(46, 49);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(67, 23);
+            txtId.TabIndex = 1;
             // 
-            // nomeProduto
+            // txtNome
             // 
-            nomeProduto.Location = new Point(46, 111);
-            nomeProduto.Name = "nomeProduto";
-            nomeProduto.Size = new Size(180, 23);
-            nomeProduto.TabIndex = 2;
+            txtNome.Location = new Point(46, 111);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(180, 23);
+            txtNome.TabIndex = 2;
             // 
-            // valorProduto
+            // txtValor
             // 
-            valorProduto.Location = new Point(46, 183);
-            valorProduto.Name = "valorProduto";
-            valorProduto.Size = new Size(180, 23);
-            valorProduto.TabIndex = 3;
+            txtValor.Location = new Point(46, 183);
+            txtValor.Name = "txtValor";
+            txtValor.Size = new Size(180, 23);
+            txtValor.TabIndex = 3;
             // 
-            // label2
+            // lblNome
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(46, 93);
-            label2.Name = "label2";
-            label2.Size = new Size(43, 15);
-            label2.TabIndex = 4;
-            label2.Text = "Nome:";
+            lblNome.AutoSize = true;
+            lblNome.Location = new Point(46, 93);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new Size(43, 15);
+            lblNome.TabIndex = 4;
+            lblNome.Text = "Nome:";
             // 
-            // label3
+            // lblValor
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(46, 165);
-            label3.Name = "label3";
-            label3.Size = new Size(36, 15);
-            label3.TabIndex = 5;
-            label3.Text = "Valor:";
+            lblValor.AutoSize = true;
+            lblValor.Location = new Point(46, 165);
+            lblValor.Name = "lblValor";
+            lblValor.Size = new Size(36, 15);
+            lblValor.TabIndex = 5;
+            lblValor.Text = "Valor:";
             // 
-            // tipoProduto
+            // groupBoxTipo
             // 
-            tipoProduto.Items.AddRange(new ListViewItem[] { listViewItem13, listViewItem14, listViewItem15, listViewItem16, listViewItem17, listViewItem18 });
-            tipoProduto.Location = new Point(268, 49);
-            tipoProduto.Name = "tipoProduto";
-            tipoProduto.Size = new Size(121, 157);
-            tipoProduto.TabIndex = 6;
-            tipoProduto.UseCompatibleStateImageBehavior = false;
-            tipoProduto.View = View.List;
+            groupBoxTipo.Items.AddRange(new ListViewItem[] { listViewItem13, listViewItem14, listViewItem15, listViewItem16, listViewItem17, listViewItem18 });
+            groupBoxTipo.Location = new Point(268, 49);
+            groupBoxTipo.Name = "groupBoxTipo";
+            groupBoxTipo.Size = new Size(121, 157);
+            groupBoxTipo.TabIndex = 6;
+            groupBoxTipo.UseCompatibleStateImageBehavior = false;
+            groupBoxTipo.View = View.List;
             // 
-            // mlProduto
+            // groupBoxMl
             // 
-            mlProduto.Items.AddRange(new ListViewItem[] { listViewItem19, listViewItem20, listViewItem21, listViewItem22, listViewItem23, listViewItem24 });
-            mlProduto.Location = new Point(405, 49);
-            mlProduto.Name = "mlProduto";
-            mlProduto.Size = new Size(121, 157);
-            mlProduto.TabIndex = 7;
-            mlProduto.UseCompatibleStateImageBehavior = false;
-            mlProduto.View = View.List;
+            groupBoxMl.Items.AddRange(new ListViewItem[] { listViewItem19, listViewItem20, listViewItem21, listViewItem22, listViewItem23, listViewItem24 });
+            groupBoxMl.Location = new Point(405, 49);
+            groupBoxMl.Name = "groupBoxMl";
+            groupBoxMl.Size = new Size(121, 157);
+            groupBoxMl.TabIndex = 7;
+            groupBoxMl.UseCompatibleStateImageBehavior = false;
+            groupBoxMl.View = View.List;
             // 
-            // label4
+            // lblTipo
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(268, 31);
-            label4.Name = "label4";
-            label4.Size = new Size(33, 15);
-            label4.TabIndex = 8;
-            label4.Text = "Tipo:";
+            lblTipo.AutoSize = true;
+            lblTipo.Location = new Point(268, 31);
+            lblTipo.Name = "lblTipo";
+            lblTipo.Size = new Size(33, 15);
+            lblTipo.TabIndex = 8;
+            lblTipo.Text = "Tipo:";
             // 
             // label5
             // 
@@ -144,49 +144,49 @@
             label5.TabIndex = 9;
             label5.Text = "ML:";
             // 
-            // fecharTela
+            // btnFechar
             // 
-            fecharTela.BackColor = Color.MediumBlue;
-            fecharTela.ForeColor = SystemColors.Control;
-            fecharTela.Location = new Point(416, 233);
-            fecharTela.Name = "fecharTela";
-            fecharTela.Size = new Size(110, 33);
-            fecharTela.TabIndex = 31;
-            fecharTela.Text = "Fechar";
-            fecharTela.UseVisualStyleBackColor = false;
+            btnFechar.BackColor = Color.MediumBlue;
+            btnFechar.ForeColor = SystemColors.Control;
+            btnFechar.Location = new Point(416, 233);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(110, 33);
+            btnFechar.TabIndex = 31;
+            btnFechar.Text = "Fechar";
+            btnFechar.UseVisualStyleBackColor = false;
             // 
-            // excluirProdutos
+            // btnExcluir
             // 
-            excluirProdutos.BackColor = Color.Red;
-            excluirProdutos.ForeColor = SystemColors.Control;
-            excluirProdutos.Location = new Point(293, 233);
-            excluirProdutos.Name = "excluirProdutos";
-            excluirProdutos.Size = new Size(110, 33);
-            excluirProdutos.TabIndex = 30;
-            excluirProdutos.Text = "Excluir";
-            excluirProdutos.UseVisualStyleBackColor = false;
+            btnExcluir.BackColor = Color.Red;
+            btnExcluir.ForeColor = SystemColors.Control;
+            btnExcluir.Location = new Point(293, 233);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(110, 33);
+            btnExcluir.TabIndex = 30;
+            btnExcluir.Text = "Excluir";
+            btnExcluir.UseVisualStyleBackColor = false;
             // 
-            // editarProdutos
+            // btnEditar
             // 
-            editarProdutos.BackColor = Color.Turquoise;
-            editarProdutos.ForeColor = SystemColors.Control;
-            editarProdutos.Location = new Point(170, 233);
-            editarProdutos.Name = "editarProdutos";
-            editarProdutos.Size = new Size(110, 33);
-            editarProdutos.TabIndex = 29;
-            editarProdutos.Text = "Editar";
-            editarProdutos.UseVisualStyleBackColor = false;
+            btnEditar.BackColor = Color.Turquoise;
+            btnEditar.ForeColor = SystemColors.Control;
+            btnEditar.Location = new Point(170, 233);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(110, 33);
+            btnEditar.TabIndex = 29;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = false;
             // 
-            // salvarProdutos
+            // btnSalvar
             // 
-            salvarProdutos.BackColor = Color.Lime;
-            salvarProdutos.ForeColor = SystemColors.Control;
-            salvarProdutos.Location = new Point(46, 233);
-            salvarProdutos.Name = "salvarProdutos";
-            salvarProdutos.Size = new Size(110, 33);
-            salvarProdutos.TabIndex = 28;
-            salvarProdutos.Text = "Salvar";
-            salvarProdutos.UseVisualStyleBackColor = false;
+            btnSalvar.BackColor = Color.Lime;
+            btnSalvar.ForeColor = SystemColors.Control;
+            btnSalvar.Location = new Point(46, 233);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(110, 33);
+            btnSalvar.TabIndex = 28;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.UseVisualStyleBackColor = false;
             // 
             // FormProdutos
             // 
@@ -194,20 +194,20 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(572, 297);
-            Controls.Add(fecharTela);
-            Controls.Add(excluirProdutos);
-            Controls.Add(editarProdutos);
-            Controls.Add(salvarProdutos);
+            Controls.Add(btnFechar);
+            Controls.Add(btnExcluir);
+            Controls.Add(btnEditar);
+            Controls.Add(btnSalvar);
             Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(mlProduto);
-            Controls.Add(tipoProduto);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(valorProduto);
-            Controls.Add(nomeProduto);
-            Controls.Add(idProduto);
-            Controls.Add(label1);
+            Controls.Add(lblTipo);
+            Controls.Add(groupBoxMl);
+            Controls.Add(groupBoxTipo);
+            Controls.Add(lblValor);
+            Controls.Add(lblNome);
+            Controls.Add(txtValor);
+            Controls.Add(txtNome);
+            Controls.Add(txtId);
+            Controls.Add(lblId);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormProdutos";
@@ -219,19 +219,19 @@
 
         #endregion
 
-        private Label label1;
-        private TextBox idProduto;
-        private TextBox nomeProduto;
-        private TextBox valorProduto;
-        private Label label2;
-        private Label label3;
-        private ListView tipoProduto;
-        private ListView mlProduto;
-        private Label label4;
+        private Label lblId;
+        private TextBox txtId;
+        private TextBox txtNome;
+        private TextBox txtValor;
+        private Label lblNome;
+        private Label lblValor;
+        private ListView groupBoxTipo;
+        private ListView groupBoxMl;
+        private Label lblTipo;
         private Label label5;
-        private Button fecharTela;
-        private Button excluirProdutos;
-        private Button editarProdutos;
-        private Button salvarProdutos;
+        private Button btnFechar;
+        private Button btnExcluir;
+        private Button btnEditar;
+        private Button btnSalvar;
     }
 }

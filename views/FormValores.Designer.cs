@@ -34,155 +34,155 @@
             ListViewItem listViewItem10 = new ListViewItem("Média");
             ListViewItem listViewItem11 = new ListViewItem("Grande");
             ListViewItem listViewItem12 = new ListViewItem("Familia");
-            fecharTela = new Button();
-            excluirPizza = new Button();
-            EditarPizza = new Button();
-            salvarPizza = new Button();
-            label5 = new Label();
-            label4 = new Label();
-            categoriaPizza = new ListView();
-            tamanhoPizza = new ListView();
-            label3 = new Label();
-            label2 = new Label();
-            valorBordaPizza = new TextBox();
-            valorPizza = new TextBox();
-            idPizza = new TextBox();
-            label1 = new Label();
+            btnFechar = new Button();
+            btnExcluir = new Button();
+            btnEditar = new Button();
+            btnSalvar = new Button();
+            lblCategoria = new Label();
+            lblTamanho = new Label();
+            txtCategoria = new ListView();
+            txtTamanho = new ListView();
+            lblAdicionalBorda = new Label();
+            lblValor = new Label();
+            txtAdicionalBorda = new TextBox();
+            txtValor = new TextBox();
+            txtId = new TextBox();
+            lblId = new Label();
             SuspendLayout();
             // 
-            // fecharTela
+            // btnFechar
             // 
-            fecharTela.BackColor = Color.MediumBlue;
-            fecharTela.ForeColor = SystemColors.Control;
-            fecharTela.Location = new Point(418, 232);
-            fecharTela.Name = "fecharTela";
-            fecharTela.Size = new Size(110, 33);
-            fecharTela.TabIndex = 27;
-            fecharTela.Text = "Fechar";
-            fecharTela.UseVisualStyleBackColor = false;
+            btnFechar.BackColor = Color.MediumBlue;
+            btnFechar.ForeColor = SystemColors.Control;
+            btnFechar.Location = new Point(418, 232);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(110, 33);
+            btnFechar.TabIndex = 27;
+            btnFechar.Text = "Fechar";
+            btnFechar.UseVisualStyleBackColor = false;
             // 
-            // excluirPizza
+            // btnExcluir
             // 
-            excluirPizza.BackColor = Color.Red;
-            excluirPizza.ForeColor = SystemColors.Control;
-            excluirPizza.Location = new Point(295, 232);
-            excluirPizza.Name = "excluirPizza";
-            excluirPizza.Size = new Size(110, 33);
-            excluirPizza.TabIndex = 26;
-            excluirPizza.Text = "Excluir";
-            excluirPizza.UseVisualStyleBackColor = false;
+            btnExcluir.BackColor = Color.Red;
+            btnExcluir.ForeColor = SystemColors.Control;
+            btnExcluir.Location = new Point(295, 232);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(110, 33);
+            btnExcluir.TabIndex = 26;
+            btnExcluir.Text = "Excluir";
+            btnExcluir.UseVisualStyleBackColor = false;
             // 
-            // EditarPizza
+            // btnEditar
             // 
-            EditarPizza.BackColor = Color.LightSeaGreen;
-            EditarPizza.ForeColor = SystemColors.Control;
-            EditarPizza.Location = new Point(172, 232);
-            EditarPizza.Name = "EditarPizza";
-            EditarPizza.Size = new Size(110, 33);
-            EditarPizza.TabIndex = 25;
-            EditarPizza.Text = "Editar";
-            EditarPizza.UseVisualStyleBackColor = false;
+            btnEditar.BackColor = Color.LightSeaGreen;
+            btnEditar.ForeColor = SystemColors.Control;
+            btnEditar.Location = new Point(172, 232);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(110, 33);
+            btnEditar.TabIndex = 25;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = false;
             // 
-            // salvarPizza
+            // btnSalvar
             // 
-            salvarPizza.BackColor = Color.Lime;
-            salvarPizza.ForeColor = SystemColors.Control;
-            salvarPizza.ImageAlign = ContentAlignment.MiddleLeft;
-            salvarPizza.Location = new Point(48, 232);
-            salvarPizza.Margin = new Padding(0);
-            salvarPizza.Name = "salvarPizza";
-            salvarPizza.Size = new Size(110, 33);
-            salvarPizza.TabIndex = 24;
-            salvarPizza.Text = "Salvar";
-            salvarPizza.UseVisualStyleBackColor = false;
+            btnSalvar.BackColor = Color.Lime;
+            btnSalvar.ForeColor = SystemColors.Control;
+            btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSalvar.Location = new Point(48, 232);
+            btnSalvar.Margin = new Padding(0);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(110, 33);
+            btnSalvar.TabIndex = 24;
+            btnSalvar.Text = "Salvar";
+            btnSalvar.UseVisualStyleBackColor = false;
             // 
-            // label5
+            // lblCategoria
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(407, 31);
-            label5.Name = "label5";
-            label5.Size = new Size(61, 15);
-            label5.TabIndex = 23;
-            label5.Text = "Categoria:";
+            lblCategoria.AutoSize = true;
+            lblCategoria.Location = new Point(407, 31);
+            lblCategoria.Name = "lblCategoria";
+            lblCategoria.Size = new Size(61, 15);
+            lblCategoria.TabIndex = 23;
+            lblCategoria.Text = "Categoria:";
             // 
-            // label4
+            // lblTamanho
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(270, 31);
-            label4.Name = "label4";
-            label4.Size = new Size(59, 15);
-            label4.TabIndex = 22;
-            label4.Text = "Tamanho:";
+            lblTamanho.AutoSize = true;
+            lblTamanho.Location = new Point(270, 31);
+            lblTamanho.Name = "lblTamanho";
+            lblTamanho.Size = new Size(59, 15);
+            lblTamanho.TabIndex = 22;
+            lblTamanho.Text = "Tamanho:";
             // 
-            // categoriaPizza
+            // txtCategoria
             // 
-            categoriaPizza.Items.AddRange(new ListViewItem[] { listViewItem7, listViewItem8 });
-            categoriaPizza.Location = new Point(407, 49);
-            categoriaPizza.Name = "categoriaPizza";
-            categoriaPizza.Size = new Size(121, 157);
-            categoriaPizza.TabIndex = 21;
-            categoriaPizza.UseCompatibleStateImageBehavior = false;
-            categoriaPizza.View = View.List;
+            txtCategoria.Items.AddRange(new ListViewItem[] { listViewItem7, listViewItem8 });
+            txtCategoria.Location = new Point(407, 49);
+            txtCategoria.Name = "txtCategoria";
+            txtCategoria.Size = new Size(121, 157);
+            txtCategoria.TabIndex = 21;
+            txtCategoria.UseCompatibleStateImageBehavior = false;
+            txtCategoria.View = View.List;
             // 
-            // tamanhoPizza
+            // txtTamanho
             // 
-            tamanhoPizza.Items.AddRange(new ListViewItem[] { listViewItem9, listViewItem10, listViewItem11, listViewItem12 });
-            tamanhoPizza.Location = new Point(270, 49);
-            tamanhoPizza.Name = "tamanhoPizza";
-            tamanhoPizza.Size = new Size(121, 157);
-            tamanhoPizza.TabIndex = 20;
-            tamanhoPizza.UseCompatibleStateImageBehavior = false;
-            tamanhoPizza.View = View.List;
+            txtTamanho.Items.AddRange(new ListViewItem[] { listViewItem9, listViewItem10, listViewItem11, listViewItem12 });
+            txtTamanho.Location = new Point(270, 49);
+            txtTamanho.Name = "txtTamanho";
+            txtTamanho.Size = new Size(121, 157);
+            txtTamanho.TabIndex = 20;
+            txtTamanho.UseCompatibleStateImageBehavior = false;
+            txtTamanho.View = View.List;
             // 
-            // label3
+            // lblAdicionalBorda
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(48, 165);
-            label3.Name = "label3";
-            label3.Size = new Size(121, 15);
-            label3.TabIndex = 19;
-            label3.Text = "Valor adicional borda:";
+            lblAdicionalBorda.AutoSize = true;
+            lblAdicionalBorda.Location = new Point(48, 165);
+            lblAdicionalBorda.Name = "lblAdicionalBorda";
+            lblAdicionalBorda.Size = new Size(121, 15);
+            lblAdicionalBorda.TabIndex = 19;
+            lblAdicionalBorda.Text = "Valor adicional borda:";
             // 
-            // label2
+            // lblValor
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(48, 93);
-            label2.Name = "label2";
-            label2.Size = new Size(36, 15);
-            label2.TabIndex = 18;
-            label2.Text = "Valor:";
+            lblValor.AutoSize = true;
+            lblValor.Location = new Point(48, 93);
+            lblValor.Name = "lblValor";
+            lblValor.Size = new Size(36, 15);
+            lblValor.TabIndex = 18;
+            lblValor.Text = "Valor:";
             // 
-            // valorBordaPizza
+            // txtAdicionalBorda
             // 
-            valorBordaPizza.Location = new Point(48, 183);
-            valorBordaPizza.Name = "valorBordaPizza";
-            valorBordaPizza.Size = new Size(180, 23);
-            valorBordaPizza.TabIndex = 17;
+            txtAdicionalBorda.Location = new Point(48, 183);
+            txtAdicionalBorda.Name = "txtAdicionalBorda";
+            txtAdicionalBorda.Size = new Size(180, 23);
+            txtAdicionalBorda.TabIndex = 17;
             // 
-            // valorPizza
+            // txtValor
             // 
-            valorPizza.Location = new Point(48, 111);
-            valorPizza.Name = "valorPizza";
-            valorPizza.Size = new Size(180, 23);
-            valorPizza.TabIndex = 16;
+            txtValor.Location = new Point(48, 111);
+            txtValor.Name = "txtValor";
+            txtValor.Size = new Size(180, 23);
+            txtValor.TabIndex = 16;
             // 
-            // idPizza
+            // txtId
             // 
-            idPizza.BackColor = SystemColors.InactiveCaption;
-            idPizza.Enabled = false;
-            idPizza.Location = new Point(48, 49);
-            idPizza.Name = "idPizza";
-            idPizza.Size = new Size(67, 23);
-            idPizza.TabIndex = 15;
+            txtId.BackColor = SystemColors.InactiveCaption;
+            txtId.Enabled = false;
+            txtId.Location = new Point(48, 49);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(67, 23);
+            txtId.TabIndex = 15;
             // 
-            // label1
+            // lblId
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(48, 31);
-            label1.Name = "label1";
-            label1.Size = new Size(21, 15);
-            label1.TabIndex = 14;
-            label1.Text = "ID:";
+            lblId.AutoSize = true;
+            lblId.Location = new Point(48, 31);
+            lblId.Name = "lblId";
+            lblId.Size = new Size(21, 15);
+            lblId.TabIndex = 14;
+            lblId.Text = "ID:";
             // 
             // FormValores
             // 
@@ -190,20 +190,20 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(572, 297);
-            Controls.Add(fecharTela);
-            Controls.Add(excluirPizza);
-            Controls.Add(EditarPizza);
-            Controls.Add(salvarPizza);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(categoriaPizza);
-            Controls.Add(tamanhoPizza);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(valorBordaPizza);
-            Controls.Add(valorPizza);
-            Controls.Add(idPizza);
-            Controls.Add(label1);
+            Controls.Add(btnFechar);
+            Controls.Add(btnExcluir);
+            Controls.Add(btnEditar);
+            Controls.Add(btnSalvar);
+            Controls.Add(lblCategoria);
+            Controls.Add(lblTamanho);
+            Controls.Add(txtCategoria);
+            Controls.Add(txtTamanho);
+            Controls.Add(lblAdicionalBorda);
+            Controls.Add(lblValor);
+            Controls.Add(txtAdicionalBorda);
+            Controls.Add(txtValor);
+            Controls.Add(txtId);
+            Controls.Add(lblId);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormValores";
@@ -215,19 +215,19 @@
 
         #endregion
 
-        private Button fecharTela;
-        private Button excluirPizza;
-        private Button EditarPizza;
-        private Button salvarPizza;
-        private Label label5;
-        private Label label4;
-        private ListView categoriaPizza;
-        private ListView tamanhoPizza;
-        private Label label3;
-        private Label label2;
-        private TextBox valorBordaPizza;
-        private TextBox valorPizza;
-        private TextBox idPizza;
-        private Label label1;
+        private Button btnFechar;
+        private Button btnExcluir;
+        private Button btnEditar;
+        private Button btnSalvar;
+        private Label lblCategoria;
+        private Label lblTamanho;
+        private ListView txtCategoria;
+        private ListView txtTamanho;
+        private Label lblAdicionalBorda;
+        private Label lblValor;
+        private TextBox txtAdicionalBorda;
+        private TextBox txtValor;
+        private TextBox txtId;
+        private Label lblId;
     }
 }

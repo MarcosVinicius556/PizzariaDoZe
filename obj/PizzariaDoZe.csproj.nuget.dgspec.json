@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alanr\\Documents\\GitHub\\PizzariaDoZe\\PizzariaDoZe.csproj": {}
+    "C:\\Users\\Alanr\\Documents\\Desktop\\PizzariaDoZe\\PizzariaDoZe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alanr\\Documents\\GitHub\\PizzariaDoZe\\PizzariaDoZe.csproj": {
+    "C:\\Users\\Alanr\\Documents\\Desktop\\PizzariaDoZe\\PizzariaDoZe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alanr\\Documents\\GitHub\\PizzariaDoZe\\PizzariaDoZe.csproj",
+        "projectUniqueName": "C:\\Users\\Alanr\\Documents\\Desktop\\PizzariaDoZe\\PizzariaDoZe.csproj",
         "projectName": "PizzariaDoZe",
-        "projectPath": "C:\\Users\\alanr\\Documents\\GitHub\\PizzariaDoZe\\PizzariaDoZe.csproj",
-        "packagesPath": "C:\\Users\\alanr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alanr\\Documents\\GitHub\\PizzariaDoZe\\obj\\",
+        "projectPath": "C:\\Users\\Alanr\\Documents\\Desktop\\PizzariaDoZe\\PizzariaDoZe.csproj",
+        "packagesPath": "C:\\Users\\Alanr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alanr\\Documents\\Desktop\\PizzariaDoZe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\alanr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Alanr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
