@@ -28,314 +28,329 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ButtonSalvar = new Button();
-            labelId = new Label();
-            textBoxId = new TextBox();
-            labelCpf = new Label();
-            labelMatricula = new Label();
-            labelNomeFuncionario = new Label();
-            labelTelefone = new Label();
-            labelEmail = new Label();
-            labelCnh = new Label();
-            LabelValidade = new Label();
-            LabelSenha = new Label();
-            PanelRegistro = new Panel();
-            label2 = new Label();
-            MaskedTextBoxTelefone = new MaskedTextBox();
-            maskedTextBoxCpf = new MaskedTextBox();
-            maskedTextBoxSenhaFuncinario = new MaskedTextBox();
-            labelObservacoes = new Label();
-            textBox9 = new TextBox();
-            Calendario = new DateTimePicker();
-            textBoxCnh = new TextBox();
-            textBoxEmail = new TextBox();
-            TextBox4 = new TextBox();
-            textBoxMatricula = new TextBox();
-            ButtonExcluir = new Button();
-            ButtonEditar = new Button();
-            PanelRegistro.SuspendLayout();
+            btnSalvar = new Button();
+            lblId = new Label();
+            txtId = new TextBox();
+            lblCpf = new Label();
+            lblMatricula = new Label();
+            lblNome = new Label();
+            lblTelefone = new Label();
+            lblEmail = new Label();
+            lblCnh = new Label();
+            lblValidade = new Label();
+            lblSenha = new Label();
+            panelClientes = new Panel();
+            lblTitulo = new Label();
+            txtTelefone = new MaskedTextBox();
+            txtCpf = new MaskedTextBox();
+            txtSenha = new MaskedTextBox();
+            lblObs = new Label();
+            txtObs = new TextBox();
+            calendarioCnh = new DateTimePicker();
+            txtCnh = new TextBox();
+            txtEmail = new TextBox();
+            txtNome = new TextBox();
+            txtMatricula = new TextBox();
+            btnExcluir = new Button();
+            btnEditar = new Button();
+            panelClientes.SuspendLayout();
             SuspendLayout();
             // 
-            // ButtonSalvar
+            // btnSalvar
             // 
-            ButtonSalvar.BackColor = Color.LimeGreen;
-            ButtonSalvar.Location = new Point(73, 383);
-            ButtonSalvar.Name = "ButtonSalvar";
-            ButtonSalvar.Size = new Size(75, 32);
-            ButtonSalvar.TabIndex = 0;
-            ButtonSalvar.Text = "SALVAR";
-            ButtonSalvar.UseVisualStyleBackColor = false;
+            btnSalvar.BackColor = Color.LimeGreen;
+            btnSalvar.Location = new Point(83, 511);
+            btnSalvar.Margin = new Padding(3, 4, 3, 4);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(86, 43);
+            btnSalvar.TabIndex = 0;
+            btnSalvar.Text = "SALVAR";
+            btnSalvar.UseVisualStyleBackColor = false;
             // 
-            // labelId
+            // lblId
             // 
-            labelId.AutoSize = true;
-            labelId.Location = new Point(21, 19);
-            labelId.Name = "labelId";
-            labelId.Size = new Size(21, 15);
-            labelId.TabIndex = 1;
-            labelId.Text = "ID:";
+            lblId.AutoSize = true;
+            lblId.Location = new Point(24, 25);
+            lblId.Name = "lblId";
+            lblId.Size = new Size(27, 20);
+            lblId.TabIndex = 1;
+            lblId.Text = "ID:";
             // 
-            // textBoxId
+            // txtId
             // 
-            textBoxId.Location = new Point(21, 37);
-            textBoxId.Name = "textBoxId";
-            textBoxId.Size = new Size(42, 23);
-            textBoxId.TabIndex = 2;
+            txtId.Location = new Point(24, 49);
+            txtId.Margin = new Padding(3, 4, 3, 4);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(47, 27);
+            txtId.TabIndex = 2;
             // 
-            // labelCpf
+            // lblCpf
             // 
-            labelCpf.AutoSize = true;
-            labelCpf.Location = new Point(126, 19);
-            labelCpf.Name = "labelCpf";
-            labelCpf.Size = new Size(31, 15);
-            labelCpf.TabIndex = 3;
-            labelCpf.Text = "CPF:";
+            lblCpf.AutoSize = true;
+            lblCpf.Location = new Point(144, 25);
+            lblCpf.Name = "lblCpf";
+            lblCpf.Size = new Size(36, 20);
+            lblCpf.TabIndex = 3;
+            lblCpf.Text = "CPF:";
             // 
-            // labelMatricula
+            // lblMatricula
             // 
-            labelMatricula.AutoSize = true;
-            labelMatricula.Location = new Point(302, 19);
-            labelMatricula.Name = "labelMatricula";
-            labelMatricula.Size = new Size(74, 15);
-            labelMatricula.TabIndex = 4;
-            labelMatricula.Text = "MATRICULA:";
+            lblMatricula.AutoSize = true;
+            lblMatricula.Location = new Point(345, 25);
+            lblMatricula.Name = "lblMatricula";
+            lblMatricula.Size = new Size(91, 20);
+            lblMatricula.TabIndex = 4;
+            lblMatricula.Text = "MATRICULA:";
             // 
-            // labelNomeFuncionario
+            // lblNome
             // 
-            labelNomeFuncionario.AutoSize = true;
-            labelNomeFuncionario.Location = new Point(21, 83);
-            labelNomeFuncionario.Name = "labelNomeFuncionario";
-            labelNomeFuncionario.Size = new Size(45, 15);
-            labelNomeFuncionario.TabIndex = 5;
-            labelNomeFuncionario.Text = "NOME:";
+            lblNome.AutoSize = true;
+            lblNome.Location = new Point(24, 111);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new Size(55, 20);
+            lblNome.TabIndex = 5;
+            lblNome.Text = "NOME:";
             // 
-            // labelTelefone
+            // lblTelefone
             // 
-            labelTelefone.AutoSize = true;
-            labelTelefone.Location = new Point(21, 158);
-            labelTelefone.Name = "labelTelefone";
-            labelTelefone.Size = new Size(64, 15);
-            labelTelefone.TabIndex = 6;
-            labelTelefone.Text = "TELEFONE:";
+            lblTelefone.AutoSize = true;
+            lblTelefone.Location = new Point(24, 211);
+            lblTelefone.Name = "lblTelefone";
+            lblTelefone.Size = new Size(80, 20);
+            lblTelefone.TabIndex = 6;
+            lblTelefone.Text = "TELEFONE:";
             // 
-            // labelEmail
+            // lblEmail
             // 
-            labelEmail.AutoSize = true;
-            labelEmail.Location = new Point(198, 158);
-            labelEmail.Name = "labelEmail";
-            labelEmail.Size = new Size(49, 15);
-            labelEmail.TabIndex = 7;
-            labelEmail.Text = "E-MAIL:";
+            lblEmail.AutoSize = true;
+            lblEmail.Location = new Point(226, 211);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(60, 20);
+            lblEmail.TabIndex = 7;
+            lblEmail.Text = "E-MAIL:";
             // 
-            // labelCnh
+            // lblCnh
             // 
-            labelCnh.AutoSize = true;
-            labelCnh.Location = new Point(21, 213);
-            labelCnh.Name = "labelCnh";
-            labelCnh.Size = new Size(33, 15);
-            labelCnh.TabIndex = 8;
-            labelCnh.Text = "CNH";
+            lblCnh.AutoSize = true;
+            lblCnh.Location = new Point(24, 284);
+            lblCnh.Name = "lblCnh";
+            lblCnh.Size = new Size(43, 20);
+            lblCnh.TabIndex = 8;
+            lblCnh.Text = "CNH:";
             // 
-            // LabelValidade
+            // lblValidade
             // 
-            LabelValidade.AutoSize = true;
-            LabelValidade.Location = new Point(186, 213);
-            LabelValidade.Name = "LabelValidade";
-            LabelValidade.Size = new Size(63, 15);
-            LabelValidade.TabIndex = 9;
-            LabelValidade.Text = "VALIDADE:";
-            LabelValidade.Click += LabelValidade_Click;
+            lblValidade.AutoSize = true;
+            lblValidade.Location = new Point(213, 284);
+            lblValidade.Name = "lblValidade";
+            lblValidade.Size = new Size(81, 20);
+            lblValidade.TabIndex = 9;
+            lblValidade.Text = "VALIDADE:";
+            lblValidade.Click += LabelValidade_Click;
             // 
-            // LabelSenha
+            // lblSenha
             // 
-            LabelSenha.AutoSize = true;
-            LabelSenha.Location = new Point(312, 213);
-            LabelSenha.Name = "LabelSenha";
-            LabelSenha.Size = new Size(48, 15);
-            LabelSenha.TabIndex = 10;
-            LabelSenha.Text = "SENHA:";
+            lblSenha.AutoSize = true;
+            lblSenha.Location = new Point(357, 284);
+            lblSenha.Name = "lblSenha";
+            lblSenha.Size = new Size(60, 20);
+            lblSenha.TabIndex = 10;
+            lblSenha.Text = "SENHA:";
             // 
-            // PanelRegistro
+            // panelClientes
             // 
-            PanelRegistro.BackColor = SystemColors.ActiveBorder;
-            PanelRegistro.Controls.Add(label2);
-            PanelRegistro.Controls.Add(MaskedTextBoxTelefone);
-            PanelRegistro.Controls.Add(maskedTextBoxCpf);
-            PanelRegistro.Controls.Add(maskedTextBoxSenhaFuncinario);
-            PanelRegistro.Controls.Add(labelObservacoes);
-            PanelRegistro.Controls.Add(textBox9);
-            PanelRegistro.Controls.Add(Calendario);
-            PanelRegistro.Controls.Add(textBoxCnh);
-            PanelRegistro.Controls.Add(textBoxEmail);
-            PanelRegistro.Controls.Add(TextBox4);
-            PanelRegistro.Controls.Add(textBoxMatricula);
-            PanelRegistro.Controls.Add(LabelSenha);
-            PanelRegistro.Controls.Add(labelTelefone);
-            PanelRegistro.Controls.Add(labelEmail);
-            PanelRegistro.Controls.Add(labelCnh);
-            PanelRegistro.Controls.Add(LabelValidade);
-            PanelRegistro.Controls.Add(labelNomeFuncionario);
-            PanelRegistro.Controls.Add(labelId);
-            PanelRegistro.Controls.Add(textBoxId);
-            PanelRegistro.Controls.Add(labelCpf);
-            PanelRegistro.Controls.Add(labelMatricula);
-            PanelRegistro.Location = new Point(17, 21);
-            PanelRegistro.Name = "PanelRegistro";
-            PanelRegistro.Size = new Size(544, 356);
-            PanelRegistro.TabIndex = 11;
-            PanelRegistro.Paint += panel1_Paint;
+            panelClientes.BackColor = SystemColors.ActiveBorder;
+            panelClientes.Controls.Add(lblTitulo);
+            panelClientes.Controls.Add(txtTelefone);
+            panelClientes.Controls.Add(txtCpf);
+            panelClientes.Controls.Add(txtSenha);
+            panelClientes.Controls.Add(lblObs);
+            panelClientes.Controls.Add(txtObs);
+            panelClientes.Controls.Add(calendarioCnh);
+            panelClientes.Controls.Add(txtCnh);
+            panelClientes.Controls.Add(txtEmail);
+            panelClientes.Controls.Add(txtNome);
+            panelClientes.Controls.Add(txtMatricula);
+            panelClientes.Controls.Add(lblSenha);
+            panelClientes.Controls.Add(lblTelefone);
+            panelClientes.Controls.Add(lblEmail);
+            panelClientes.Controls.Add(lblCnh);
+            panelClientes.Controls.Add(lblValidade);
+            panelClientes.Controls.Add(lblNome);
+            panelClientes.Controls.Add(lblId);
+            panelClientes.Controls.Add(txtId);
+            panelClientes.Controls.Add(lblCpf);
+            panelClientes.Controls.Add(lblMatricula);
+            panelClientes.Location = new Point(19, 28);
+            panelClientes.Margin = new Padding(3, 4, 3, 4);
+            panelClientes.Name = "panelClientes";
+            panelClientes.Size = new Size(622, 475);
+            panelClientes.TabIndex = 11;
+            panelClientes.Paint += panel1_Paint;
             // 
-            // label2
+            // lblTitulo
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(15, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(155, 15);
-            label2.TabIndex = 25;
-            label2.Text = "CADASTRO FUNCIONARIOS";
-            label2.Click += label2_Click;
+            lblTitulo.AutoSize = true;
+            lblTitulo.Location = new Point(17, 0);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(152, 20);
+            lblTitulo.TabIndex = 25;
+            lblTitulo.Text = "CADASTRO CLIENTES";
+            lblTitulo.Click += label2_Click;
             // 
-            // MaskedTextBoxTelefone
+            // txtTelefone
             // 
-            MaskedTextBoxTelefone.Location = new Point(21, 176);
-            MaskedTextBoxTelefone.Mask = "(99) 00000-0000";
-            MaskedTextBoxTelefone.Name = "MaskedTextBoxTelefone";
-            MaskedTextBoxTelefone.Size = new Size(168, 23);
-            MaskedTextBoxTelefone.TabIndex = 24;
+            txtTelefone.Location = new Point(24, 235);
+            txtTelefone.Margin = new Padding(3, 4, 3, 4);
+            txtTelefone.Mask = "(99) 00000-0000";
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.Size = new Size(191, 27);
+            txtTelefone.TabIndex = 24;
             // 
-            // maskedTextBoxCpf
+            // txtCpf
             // 
-            maskedTextBoxCpf.Location = new Point(126, 37);
-            maskedTextBoxCpf.Mask = "00000-000";
-            maskedTextBoxCpf.Name = "maskedTextBoxCpf";
-            maskedTextBoxCpf.Size = new Size(147, 23);
-            maskedTextBoxCpf.TabIndex = 15;
-            maskedTextBoxCpf.MaskInputRejected += maskedTextBox2_MaskInputRejected;
+            txtCpf.Location = new Point(144, 49);
+            txtCpf.Margin = new Padding(3, 4, 3, 4);
+            txtCpf.Mask = "00000-000";
+            txtCpf.Name = "txtCpf";
+            txtCpf.Size = new Size(167, 27);
+            txtCpf.TabIndex = 15;
+            txtCpf.MaskInputRejected += maskedTextBox2_MaskInputRejected;
             // 
-            // maskedTextBoxSenhaFuncinario
+            // txtSenha
             // 
-            maskedTextBoxSenhaFuncinario.Location = new Point(312, 234);
-            maskedTextBoxSenhaFuncinario.Name = "maskedTextBoxSenhaFuncinario";
-            maskedTextBoxSenhaFuncinario.PasswordChar = '*';
-            maskedTextBoxSenhaFuncinario.Size = new Size(100, 23);
-            maskedTextBoxSenhaFuncinario.TabIndex = 23;
+            txtSenha.Location = new Point(357, 312);
+            txtSenha.Margin = new Padding(3, 4, 3, 4);
+            txtSenha.Name = "txtSenha";
+            txtSenha.PasswordChar = '*';
+            txtSenha.Size = new Size(114, 27);
+            txtSenha.TabIndex = 23;
             // 
-            // labelObservacoes
+            // lblObs
             // 
-            labelObservacoes.AutoSize = true;
-            labelObservacoes.Location = new Point(15, 267);
-            labelObservacoes.Name = "labelObservacoes";
-            labelObservacoes.Size = new Size(84, 15);
-            labelObservacoes.TabIndex = 22;
-            labelObservacoes.Text = "OBSERVAÇÃO:";
+            lblObs.AutoSize = true;
+            lblObs.Location = new Point(17, 356);
+            lblObs.Name = "lblObs";
+            lblObs.Size = new Size(105, 20);
+            lblObs.TabIndex = 22;
+            lblObs.Text = "OBSERVAÇÃO:";
             // 
-            // textBox9
+            // txtObs
             // 
-            textBox9.Location = new Point(15, 285);
-            textBox9.Multiline = true;
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(461, 68);
-            textBox9.TabIndex = 21;
+            txtObs.Location = new Point(17, 380);
+            txtObs.Margin = new Padding(3, 4, 3, 4);
+            txtObs.Multiline = true;
+            txtObs.Name = "txtObs";
+            txtObs.Size = new Size(526, 89);
+            txtObs.TabIndex = 21;
             // 
-            // Calendario
+            // calendarioCnh
             // 
-            Calendario.Format = DateTimePickerFormat.Short;
-            Calendario.Location = new Point(186, 231);
-            Calendario.Name = "Calendario";
-            Calendario.Size = new Size(110, 23);
-            Calendario.TabIndex = 19;
+            calendarioCnh.Format = DateTimePickerFormat.Short;
+            calendarioCnh.Location = new Point(213, 308);
+            calendarioCnh.Margin = new Padding(3, 4, 3, 4);
+            calendarioCnh.Name = "calendarioCnh";
+            calendarioCnh.Size = new Size(125, 27);
+            calendarioCnh.TabIndex = 19;
             // 
-            // textBoxCnh
+            // txtCnh
             // 
-            textBoxCnh.Location = new Point(21, 231);
-            textBoxCnh.Name = "textBoxCnh";
-            textBoxCnh.Size = new Size(150, 23);
-            textBoxCnh.TabIndex = 18;
+            txtCnh.Location = new Point(24, 308);
+            txtCnh.Margin = new Padding(3, 4, 3, 4);
+            txtCnh.Name = "txtCnh";
+            txtCnh.Size = new Size(171, 27);
+            txtCnh.TabIndex = 18;
             // 
-            // textBoxEmail
+            // txtEmail
             // 
-            textBoxEmail.Location = new Point(195, 176);
-            textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(281, 23);
-            textBoxEmail.TabIndex = 17;
+            txtEmail.Location = new Point(223, 235);
+            txtEmail.Margin = new Padding(3, 4, 3, 4);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(321, 27);
+            txtEmail.TabIndex = 17;
             // 
-            // TextBox4
+            // txtNome
             // 
-            TextBox4.Location = new Point(21, 101);
-            TextBox4.Name = "TextBox4";
-            TextBox4.Size = new Size(455, 23);
-            TextBox4.TabIndex = 15;
+            txtNome.Location = new Point(24, 135);
+            txtNome.Margin = new Padding(3, 4, 3, 4);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(519, 27);
+            txtNome.TabIndex = 15;
             // 
-            // textBoxMatricula
+            // txtMatricula
             // 
-            textBoxMatricula.Location = new Point(302, 37);
-            textBoxMatricula.Name = "textBoxMatricula";
-            textBoxMatricula.Size = new Size(174, 23);
-            textBoxMatricula.TabIndex = 14;
+            txtMatricula.Location = new Point(345, 49);
+            txtMatricula.Margin = new Padding(3, 4, 3, 4);
+            txtMatricula.Name = "txtMatricula";
+            txtMatricula.Size = new Size(198, 27);
+            txtMatricula.TabIndex = 14;
             // 
-            // ButtonExcluir
+            // btnExcluir
             // 
-            ButtonExcluir.BackColor = Color.LightCoral;
-            ButtonExcluir.Location = new Point(302, 383);
-            ButtonExcluir.Name = "ButtonExcluir";
-            ButtonExcluir.Size = new Size(75, 32);
-            ButtonExcluir.TabIndex = 13;
-            ButtonExcluir.Text = "EXCLUIR";
-            ButtonExcluir.UseVisualStyleBackColor = false;
+            btnExcluir.BackColor = Color.LightCoral;
+            btnExcluir.Location = new Point(345, 511);
+            btnExcluir.Margin = new Padding(3, 4, 3, 4);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(86, 43);
+            btnExcluir.TabIndex = 13;
+            btnExcluir.Text = "EXCLUIR";
+            btnExcluir.UseVisualStyleBackColor = false;
             // 
-            // ButtonEditar
+            // btnEditar
             // 
-            ButtonEditar.BackColor = Color.CornflowerBlue;
-            ButtonEditar.Location = new Point(189, 383);
-            ButtonEditar.Name = "ButtonEditar";
-            ButtonEditar.Size = new Size(75, 32);
-            ButtonEditar.TabIndex = 14;
-            ButtonEditar.Text = "EDITAR";
-            ButtonEditar.UseVisualStyleBackColor = false;
+            btnEditar.BackColor = Color.CornflowerBlue;
+            btnEditar.Location = new Point(216, 511);
+            btnEditar.Margin = new Padding(3, 4, 3, 4);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(86, 43);
+            btnEditar.TabIndex = 14;
+            btnEditar.Text = "EDITAR";
+            btnEditar.UseVisualStyleBackColor = false;
             // 
-            // Form1
+            // FormCadastroCliente
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(581, 419);
-            Controls.Add(ButtonEditar);
-            Controls.Add(ButtonExcluir);
-            Controls.Add(PanelRegistro);
-            Controls.Add(ButtonSalvar);
-            Name = "Form1";
+            ClientSize = new Size(664, 559);
+            Controls.Add(btnEditar);
+            Controls.Add(btnExcluir);
+            Controls.Add(panelClientes);
+            Controls.Add(btnSalvar);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "FormCadastroCliente";
             Text = "FormCadastroClientes";
             Load += Form1_Load;
-            PanelRegistro.ResumeLayout(false);
-            PanelRegistro.PerformLayout();
+            panelClientes.ResumeLayout(false);
+            panelClientes.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button ButtonSalvar;
-        private Label labelId;
-        private TextBox textBoxId;
-        private Label labelCpf;
-        private Label labelMatricula;
-        private Label labelNomeFuncionario;
-        private Label labelTelefone;
-        private Label labelEmail;
-        private Label labelCnh;
-        private Label LabelValidade;
-        private Label LabelSenha;
-        private Panel PanelRegistro;
-        private Button ButtonExcluir;
-        private Button ButtonEditar;
-        private TextBox textBoxEmail;
-        private TextBox TextBox4;
-        private TextBox textBoxMatricula;
-        private TextBox textBoxCnh;
-        private Label labelObservacoes;
-        private TextBox textBox9;
-        private DateTimePicker Calendario;
-        private MaskedTextBox maskedTextBoxSenhaFuncinario;
-        private MaskedTextBox maskedTextBoxCpf;
-        private MaskedTextBox MaskedTextBoxTelefone;
-        private Label label2;
+        private Button btnSalvar;
+        private Label lblId;
+        private TextBox txtId;
+        private Label lblCpf;
+        private Label lblMatricula;
+        private Label lblNome;
+        private Label lblTelefone;
+        private Label lblEmail;
+        private Label lblCnh;
+        private Label lblValidade;
+        private Label lblSenha;
+        private Panel panelClientes;
+        private Button btnExcluir;
+        private Button btnEditar;
+        private TextBox txtEmail;
+        private TextBox txtNome;
+        private TextBox txtMatricula;
+        private TextBox txtCnh;
+        private Label lblObs;
+        private TextBox txtObs;
+        private DateTimePicker calendarioCnh;
+        private MaskedTextBox txtSenha;
+        private MaskedTextBox txtCpf;
+        private MaskedTextBox txtTelefone;
+        private Label lblTitulo;
     }
 }

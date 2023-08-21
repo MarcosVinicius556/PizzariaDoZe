@@ -28,217 +28,219 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            labelIdProutos = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            labelNomePizza = new Label();
-            label1 = new Label();
-            textBox3 = new TextBox();
-            label2 = new Label();
-            label3 = new Label();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            panel2 = new Panel();
-            label4 = new Label();
-            ButtonEditar = new Button();
-            ButtonExcluir = new Button();
-            ButtonSalvar = new Button();
-            panel1.SuspendLayout();
+            panelSabores = new Panel();
+            lblFoto = new Label();
+            txtTipo = new TextBox();
+            txtCategoria = new TextBox();
+            lblCategoria = new Label();
+            lblTipo = new Label();
+            txtIngredientes = new TextBox();
+            lblIngredientes = new Label();
+            lblNome = new Label();
+            txtNome = new TextBox();
+            txtId = new TextBox();
+            lblId = new Label();
+            btnEditar = new Button();
+            btnExcluir = new Button();
+            btnSalvar = new Button();
+            pictureBoxFoto = new PictureBox();
+            panelSabores.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxFoto).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // panelSabores
             // 
-            panel1.BackColor = SystemColors.ActiveBorder;
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(textBox5);
-            panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(labelNomePizza);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(labelIdProutos);
-            panel1.Location = new Point(12, 12);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(776, 426);
-            panel1.TabIndex = 0;
+            panelSabores.BackColor = SystemColors.ActiveBorder;
+            panelSabores.Controls.Add(pictureBoxFoto);
+            panelSabores.Controls.Add(lblFoto);
+            panelSabores.Controls.Add(txtTipo);
+            panelSabores.Controls.Add(txtCategoria);
+            panelSabores.Controls.Add(lblCategoria);
+            panelSabores.Controls.Add(lblTipo);
+            panelSabores.Controls.Add(txtIngredientes);
+            panelSabores.Controls.Add(lblIngredientes);
+            panelSabores.Controls.Add(lblNome);
+            panelSabores.Controls.Add(txtNome);
+            panelSabores.Controls.Add(txtId);
+            panelSabores.Controls.Add(lblId);
+            panelSabores.Location = new Point(12, 12);
+            panelSabores.Name = "panelSabores";
+            panelSabores.Size = new Size(776, 426);
+            panelSabores.TabIndex = 0;
             // 
-            // labelIdProutos
+            // lblFoto
             // 
-            labelIdProutos.AutoSize = true;
-            labelIdProutos.Location = new Point(27, 10);
-            labelIdProutos.Name = "labelIdProutos";
-            labelIdProutos.Size = new Size(21, 15);
-            labelIdProutos.TabIndex = 0;
-            labelIdProutos.Text = "ID:";
-            labelIdProutos.Click += label1_Click;
+            lblFoto.AutoSize = true;
+            lblFoto.Location = new Point(22, 294);
+            lblFoto.Name = "lblFoto";
+            lblFoto.Size = new Size(38, 15);
+            lblFoto.TabIndex = 11;
+            lblFoto.Text = "FOTO:";
+            lblFoto.Click += label4_Click;
             // 
-            // textBox1
+            // txtTipo
             // 
-            textBox1.Location = new Point(27, 30);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(69, 23);
-            textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtTipo.Location = new Point(237, 169);
+            txtTipo.Multiline = true;
+            txtTipo.Name = "txtTipo";
+            txtTipo.Size = new Size(141, 112);
+            txtTipo.TabIndex = 9;
+            txtTipo.TextChanged += textBox5_TextChanged;
             // 
-            // textBox2
+            // txtCategoria
             // 
-            textBox2.Location = new Point(22, 104);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(405, 23);
-            textBox2.TabIndex = 2;
-            textBox2.TextChanged += textBox2_TextChanged;
+            txtCategoria.Location = new Point(22, 169);
+            txtCategoria.Multiline = true;
+            txtCategoria.Name = "txtCategoria";
+            txtCategoria.Size = new Size(141, 112);
+            txtCategoria.TabIndex = 8;
+            txtCategoria.TextChanged += textBox4_TextChanged;
             // 
-            // labelNomePizza
+            // lblCategoria
             // 
-            labelNomePizza.AutoSize = true;
-            labelNomePizza.Location = new Point(27, 86);
-            labelNomePizza.Name = "labelNomePizza";
-            labelNomePizza.Size = new Size(45, 15);
-            labelNomePizza.TabIndex = 3;
-            labelNomePizza.Text = "NOME:";
-            labelNomePizza.Click += labelNomePizza_Click;
+            lblCategoria.AutoSize = true;
+            lblCategoria.Location = new Point(22, 151);
+            lblCategoria.Name = "lblCategoria";
+            lblCategoria.Size = new Size(72, 15);
+            lblCategoria.TabIndex = 7;
+            lblCategoria.Text = "CATEGORIA:";
+            lblCategoria.Click += label3_Click;
             // 
-            // label1
+            // lblTipo
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(574, 10);
-            label1.Name = "label1";
-            label1.Size = new Size(84, 15);
-            label1.TabIndex = 4;
-            label1.Text = "INGREDIENTES";
+            lblTipo.AutoSize = true;
+            lblTipo.Location = new Point(237, 151);
+            lblTipo.Name = "lblTipo";
+            lblTipo.Size = new Size(35, 15);
+            lblTipo.TabIndex = 6;
+            lblTipo.Text = "TIPO:";
+            lblTipo.Click += label2_Click;
             // 
-            // textBox3
+            // txtIngredientes
             // 
-            textBox3.Location = new Point(574, 30);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(171, 358);
-            textBox3.TabIndex = 5;
+            txtIngredientes.Location = new Point(574, 30);
+            txtIngredientes.Multiline = true;
+            txtIngredientes.Name = "txtIngredientes";
+            txtIngredientes.Size = new Size(171, 358);
+            txtIngredientes.TabIndex = 5;
             // 
-            // label2
+            // lblIngredientes
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(237, 151);
-            label2.Name = "label2";
-            label2.Size = new Size(35, 15);
-            label2.TabIndex = 6;
-            label2.Text = "TIPO:";
-            label2.Click += label2_Click;
+            lblIngredientes.AutoSize = true;
+            lblIngredientes.Location = new Point(574, 10);
+            lblIngredientes.Name = "lblIngredientes";
+            lblIngredientes.Size = new Size(84, 15);
+            lblIngredientes.TabIndex = 4;
+            lblIngredientes.Text = "INGREDIENTES";
             // 
-            // label3
+            // lblNome
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(22, 151);
-            label3.Name = "label3";
-            label3.Size = new Size(72, 15);
-            label3.TabIndex = 7;
-            label3.Text = "CATEGORIA:";
-            label3.Click += label3_Click;
+            lblNome.AutoSize = true;
+            lblNome.Location = new Point(27, 86);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new Size(45, 15);
+            lblNome.TabIndex = 3;
+            lblNome.Text = "NOME:";
+            lblNome.Click += labelNomePizza_Click;
             // 
-            // textBox4
+            // txtNome
             // 
-            textBox4.Location = new Point(22, 169);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(141, 112);
-            textBox4.TabIndex = 8;
-            textBox4.TextChanged += textBox4_TextChanged;
+            txtNome.Location = new Point(22, 104);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(405, 23);
+            txtNome.TabIndex = 2;
+            txtNome.TextChanged += textBox2_TextChanged;
             // 
-            // textBox5
+            // txtId
             // 
-            textBox5.Location = new Point(237, 169);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(141, 112);
-            textBox5.TabIndex = 9;
-            textBox5.TextChanged += textBox5_TextChanged;
+            txtId.Location = new Point(27, 30);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(69, 23);
+            txtId.TabIndex = 1;
+            txtId.TextChanged += textBox1_TextChanged;
             // 
-            // panel2
+            // lblId
             // 
-            panel2.BackColor = SystemColors.ActiveCaption;
-            panel2.Location = new Point(22, 312);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(222, 111);
-            panel2.TabIndex = 10;
+            lblId.AutoSize = true;
+            lblId.Location = new Point(27, 10);
+            lblId.Name = "lblId";
+            lblId.Size = new Size(21, 15);
+            lblId.TabIndex = 0;
+            lblId.Text = "ID:";
+            lblId.Click += label1_Click;
             // 
-            // label4
+            // btnEditar
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(22, 294);
-            label4.Name = "label4";
-            label4.Size = new Size(38, 15);
-            label4.TabIndex = 11;
-            label4.Text = "FOTO:";
-            label4.Click += label4_Click;
+            btnEditar.BackColor = Color.CornflowerBlue;
+            btnEditar.Location = new Point(315, 454);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(75, 32);
+            btnEditar.TabIndex = 17;
+            btnEditar.Text = "EDITAR";
+            btnEditar.UseVisualStyleBackColor = false;
             // 
-            // ButtonEditar
+            // btnExcluir
             // 
-            ButtonEditar.BackColor = Color.CornflowerBlue;
-            ButtonEditar.Location = new Point(315, 454);
-            ButtonEditar.Name = "ButtonEditar";
-            ButtonEditar.Size = new Size(75, 32);
-            ButtonEditar.TabIndex = 17;
-            ButtonEditar.Text = "EDITAR";
-            ButtonEditar.UseVisualStyleBackColor = false;
+            btnExcluir.BackColor = Color.LightCoral;
+            btnExcluir.Location = new Point(415, 454);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(75, 32);
+            btnExcluir.TabIndex = 16;
+            btnExcluir.Text = "EXCLUIR";
+            btnExcluir.UseVisualStyleBackColor = false;
             // 
-            // ButtonExcluir
+            // btnSalvar
             // 
-            ButtonExcluir.BackColor = Color.LightCoral;
-            ButtonExcluir.Location = new Point(415, 454);
-            ButtonExcluir.Name = "ButtonExcluir";
-            ButtonExcluir.Size = new Size(75, 32);
-            ButtonExcluir.TabIndex = 16;
-            ButtonExcluir.Text = "EXCLUIR";
-            ButtonExcluir.UseVisualStyleBackColor = false;
+            btnSalvar.BackColor = Color.LimeGreen;
+            btnSalvar.Location = new Point(209, 454);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(75, 32);
+            btnSalvar.TabIndex = 15;
+            btnSalvar.Text = "SALVAR";
+            btnSalvar.UseVisualStyleBackColor = false;
             // 
-            // ButtonSalvar
+            // pictureBoxFoto
             // 
-            ButtonSalvar.BackColor = Color.LimeGreen;
-            ButtonSalvar.Location = new Point(209, 454);
-            ButtonSalvar.Name = "ButtonSalvar";
-            ButtonSalvar.Size = new Size(75, 32);
-            ButtonSalvar.TabIndex = 15;
-            ButtonSalvar.Text = "SALVAR";
-            ButtonSalvar.UseVisualStyleBackColor = false;
+            pictureBoxFoto.Location = new Point(27, 324);
+            pictureBoxFoto.Name = "pictureBoxFoto";
+            pictureBoxFoto.Size = new Size(209, 95);
+            pictureBoxFoto.TabIndex = 12;
+            pictureBoxFoto.TabStop = false;
             // 
-            // Form1
+            // FormSabores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 498);
-            Controls.Add(ButtonEditar);
-            Controls.Add(ButtonExcluir);
-            Controls.Add(ButtonSalvar);
-            Controls.Add(panel1);
-            Name = "Form1";
+            Controls.Add(btnEditar);
+            Controls.Add(btnExcluir);
+            Controls.Add(btnSalvar);
+            Controls.Add(panelSabores);
+            Name = "FormSabores";
             Text = "Form1";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panelSabores.ResumeLayout(false);
+            panelSabores.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxFoto).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private Label labelIdProutos;
-        private TextBox textBox4;
-        private Label label3;
-        private Label label2;
-        private TextBox textBox3;
-        private Label label1;
-        private Label labelNomePizza;
-        private Panel panel2;
-        private TextBox textBox5;
-        private Label label4;
-        private Button ButtonEditar;
-        private Button ButtonExcluir;
-        private Button ButtonSalvar;
+        private Panel panelSabores;
+        private TextBox txtNome;
+        private TextBox txtId;
+        private Label lblId;
+        private TextBox txtCategoria;
+        private Label lblCategoria;
+        private Label lblTipo;
+        private TextBox txtIngredientes;
+        private Label lblIngredientes;
+        private Label lblNome;
+        private TextBox txtTipo;
+        private Label lblFoto;
+        private Button btnEditar;
+        private Button btnExcluir;
+        private Button btnSalvar;
+        private PictureBox pictureBoxFoto;
     }
 }

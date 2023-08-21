@@ -30,40 +30,40 @@ partial class FormEndereco
     {
         components = new System.ComponentModel.Container();
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEndereco));
-        text_id = new TextBox();
+        txtId = new TextBox();
         errorProvider1 = new ErrorProvider(components);
         toolTip1 = new ToolTip(components);
-        lbl_id = new Label();
-        text_cep = new TextBox();
-        lbl_cep = new Label();
-        lbl_titulo_endereco = new Label();
-        panel_endereco = new Panel();
-        lbl_bairro = new Label();
-        text_bairro = new TextBox();
-        comboBox1 = new ComboBox();
-        label1 = new Label();
-        lbl_cidade = new Label();
-        box_cidade = new ComboBox();
-        box_pais = new ComboBox();
-        lbl_pais = new Label();
-        lbl_logradouro = new Label();
-        text_logradouro = new TextBox();
-        btn_salvar = new Button();
-        btn_edit = new Button();
-        btn_deletar = new Button();
-        btn_fechar = new Button();
+        lblId = new Label();
+        txtCep = new TextBox();
+        lblCep = new Label();
+        lblTituloEndereco = new Label();
+        panelEndereco = new Panel();
+        lblBairro = new Label();
+        txtBairro = new TextBox();
+        dropBoxUf = new ComboBox();
+        lblUf = new Label();
+        lblCidade = new Label();
+        dropBoxCidade = new ComboBox();
+        dropBoxPais = new ComboBox();
+        lblPais = new Label();
+        lblLogradouro = new Label();
+        txtLogradouro = new TextBox();
+        btnSalvar = new Button();
+        btnEditar = new Button();
+        btnDeletar = new Button();
+        btnFechar = new Button();
         contextMenuStrip1 = new ContextMenuStrip(components);
         ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
-        panel_endereco.SuspendLayout();
+        panelEndereco.SuspendLayout();
         SuspendLayout();
         // 
-        // text_id
+        // txtId
         // 
-        text_id.Location = new Point(28, 66);
-        text_id.Name = "text_id";
-        text_id.Size = new Size(127, 23);
-        text_id.TabIndex = 1;
-        toolTip1.SetToolTip(text_id, "Dados Incorretos");
+        txtId.Location = new Point(28, 66);
+        txtId.Name = "txtId";
+        txtId.Size = new Size(127, 27);
+        txtId.TabIndex = 1;
+        toolTip1.SetToolTip(txtId, "Dados Incorretos");
         // 
         // errorProvider1
         // 
@@ -75,260 +75,261 @@ partial class FormEndereco
         toolTip1.ToolTipIcon = ToolTipIcon.Warning;
         toolTip1.ToolTipTitle = "Goza burrinho";
         // 
-        // lbl_id
+        // lblId
         // 
-        lbl_id.AutoSize = true;
-        lbl_id.Location = new Point(28, 44);
-        lbl_id.Name = "lbl_id";
-        lbl_id.Size = new Size(23, 15);
-        lbl_id.TabIndex = 3;
-        lbl_id.Text = "ID:";
+        lblId.AutoSize = true;
+        lblId.Location = new Point(28, 44);
+        lblId.Name = "lblId";
+        lblId.Size = new Size(29, 20);
+        lblId.TabIndex = 3;
+        lblId.Text = "ID:";
         // 
-        // text_cep
+        // txtCep
         // 
-        text_cep.Location = new Point(214, 66);
-        text_cep.Name = "text_cep";
-        text_cep.Size = new Size(191, 23);
-        text_cep.TabIndex = 4;
+        txtCep.Location = new Point(214, 66);
+        txtCep.Name = "txtCep";
+        txtCep.Size = new Size(191, 27);
+        txtCep.TabIndex = 4;
         // 
-        // lbl_cep
+        // lblCep
         // 
-        lbl_cep.AutoSize = true;
-        lbl_cep.Location = new Point(214, 44);
-        lbl_cep.Name = "lbl_cep";
-        lbl_cep.Size = new Size(30, 15);
-        lbl_cep.TabIndex = 5;
-        lbl_cep.Text = "CEP:";
-        lbl_cep.Click += lbl_cep_Click;
+        lblCep.AutoSize = true;
+        lblCep.Location = new Point(214, 44);
+        lblCep.Name = "lblCep";
+        lblCep.Size = new Size(39, 20);
+        lblCep.TabIndex = 5;
+        lblCep.Text = "CEP:";
+        lblCep.Click += lbl_cep_Click;
         // 
-        // lbl_titulo_endereco
+        // lblTituloEndereco
         // 
-        lbl_titulo_endereco.AutoSize = true;
-        lbl_titulo_endereco.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
-        lbl_titulo_endereco.Location = new Point(20, 20);
-        lbl_titulo_endereco.Name = "lbl_titulo_endereco";
-        lbl_titulo_endereco.Size = new Size(296, 37);
-        lbl_titulo_endereco.TabIndex = 6;
-        lbl_titulo_endereco.Text = "Cadastro de Endereço";
+        lblTituloEndereco.AutoSize = true;
+        lblTituloEndereco.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+        lblTituloEndereco.Location = new Point(20, 20);
+        lblTituloEndereco.Name = "lblTituloEndereco";
+        lblTituloEndereco.Size = new Size(365, 46);
+        lblTituloEndereco.TabIndex = 6;
+        lblTituloEndereco.Text = "Cadastro de Endereço";
         // 
-        // panel_endereco
+        // panelEndereco
         // 
-        panel_endereco.BackColor = SystemColors.AppWorkspace;
-        panel_endereco.Controls.Add(lbl_bairro);
-        panel_endereco.Controls.Add(text_bairro);
-        panel_endereco.Controls.Add(comboBox1);
-        panel_endereco.Controls.Add(label1);
-        panel_endereco.Controls.Add(lbl_cidade);
-        panel_endereco.Controls.Add(box_cidade);
-        panel_endereco.Controls.Add(box_pais);
-        panel_endereco.Controls.Add(lbl_pais);
-        panel_endereco.Controls.Add(lbl_logradouro);
-        panel_endereco.Controls.Add(text_logradouro);
-        panel_endereco.Controls.Add(text_cep);
-        panel_endereco.Controls.Add(text_id);
-        panel_endereco.Controls.Add(lbl_cep);
-        panel_endereco.Controls.Add(lbl_id);
-        panel_endereco.Location = new Point(12, 69);
-        panel_endereco.Name = "panel_endereco";
-        panel_endereco.Size = new Size(776, 273);
-        panel_endereco.TabIndex = 7;
+        panelEndereco.BackColor = SystemColors.AppWorkspace;
+        panelEndereco.Controls.Add(lblBairro);
+        panelEndereco.Controls.Add(txtBairro);
+        panelEndereco.Controls.Add(dropBoxUf);
+        panelEndereco.Controls.Add(lblUf);
+        panelEndereco.Controls.Add(lblCidade);
+        panelEndereco.Controls.Add(dropBoxCidade);
+        panelEndereco.Controls.Add(dropBoxPais);
+        panelEndereco.Controls.Add(lblPais);
+        panelEndereco.Controls.Add(lblLogradouro);
+        panelEndereco.Controls.Add(txtLogradouro);
+        panelEndereco.Controls.Add(txtCep);
+        panelEndereco.Controls.Add(txtId);
+        panelEndereco.Controls.Add(lblCep);
+        panelEndereco.Controls.Add(lblId);
+        panelEndereco.Location = new Point(12, 69);
+        panelEndereco.Name = "panelEndereco";
+        panelEndereco.Size = new Size(776, 273);
+        panelEndereco.TabIndex = 7;
         // 
-        // lbl_bairro
+        // lblBairro
         // 
-        lbl_bairro.AutoSize = true;
-        lbl_bairro.Location = new Point(466, 180);
-        lbl_bairro.Name = "lbl_bairro";
-        lbl_bairro.Size = new Size(44, 15);
-        lbl_bairro.TabIndex = 16;
-        lbl_bairro.Text = "Bairro:";
+        lblBairro.AutoSize = true;
+        lblBairro.Location = new Point(466, 180);
+        lblBairro.Name = "lblBairro";
+        lblBairro.Size = new Size(56, 20);
+        lblBairro.TabIndex = 16;
+        lblBairro.Text = "Bairro:";
         // 
-        // text_bairro
+        // txtBairro
         // 
-        text_bairro.Location = new Point(466, 207);
-        text_bairro.Name = "text_bairro";
-        text_bairro.Size = new Size(257, 23);
-        text_bairro.TabIndex = 15;
+        txtBairro.Location = new Point(466, 207);
+        txtBairro.Name = "txtBairro";
+        txtBairro.Size = new Size(257, 27);
+        txtBairro.TabIndex = 15;
         // 
-        // comboBox1
+        // dropBoxUf
         // 
-        comboBox1.FormattingEnabled = true;
-        comboBox1.Location = new Point(466, 135);
-        comboBox1.Name = "comboBox1";
-        comboBox1.Size = new Size(257, 23);
-        comboBox1.TabIndex = 14;
+        dropBoxUf.FormattingEnabled = true;
+        dropBoxUf.Location = new Point(466, 135);
+        dropBoxUf.Name = "dropBoxUf";
+        dropBoxUf.Size = new Size(257, 28);
+        dropBoxUf.TabIndex = 14;
         // 
-        // label1
+        // lblUf
         // 
-        label1.AutoSize = true;
-        label1.Location = new Point(466, 103);
-        label1.Name = "label1";
-        label1.Size = new Size(25, 15);
-        label1.TabIndex = 13;
-        label1.Text = "UF:";
+        lblUf.AutoSize = true;
+        lblUf.Location = new Point(466, 103);
+        lblUf.Name = "lblUf";
+        lblUf.Size = new Size(32, 20);
+        lblUf.TabIndex = 13;
+        lblUf.Text = "UF:";
         // 
-        // lbl_cidade
+        // lblCidade
         // 
-        lbl_cidade.AutoSize = true;
-        lbl_cidade.Location = new Point(31, 189);
-        lbl_cidade.Name = "lbl_cidade";
-        lbl_cidade.Size = new Size(47, 15);
-        lbl_cidade.TabIndex = 12;
-        lbl_cidade.Text = "Cidade:";
+        lblCidade.AutoSize = true;
+        lblCidade.Location = new Point(31, 189);
+        lblCidade.Name = "lblCidade";
+        lblCidade.Size = new Size(60, 20);
+        lblCidade.TabIndex = 12;
+        lblCidade.Text = "Cidade:";
         // 
-        // box_cidade
+        // dropBoxCidade
         // 
-        box_cidade.FormattingEnabled = true;
-        box_cidade.Location = new Point(31, 207);
-        box_cidade.Name = "box_cidade";
-        box_cidade.Size = new Size(374, 23);
-        box_cidade.TabIndex = 11;
+        dropBoxCidade.FormattingEnabled = true;
+        dropBoxCidade.Location = new Point(31, 207);
+        dropBoxCidade.Name = "dropBoxCidade";
+        dropBoxCidade.Size = new Size(374, 28);
+        dropBoxCidade.TabIndex = 11;
         // 
-        // box_pais
+        // dropBoxPais
         // 
-        box_pais.FormattingEnabled = true;
-        box_pais.Location = new Point(31, 135);
-        box_pais.Name = "box_pais";
-        box_pais.Size = new Size(374, 23);
-        box_pais.TabIndex = 10;
-        box_pais.SelectedIndexChanged += lista_paises_SelectedIndexChanged;
+        dropBoxPais.FormattingEnabled = true;
+        dropBoxPais.Location = new Point(31, 135);
+        dropBoxPais.Name = "dropBoxPais";
+        dropBoxPais.Size = new Size(374, 28);
+        dropBoxPais.TabIndex = 10;
+        dropBoxPais.SelectedIndexChanged += lista_paises_SelectedIndexChanged;
         // 
-        // lbl_pais
+        // lblPais
         // 
-        lbl_pais.AutoSize = true;
-        lbl_pais.Location = new Point(31, 103);
-        lbl_pais.Name = "lbl_pais";
-        lbl_pais.Size = new Size(31, 15);
-        lbl_pais.TabIndex = 9;
-        lbl_pais.Text = "País:";
+        lblPais.AutoSize = true;
+        lblPais.Location = new Point(31, 103);
+        lblPais.Name = "lblPais";
+        lblPais.Size = new Size(41, 20);
+        lblPais.TabIndex = 9;
+        lblPais.Text = "País:";
         // 
-        // lbl_logradouro
+        // lblLogradouro
         // 
-        lbl_logradouro.AutoSize = true;
-        lbl_logradouro.Location = new Point(466, 44);
-        lbl_logradouro.Name = "lbl_logradouro";
-        lbl_logradouro.Size = new Size(74, 15);
-        lbl_logradouro.TabIndex = 8;
-        lbl_logradouro.Text = "Logradouro:";
+        lblLogradouro.AutoSize = true;
+        lblLogradouro.Location = new Point(466, 44);
+        lblLogradouro.Name = "lblLogradouro";
+        lblLogradouro.Size = new Size(95, 20);
+        lblLogradouro.TabIndex = 8;
+        lblLogradouro.Text = "Logradouro:";
         // 
-        // text_logradouro
+        // txtLogradouro
         // 
-        text_logradouro.Location = new Point(466, 66);
-        text_logradouro.Name = "text_logradouro";
-        text_logradouro.Size = new Size(257, 23);
-        text_logradouro.TabIndex = 6;
+        txtLogradouro.Location = new Point(466, 66);
+        txtLogradouro.Name = "txtLogradouro";
+        txtLogradouro.Size = new Size(257, 27);
+        txtLogradouro.TabIndex = 6;
         // 
-        // btn_salvar
+        // btnSalvar
         // 
-        btn_salvar.BackColor = Color.Green;
-        btn_salvar.ForeColor = Color.White;
-        btn_salvar.Image = (Image)resources.GetObject("btn_salvar.Image");
-        btn_salvar.ImageAlign = ContentAlignment.MiddleLeft;
-        btn_salvar.Location = new Point(12, 356);
-        btn_salvar.Name = "btn_salvar";
-        btn_salvar.Size = new Size(168, 70);
-        btn_salvar.TabIndex = 8;
-        btn_salvar.Text = "Salvar";
-        btn_salvar.TextAlign = ContentAlignment.MiddleLeft;
-        btn_salvar.TextImageRelation = TextImageRelation.ImageBeforeText;
-        btn_salvar.UseVisualStyleBackColor = false;
-        btn_salvar.Click += btn_salvar_Click;
+        btnSalvar.BackColor = Color.Green;
+        btnSalvar.ForeColor = Color.White;
+        btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
+        btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
+        btnSalvar.Location = new Point(12, 356);
+        btnSalvar.Name = "btnSalvar";
+        btnSalvar.Size = new Size(168, 70);
+        btnSalvar.TabIndex = 8;
+        btnSalvar.Text = "Salvar";
+        btnSalvar.TextAlign = ContentAlignment.MiddleLeft;
+        btnSalvar.TextImageRelation = TextImageRelation.ImageBeforeText;
+        btnSalvar.UseVisualStyleBackColor = false;
+        btnSalvar.Click += btn_salvar_Click;
         // 
-        // btn_edit
+        // btnEditar
         // 
-        btn_edit.BackColor = Color.FromArgb(0, 0, 192);
-        btn_edit.ForeColor = Color.White;
-        btn_edit.Image = (Image)resources.GetObject("btn_edit.Image");
-        btn_edit.ImageAlign = ContentAlignment.MiddleLeft;
-        btn_edit.Location = new Point(216, 356);
-        btn_edit.Name = "btn_edit";
-        btn_edit.Size = new Size(168, 70);
-        btn_edit.TabIndex = 9;
-        btn_edit.Text = "Editar";
-        btn_edit.TextAlign = ContentAlignment.MiddleLeft;
-        btn_edit.TextImageRelation = TextImageRelation.ImageBeforeText;
-        btn_edit.UseVisualStyleBackColor = false;
+        btnEditar.BackColor = Color.FromArgb(0, 0, 192);
+        btnEditar.ForeColor = Color.White;
+        btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
+        btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
+        btnEditar.Location = new Point(216, 356);
+        btnEditar.Name = "btnEditar";
+        btnEditar.Size = new Size(168, 70);
+        btnEditar.TabIndex = 9;
+        btnEditar.Text = "Editar";
+        btnEditar.TextAlign = ContentAlignment.MiddleLeft;
+        btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
+        btnEditar.UseVisualStyleBackColor = false;
         // 
-        // btn_deletar
+        // btnDeletar
         // 
-        btn_deletar.BackColor = Color.Maroon;
-        btn_deletar.ForeColor = Color.White;
-        btn_deletar.Image = (Image)resources.GetObject("btn_deletar.Image");
-        btn_deletar.ImageAlign = ContentAlignment.MiddleLeft;
-        btn_deletar.Location = new Point(416, 356);
-        btn_deletar.Name = "btn_deletar";
-        btn_deletar.Size = new Size(168, 70);
-        btn_deletar.TabIndex = 10;
-        btn_deletar.Text = "Deletar";
-        btn_deletar.TextAlign = ContentAlignment.MiddleLeft;
-        btn_deletar.TextImageRelation = TextImageRelation.ImageBeforeText;
-        btn_deletar.UseVisualStyleBackColor = false;
+        btnDeletar.BackColor = Color.Maroon;
+        btnDeletar.ForeColor = Color.White;
+        btnDeletar.Image = (Image)resources.GetObject("btnDeletar.Image");
+        btnDeletar.ImageAlign = ContentAlignment.MiddleLeft;
+        btnDeletar.Location = new Point(416, 356);
+        btnDeletar.Name = "btnDeletar";
+        btnDeletar.Size = new Size(168, 70);
+        btnDeletar.TabIndex = 10;
+        btnDeletar.Text = "Deletar";
+        btnDeletar.TextAlign = ContentAlignment.MiddleLeft;
+        btnDeletar.TextImageRelation = TextImageRelation.ImageBeforeText;
+        btnDeletar.UseVisualStyleBackColor = false;
         // 
-        // btn_fechar
+        // btnFechar
         // 
-        btn_fechar.BackColor = Color.Black;
-        btn_fechar.ForeColor = Color.White;
-        btn_fechar.Image = (Image)resources.GetObject("btn_fechar.Image");
-        btn_fechar.ImageAlign = ContentAlignment.MiddleLeft;
-        btn_fechar.Location = new Point(620, 356);
-        btn_fechar.Name = "btn_fechar";
-        btn_fechar.Size = new Size(168, 70);
-        btn_fechar.TabIndex = 11;
-        btn_fechar.Text = "Sair";
-        btn_fechar.TextAlign = ContentAlignment.MiddleLeft;
-        btn_fechar.TextImageRelation = TextImageRelation.ImageBeforeText;
-        btn_fechar.UseVisualStyleBackColor = false;
+        btnFechar.BackColor = Color.Black;
+        btnFechar.ForeColor = Color.White;
+        btnFechar.Image = (Image)resources.GetObject("btnFechar.Image");
+        btnFechar.ImageAlign = ContentAlignment.MiddleLeft;
+        btnFechar.Location = new Point(620, 356);
+        btnFechar.Name = "btnFechar";
+        btnFechar.Size = new Size(168, 70);
+        btnFechar.TabIndex = 11;
+        btnFechar.Text = "Fechar";
+        btnFechar.TextAlign = ContentAlignment.MiddleLeft;
+        btnFechar.TextImageRelation = TextImageRelation.ImageBeforeText;
+        btnFechar.UseVisualStyleBackColor = false;
         // 
         // contextMenuStrip1
         // 
+        contextMenuStrip1.ImageScalingSize = new Size(20, 20);
         contextMenuStrip1.Name = "contextMenuStrip1";
         contextMenuStrip1.Size = new Size(61, 4);
         // 
-        // form_endereco
+        // FormEndereco
         // 
-        AutoScaleDimensions = new SizeF(7F, 15F);
+        AutoScaleDimensions = new SizeF(9F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
-        Controls.Add(btn_fechar);
-        Controls.Add(btn_deletar);
-        Controls.Add(btn_edit);
-        Controls.Add(btn_salvar);
-        Controls.Add(panel_endereco);
-        Controls.Add(lbl_titulo_endereco);
+        Controls.Add(btnFechar);
+        Controls.Add(btnDeletar);
+        Controls.Add(btnEditar);
+        Controls.Add(btnSalvar);
+        Controls.Add(panelEndereco);
+        Controls.Add(lblTituloEndereco);
         Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
         FormBorderStyle = FormBorderStyle.FixedSingle;
-        Name = "form_endereco";
+        Name = "FormEndereco";
         Text = "Endereço";
         Load += form_endereco_Load;
         ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
-        panel_endereco.ResumeLayout(false);
-        panel_endereco.PerformLayout();
+        panelEndereco.ResumeLayout(false);
+        panelEndereco.PerformLayout();
         ResumeLayout(false);
         PerformLayout();
     }
 
     #endregion
 
-    private Label lbl_cidade;
-    private TextBox text_id;
-    private Button btn_salvar;
+    private Label lblCidade;
+    private TextBox txtId;
+    private Button btnSalvar;
     private ErrorProvider errorProvider1;
     private ToolTip toolTip1;
-    private Label lbl_id;
-    private TextBox text_cep;
-    private Label lbl_titulo_endereco;
-    private Label lbl_cep;
-    private TextBox text_bairro;
-    private Panel panel_endereco;
-    private Label lbl_logradouro;
-    private TextBox text_logradouro;
-    private Label lbl_pais;
-    private Button btn_deletar;
-    private Button btn_edit;
-    private Button btn_fechar;
-    private ComboBox box_pais;
-    private ComboBox box_cidade;
-    private Label lbl_bairro;
-    private ComboBox comboBox1;
-    private Label label1;
+    private Label lblId;
+    private TextBox txtCep;
+    private Label lblTituloEndereco;
+    private Label lblCep;
+    private TextBox txtBairro;
+    private Panel panelEndereco;
+    private Label lblLogradouro;
+    private TextBox txtLogradouro;
+    private Label lblPais;
+    private Button btnDeletar;
+    private Button btnEditar;
+    private Button btnFechar;
+    private ComboBox dropBoxPais;
+    private ComboBox dropBoxCidade;
+    private Label lblBairro;
+    private ComboBox dropBoxUf;
+    private Label lblUf;
     private ContextMenuStrip contextMenuStrip1;
 }
