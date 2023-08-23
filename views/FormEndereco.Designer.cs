@@ -69,12 +69,6 @@ partial class FormEndereco
         // 
         errorProvider1.ContainerControl = this;
         // 
-        // toolTip1
-        // 
-        toolTip1.IsBalloon = true;
-        toolTip1.ToolTipIcon = ToolTipIcon.Warning;
-        toolTip1.ToolTipTitle = "Goza burrinho";
-        // 
         // lblId
         // 
         lblId.AutoSize = true;
@@ -98,7 +92,7 @@ partial class FormEndereco
         lblCep.Name = "lblCep";
         lblCep.Size = new Size(39, 20);
         lblCep.TabIndex = 5;
-        lblCep.Text = "CEP:";
+        lblCep.Text = Properties.Resources.ResourceManager.GetString("CEP");
         lblCep.Click += lbl_cep_Click;
         // 
         // lblTituloEndereco
@@ -109,7 +103,7 @@ partial class FormEndereco
         lblTituloEndereco.Name = "lblTituloEndereco";
         lblTituloEndereco.Size = new Size(365, 46);
         lblTituloEndereco.TabIndex = 6;
-        lblTituloEndereco.Text = "Cadastro de Endereço";
+        lblTituloEndereco.Text = Properties.Resources.ResourceManager.GetString("Cadastro de Endereço");
         // 
         // panelEndereco
         // 
@@ -140,7 +134,7 @@ partial class FormEndereco
         lblBairro.Name = "lblBairro";
         lblBairro.Size = new Size(56, 20);
         lblBairro.TabIndex = 16;
-        lblBairro.Text = "Bairro:";
+        lblBairro.Text = Properties.Resources.ResourceManager.GetString("Bairro");
         // 
         // txtBairro
         // 
@@ -164,7 +158,7 @@ partial class FormEndereco
         lblUf.Name = "lblUf";
         lblUf.Size = new Size(32, 20);
         lblUf.TabIndex = 13;
-        lblUf.Text = "UF:";
+        lblUf.Text = Properties.Resources.ResourceManager.GetString("UF");
         // 
         // lblCidade
         // 
@@ -173,7 +167,7 @@ partial class FormEndereco
         lblCidade.Name = "lblCidade";
         lblCidade.Size = new Size(60, 20);
         lblCidade.TabIndex = 12;
-        lblCidade.Text = "Cidade:";
+        lblCidade.Text = Properties.Resources.ResourceManager.GetString("Cidade");
         // 
         // dropBoxCidade
         // 
@@ -199,7 +193,7 @@ partial class FormEndereco
         lblPais.Name = "lblPais";
         lblPais.Size = new Size(41, 20);
         lblPais.TabIndex = 9;
-        lblPais.Text = "País:";
+        lblPais.Text = Properties.Resources.ResourceManager.GetString("Pais");
         // 
         // lblLogradouro
         // 
@@ -208,7 +202,7 @@ partial class FormEndereco
         lblLogradouro.Name = "lblLogradouro";
         lblLogradouro.Size = new Size(95, 20);
         lblLogradouro.TabIndex = 8;
-        lblLogradouro.Text = "Logradouro:";
+        lblLogradouro.Text = Properties.Resources.ResourceManager.GetString("Logradouro");
         // 
         // txtLogradouro
         // 
@@ -227,7 +221,7 @@ partial class FormEndereco
         btnSalvar.Name = "btnSalvar";
         btnSalvar.Size = new Size(168, 70);
         btnSalvar.TabIndex = 8;
-        btnSalvar.Text = "Salvar";
+        btnSalvar.Text = Properties.Resources.ResourceManager.GetString("Salvar");
         btnSalvar.TextAlign = ContentAlignment.MiddleLeft;
         btnSalvar.TextImageRelation = TextImageRelation.ImageBeforeText;
         btnSalvar.UseVisualStyleBackColor = false;
@@ -243,7 +237,7 @@ partial class FormEndereco
         btnEditar.Name = "btnEditar";
         btnEditar.Size = new Size(168, 70);
         btnEditar.TabIndex = 9;
-        btnEditar.Text = "Editar";
+        btnEditar.Text = Properties.Resources.ResourceManager.GetString("Editar");
         btnEditar.TextAlign = ContentAlignment.MiddleLeft;
         btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
         btnEditar.UseVisualStyleBackColor = false;
@@ -258,7 +252,7 @@ partial class FormEndereco
         btnDeletar.Name = "btnDeletar";
         btnDeletar.Size = new Size(168, 70);
         btnDeletar.TabIndex = 10;
-        btnDeletar.Text = "Deletar";
+        btnDeletar.Text = Properties.Resources.ResourceManager.GetString("Excluir");
         btnDeletar.TextAlign = ContentAlignment.MiddleLeft;
         btnDeletar.TextImageRelation = TextImageRelation.ImageBeforeText;
         btnDeletar.UseVisualStyleBackColor = false;
@@ -273,7 +267,7 @@ partial class FormEndereco
         btnFechar.Name = "btnFechar";
         btnFechar.Size = new Size(168, 70);
         btnFechar.TabIndex = 11;
-        btnFechar.Text = "Fechar";
+        btnFechar.Text = Properties.Resources.ResourceManager.GetString("Fechar");
         btnFechar.TextAlign = ContentAlignment.MiddleLeft;
         btnFechar.TextImageRelation = TextImageRelation.ImageBeforeText;
         btnFechar.UseVisualStyleBackColor = false;
@@ -298,7 +292,7 @@ partial class FormEndereco
         Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
         FormBorderStyle = FormBorderStyle.FixedSingle;
         Name = "FormEndereco";
-        Text = "Endereço";
+        Text = Properties.Resources.ResourceManager.GetString("Endereço");
         Load += form_endereco_Load;
         ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
         panelEndereco.ResumeLayout(false);

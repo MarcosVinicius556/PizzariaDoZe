@@ -69,7 +69,7 @@
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(86, 43);
             btnSalvar.TabIndex = 0;
-            btnSalvar.Text = "SALVAR";
+            btnSalvar.Text = Properties.Resources.ResourceManager.GetString("Salvar");
             btnSalvar.UseVisualStyleBackColor = false;
             // 
             // lblId
@@ -96,7 +96,7 @@
             lblCpf.Name = "lblCpf";
             lblCpf.Size = new Size(36, 20);
             lblCpf.TabIndex = 3;
-            lblCpf.Text = "CPF:";
+            lblCpf.Text = Properties.Resources.ResourceManager.GetString("CPF");
             // 
             // lblMatricula
             // 
@@ -105,7 +105,7 @@
             lblMatricula.Name = "lblMatricula";
             lblMatricula.Size = new Size(91, 20);
             lblMatricula.TabIndex = 4;
-            lblMatricula.Text = "MATRICULA:";
+            lblMatricula.Text = Properties.Resources.ResourceManager.GetString("Matricula");
             // 
             // labelNomeFuncionario
             // 
@@ -114,7 +114,7 @@
             labelNomeFuncionario.Name = "labelNomeFuncionario";
             labelNomeFuncionario.Size = new Size(55, 20);
             labelNomeFuncionario.TabIndex = 5;
-            labelNomeFuncionario.Text = "NOME:";
+            labelNomeFuncionario.Text = Properties.Resources.ResourceManager.GetString("Nome");
             // 
             // lblTelefone
             // 
@@ -123,7 +123,7 @@
             lblTelefone.Name = "lblTelefone";
             lblTelefone.Size = new Size(80, 20);
             lblTelefone.TabIndex = 6;
-            lblTelefone.Text = "TELEFONE:";
+            lblTelefone.Text = Properties.Resources.ResourceManager.GetString("Telefone");
             // 
             // labelEmail
             // 
@@ -132,7 +132,7 @@
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(60, 20);
             labelEmail.TabIndex = 7;
-            labelEmail.Text = "E-MAIL:";
+            labelEmail.Text = Properties.Resources.ResourceManager.GetString("Email");
             // 
             // labelCnh
             // 
@@ -141,7 +141,7 @@
             labelCnh.Name = "labelCnh";
             labelCnh.Size = new Size(40, 20);
             labelCnh.TabIndex = 8;
-            labelCnh.Text = "CNH";
+            labelCnh.Text = Properties.Resources.ResourceManager.GetString("CNH");
             // 
             // lblValidade
             // 
@@ -150,7 +150,7 @@
             lblValidade.Name = "lblValidade";
             lblValidade.Size = new Size(81, 20);
             lblValidade.TabIndex = 9;
-            lblValidade.Text = "VALIDADE:";
+            lblValidade.Text = Properties.Resources.ResourceManager.GetString("Validade");
             lblValidade.Click += LabelValidade_Click;
             // 
             // lblSenha
@@ -160,7 +160,7 @@
             lblSenha.Name = "lblSenha";
             lblSenha.Size = new Size(60, 20);
             lblSenha.TabIndex = 10;
-            lblSenha.Text = "SENHA:";
+            lblSenha.Text = Properties.Resources.ResourceManager.GetString("Senha");
             // 
             // panelFuncionarios
             // 
@@ -201,7 +201,7 @@
             lblFuncionarios.Name = "lblFuncionarios";
             lblFuncionarios.Size = new Size(194, 20);
             lblFuncionarios.TabIndex = 25;
-            lblFuncionarios.Text = "CADASTRO FUNCIONARIOS";
+            lblFuncionarios.Text = Properties.Resources.ResourceManager.GetString("Cadastro de Funcionários");
             lblFuncionarios.Click += label2_Click;
             // 
             // txtTelefone
@@ -239,7 +239,7 @@
             lblObs.Name = "lblObs";
             lblObs.Size = new Size(105, 20);
             lblObs.TabIndex = 22;
-            lblObs.Text = "OBSERVAÇÃO:";
+            lblObs.Text = Properties.Resources.ResourceManager.GetString("Observação");
             // 
             // txtObs
             // 
@@ -314,7 +314,7 @@
             radioEntregador.Size = new Size(128, 24);
             radioEntregador.TabIndex = 14;
             radioEntregador.TabStop = true;
-            radioEntregador.Text = "ENTREGADOR:";
+            radioEntregador.Text = Properties.Resources.ResourceManager.GetString("Entregador");
             radioEntregador.UseVisualStyleBackColor = true;
             radioEntregador.CheckedChanged += radioButton3_CheckedChanged;
             // 
@@ -327,7 +327,7 @@
             radioAtendente.Size = new Size(115, 24);
             radioAtendente.TabIndex = 13;
             radioAtendente.TabStop = true;
-            radioAtendente.Text = "ATENDENTE:";
+            radioAtendente.Text = Properties.Resources.ResourceManager.GetString("Atendente");
             radioAtendente.UseVisualStyleBackColor = true;
             radioAtendente.CheckedChanged += radioButton2_CheckedChanged;
             // 
@@ -340,7 +340,7 @@
             radioAdministrador.Size = new Size(152, 24);
             radioAdministrador.TabIndex = 12;
             radioAdministrador.TabStop = true;
-            radioAdministrador.Text = "ADMINISTRADOR:";
+            radioAdministrador.Text = Properties.Resources.ResourceManager.GetString("Administrador");
             radioAdministrador.UseVisualStyleBackColor = true;
             radioAdministrador.CheckedChanged += radioButton1_CheckedChanged;
             // 
@@ -352,7 +352,7 @@
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(86, 43);
             btnExcluir.TabIndex = 13;
-            btnExcluir.Text = "EXCLUIR";
+            btnExcluir.Text = Properties.Resources.ResourceManager.GetString("Excluir");
             btnExcluir.UseVisualStyleBackColor = false;
             // 
             // btnEditar
@@ -363,7 +363,7 @@
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(86, 43);
             btnEditar.TabIndex = 14;
-            btnEditar.Text = "EDITAR";
+            btnEditar.Text = Properties.Resources.ResourceManager.GetString("Editar");
             btnEditar.UseVisualStyleBackColor = false;
             // 
             // FormFuncionario

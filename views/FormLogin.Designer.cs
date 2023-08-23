@@ -47,7 +47,7 @@
             btnEntrar.Name = "btnEntrar";
             btnEntrar.Size = new Size(156, 43);
             btnEntrar.TabIndex = 0;
-            btnEntrar.Text = "Entrar";
+            btnEntrar.Text = Properties.Resources.ResourceManager.GetString("Entrar");
             btnEntrar.UseVisualStyleBackColor = false;
             btnEntrar.Click += btnEntrar_Click;
             // 
@@ -87,7 +87,7 @@
             lblSenha.Name = "lblSenha";
             lblSenha.Size = new Size(42, 15);
             lblSenha.TabIndex = 4;
-            lblSenha.Text = "Senha:";
+            lblSenha.Text = Properties.Resources.ResourceManager.GetString("Senha");
             // 
             // panelLogin
             // 

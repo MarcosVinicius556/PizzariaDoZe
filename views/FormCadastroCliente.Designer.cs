@@ -64,7 +64,7 @@
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(86, 43);
             btnSalvar.TabIndex = 0;
-            btnSalvar.Text = "SALVAR";
+            btnSalvar.Text = Properties.Resources.ResourceManager.GetString("Salvar");
             btnSalvar.UseVisualStyleBackColor = false;
             // 
             // lblId
@@ -91,7 +91,7 @@
             lblCpf.Name = "lblCpf";
             lblCpf.Size = new Size(36, 20);
             lblCpf.TabIndex = 3;
-            lblCpf.Text = "CPF:";
+            lblCpf.Text = Properties.Resources.ResourceManager.GetString("CPF");
             // 
             // lblMatricula
             // 
@@ -100,7 +100,7 @@
             lblMatricula.Name = "lblMatricula";
             lblMatricula.Size = new Size(91, 20);
             lblMatricula.TabIndex = 4;
-            lblMatricula.Text = "MATRICULA:";
+            lblMatricula.Text = Properties.Resources.ResourceManager.GetString("Matricula");
             // 
             // lblNome
             // 
@@ -109,7 +109,7 @@
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(55, 20);
             lblNome.TabIndex = 5;
-            lblNome.Text = "NOME:";
+            lblNome.Text = Properties.Resources.ResourceManager.GetString("Nome");
             // 
             // lblTelefone
             // 
@@ -118,7 +118,7 @@
             lblTelefone.Name = "lblTelefone";
             lblTelefone.Size = new Size(80, 20);
             lblTelefone.TabIndex = 6;
-            lblTelefone.Text = "TELEFONE:";
+            lblTelefone.Text = Properties.Resources.ResourceManager.GetString("Telefone");
             // 
             // lblEmail
             // 
@@ -127,7 +127,7 @@
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(60, 20);
             lblEmail.TabIndex = 7;
-            lblEmail.Text = "E-MAIL:";
+            lblEmail.Text = Properties.Resources.ResourceManager.GetString("Email");
             // 
             // lblCnh
             // 
@@ -136,7 +136,7 @@
             lblCnh.Name = "lblCnh";
             lblCnh.Size = new Size(43, 20);
             lblCnh.TabIndex = 8;
-            lblCnh.Text = "CNH:";
+            lblCnh.Text = Properties.Resources.ResourceManager.GetString("CNH");
             // 
             // lblValidade
             // 
@@ -145,7 +145,7 @@
             lblValidade.Name = "lblValidade";
             lblValidade.Size = new Size(81, 20);
             lblValidade.TabIndex = 9;
-            lblValidade.Text = "VALIDADE:";
+            lblValidade.Text = Properties.Resources.ResourceManager.GetString("Validade");
             lblValidade.Click += LabelValidade_Click;
             // 
             // lblSenha
@@ -155,7 +155,7 @@
             lblSenha.Name = "lblSenha";
             lblSenha.Size = new Size(60, 20);
             lblSenha.TabIndex = 10;
-            lblSenha.Text = "SENHA:";
+            lblSenha.Text = Properties.Resources.ResourceManager.GetString("Senha");
             // 
             // panelClientes
             // 
@@ -195,7 +195,7 @@
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(152, 20);
             lblTitulo.TabIndex = 25;
-            lblTitulo.Text = "CADASTRO CLIENTES";
+            lblTitulo.Text = Properties.Resources.ResourceManager.GetString("Cadastro Cliente");
             lblTitulo.Click += label2_Click;
             // 
             // txtTelefone
@@ -233,7 +233,7 @@
             lblObs.Name = "lblObs";
             lblObs.Size = new Size(105, 20);
             lblObs.TabIndex = 22;
-            lblObs.Text = "OBSERVAÇÃO:";
+            lblObs.Text = Properties.Resources.ResourceManager.GetString("Observação");
             // 
             // txtObs
             // 
@@ -293,7 +293,7 @@
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(86, 43);
             btnExcluir.TabIndex = 13;
-            btnExcluir.Text = "EXCLUIR";
+            btnExcluir.Text = Properties.Resources.ResourceManager.GetString("Excluir");
             btnExcluir.UseVisualStyleBackColor = false;
             // 
             // btnEditar
@@ -304,7 +304,7 @@
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(86, 43);
             btnEditar.TabIndex = 14;
-            btnEditar.Text = "EDITAR";
+            btnEditar.Text = Properties.Resources.ResourceManager.GetString("Editar");
             btnEditar.UseVisualStyleBackColor = false;
             // 
             // FormCadastroCliente

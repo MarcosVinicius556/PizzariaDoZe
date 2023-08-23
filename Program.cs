@@ -1,4 +1,5 @@
 using PizzariaDoZe.views;
+using System.Globalization;
 
 namespace PizzariaDoZe
 {
@@ -7,6 +8,12 @@ namespace PizzariaDoZe
         [STAThread]
         static void Main()
         {
+            string lang = "en-US";
+            //ajusta o idioma/região
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(lang);
+
+
             ApplicationConfiguration.Initialize();
 
             Application.Run(new FormLogin());

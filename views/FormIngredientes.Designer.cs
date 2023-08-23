@@ -53,7 +53,7 @@
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(192, 93);
             btnSalvar.TabIndex = 9;
-            btnSalvar.Text = "Salvar";
+            btnSalvar.Text = Properties.Resources.ResourceManager.GetString("Salvar");
             btnSalvar.TextAlign = ContentAlignment.MiddleLeft;
             btnSalvar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSalvar.UseVisualStyleBackColor = false;
@@ -69,7 +69,7 @@
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(192, 93);
             btnEditar.TabIndex = 10;
-            btnEditar.Text = "Editar";
+            btnEditar.Text = Properties.Resources.ResourceManager.GetString("Editar");
             btnEditar.TextAlign = ContentAlignment.MiddleLeft;
             btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnEditar.UseVisualStyleBackColor = false;
@@ -85,7 +85,7 @@
             btnDeletar.Name = "btnDeletar";
             btnDeletar.Size = new Size(192, 93);
             btnDeletar.TabIndex = 11;
-            btnDeletar.Text = "Deletar";
+            btnDeletar.Text = Properties.Resources.ResourceManager.GetString("Excluir");
             btnDeletar.TextAlign = ContentAlignment.MiddleLeft;
             btnDeletar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnDeletar.UseVisualStyleBackColor = false;
@@ -101,7 +101,7 @@
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(192, 93);
             btnFechar.TabIndex = 12;
-            btnFechar.Text = "Fechar";
+            btnFechar.Text = Properties.Resources.ResourceManager.GetString("Fechar");
             btnFechar.TextAlign = ContentAlignment.MiddleLeft;
             btnFechar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnFechar.UseVisualStyleBackColor = false;
@@ -114,7 +114,7 @@
             lblCadastroIngredientes.Name = "lblCadastroIngredientes";
             lblCadastroIngredientes.Size = new Size(473, 57);
             lblCadastroIngredientes.TabIndex = 13;
-            lblCadastroIngredientes.Text = "Cadastrar Ingredientes";
+            lblCadastroIngredientes.Text = Properties.Resources.ResourceManager.GetString("Cadastrar Ingredientes");
             // 
             // textId
             // 
@@ -150,7 +150,7 @@
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(53, 20);
             lblNome.TabIndex = 17;
-            lblNome.Text = "Nome:";
+            lblNome.Text = Properties.Resources.ResourceManager.GetString("Nome");
             // 
             // panelIngredientes
             // 
@@ -178,7 +178,7 @@
             Controls.Add(btnSalvar);
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormIngredientes";
-            Text = "Ingredientes";
+            Text = Properties.Resources.ResourceManager.GetString("Ingredientes");
             panelIngredientes.ResumeLayout(false);
             panelIngredientes.PerformLayout();
             ResumeLayout(false);

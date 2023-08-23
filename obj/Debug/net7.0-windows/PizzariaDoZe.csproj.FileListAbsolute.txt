@@ -59,3 +59,13 @@ C:\Users\is-4\source\repos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.ge
 C:\Users\is-4\source\repos\PizzariaDoZe\obj\Debug\net7.0-windows\ref\PizzariaDoZe.dll
 C:\Users\is-4\source\repos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.views.FormProdutos.resources
 C:\Users\is-4\source\repos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.views.FormValores.resources
+C:\Users\55949\Documents\projetos\PizzariaDoZe\bin\Debug\net7.0-windows\en-US\PizzariaDoZe.resources.dll
+C:\Users\55949\Documents\projetos\PizzariaDoZe\bin\Debug\net7.0-windows\es\PizzariaDoZe.resources.dll
+C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.Properties.Resources.resources
+C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.views.FormCadastroCliente.resources
+C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.views.FormProdutos.resources
+C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.views.FormValores.resources
+C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.Properties.Resources.en-US.resources
+C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.Properties.Resources.es.resources
+C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\en-US\PizzariaDoZe.resources.dll
+C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\es\PizzariaDoZe.resources.dll

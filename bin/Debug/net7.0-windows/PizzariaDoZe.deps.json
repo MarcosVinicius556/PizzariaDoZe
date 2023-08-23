@@ -9,6 +9,14 @@
       "PizzariaDoZe/1.0.0": {
         "runtime": {
           "PizzariaDoZe.dll": {}
+        },
+        "resources": {
+          "en-US/PizzariaDoZe.resources.dll": {
+            "locale": "en-US"
+          },
+          "es/PizzariaDoZe.resources.dll": {
+            "locale": "es"
+          }
         }
       }
     }

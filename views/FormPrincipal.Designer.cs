@@ -69,7 +69,7 @@
             // 
             // ColumnId
             // 
-            ColumnId.HeaderText = "Código";
+            ColumnId.HeaderText = Properties.Resources.ResourceManager.GetString("Código");
             ColumnId.MinimumWidth = 6;
             ColumnId.Name = "ColumnId";
             ColumnId.ReadOnly = true;
@@ -77,7 +77,7 @@
             // 
             // ColumnDescription
             // 
-            ColumnDescription.HeaderText = "Descrição";
+            ColumnDescription.HeaderText = Properties.Resources.ResourceManager.GetString("Descrição");
             ColumnDescription.MinimumWidth = 6;
             ColumnDescription.Name = "ColumnDescription";
             ColumnDescription.ReadOnly = true;
@@ -85,7 +85,7 @@
             // 
             // ColumnValue
             // 
-            ColumnValue.HeaderText = "Valor";
+            ColumnValue.HeaderText = Properties.Resources.ResourceManager.GetString("Valor");
             ColumnValue.MinimumWidth = 6;
             ColumnValue.Name = "ColumnValue";
             ColumnValue.ReadOnly = true;
@@ -110,7 +110,7 @@
             buttonSearch.Name = "buttonSearch";
             buttonSearch.Size = new Size(86, 55);
             buttonSearch.TabIndex = 1;
-            buttonSearch.Text = "Buscar";
+            buttonSearch.Text = Properties.Resources.ResourceManager.GetString("Buscar");
             buttonSearch.UseVisualStyleBackColor = true;
             // 
             // textBoxSearch
