@@ -1,4 +1,6 @@
-﻿namespace PizzariaDoZe.views
+﻿using System.Runtime.CompilerServices;
+
+namespace PizzariaDoZe.views
 {
     partial class FormSabores
     {
@@ -29,7 +31,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            this.lblFoto = new Label();
+            this.pictureBoxFoto = new PictureBox();
             txtTipo = new TextBox();
             txtCategoria = new TextBox();
             lblCategoria = new Label();
@@ -52,7 +54,7 @@
             // 
             panel1.BackColor = SystemColors.ActiveBorder;
             panel1.Controls.Add(pictureBoxFoto);
-            panel1.Controls.Add(this.lblFoto);
+            panel1.Controls.Add(this.pictureBoxFoto);
             panel1.Controls.Add(txtTipo);
             panel1.Controls.Add(txtCategoria);
             panel1.Controls.Add(lblCategoria);
@@ -70,13 +72,13 @@
             // 
             // lblFoto
             // 
-            this.lblFoto.AutoSize = true;
-            this.lblFoto.Location = new Point(22, 294);
-            this.lblFoto.Name = "lblFoto";
-            this.lblFoto.Size = new Size(38, 15);
-            this.lblFoto.TabIndex = 11;
-            this.lblFoto.Text = "FOTO:";
-            this.lblFoto.Click += this.label4_Click;
+            this.pictureBoxFoto.AutoSize = true;
+            this.pictureBoxFoto.Location = new Point(22, 294);
+            this.pictureBoxFoto.Name = "lblFoto";
+            this.pictureBoxFoto.Size = new Size(38, 15);
+            this.pictureBoxFoto.TabIndex = 11;
+            this.pictureBoxFoto.Text = "FOTO:";
+            this.pictureBoxFoto.Click += this.label4_Click;
             // 
             // txtTipo
             // 
@@ -238,9 +240,11 @@
         private Label lblNome;
         private Panel panel2;
         private Label label4;
-        private Button ButtonEditar;
-        private Button ButtonExcluir;
         private Button btnSalvar;
-        //private PictureBox pictureBoxFoto;
+        private TextBox txtIngredientes;
+        private PictureBox pictureBoxFoto;
+        private Label lblIngredientes;
+        private Button btnEditar;
+        private Button btnExcluir;
     }
 }
