@@ -58,7 +58,7 @@
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(110, 33);
             btnFechar.TabIndex = 27;
-            btnFechar.Text = "Fechar";
+            btnFechar.Text = Properties.Resources.ResourceManager.GetString("Fechar");
             btnFechar.UseVisualStyleBackColor = false;
             // 
             // btnExcluir
@@ -69,7 +69,7 @@
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(110, 33);
             btnExcluir.TabIndex = 26;
-            btnExcluir.Text = "Excluir";
+            btnExcluir.Text = Properties.Resources.ResourceManager.GetString("Excluir");
             btnExcluir.UseVisualStyleBackColor = false;
             // 
             // btnEditar
@@ -80,7 +80,7 @@
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(110, 33);
             btnEditar.TabIndex = 25;
-            btnEditar.Text = "Editar";
+            btnEditar.Text = Properties.Resources.ResourceManager.GetString("Editar");
             btnEditar.UseVisualStyleBackColor = false;
             // 
             // btnSalvar
@@ -93,7 +93,7 @@
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(110, 33);
             btnSalvar.TabIndex = 24;
-            btnSalvar.Text = "Salvar";
+            btnSalvar.Text = Properties.Resources.ResourceManager.GetString("Salvar");
             btnSalvar.UseVisualStyleBackColor = false;
             // 
             // lblCategoria
@@ -103,7 +103,7 @@
             lblCategoria.Name = "lblCategoria";
             lblCategoria.Size = new Size(61, 15);
             lblCategoria.TabIndex = 23;
-            lblCategoria.Text = "Categoria:";
+            lblCategoria.Text = Properties.Resources.ResourceManager.GetString("Categoria");
             // 
             // lblTamanho
             // 
@@ -112,7 +112,7 @@
             lblTamanho.Name = "lblTamanho";
             lblTamanho.Size = new Size(59, 15);
             lblTamanho.TabIndex = 22;
-            lblTamanho.Text = "Tamanho:";
+            lblTamanho.Text = Properties.Resources.ResourceManager.GetString("tamanho");
             // 
             // txtCategoria
             // 
@@ -141,7 +141,7 @@
             lblAdicionalBorda.Name = "lblAdicionalBorda";
             lblAdicionalBorda.Size = new Size(121, 15);
             lblAdicionalBorda.TabIndex = 19;
-            lblAdicionalBorda.Text = "Valor adicional borda:";
+            lblAdicionalBorda.Text = Properties.Resources.ResourceManager.GetString("Valor Adicional Borda");
             // 
             // lblValor
             // 
@@ -150,7 +150,7 @@
             lblValor.Name = "lblValor";
             lblValor.Size = new Size(36, 15);
             lblValor.TabIndex = 18;
-            lblValor.Text = "Valor:";
+            lblValor.Text = Properties.Resources.ResourceManager.GetString("Valor");
             // 
             // txtAdicionalBorda
             // 

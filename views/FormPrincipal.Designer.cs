@@ -152,7 +152,7 @@
             buttonRegisterOrders.Name = "buttonRegisterOrders";
             buttonRegisterOrders.Size = new Size(215, 64);
             buttonRegisterOrders.TabIndex = 7;
-            buttonRegisterOrders.Text = "Pedidos";
+            buttonRegisterOrders.Text = Properties.Resources.ResourceManager.GetString("Pedidos");
             buttonRegisterOrders.UseVisualStyleBackColor = true;
             buttonRegisterOrders.Click += ButtonRegisterOrders_Click;
             // 
@@ -163,7 +163,7 @@
             RegisterProducts.Name = "RegisterProducts";
             RegisterProducts.Size = new Size(215, 64);
             RegisterProducts.TabIndex = 6;
-            RegisterProducts.Text = "Produtos";
+            RegisterProducts.Text = Properties.Resources.ResourceManager.GetString("Produtos");
             RegisterProducts.UseVisualStyleBackColor = true;
             RegisterProducts.Click += RegisterProducts_Click;
             // 
@@ -174,7 +174,7 @@
             buttonPizzaValues.Name = "buttonPizzaValues";
             buttonPizzaValues.Size = new Size(215, 64);
             buttonPizzaValues.TabIndex = 5;
-            buttonPizzaValues.Text = "Valores Pizza";
+            buttonPizzaValues.Text = Properties.Resources.ResourceManager.GetString("Valores Pizza");
             buttonPizzaValues.UseVisualStyleBackColor = true;
             buttonPizzaValues.Click += ButtonPizzaValues_Click;
             // 
@@ -185,7 +185,7 @@
             buttonRegisterFlavors.Name = "buttonRegisterFlavors";
             buttonRegisterFlavors.Size = new Size(215, 64);
             buttonRegisterFlavors.TabIndex = 4;
-            buttonRegisterFlavors.Text = "Sabores";
+            buttonRegisterFlavors.Text = Properties.Resources.ResourceManager.GetString("Sabores");
             buttonRegisterFlavors.UseVisualStyleBackColor = true;
             buttonRegisterFlavors.Click += ButtonRegisterFlavors_Click;
             // 
@@ -196,7 +196,7 @@
             buttonRegisterIngredients.Name = "buttonRegisterIngredients";
             buttonRegisterIngredients.Size = new Size(215, 64);
             buttonRegisterIngredients.TabIndex = 3;
-            buttonRegisterIngredients.Text = "Ingredientes";
+            buttonRegisterIngredients.Text = Properties.Resources.ResourceManager.GetString("Ingredientes");
             buttonRegisterIngredients.UseVisualStyleBackColor = true;
             buttonRegisterIngredients.Click += ButtonRegisterIngredients_Click;
             // 
@@ -207,7 +207,7 @@
             buttonRegisterClient.Name = "buttonRegisterClient";
             buttonRegisterClient.Size = new Size(215, 64);
             buttonRegisterClient.TabIndex = 2;
-            buttonRegisterClient.Text = "Clientes";
+            buttonRegisterClient.Text = Properties.Resources.ResourceManager.GetString("Clientes");
             buttonRegisterClient.UseVisualStyleBackColor = true;
             buttonRegisterClient.Click += ButtonRegisterClient_Click;
             // 
@@ -218,7 +218,7 @@
             buttonRegisterEmployees.Name = "buttonRegisterEmployees";
             buttonRegisterEmployees.Size = new Size(215, 64);
             buttonRegisterEmployees.TabIndex = 1;
-            buttonRegisterEmployees.Text = "Funcionários";
+            buttonRegisterEmployees.Text = Properties.Resources.ResourceManager.GetString("Funcionários");
             buttonRegisterEmployees.UseVisualStyleBackColor = true;
             buttonRegisterEmployees.Click += Employees_Click;
             // 
@@ -229,7 +229,7 @@
             buttonAdressRegister.Name = "buttonAdressRegister";
             buttonAdressRegister.Size = new Size(215, 64);
             buttonAdressRegister.TabIndex = 0;
-            buttonAdressRegister.Text = "Endereço";
+            buttonAdressRegister.Text = Properties.Resources.ResourceManager.GetString("Endereço");
             buttonAdressRegister.UseVisualStyleBackColor = true;
             buttonAdressRegister.Click += AdressClick_Click;
             // 
@@ -259,7 +259,7 @@
             buttonConfirm.Name = "buttonConfirm";
             buttonConfirm.Size = new Size(98, 35);
             buttonConfirm.TabIndex = 1;
-            buttonConfirm.Text = "Finalizar";
+            buttonConfirm.Text = Properties.Resources.ResourceManager.GetString("Finalizar");
             buttonConfirm.UseVisualStyleBackColor = true;
             // 
             // buttonPrint
@@ -269,7 +269,7 @@
             buttonPrint.Name = "buttonPrint";
             buttonPrint.Size = new Size(98, 35);
             buttonPrint.TabIndex = 0;
-            buttonPrint.Text = "Imprimir";
+            buttonPrint.Text = Properties.Resources.ResourceManager.GetString("Imprimir");
             buttonPrint.UseVisualStyleBackColor = true;
             // 
             // panelInf

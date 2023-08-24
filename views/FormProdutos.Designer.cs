@@ -95,7 +95,7 @@
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(43, 15);
             lblNome.TabIndex = 4;
-            lblNome.Text = "Nome:";
+            lblNome.Text = Properties.Resources.ResourceManager.GetString("Nome");
             // 
             // lblValor
             // 
@@ -104,7 +104,7 @@
             lblValor.Name = "lblValor";
             lblValor.Size = new Size(36, 15);
             lblValor.TabIndex = 5;
-            lblValor.Text = "Valor:";
+            lblValor.Text = Properties.Resources.ResourceManager.GetString("Valor");
             // 
             // groupBoxTipo
             // 
@@ -133,7 +133,7 @@
             lblTipo.Name = "lblTipo";
             lblTipo.Size = new Size(33, 15);
             lblTipo.TabIndex = 8;
-            lblTipo.Text = "Tipo:";
+            lblTipo.Text = Properties.Resources.ResourceManager.GetString("Tipo");
             // 
             // lblMl
             // 
@@ -142,7 +142,7 @@
             lblMl.Name = "lblMl";
             lblMl.Size = new Size(27, 15);
             lblMl.TabIndex = 9;
-            lblMl.Text = "ML:";
+            lblMl.Text = Properties.Resources.ResourceManager.GetString("ML");
             // 
             // btnFechar
             // 
@@ -152,7 +152,7 @@
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(110, 33);
             btnFechar.TabIndex = 31;
-            btnFechar.Text = "Fechar";
+            btnFechar.Text = Properties.Resources.ResourceManager.GetString("Fechar");
             btnFechar.UseVisualStyleBackColor = false;
             // 
             // btnExcluir
@@ -163,7 +163,7 @@
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(110, 33);
             btnExcluir.TabIndex = 30;
-            btnExcluir.Text = "Excluir";
+            btnExcluir.Text = Properties.Resources.ResourceManager.GetString("Excluir");
             btnExcluir.UseVisualStyleBackColor = false;
             // 
             // btnEditar
@@ -174,7 +174,7 @@
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(110, 33);
             btnEditar.TabIndex = 29;
-            btnEditar.Text = "Editar";
+            btnEditar.Text = Properties.Resources.ResourceManager.GetString("Editar");
             btnEditar.UseVisualStyleBackColor = false;
             // 
             // btnSalvar
@@ -185,7 +185,7 @@
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(110, 33);
             btnSalvar.TabIndex = 28;
-            btnSalvar.Text = "Salvar";
+            btnSalvar.Text = Properties.Resources.ResourceManager.GetString("Salvar");
             btnSalvar.UseVisualStyleBackColor = false;
             // 
             // FormProdutos

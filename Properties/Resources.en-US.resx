@@ -153,6 +153,9 @@
   <data name="Cidade" xml:space="preserve">
     <value>City</value>
   </data>
+	<data name="Clientes" xml:space="preserve">
+    <value>Customers</value>
+  </data>
   <data name="CNH" xml:space="preserve">
     <value>License</value>
   </data>
@@ -189,6 +192,9 @@
   <data name="Fechar" xml:space="preserve">
     <value>Close</value>
   </data>
+	<data name="Finalizar" xml:space="preserve">
+    <value>Finishin</value>
+  </data>
   <data name="Foto" xml:space="preserve">
     <value>Picture</value>
   </data>
@@ -197,6 +203,9 @@
   </data>
   <data name="Id" xml:space="preserve">
     <value>ID</value>
+  </data>
+	<data name="Imprimir" xml:space="preserve">
+    <value>Print out</value>
   </data>
   <data name="Ingredientes" xml:space="preserve">
     <value>Ingredients</value>
@@ -228,6 +237,12 @@
   <data name="Preço" xml:space="preserve">
     <value>Price</value>
   </data>
+	<data name="Produtos" xml:space="preserve">
+    <value>Products</value>
+  </data>
+	<data name="Sabores" xml:space="preserve">
+    <value>flavors</value>
+  </data>
   <data name="Salvar" xml:space="preserve">
     <value>Save</value>
   </data>
@@ -251,5 +266,8 @@
   </data>
   <data name="Valor" xml:space="preserve">
     <value>Price</value>
+  </data>
+  <data name="Valores Pizza" xml:space="preserve">
+    <value>Pizza Values</value>
   </data>
 </root>
