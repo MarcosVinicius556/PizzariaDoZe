@@ -143,7 +143,7 @@
             lblUserName.Name = "lblUserName";
             lblUserName.Size = new Size(121, 32);
             lblUserName.TabIndex = 9;
-            lblUserName.Text = "Username";
+            lblUserName.Text = Properties.Resources.ResourceManager.GetString("Username");
             // 
             // buttonRegisterOrders
             // 

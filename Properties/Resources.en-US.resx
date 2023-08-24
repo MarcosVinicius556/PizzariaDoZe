@@ -117,142 +117,139 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnEditar.Text" xml:space="preserve">
-    <value>Edit</value>
+  <data name="Administrado" xml:space="preserve">
+    <value>Admin</value>
   </data>
-  <data name="btnEntrar.Text" xml:space="preserve">
-    <value>Sign In</value>
+  <data name="Assitente" xml:space="preserve">
+    <value>Assistant</value>
   </data>
-  <data name="btnExcluir.Text" xml:space="preserve">
-    <value>Delete</value>
+  <data name="Bairro" xml:space="preserve">
+    <value>Neighborhood</value>
   </data>
-  <data name="btnFechar.Text" xml:space="preserve">
-    <value>Close</value>
+  <data name="Borda da Pizza" xml:space="preserve">
+    <value>pizza edge</value>
   </data>
-  <data name="buttonAdressRegister.Text" xml:space="preserve">
-    <value>Adress</value>
-  </data>
-  <data name="buttonPizzaValues.Text" xml:space="preserve">
-    <value>Pizza Values</value>
-  </data>
-  <data name="buttonRegisterEmployees.Text" xml:space="preserve">
-    <value>Employees</value>
-  </data>
-  <data name="buttonRegisterFlavors.Text" xml:space="preserve">
-    <value>Flavors</value>
-  </data>
-  <data name="buttonRegisterIngredients.Text" xml:space="preserve">
-    <value>Ingredients</value>
-  </data>
-  <data name="buttonRegisterOrders.Text" xml:space="preserve">
-    <value>Orders</value>
-  </data>
-  <data name="buttonSearch.Text" xml:space="preserve">
+  <data name="Buscar" xml:space="preserve">
     <value>Search</value>
   </data>
+  <data name="Cadastrar Ingredientes" xml:space="preserve">
+    <value>Ingredients Register</value>
+  </data>
+  <data name="Cadastro Cliente" xml:space="preserve">
+    <value>Client Register</value>
+  </data>
+  <data name="Cadastro de Endereço" xml:space="preserve">
+    <value>Adress Register</value>
+  </data>
+  <data name="Cadastro de Funcionários" xml:space="preserve">
+    <value>Employees Register</value>
+  </data>
+  <data name="Categoria" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="CEP" xml:space="preserve">
+    <value>Zip Code</value>
+  </data>
+  <data name="Cidade" xml:space="preserve">
+    <value>City</value>
+  </data>
   <data name="CNH" xml:space="preserve">
-    <value>CNH</value>
+    <value>License</value>
+  </data>
+  <data name="CPF" xml:space="preserve">
+    <value>Document</value>
+  </data>
+  <data name="Código" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="Descrição" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Editar" xml:space="preserve">
+    <value>Edit</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
-  <data name="groupBoxFuncao.Text" xml:space="preserve">
-    <value>Function</value>
-  </data>
-  <data name="lblAdicionalBorda.Text" xml:space="preserve">
-    <value>pizza edge</value>
-  </data>
-  <data name="lblBairro.Text" xml:space="preserve">
-    <value>Neighborhood</value>
-  </data>
-  <data name="lblCategoria.Text" xml:space="preserve">
-    <value>Category</value>
-  </data>
-  <data name="lblCep.Text" xml:space="preserve">
-    <value>Zip Code</value>
-  </data>
-  <data name="lblCidade.Text" xml:space="preserve">
-    <value>City</value>
-  </data>
-  <data name="lblCpf.Text" xml:space="preserve">
-    <value>Document</value>
-  </data>
-  <data name="lblFoto.text" xml:space="preserve">
-    <value>Picture</value>
-  </data>
-  <data name="lblFuncionarios.Text" xml:space="preserve">
-    <value>Employees</value>
-  </data>
-  <data name="lblId.Text" xml:space="preserve">
-    <value>ID</value>
-  </data>
-  <data name="lblIngredientes.text" xml:space="preserve">
-    <value>Ingredients</value>
-  </data>
-  <data name="lblLogin.Text" xml:space="preserve">
-    <value>Login</value>
-  </data>
-  <data name="lblLogradouro.Text" xml:space="preserve">
-    <value>Public place</value>
-  </data>
-  <data name="lblMl.Text" xml:space="preserve">
-    <value>ML</value>
-  </data>
-  <data name="lblObs.Text" xml:space="preserve">
-    <value>Observation</value>
-  </data>
-  <data name="lblPais.Text" xml:space="preserve">
-    <value>Country</value>
-  </data>
-  <data name="lblSenha" xml:space="preserve">
-    <value>Password</value>
-  </data>
-  <data name="lblSenha.Text" xml:space="preserve">
-    <value>Password</value>
-  </data>
-  <data name="lblTamanho.Text" xml:space="preserve">
-    <value>Size</value>
-  </data>
-  <data name="lblTipo.Text" xml:space="preserve">
-    <value>Type</value>
-  </data>
-  <data name="lblTitulo.Text" xml:space="preserve">
-    <value>Title</value>
-  </data>
-  <data name="lblTituloEndereco.Text" xml:space="preserve">
+  <data name="Endereço" xml:space="preserve">
     <value>Adress</value>
   </data>
-  <data name="lblUf.Text" xml:space="preserve">
+  <data name="Entrar" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="Entregador" xml:space="preserve">
+    <value>Deliveryman</value>
+  </data>
+  <data name="Estado" xml:space="preserve">
     <value>State</value>
   </data>
-  <data name="lblValor.Text" xml:space="preserve">
-    <value>Price</value>
+  <data name="Excluir" xml:space="preserve">
+    <value>Delete</value>
   </data>
-  <data name="matricula" xml:space="preserve">
+  <data name="Fechar" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Foto" xml:space="preserve">
+    <value>Picture</value>
+  </data>
+  <data name="Funcionários" xml:space="preserve">
+    <value>Employees</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Ingredientes" xml:space="preserve">
+    <value>Ingredients</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Logradouro" xml:space="preserve">
+    <value>Public place</value>
+  </data>
+  <data name="Matricula" xml:space="preserve">
     <value>Registration</value>
+  </data>
+  <data name="ML" xml:space="preserve">
+    <value>ML</value>
   </data>
   <data name="Nome" xml:space="preserve">
     <value>Name</value>
   </data>
-  <data name="radioAdministrador.Text" xml:space="preserve">
-    <value>Admin</value>
+  <data name="Observação" xml:space="preserve">
+    <value>Observation</value>
   </data>
-  <data name="radioAtendente.Text" xml:space="preserve">
-    <value>Assistant</value>
+  <data name="Pais" xml:space="preserve">
+    <value>Country</value>
   </data>
-  <data name="radioEntregador.Text" xml:space="preserve">
-    <value>Deliveryman</value>
+  <data name="Pedidos" xml:space="preserve">
+    <value>Orders</value>
   </data>
-  <data name="RegisterProducts.Text" xml:space="preserve">
-    <value>Product</value>
+  <data name="Preço" xml:space="preserve">
+    <value>Price</value>
   </data>
   <data name="Salvar" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="Senha" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="tamanho" xml:space="preserve">
+    <value>Size</value>
+  </data>
   <data name="Telefone" xml:space="preserve">
     <value>Phone</value>
   </data>
+  <data name="Tipo" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
   <data name="Validade" xml:space="preserve">
     <value>Validity</value>
+  </data>
+  <data name="Valor" xml:space="preserve">
+    <value>Price</value>
   </data>
 </root>
