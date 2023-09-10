@@ -103,3 +103,5 @@ C:\Users\Cliente\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\refint
 C:\Users\Cliente\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.pdb
 C:\Users\Cliente\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.genruntimeconfig.cache
 C:\Users\Cliente\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\ref\PizzariaDoZe.dll
+C:\Users\Cliente\Documents\projetos\PizzariaDoZe\bin\Debug\net7.0-windows\PizzariaDoZe.xml
+C:\Users\Cliente\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.xml

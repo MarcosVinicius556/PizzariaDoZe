@@ -21,7 +21,10 @@ namespace PizzariaDoZe.views
             //seleciona no comboBox o idioma/cultura atual
             comboBoxIdioma.SelectedItem = ConfigurationManager.AppSettings.Get("IdiomaRegiao");
         }
-
+        /// <summary>
+        ///  Ao ser chamado no click do botão salvar da tela de configurações, 
+        ///  altera o arquivo .dll responsável por definir o idioma para a aplicação
+        /// </summary>
         private void SalvarIdioma_Click(object sender, EventArgs e)
         {
             //abre o arquivo local como leitura/escrita e salva as alterações em ProjetoPastelariaDoZe_2023.dll.config

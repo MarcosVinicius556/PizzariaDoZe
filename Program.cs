@@ -26,6 +26,9 @@ namespace PizzariaDoZe
             Application.Run(new FormLogin());
         }
 
+        /// <summary>
+        /// Faz a busca do idioma selecionado para a aplicação, esta busca é realizada no arquivo App.config...
+        /// </summary>
         static public void AjustaIdiomaRegiao()
         {
             // ? indica que o valor pode ser nulo
