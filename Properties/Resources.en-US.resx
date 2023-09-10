@@ -153,7 +153,7 @@
   <data name="Cidade" xml:space="preserve">
     <value>City</value>
   </data>
-	<data name="Clientes" xml:space="preserve">
+  <data name="Clientes" xml:space="preserve">
     <value>Customers</value>
   </data>
   <data name="CNH" xml:space="preserve">
@@ -192,7 +192,7 @@
   <data name="Fechar" xml:space="preserve">
     <value>Close</value>
   </data>
-	<data name="Finalizar" xml:space="preserve">
+  <data name="Finalizar" xml:space="preserve">
     <value>Finishin</value>
   </data>
   <data name="Foto" xml:space="preserve">
@@ -204,7 +204,7 @@
   <data name="Id" xml:space="preserve">
     <value>ID</value>
   </data>
-	<data name="Imprimir" xml:space="preserve">
+  <data name="Imprimir" xml:space="preserve">
     <value>Print out</value>
   </data>
   <data name="Ingredientes" xml:space="preserve">
@@ -228,6 +228,9 @@
   <data name="Observação" xml:space="preserve">
     <value>Observation</value>
   </data>
+  <data name="Opções" xml:space="preserve">
+    <value>Options</value>
+  </data>
   <data name="Pais" xml:space="preserve">
     <value>Country</value>
   </data>
@@ -237,10 +240,10 @@
   <data name="Preço" xml:space="preserve">
     <value>Price</value>
   </data>
-	<data name="Produtos" xml:space="preserve">
+  <data name="Produtos" xml:space="preserve">
     <value>Products</value>
   </data>
-	<data name="Sabores" xml:space="preserve">
+  <data name="Sabores" xml:space="preserve">
     <value>flavors</value>
   </data>
   <data name="Salvar" xml:space="preserve">

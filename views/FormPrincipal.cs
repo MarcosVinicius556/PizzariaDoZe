@@ -16,6 +16,19 @@ namespace PizzariaDoZe.views
         {
             InitializeComponent();
         }
+
+        private void buttonOptions_Click(object sender, EventArgs e)
+        {
+            FormConfiguracoes config = new FormConfiguracoes()
+            {
+                StartPosition = FormStartPosition.CenterScreen
+            };
+            _ = config.ShowDialog();
+
+            Controls.Clear();
+            InitializeComponent();
+
+        }
     }
 
 }

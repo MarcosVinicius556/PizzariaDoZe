@@ -117,4 +117,163 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Administrado" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="Assitente" xml:space="preserve">
+    <value>Assitente</value>
+  </data>
+  <data name="Bairro" xml:space="preserve">
+    <value>Bairro</value>
+  </data>
+  <data name="Borda da Pizza" xml:space="preserve">
+    <value>Borda da Pizza</value>
+  </data>
+  <data name="Buscar" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="Cadastrar Ingredientes" xml:space="preserve">
+    <value>Cadastrar Ingredientes</value>
+  </data>
+  <data name="Cadastro Cliente" xml:space="preserve">
+    <value>Cadastro Cliente</value>
+  </data>
+  <data name="Cadastro de Endereço" xml:space="preserve">
+    <value>Cadastro de Endereço</value>
+  </data>
+  <data name="Cadastro de Funcionários" xml:space="preserve">
+    <value>Cadastro de Funcionários</value>
+  </data>
+  <data name="Cadastro de Produtos" xml:space="preserve">
+    <value>Cadastro de Produtos</value>
+  </data>
+  <data name="Categoria" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="CEP" xml:space="preserve">
+    <value>CEP</value>
+  </data>
+  <data name="Cidade" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="Clientes" xml:space="preserve">
+    <value>Clientes</value>
+  </data>
+  <data name="CNH" xml:space="preserve">
+    <value>CNH</value>
+  </data>
+  <data name="CPF" xml:space="preserve">
+    <value>CPF</value>
+  </data>
+  <data name="Código" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="Descrição" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="Editar" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Endereço" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
+  <data name="Entrar" xml:space="preserve">
+    <value>Entrar</value>
+  </data>
+  <data name="Entregador" xml:space="preserve">
+    <value>Entregador</value>
+  </data>
+  <data name="Estado" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="Excluir" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
+  <data name="Fechar" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="Finalizar" xml:space="preserve">
+    <value>Finalizar</value>
+  </data>
+  <data name="Foto" xml:space="preserve">
+    <value>Foto</value>
+  </data>
+  <data name="Funcionários" xml:space="preserve">
+    <value>Funcionários</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Imprimir" xml:space="preserve">
+    <value>Imprimir</value>
+  </data>
+  <data name="Ingredientes" xml:space="preserve">
+    <value>Ingredientes</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Logradouro" xml:space="preserve">
+    <value>Logradouro</value>
+  </data>
+  <data name="Matricula" xml:space="preserve">
+    <value>Matricula</value>
+  </data>
+  <data name="ML" xml:space="preserve">
+    <value>ML</value>
+  </data>
+  <data name="Nome" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Observação" xml:space="preserve">
+    <value>Observação</value>
+  </data>
+  <data name="Opções" xml:space="preserve">
+    <value>Opções</value>
+  </data>
+  <data name="Pais" xml:space="preserve">
+    <value>Pais</value>
+  </data>
+  <data name="Pedidos" xml:space="preserve">
+    <value>Pedidos</value>
+  </data>
+  <data name="Preço" xml:space="preserve">
+    <value>Preço</value>
+  </data>
+  <data name="Produtos" xml:space="preserve">
+    <value>Produtos</value>
+  </data>
+  <data name="Sabores" xml:space="preserve">
+    <value>Sabores</value>
+  </data>
+  <data name="Salvar" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="Senha" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="tamanho" xml:space="preserve">
+    <value>tamanho</value>
+  </data>
+  <data name="Telefone" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
+  <data name="Tipo" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Nome de Usuário</value>
+  </data>
+  <data name="Validade" xml:space="preserve">
+    <value>Validade</value>
+  </data>
+  <data name="Valor" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="Valores Pizza" xml:space="preserve">
+    <value>Valores Pizza</value>
+  </data>
 </root>

@@ -59,5 +59,482 @@ namespace PizzariaDoZe.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Admin.
+        /// </summary>
+        internal static string Administrado {
+            get {
+                return ResourceManager.GetString("Administrado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Assitente.
+        /// </summary>
+        internal static string Assitente {
+            get {
+                return ResourceManager.GetString("Assitente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Bairro.
+        /// </summary>
+        internal static string Bairro {
+            get {
+                return ResourceManager.GetString("Bairro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Borda da Pizza.
+        /// </summary>
+        internal static string Borda_da_Pizza {
+            get {
+                return ResourceManager.GetString("Borda da Pizza", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Buscar.
+        /// </summary>
+        internal static string Buscar {
+            get {
+                return ResourceManager.GetString("Buscar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Cadastrar Ingredientes.
+        /// </summary>
+        internal static string Cadastrar_Ingredientes {
+            get {
+                return ResourceManager.GetString("Cadastrar Ingredientes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Cadastro Cliente.
+        /// </summary>
+        internal static string Cadastro_Cliente {
+            get {
+                return ResourceManager.GetString("Cadastro Cliente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Cadastro de Endereço.
+        /// </summary>
+        internal static string Cadastro_de_Endereço {
+            get {
+                return ResourceManager.GetString("Cadastro de Endereço", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Cadastro de Funcionários.
+        /// </summary>
+        internal static string Cadastro_de_Funcionários {
+            get {
+                return ResourceManager.GetString("Cadastro de Funcionários", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Cadastro de Produtos.
+        /// </summary>
+        internal static string Cadastro_de_Produtos {
+            get {
+                return ResourceManager.GetString("Cadastro de Produtos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Categoria.
+        /// </summary>
+        internal static string Categoria {
+            get {
+                return ResourceManager.GetString("Categoria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a CEP.
+        /// </summary>
+        internal static string CEP {
+            get {
+                return ResourceManager.GetString("CEP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Cidade.
+        /// </summary>
+        internal static string Cidade {
+            get {
+                return ResourceManager.GetString("Cidade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Clientes.
+        /// </summary>
+        internal static string Clientes {
+            get {
+                return ResourceManager.GetString("Clientes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a CNH.
+        /// </summary>
+        internal static string CNH {
+            get {
+                return ResourceManager.GetString("CNH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Código.
+        /// </summary>
+        internal static string Código {
+            get {
+                return ResourceManager.GetString("Código", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a CPF.
+        /// </summary>
+        internal static string CPF {
+            get {
+                return ResourceManager.GetString("CPF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Descrição.
+        /// </summary>
+        internal static string Descrição {
+            get {
+                return ResourceManager.GetString("Descrição", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Editar.
+        /// </summary>
+        internal static string Editar {
+            get {
+                return ResourceManager.GetString("Editar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Email.
+        /// </summary>
+        internal static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Endereço.
+        /// </summary>
+        internal static string Endereço {
+            get {
+                return ResourceManager.GetString("Endereço", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Entrar.
+        /// </summary>
+        internal static string Entrar {
+            get {
+                return ResourceManager.GetString("Entrar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Entregador.
+        /// </summary>
+        internal static string Entregador {
+            get {
+                return ResourceManager.GetString("Entregador", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Estado.
+        /// </summary>
+        internal static string Estado {
+            get {
+                return ResourceManager.GetString("Estado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Excluir.
+        /// </summary>
+        internal static string Excluir {
+            get {
+                return ResourceManager.GetString("Excluir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Fechar.
+        /// </summary>
+        internal static string Fechar {
+            get {
+                return ResourceManager.GetString("Fechar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Finalizar.
+        /// </summary>
+        internal static string Finalizar {
+            get {
+                return ResourceManager.GetString("Finalizar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Foto.
+        /// </summary>
+        internal static string Foto {
+            get {
+                return ResourceManager.GetString("Foto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Funcionários.
+        /// </summary>
+        internal static string Funcionários {
+            get {
+                return ResourceManager.GetString("Funcionários", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Id.
+        /// </summary>
+        internal static string Id {
+            get {
+                return ResourceManager.GetString("Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Imprimir.
+        /// </summary>
+        internal static string Imprimir {
+            get {
+                return ResourceManager.GetString("Imprimir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Ingredientes.
+        /// </summary>
+        internal static string Ingredientes {
+            get {
+                return ResourceManager.GetString("Ingredientes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Login.
+        /// </summary>
+        internal static string Login {
+            get {
+                return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Logradouro.
+        /// </summary>
+        internal static string Logradouro {
+            get {
+                return ResourceManager.GetString("Logradouro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Matricula.
+        /// </summary>
+        internal static string Matricula {
+            get {
+                return ResourceManager.GetString("Matricula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a ML.
+        /// </summary>
+        internal static string ML {
+            get {
+                return ResourceManager.GetString("ML", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Nome.
+        /// </summary>
+        internal static string Nome {
+            get {
+                return ResourceManager.GetString("Nome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Observação.
+        /// </summary>
+        internal static string Observação {
+            get {
+                return ResourceManager.GetString("Observação", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Opções.
+        /// </summary>
+        internal static string Opções {
+            get {
+                return ResourceManager.GetString("Opções", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Pais.
+        /// </summary>
+        internal static string Pais {
+            get {
+                return ResourceManager.GetString("Pais", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Pedidos.
+        /// </summary>
+        internal static string Pedidos {
+            get {
+                return ResourceManager.GetString("Pedidos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Preço.
+        /// </summary>
+        internal static string Preço {
+            get {
+                return ResourceManager.GetString("Preço", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Produtos.
+        /// </summary>
+        internal static string Produtos {
+            get {
+                return ResourceManager.GetString("Produtos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Sabores.
+        /// </summary>
+        internal static string Sabores {
+            get {
+                return ResourceManager.GetString("Sabores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Salvar.
+        /// </summary>
+        internal static string Salvar {
+            get {
+                return ResourceManager.GetString("Salvar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Senha.
+        /// </summary>
+        internal static string Senha {
+            get {
+                return ResourceManager.GetString("Senha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a tamanho.
+        /// </summary>
+        internal static string tamanho {
+            get {
+                return ResourceManager.GetString("tamanho", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Telefone.
+        /// </summary>
+        internal static string Telefone {
+            get {
+                return ResourceManager.GetString("Telefone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Tipo.
+        /// </summary>
+        internal static string Tipo {
+            get {
+                return ResourceManager.GetString("Tipo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Nome de Usuário.
+        /// </summary>
+        internal static string Username {
+            get {
+                return ResourceManager.GetString("Username", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Validade.
+        /// </summary>
+        internal static string Validade {
+            get {
+                return ResourceManager.GetString("Validade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Valor.
+        /// </summary>
+        internal static string Valor {
+            get {
+                return ResourceManager.GetString("Valor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Valores Pizza.
+        /// </summary>
+        internal static string Valores_Pizza {
+            get {
+                return ResourceManager.GetString("Valores Pizza", resourceCulture);
+            }
+        }
     }
 }

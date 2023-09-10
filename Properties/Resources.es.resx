@@ -142,7 +142,7 @@
     <value>Dirección</value>
   </data>
   <data name="Cadastro de Funcionários" xml:space="preserve">
-    <value>Empleados</value>
+    <value>REGISTRO DE EMPLEADOS</value>
   </data>
   <data name="Cadastro de Produtos" xml:space="preserve">
     <value>Registración del producto</value>
@@ -162,14 +162,13 @@
   <data name="CNH" xml:space="preserve">
     <value>Licencia de conducir</value>
   </data>
-	
   <data name="CPF" xml:space="preserve">
     <value>Document</value>
   </data>
-	<data name="Código" xml:space="preserve">
+  <data name="Código" xml:space="preserve">
     <value>Código</value>
   </data>
-	<data name="Descrição" xml:space="preserve">
+  <data name="Descrição" xml:space="preserve">
     <value>Description</value>
   </data>
   <data name="Editar" xml:space="preserve">
@@ -181,7 +180,7 @@
   <data name="Endereço" xml:space="preserve">
     <value>Registro de Dirección</value>
   </data>
-	<data name="Entrar" xml:space="preserve">
+  <data name="Entrar" xml:space="preserve">
     <value>Entrar</value>
   </data>
   <data name="Entregador" xml:space="preserve">
@@ -214,9 +213,6 @@
   <data name="Ingredientes" xml:space="preserve">
     <value>Ingredientes</value>
   </data>
-  <data name="Cadastro de Funcionários" xml:space="preserve">
-    <value>REGISTRO DE EMPLEADOS</value>
-  </data>
   <data name="Login" xml:space="preserve">
     <value>Acceso</value>
   </data>
@@ -234,6 +230,9 @@
   </data>
   <data name="Observação" xml:space="preserve">
     <value>Observación</value>
+  </data>
+  <data name="Opções" xml:space="preserve">
+    <value>Opciones</value>
   </data>
   <data name="Pais" xml:space="preserve">
     <value>País</value>
