@@ -69,3 +69,4 @@ C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\Pizzaria
 C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.Properties.Resources.es.resources
 C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\en-US\PizzariaDoZe.resources.dll
 C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\es\PizzariaDoZe.resources.dll
+C:\Users\55949\Documents\projetos\PizzariaDoZe\bin\Debug\net7.0-windows\PizzariaDoZe.dll.config

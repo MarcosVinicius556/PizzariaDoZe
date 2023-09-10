@@ -4,6 +4,9 @@
     <Compile Update="views\FormCadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="views\FormConfiguracoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="views\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>

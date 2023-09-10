@@ -1,4 +1,5 @@
 using PizzariaDoZe.views;
+using System.Configuration;
 using System.Globalization;
 
 namespace PizzariaDoZe
@@ -8,10 +9,14 @@ namespace PizzariaDoZe
         [STAThread]
         static void Main()
         {
-            string lang = "en-US";
+            // ? indica que o valor pode ser nulo
+            // no ternário estamos tratando para isso não acontecer
+            string? lang = (ConfigurationManager.AppSettings.Get("IdiomaRegiao") is not null) 
+                           ? ConfigurationManager.AppSettings.Get("IdiomaRegiao") 
+                           : "";
             //ajusta o idioma/região
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
-            Thread.CurrentThread.CurrentCulture = new CultureInfo(lang);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang!);
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(lang!);
 
 
             ApplicationConfiguration.Initialize();
