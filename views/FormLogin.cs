@@ -1,4 +1,4 @@
-namespace PizzariaDoZe.views
+﻿namespace PizzariaDoZe.views
 {
     public partial class FormLogin : Form
     {
@@ -12,6 +12,18 @@ namespace PizzariaDoZe.views
             FormPrincipal form = new FormPrincipal();
             form.Show();
             this.Hide();
+        }
+
+        private void TabEvent(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Impede que o caractere "Enter" seja inserido no TextBox
+                e.SuppressKeyPress = true;
+
+                // Simula o pressionamento da tecla "Tab" para mover o foco para o pr�ximo controle
+                SendKeys.Send("{Tab}");
+            }
         }
     }
 }

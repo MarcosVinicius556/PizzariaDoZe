@@ -88,6 +88,7 @@ namespace PizzariaDoZe.views
             txtTipo.Size = new Size(141, 112);
             txtTipo.TabIndex = 9;
             txtTipo.TextChanged += textBox5_TextChanged;
+            txtTipo.KeyDown += TabEvent;
             // 
             // txtCategoria
             // 
@@ -97,6 +98,7 @@ namespace PizzariaDoZe.views
             txtCategoria.Size = new Size(141, 112);
             txtCategoria.TabIndex = 8;
             txtCategoria.TextChanged += textBox4_TextChanged;
+            txtCategoria.KeyDown += TabEvent;
             // 
             // lblCategoria
             // 
@@ -125,6 +127,7 @@ namespace PizzariaDoZe.views
             this.txtIngredientes.Name = "txtIngredientes";
             this.txtIngredientes.Size = new Size(171, 358);
             this.txtIngredientes.TabIndex = 5;
+            this.txtIngredientes.KeyDown += TabEvent;
             // 
             // lblIngredientes
             // 
@@ -152,6 +155,7 @@ namespace PizzariaDoZe.views
             txtNome.Size = new Size(405, 23);
             txtNome.TabIndex = 2;
             txtNome.TextChanged += textBox2_TextChanged;
+            txtNome.KeyDown += TabEvent;
             // 
             // txtId
             // 
@@ -160,6 +164,7 @@ namespace PizzariaDoZe.views
             txtId.Size = new Size(69, 23);
             txtId.TabIndex = 1;
             txtId.TextChanged += textBox1_TextChanged;
+            txtId.KeyDown += TabEvent;
             // 
             // lblId
             // 

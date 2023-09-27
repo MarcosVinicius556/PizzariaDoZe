@@ -63,6 +63,7 @@ partial class FormEndereco
         txtId.Name = "txtId";
         txtId.Size = new Size(127, 27);
         txtId.TabIndex = 1;
+        txtId.KeyDown += TabEvent;
         toolTip1.SetToolTip(txtId, "Dados Incorretos");
         // 
         // errorProvider1
@@ -84,6 +85,7 @@ partial class FormEndereco
         txtCep.Name = "txtCep";
         txtCep.Size = new Size(191, 27);
         txtCep.TabIndex = 4;
+        txtCep.KeyDown += TabEvent;
         // 
         // lblCep
         // 
@@ -142,6 +144,7 @@ partial class FormEndereco
         txtBairro.Name = "txtBairro";
         txtBairro.Size = new Size(257, 27);
         txtBairro.TabIndex = 15;
+        txtBairro.KeyDown += TabEvent;
         // 
         // dropBoxUf
         // 
@@ -150,6 +153,7 @@ partial class FormEndereco
         dropBoxUf.Name = "dropBoxUf";
         dropBoxUf.Size = new Size(257, 28);
         dropBoxUf.TabIndex = 14;
+        dropBoxUf.KeyDown += TabEvent;
         // 
         // lblUf
         // 
@@ -176,6 +180,7 @@ partial class FormEndereco
         dropBoxCidade.Name = "dropBoxCidade";
         dropBoxCidade.Size = new Size(374, 28);
         dropBoxCidade.TabIndex = 11;
+        dropBoxCidade.KeyDown += TabEvent;
         // 
         // dropBoxPais
         // 
@@ -185,6 +190,7 @@ partial class FormEndereco
         dropBoxPais.Size = new Size(374, 28);
         dropBoxPais.TabIndex = 10;
         dropBoxPais.SelectedIndexChanged += lista_paises_SelectedIndexChanged;
+        dropBoxPais.KeyDown += TabEvent;
         // 
         // lblPais
         // 
@@ -210,6 +216,7 @@ partial class FormEndereco
         txtLogradouro.Name = "txtLogradouro";
         txtLogradouro.Size = new Size(257, 27);
         txtLogradouro.TabIndex = 6;
+        txtLogradouro.KeyDown += TabEvent;
         // 
         // btnSalvar
         // 

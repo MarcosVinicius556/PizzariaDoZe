@@ -123,6 +123,7 @@
             textId.Name = "textId";
             textId.Size = new Size(122, 27);
             textId.TabIndex = 14;
+            textId.KeyDown += TabEvent;
             // 
             // lblId
             // 
@@ -141,6 +142,7 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(294, 27);
             txtNome.TabIndex = 16;
+            txtNome.KeyDown += TabEvent;
             // 
             // lblNome
             // 

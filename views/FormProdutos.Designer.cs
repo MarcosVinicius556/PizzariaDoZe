@@ -73,6 +73,7 @@
             txtId.Name = "txtId";
             txtId.Size = new Size(67, 23);
             txtId.TabIndex = 1;
+            txtId.KeyDown += TabEvent;
             // 
             // txtNome
             // 
@@ -80,6 +81,7 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(180, 23);
             txtNome.TabIndex = 2;
+            txtNome.KeyDown += TabEvent;
             // 
             // txtValor
             // 
@@ -87,6 +89,7 @@
             txtValor.Name = "txtValor";
             txtValor.Size = new Size(180, 23);
             txtValor.TabIndex = 3;
+            txtValor.KeyDown += TabEvent;
             // 
             // lblNome
             // 
@@ -115,6 +118,7 @@
             groupBoxTipo.TabIndex = 6;
             groupBoxTipo.UseCompatibleStateImageBehavior = false;
             groupBoxTipo.View = View.List;
+            groupBoxTipo.KeyDown += TabEvent;
             // 
             // groupBoxMl
             // 
@@ -125,6 +129,7 @@
             groupBoxMl.TabIndex = 7;
             groupBoxMl.UseCompatibleStateImageBehavior = false;
             groupBoxMl.View = View.List;
+            groupBoxMl.KeyDown += TabEvent;
             // 
             // lblTipo
             // 

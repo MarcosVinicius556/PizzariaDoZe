@@ -58,6 +58,7 @@
             txtLogin.Name = "txtLogin";
             txtLogin.Size = new Size(224, 23);
             txtLogin.TabIndex = 1;
+            txtLogin.KeyDown += TabEvent;
             // 
             // txtSenha
             // 
@@ -66,6 +67,7 @@
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(224, 23);
             txtSenha.TabIndex = 2;
+            txtSenha.KeyDown += TabEvent;
             // 
             // lblLogin
             // 

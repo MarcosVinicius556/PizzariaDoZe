@@ -88,6 +88,7 @@
             txtId.Name = "txtId";
             txtId.Size = new Size(47, 27);
             txtId.TabIndex = 2;
+            txtId.KeyDown += TabEvent;
             // 
             // lblCpf
             // 
@@ -212,6 +213,7 @@
             txtTelefone.Name = "txtTelefone";
             txtTelefone.Size = new Size(191, 27);
             txtTelefone.TabIndex = 24;
+            txtTelefone.KeyDown += TabEvent;
             // 
             // txtCpf
             // 
@@ -222,6 +224,7 @@
             txtCpf.Size = new Size(167, 27);
             txtCpf.TabIndex = 15;
             txtCpf.MaskInputRejected += maskedTextBox2_MaskInputRejected;
+            txtCpf.KeyDown += TabEvent;
             // 
             // txtSenha
             // 
@@ -231,6 +234,7 @@
             txtSenha.PasswordChar = '*';
             txtSenha.Size = new Size(114, 27);
             txtSenha.TabIndex = 23;
+            txtSenha.KeyDown += TabEvent;
             // 
             // lblObs
             // 
@@ -249,6 +253,7 @@
             txtObs.Name = "txtObs";
             txtObs.Size = new Size(621, 89);
             txtObs.TabIndex = 21;
+            txtObs.KeyDown += TabEvent;
             // 
             // calendarioCnh
             // 
@@ -258,6 +263,7 @@
             calendarioCnh.Name = "calendarioCnh";
             calendarioCnh.Size = new Size(125, 27);
             calendarioCnh.TabIndex = 19;
+            calendarioCnh.KeyDown += TabEvent;
             // 
             // textBoxCnh
             // 
@@ -266,6 +272,7 @@
             textBoxCnh.Name = "textBoxCnh";
             textBoxCnh.Size = new Size(171, 27);
             textBoxCnh.TabIndex = 18;
+            textBoxCnh.KeyDown += TabEvent;
             // 
             // textBoxEmail
             // 
@@ -274,6 +281,7 @@
             textBoxEmail.Name = "textBoxEmail";
             textBoxEmail.Size = new Size(321, 27);
             textBoxEmail.TabIndex = 17;
+            textBoxEmail.KeyDown += TabEvent;
             // 
             // TextBox4
             // 
@@ -282,6 +290,7 @@
             TextBox4.Name = "TextBox4";
             TextBox4.Size = new Size(462, 27);
             TextBox4.TabIndex = 15;
+            TextBox4.KeyDown += TabEvent;
             // 
             // txtMatricula
             // 
@@ -290,6 +299,7 @@
             txtMatricula.Name = "txtMatricula";
             txtMatricula.Size = new Size(145, 27);
             txtMatricula.TabIndex = 14;
+            txtMatricula.KeyDown += TabEvent;
             // 
             // groupBoxFuncao
             // 
@@ -304,6 +314,7 @@
             groupBoxFuncao.TabIndex = 12;
             groupBoxFuncao.TabStop = false;
             groupBoxFuncao.Text = "FUNÇÃO";
+            groupBoxFuncao.KeyDown += TabEvent;
             // 
             // radioEntregador
             // 

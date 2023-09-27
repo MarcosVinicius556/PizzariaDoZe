@@ -52,6 +52,7 @@
             comboBoxIdioma.Name = "comboBoxIdioma";
             comboBoxIdioma.Size = new Size(278, 23);
             comboBoxIdioma.TabIndex = 1;
+            comboBoxIdioma.KeyDown += TabEvent;
             // 
             // SalvarIdioma
             // 

@@ -123,6 +123,7 @@
             txtCategoria.TabIndex = 21;
             txtCategoria.UseCompatibleStateImageBehavior = false;
             txtCategoria.View = View.List;
+            txtCategoria.KeyDown += TabEvent;
             // 
             // txtTamanho
             // 
@@ -133,6 +134,7 @@
             txtTamanho.TabIndex = 20;
             txtTamanho.UseCompatibleStateImageBehavior = false;
             txtTamanho.View = View.List;
+            txtTamanho.KeyDown += TabEvent;
             // 
             // lblAdicionalBorda
             // 
@@ -158,6 +160,7 @@
             txtAdicionalBorda.Name = "txtAdicionalBorda";
             txtAdicionalBorda.Size = new Size(180, 23);
             txtAdicionalBorda.TabIndex = 17;
+            txtAdicionalBorda.KeyDown += TabEvent;
             // 
             // txtValor
             // 
@@ -165,6 +168,7 @@
             txtValor.Name = "txtValor";
             txtValor.Size = new Size(180, 23);
             txtValor.TabIndex = 16;
+            txtValor.KeyDown += TabEvent;
             // 
             // txtId
             // 
@@ -174,6 +178,7 @@
             txtId.Name = "txtId";
             txtId.Size = new Size(67, 23);
             txtId.TabIndex = 15;
+            txtId.KeyDown += TabEvent;
             // 
             // lblId
             // 
