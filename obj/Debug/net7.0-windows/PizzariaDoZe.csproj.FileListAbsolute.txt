@@ -105,3 +105,6 @@ C:\Users\Cliente\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\Pizzar
 C:\Users\Cliente\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\ref\PizzariaDoZe.dll
 C:\Users\Cliente\Documents\projetos\PizzariaDoZe\bin\Debug\net7.0-windows\PizzariaDoZe.xml
 C:\Users\Cliente\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.xml
+C:\Users\55949\Documents\projetos\PizzariaDoZe\bin\Debug\net7.0-windows\PizzariaDoZe.xml
+C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.views.FormConfiguracoes.resources
+C:\Users\55949\Documents\projetos\PizzariaDoZe\obj\Debug\net7.0-windows\PizzariaDoZe.xml
