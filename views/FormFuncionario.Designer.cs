@@ -64,103 +64,93 @@
             // btnSalvar
             // 
             btnSalvar.BackColor = Color.LimeGreen;
-            btnSalvar.Location = new Point(242, 511);
-            btnSalvar.Margin = new Padding(3, 4, 3, 4);
+            btnSalvar.Location = new Point(212, 383);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(86, 43);
+            btnSalvar.Size = new Size(75, 32);
             btnSalvar.TabIndex = 0;
-            btnSalvar.Text = Properties.Resources.ResourceManager.GetString("Salvar");
             btnSalvar.UseVisualStyleBackColor = false;
             // 
             // lblId
             // 
             lblId.AutoSize = true;
-            lblId.Location = new Point(24, 25);
+            lblId.Location = new Point(21, 19);
             lblId.Name = "lblId";
-            lblId.Size = new Size(27, 20);
+            lblId.Size = new Size(21, 15);
             lblId.TabIndex = 1;
             lblId.Text = "ID:";
             // 
             // txtId
             // 
-            txtId.Location = new Point(24, 49);
-            txtId.Margin = new Padding(3, 4, 3, 4);
+            txtId.Location = new Point(21, 37);
             txtId.Name = "txtId";
-            txtId.Size = new Size(47, 27);
+            txtId.Size = new Size(42, 23);
             txtId.TabIndex = 2;
+            txtId.KeyDown += txtId_KeyDown;
             // 
             // lblCpf
             // 
             lblCpf.AutoSize = true;
-            lblCpf.Location = new Point(144, 25);
+            lblCpf.Location = new Point(126, 19);
             lblCpf.Name = "lblCpf";
-            lblCpf.Size = new Size(36, 20);
+            lblCpf.Size = new Size(0, 15);
             lblCpf.TabIndex = 3;
-            lblCpf.Text = Properties.Resources.ResourceManager.GetString("CPF");
             // 
             // lblMatricula
             // 
             lblMatricula.AutoSize = true;
-            lblMatricula.Location = new Point(345, 25);
+            lblMatricula.Location = new Point(302, 19);
             lblMatricula.Name = "lblMatricula";
-            lblMatricula.Size = new Size(91, 20);
+            lblMatricula.Size = new Size(0, 15);
             lblMatricula.TabIndex = 4;
-            lblMatricula.Text = Properties.Resources.ResourceManager.GetString("Matricula");
             // 
             // labelNomeFuncionario
             // 
             labelNomeFuncionario.AutoSize = true;
-            labelNomeFuncionario.Location = new Point(24, 111);
+            labelNomeFuncionario.Location = new Point(21, 83);
             labelNomeFuncionario.Name = "labelNomeFuncionario";
-            labelNomeFuncionario.Size = new Size(55, 20);
+            labelNomeFuncionario.Size = new Size(0, 15);
             labelNomeFuncionario.TabIndex = 5;
-            labelNomeFuncionario.Text = Properties.Resources.ResourceManager.GetString("Nome");
             // 
             // lblTelefone
             // 
             lblTelefone.AutoSize = true;
-            lblTelefone.Location = new Point(24, 211);
+            lblTelefone.Location = new Point(21, 158);
             lblTelefone.Name = "lblTelefone";
-            lblTelefone.Size = new Size(80, 20);
+            lblTelefone.Size = new Size(0, 15);
             lblTelefone.TabIndex = 6;
-            lblTelefone.Text = Properties.Resources.ResourceManager.GetString("Telefone");
             // 
             // labelEmail
             // 
             labelEmail.AutoSize = true;
-            labelEmail.Location = new Point(226, 211);
+            labelEmail.Location = new Point(198, 158);
             labelEmail.Name = "labelEmail";
-            labelEmail.Size = new Size(60, 20);
+            labelEmail.Size = new Size(0, 15);
             labelEmail.TabIndex = 7;
-            labelEmail.Text = Properties.Resources.ResourceManager.GetString("Email");
             // 
             // labelCnh
             // 
             labelCnh.AutoSize = true;
-            labelCnh.Location = new Point(24, 284);
+            labelCnh.Location = new Point(21, 213);
             labelCnh.Name = "labelCnh";
-            labelCnh.Size = new Size(40, 20);
+            labelCnh.Size = new Size(0, 15);
             labelCnh.TabIndex = 8;
-            labelCnh.Text = Properties.Resources.ResourceManager.GetString("CNH");
             // 
             // lblValidade
             // 
             lblValidade.AutoSize = true;
-            lblValidade.Location = new Point(213, 284);
+            lblValidade.Location = new Point(186, 213);
             lblValidade.Name = "lblValidade";
-            lblValidade.Size = new Size(81, 20);
+            lblValidade.Size = new Size(0, 15);
             lblValidade.TabIndex = 9;
-            lblValidade.Text = Properties.Resources.ResourceManager.GetString("Validade");
             lblValidade.Click += LabelValidade_Click;
             // 
             // lblSenha
             // 
             lblSenha.AutoSize = true;
-            lblSenha.Location = new Point(357, 284);
+            lblSenha.Location = new Point(312, 213);
             lblSenha.Name = "lblSenha";
-            lblSenha.Size = new Size(60, 20);
+            lblSenha.Size = new Size(0, 15);
             lblSenha.TabIndex = 10;
-            lblSenha.Text = Properties.Resources.ResourceManager.GetString("Senha");
             // 
             // panelFuncionarios
             // 
@@ -187,120 +177,115 @@
             panelFuncionarios.Controls.Add(txtId);
             panelFuncionarios.Controls.Add(lblCpf);
             panelFuncionarios.Controls.Add(lblMatricula);
-            panelFuncionarios.Location = new Point(19, 28);
-            panelFuncionarios.Margin = new Padding(3, 4, 3, 4);
+            panelFuncionarios.Location = new Point(17, 21);
             panelFuncionarios.Name = "panelFuncionarios";
-            panelFuncionarios.Size = new Size(745, 475);
+            panelFuncionarios.Size = new Size(652, 356);
             panelFuncionarios.TabIndex = 11;
             panelFuncionarios.Paint += panel1_Paint;
             // 
             // lblFuncionarios
             // 
             lblFuncionarios.AutoSize = true;
-            lblFuncionarios.Location = new Point(17, 0);
+            lblFuncionarios.Location = new Point(15, 0);
             lblFuncionarios.Name = "lblFuncionarios";
-            lblFuncionarios.Size = new Size(194, 20);
+            lblFuncionarios.Size = new Size(0, 15);
             lblFuncionarios.TabIndex = 25;
-            lblFuncionarios.Text = Properties.Resources.ResourceManager.GetString("Cadastro de Funcionários");
             lblFuncionarios.Click += label2_Click;
             // 
             // txtTelefone
             // 
-            txtTelefone.Location = new Point(24, 235);
-            txtTelefone.Margin = new Padding(3, 4, 3, 4);
+            txtTelefone.Location = new Point(21, 176);
             txtTelefone.Mask = "(99) 00000-0000";
             txtTelefone.Name = "txtTelefone";
-            txtTelefone.Size = new Size(191, 27);
+            txtTelefone.Size = new Size(168, 23);
             txtTelefone.TabIndex = 24;
+            txtTelefone.KeyDown += txtTelefone_KeyDown;
             // 
             // txtCpf
             // 
-            txtCpf.Location = new Point(144, 49);
-            txtCpf.Margin = new Padding(3, 4, 3, 4);
+            txtCpf.Location = new Point(126, 37);
             txtCpf.Mask = "00000-000";
             txtCpf.Name = "txtCpf";
-            txtCpf.Size = new Size(167, 27);
+            txtCpf.Size = new Size(147, 23);
             txtCpf.TabIndex = 15;
             txtCpf.MaskInputRejected += maskedTextBox2_MaskInputRejected;
+            txtCpf.KeyDown += txtCpf_KeyDown;
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(357, 312);
-            txtSenha.Margin = new Padding(3, 4, 3, 4);
+            txtSenha.Location = new Point(312, 234);
             txtSenha.Name = "txtSenha";
             txtSenha.PasswordChar = '*';
-            txtSenha.Size = new Size(114, 27);
+            txtSenha.Size = new Size(100, 23);
             txtSenha.TabIndex = 23;
+            txtSenha.KeyDown += txtSenha_KeyDown;
             // 
             // lblObs
             // 
             lblObs.AutoSize = true;
-            lblObs.Location = new Point(17, 356);
+            lblObs.Location = new Point(15, 267);
             lblObs.Name = "lblObs";
-            lblObs.Size = new Size(105, 20);
+            lblObs.Size = new Size(0, 15);
             lblObs.TabIndex = 22;
-            lblObs.Text = Properties.Resources.ResourceManager.GetString("Observação");
             // 
             // txtObs
             // 
-            txtObs.Location = new Point(17, 380);
-            txtObs.Margin = new Padding(3, 4, 3, 4);
+            txtObs.Location = new Point(15, 285);
             txtObs.Multiline = true;
             txtObs.Name = "txtObs";
-            txtObs.Size = new Size(621, 89);
+            txtObs.Size = new Size(544, 68);
             txtObs.TabIndex = 21;
+            txtObs.KeyDown += txtObs_KeyDown;
             // 
             // calendarioCnh
             // 
             calendarioCnh.Format = DateTimePickerFormat.Short;
-            calendarioCnh.Location = new Point(213, 308);
-            calendarioCnh.Margin = new Padding(3, 4, 3, 4);
+            calendarioCnh.Location = new Point(186, 231);
             calendarioCnh.Name = "calendarioCnh";
-            calendarioCnh.Size = new Size(125, 27);
+            calendarioCnh.Size = new Size(110, 23);
             calendarioCnh.TabIndex = 19;
+            calendarioCnh.KeyDown += calendarioCnh_KeyDown;
             // 
             // textBoxCnh
             // 
-            textBoxCnh.Location = new Point(24, 308);
-            textBoxCnh.Margin = new Padding(3, 4, 3, 4);
+            textBoxCnh.Location = new Point(21, 231);
             textBoxCnh.Name = "textBoxCnh";
-            textBoxCnh.Size = new Size(171, 27);
+            textBoxCnh.Size = new Size(150, 23);
             textBoxCnh.TabIndex = 18;
+            textBoxCnh.KeyDown += textBoxCnh_KeyDown;
             // 
             // textBoxEmail
             // 
-            textBoxEmail.Location = new Point(223, 235);
-            textBoxEmail.Margin = new Padding(3, 4, 3, 4);
+            textBoxEmail.Location = new Point(195, 176);
             textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(321, 27);
+            textBoxEmail.Size = new Size(281, 23);
             textBoxEmail.TabIndex = 17;
+            textBoxEmail.KeyDown += textBoxEmail_KeyDown;
             // 
             // TextBox4
             // 
-            TextBox4.Location = new Point(24, 135);
-            TextBox4.Margin = new Padding(3, 4, 3, 4);
+            TextBox4.Location = new Point(21, 101);
             TextBox4.Name = "TextBox4";
-            TextBox4.Size = new Size(462, 27);
+            TextBox4.Size = new Size(405, 23);
             TextBox4.TabIndex = 15;
+            TextBox4.KeyDown += TextBox4_KeyDown;
             // 
             // txtMatricula
             // 
-            txtMatricula.Location = new Point(345, 49);
-            txtMatricula.Margin = new Padding(3, 4, 3, 4);
+            txtMatricula.Location = new Point(302, 37);
             txtMatricula.Name = "txtMatricula";
-            txtMatricula.Size = new Size(145, 27);
+            txtMatricula.Size = new Size(127, 23);
             txtMatricula.TabIndex = 14;
+            txtMatricula.KeyDown += txtMatricula_KeyDown;
             // 
             // groupBoxFuncao
             // 
             groupBoxFuncao.Controls.Add(radioEntregador);
             groupBoxFuncao.Controls.Add(radioAtendente);
             groupBoxFuncao.Controls.Add(radioAdministrador);
-            groupBoxFuncao.Location = new Point(515, 25);
-            groupBoxFuncao.Margin = new Padding(3, 4, 3, 4);
+            groupBoxFuncao.Location = new Point(451, 19);
             groupBoxFuncao.Name = "groupBoxFuncao";
-            groupBoxFuncao.Padding = new Padding(3, 4, 3, 4);
-            groupBoxFuncao.Size = new Size(208, 176);
+            groupBoxFuncao.Size = new Size(182, 132);
             groupBoxFuncao.TabIndex = 12;
             groupBoxFuncao.TabStop = false;
             groupBoxFuncao.Text = "FUNÇÃO";
@@ -308,74 +293,63 @@
             // radioEntregador
             // 
             radioEntregador.AutoSize = true;
-            radioEntregador.Location = new Point(7, 129);
-            radioEntregador.Margin = new Padding(3, 4, 3, 4);
+            radioEntregador.Location = new Point(6, 97);
             radioEntregador.Name = "radioEntregador";
-            radioEntregador.Size = new Size(128, 24);
+            radioEntregador.Size = new Size(14, 13);
             radioEntregador.TabIndex = 14;
             radioEntregador.TabStop = true;
-            radioEntregador.Text = Properties.Resources.ResourceManager.GetString("Entregador");
             radioEntregador.UseVisualStyleBackColor = true;
             radioEntregador.CheckedChanged += radioButton3_CheckedChanged;
             // 
             // radioAtendente
             // 
             radioAtendente.AutoSize = true;
-            radioAtendente.Location = new Point(7, 80);
-            radioAtendente.Margin = new Padding(3, 4, 3, 4);
+            radioAtendente.Location = new Point(6, 60);
             radioAtendente.Name = "radioAtendente";
-            radioAtendente.Size = new Size(115, 24);
+            radioAtendente.Size = new Size(14, 13);
             radioAtendente.TabIndex = 13;
             radioAtendente.TabStop = true;
-            radioAtendente.Text = Properties.Resources.ResourceManager.GetString("Atendente");
             radioAtendente.UseVisualStyleBackColor = true;
             radioAtendente.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // radioAdministrador
             // 
             radioAdministrador.AutoSize = true;
-            radioAdministrador.Location = new Point(7, 29);
-            radioAdministrador.Margin = new Padding(3, 4, 3, 4);
+            radioAdministrador.Location = new Point(6, 22);
             radioAdministrador.Name = "radioAdministrador";
-            radioAdministrador.Size = new Size(152, 24);
+            radioAdministrador.Size = new Size(14, 13);
             radioAdministrador.TabIndex = 12;
             radioAdministrador.TabStop = true;
-            radioAdministrador.Text = Properties.Resources.ResourceManager.GetString("Administrador");
             radioAdministrador.UseVisualStyleBackColor = true;
             radioAdministrador.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // btnExcluir
             // 
             btnExcluir.BackColor = Color.LightCoral;
-            btnExcluir.Location = new Point(478, 511);
-            btnExcluir.Margin = new Padding(3, 4, 3, 4);
+            btnExcluir.Location = new Point(418, 383);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(86, 43);
+            btnExcluir.Size = new Size(75, 32);
             btnExcluir.TabIndex = 13;
-            btnExcluir.Text = Properties.Resources.ResourceManager.GetString("Excluir");
             btnExcluir.UseVisualStyleBackColor = false;
             // 
             // btnEditar
             // 
             btnEditar.BackColor = Color.CornflowerBlue;
-            btnEditar.Location = new Point(363, 511);
-            btnEditar.Margin = new Padding(3, 4, 3, 4);
+            btnEditar.Location = new Point(318, 383);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(86, 43);
+            btnEditar.Size = new Size(75, 32);
             btnEditar.TabIndex = 14;
-            btnEditar.Text = Properties.Resources.ResourceManager.GetString("Editar");
             btnEditar.UseVisualStyleBackColor = false;
             // 
             // FormFuncionario
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(781, 569);
+            ClientSize = new Size(683, 427);
             Controls.Add(btnEditar);
             Controls.Add(btnExcluir);
             Controls.Add(panelFuncionarios);
             Controls.Add(btnSalvar);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "FormFuncionario";
             Text = "Form1";
             Load += Form1_Load;

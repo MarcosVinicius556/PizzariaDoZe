@@ -71,5 +71,127 @@ namespace PizzariaDoZe.views
         {
 
         }
+
+        private void txtId_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Impede que o caractere "Enter" seja inserido no TextBox
+                e.SuppressKeyPress = true;
+
+                // Simula o pressionamento da tecla "Tab" para mover o foco para o próximo controle
+                SendKeys.Send("{Tab}");
+            }
+        }
+
+        private void txtCpf_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Impede que o caractere "Enter" seja inserido no TextBox
+                e.SuppressKeyPress = true;
+
+                // Simula o pressionamento da tecla "Tab" para mover o foco para o próximo controle
+                SendKeys.Send("{Tab}");
+            }
+        }
+
+        private void txtMatricula_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Impede que o caractere "Enter" seja inserido no TextBox
+                e.SuppressKeyPress = true;
+
+                // Simula o pressionamento da tecla "Tab" para mover o foco para o próximo controle
+                SendKeys.Send("{Tab}");
+            }
+        }
+
+        private void txtNome_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Impede que o caractere "Enter" seja inserido no TextBox
+                e.SuppressKeyPress = true;
+
+                // Simula o pressionamento da tecla "Tab" para mover o foco para o próximo controle
+                SendKeys.Send("{Tab}");
+            }
+        }
+
+        private void txtTelefone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Impede que o caractere "Enter" seja inserido no TextBox
+                e.SuppressKeyPress = true;
+
+                // Simula o pressionamento da tecla "Tab" para mover o foco para o próximo controle
+                SendKeys.Send("{Tab}");
+            }
+        }
+
+        private void txtEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Impede que o caractere "Enter" seja inserido no TextBox
+                e.SuppressKeyPress = true;
+
+                // Simula o pressionamento da tecla "Tab" para mover o foco para o próximo controle
+                SendKeys.Send("{Tab}");
+            }
+        }
+
+        private void txtCnh_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Impede que o caractere "Enter" seja inserido no TextBox
+                e.SuppressKeyPress = true;
+
+                // Simula o pressionamento da tecla "Tab" para mover o foco para o próximo controle
+                SendKeys.Send("{Tab}");
+            }
+        }
+
+        private void calendarioCnh_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Impede que o caractere "Enter" seja inserido no TextBox
+                e.SuppressKeyPress = true;
+
+                // Simula o pressionamento da tecla "Tab" para mover o foco para o próximo controle
+                SendKeys.Send("{Tab}");
+            }
+        }
+
+        private void txtSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Impede que o caractere "Enter" seja inserido no TextBox
+                e.SuppressKeyPress = true;
+
+                // Simula o pressionamento da tecla "Tab" para mover o foco para o próximo controle
+                SendKeys.Send("{Tab}");
+            }
+        }
+
+        private void txtObs_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void FormCadastroCliente_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Console.WriteLine("TESTE");
+                this.Close();
+            }
+        }
     }
 }

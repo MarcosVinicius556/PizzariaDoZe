@@ -76,7 +76,6 @@ namespace PizzariaDoZe.views
             ColumnId.Name = "ColumnId";
             ColumnId.ReadOnly = true;
             ColumnId.Width = 200;
-            ColumnId.Tag = Properties.Resources.ResourceManager.GetString("Id");
             // 
             // ColumnDescription
             // 
@@ -84,7 +83,6 @@ namespace PizzariaDoZe.views
             ColumnDescription.Name = "ColumnDescription";
             ColumnDescription.ReadOnly = true;
             ColumnDescription.Width = 350;
-            ColumnDescription.Tag = Properties.Resources.ResourceManager.GetString("Descrição");
             // 
             // ColumnValue
             // 
@@ -92,7 +90,6 @@ namespace PizzariaDoZe.views
             ColumnValue.Name = "ColumnValue";
             ColumnValue.ReadOnly = true;
             ColumnValue.Width = 200;
-            ColumnValue.Tag = Properties.Resources.ResourceManager.GetString("Preço");
             // 
             // dataGridViewOrders
             // 
@@ -112,7 +109,6 @@ namespace PizzariaDoZe.views
             buttonSearch.Size = new Size(75, 41);
             buttonSearch.TabIndex = 1;
             buttonSearch.UseVisualStyleBackColor = true;
-            buttonSearch.Text = Properties.Resources.ResourceManager.GetString("Buscar");
             // 
             // textBoxSearch
             // 
@@ -142,7 +138,6 @@ namespace PizzariaDoZe.views
             lblUserName.Name = "lblUserName";
             lblUserName.Size = new Size(0, 25);
             lblUserName.TabIndex = 9;
-            lblUserName.Text = Properties.Resources.ResourceManager.GetString("Username");
             // 
             // buttonRegisterOrders
             // 
@@ -152,7 +147,6 @@ namespace PizzariaDoZe.views
             buttonRegisterOrders.TabIndex = 7;
             buttonRegisterOrders.UseVisualStyleBackColor = true;
             buttonRegisterOrders.Click += ButtonRegisterOrders_Click;
-            buttonRegisterOrders.Text = Properties.Resources.ResourceManager.GetString("Pedidos");
             // 
             // RegisterProducts
             // 
@@ -162,7 +156,6 @@ namespace PizzariaDoZe.views
             RegisterProducts.TabIndex = 6;
             RegisterProducts.UseVisualStyleBackColor = true;
             RegisterProducts.Click += RegisterProducts_Click;
-            RegisterProducts.Text = Properties.Resources.ResourceManager.GetString("Produtos");
             // 
             // buttonPizzaValues
             // 
@@ -172,7 +165,6 @@ namespace PizzariaDoZe.views
             buttonPizzaValues.TabIndex = 5;
             buttonPizzaValues.UseVisualStyleBackColor = true;
             buttonPizzaValues.Click += ButtonPizzaValues_Click;
-            buttonPizzaValues.Text = Properties.Resources.ResourceManager.GetString("Valores Pizza");
             // 
             // buttonRegisterFlavors
             // 
@@ -182,7 +174,6 @@ namespace PizzariaDoZe.views
             buttonRegisterFlavors.TabIndex = 4;
             buttonRegisterFlavors.UseVisualStyleBackColor = true;
             buttonRegisterFlavors.Click += ButtonRegisterFlavors_Click;
-            buttonRegisterFlavors.Text = Properties.Resources.ResourceManager.GetString("Sabores");
             // 
             // buttonRegisterIngredients
             // 
@@ -192,7 +183,6 @@ namespace PizzariaDoZe.views
             buttonRegisterIngredients.TabIndex = 3;
             buttonRegisterIngredients.UseVisualStyleBackColor = true;
             buttonRegisterIngredients.Click += ButtonRegisterIngredients_Click;
-            buttonRegisterIngredients.Text = Properties.Resources.ResourceManager.GetString("Ingredientes");
             // 
             // buttonRegisterClient
             // 
@@ -202,7 +192,6 @@ namespace PizzariaDoZe.views
             buttonRegisterClient.TabIndex = 2;
             buttonRegisterClient.UseVisualStyleBackColor = true;
             buttonRegisterClient.Click += ButtonRegisterClient_Click;
-            buttonRegisterClient.Text = Properties.Resources.ResourceManager.GetString("Cadastro Cliente");
             // 
             // buttonRegisterEmployees
             // 
@@ -212,7 +201,6 @@ namespace PizzariaDoZe.views
             buttonRegisterEmployees.TabIndex = 1;
             buttonRegisterEmployees.UseVisualStyleBackColor = true;
             buttonRegisterEmployees.Click += Employees_Click;
-            buttonRegisterEmployees.Text = Properties.Resources.ResourceManager.GetString("Funcionários");
             // 
             // buttonAdressRegister
             // 
@@ -222,7 +210,6 @@ namespace PizzariaDoZe.views
             buttonAdressRegister.TabIndex = 0;
             buttonAdressRegister.UseVisualStyleBackColor = true;
             buttonAdressRegister.Click += AdressClick_Click;
-            buttonAdressRegister.Text = Properties.Resources.ResourceManager.GetString("Cadastro de Endereço");
             // 
             // panelLeft
             // 
@@ -251,7 +238,6 @@ namespace PizzariaDoZe.views
             buttonOptions.TabIndex = 11;
             buttonOptions.UseVisualStyleBackColor = true;
             buttonOptions.Click += buttonOptions_Click;
-            buttonOptions.Text = Properties.Resources.ResourceManager.GetString("Opções");
             // 
             // pictureUser
             // 
@@ -270,8 +256,8 @@ namespace PizzariaDoZe.views
             buttonConfirm.Name = "buttonConfirm";
             buttonConfirm.Size = new Size(86, 26);
             buttonConfirm.TabIndex = 1;
-            buttonConfirm.UseVisualStyleBackColor = true;
             buttonConfirm.Text = "Confirm";
+            buttonConfirm.UseVisualStyleBackColor = true;
             // 
             // buttonPrint
             // 
@@ -280,7 +266,6 @@ namespace PizzariaDoZe.views
             buttonPrint.Size = new Size(86, 26);
             buttonPrint.TabIndex = 0;
             buttonPrint.UseVisualStyleBackColor = true;
-            buttonPrint.Text = Properties.Resources.ResourceManager.GetString("Imprimir");
             // 
             // panelInf
             // 

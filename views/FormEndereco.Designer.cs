@@ -61,9 +61,10 @@ partial class FormEndereco
         // 
         txtId.Location = new Point(28, 66);
         txtId.Name = "txtId";
-        txtId.Size = new Size(127, 27);
+        txtId.Size = new Size(127, 23);
         txtId.TabIndex = 1;
         toolTip1.SetToolTip(txtId, "Dados Incorretos");
+        txtId.KeyDown += txtId_KeyDown;
         // 
         // errorProvider1
         // 
@@ -74,7 +75,7 @@ partial class FormEndereco
         lblId.AutoSize = true;
         lblId.Location = new Point(28, 44);
         lblId.Name = "lblId";
-        lblId.Size = new Size(29, 20);
+        lblId.Size = new Size(23, 15);
         lblId.TabIndex = 3;
         lblId.Text = "ID:";
         // 
@@ -82,17 +83,17 @@ partial class FormEndereco
         // 
         txtCep.Location = new Point(214, 66);
         txtCep.Name = "txtCep";
-        txtCep.Size = new Size(191, 27);
+        txtCep.Size = new Size(191, 23);
         txtCep.TabIndex = 4;
+        txtCep.KeyDown += txtCep_KeyDown;
         // 
         // lblCep
         // 
         lblCep.AutoSize = true;
         lblCep.Location = new Point(214, 44);
         lblCep.Name = "lblCep";
-        lblCep.Size = new Size(39, 20);
+        lblCep.Size = new Size(0, 15);
         lblCep.TabIndex = 5;
-        lblCep.Text = Properties.Resources.ResourceManager.GetString("CEP");
         lblCep.Click += lbl_cep_Click;
         // 
         // lblTituloEndereco
@@ -101,9 +102,8 @@ partial class FormEndereco
         lblTituloEndereco.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
         lblTituloEndereco.Location = new Point(20, 20);
         lblTituloEndereco.Name = "lblTituloEndereco";
-        lblTituloEndereco.Size = new Size(365, 46);
+        lblTituloEndereco.Size = new Size(0, 37);
         lblTituloEndereco.TabIndex = 6;
-        lblTituloEndereco.Text = Properties.Resources.ResourceManager.GetString("Cadastro de Endereço");
         // 
         // panelEndereco
         // 
@@ -132,84 +132,84 @@ partial class FormEndereco
         lblBairro.AutoSize = true;
         lblBairro.Location = new Point(466, 180);
         lblBairro.Name = "lblBairro";
-        lblBairro.Size = new Size(56, 20);
+        lblBairro.Size = new Size(0, 15);
         lblBairro.TabIndex = 16;
-        lblBairro.Text = Properties.Resources.ResourceManager.GetString("Bairro");
         // 
         // txtBairro
         // 
         txtBairro.Location = new Point(466, 207);
         txtBairro.Name = "txtBairro";
-        txtBairro.Size = new Size(257, 27);
+        txtBairro.Size = new Size(257, 23);
         txtBairro.TabIndex = 15;
+        txtBairro.KeyDown += txtBairro_KeyDown;
         // 
         // dropBoxUf
         // 
         dropBoxUf.FormattingEnabled = true;
         dropBoxUf.Location = new Point(466, 135);
         dropBoxUf.Name = "dropBoxUf";
-        dropBoxUf.Size = new Size(257, 28);
+        dropBoxUf.Size = new Size(257, 23);
         dropBoxUf.TabIndex = 14;
+        dropBoxUf.KeyDown += dropBoxUf_KeyDown;
         // 
         // lblUf
         // 
         lblUf.AutoSize = true;
         lblUf.Location = new Point(466, 103);
         lblUf.Name = "lblUf";
-        lblUf.Size = new Size(32, 20);
+        lblUf.Size = new Size(0, 15);
         lblUf.TabIndex = 13;
-        lblUf.Text = Properties.Resources.ResourceManager.GetString("UF");
         // 
         // lblCidade
         // 
         lblCidade.AutoSize = true;
         lblCidade.Location = new Point(31, 189);
         lblCidade.Name = "lblCidade";
-        lblCidade.Size = new Size(60, 20);
+        lblCidade.Size = new Size(0, 15);
         lblCidade.TabIndex = 12;
-        lblCidade.Text = Properties.Resources.ResourceManager.GetString("Cidade");
         // 
         // dropBoxCidade
         // 
         dropBoxCidade.FormattingEnabled = true;
         dropBoxCidade.Location = new Point(31, 207);
         dropBoxCidade.Name = "dropBoxCidade";
-        dropBoxCidade.Size = new Size(374, 28);
+        dropBoxCidade.Size = new Size(374, 23);
         dropBoxCidade.TabIndex = 11;
+        dropBoxCidade.KeyDown += dropBoxCidade_KeyDown;
         // 
         // dropBoxPais
         // 
         dropBoxPais.FormattingEnabled = true;
         dropBoxPais.Location = new Point(31, 135);
         dropBoxPais.Name = "dropBoxPais";
-        dropBoxPais.Size = new Size(374, 28);
+        dropBoxPais.Size = new Size(374, 23);
         dropBoxPais.TabIndex = 10;
         dropBoxPais.SelectedIndexChanged += lista_paises_SelectedIndexChanged;
+        dropBoxPais.KeyDown += dropBoxPais_KeyDown;
         // 
         // lblPais
         // 
         lblPais.AutoSize = true;
         lblPais.Location = new Point(31, 103);
         lblPais.Name = "lblPais";
-        lblPais.Size = new Size(41, 20);
+        lblPais.Size = new Size(0, 15);
         lblPais.TabIndex = 9;
-        lblPais.Text = Properties.Resources.ResourceManager.GetString("Pais");
         // 
         // lblLogradouro
         // 
         lblLogradouro.AutoSize = true;
         lblLogradouro.Location = new Point(466, 44);
         lblLogradouro.Name = "lblLogradouro";
-        lblLogradouro.Size = new Size(95, 20);
+        lblLogradouro.Size = new Size(0, 15);
         lblLogradouro.TabIndex = 8;
-        lblLogradouro.Text = Properties.Resources.ResourceManager.GetString("Logradouro");
         // 
         // txtLogradouro
         // 
         txtLogradouro.Location = new Point(466, 66);
         txtLogradouro.Name = "txtLogradouro";
-        txtLogradouro.Size = new Size(257, 27);
+        txtLogradouro.Size = new Size(257, 23);
         txtLogradouro.TabIndex = 6;
+        txtLogradouro.KeyDown += txtLogradouro_KeyDown;
         // 
         // btnSalvar
         // 
@@ -221,7 +221,6 @@ partial class FormEndereco
         btnSalvar.Name = "btnSalvar";
         btnSalvar.Size = new Size(168, 70);
         btnSalvar.TabIndex = 8;
-        btnSalvar.Text = Properties.Resources.ResourceManager.GetString("Salvar");
         btnSalvar.TextAlign = ContentAlignment.MiddleLeft;
         btnSalvar.TextImageRelation = TextImageRelation.ImageBeforeText;
         btnSalvar.UseVisualStyleBackColor = false;
@@ -237,7 +236,6 @@ partial class FormEndereco
         btnEditar.Name = "btnEditar";
         btnEditar.Size = new Size(168, 70);
         btnEditar.TabIndex = 9;
-        btnEditar.Text = Properties.Resources.ResourceManager.GetString("Editar");
         btnEditar.TextAlign = ContentAlignment.MiddleLeft;
         btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
         btnEditar.UseVisualStyleBackColor = false;
@@ -252,7 +250,6 @@ partial class FormEndereco
         btnDeletar.Name = "btnDeletar";
         btnDeletar.Size = new Size(168, 70);
         btnDeletar.TabIndex = 10;
-        btnDeletar.Text = Properties.Resources.ResourceManager.GetString("Excluir");
         btnDeletar.TextAlign = ContentAlignment.MiddleLeft;
         btnDeletar.TextImageRelation = TextImageRelation.ImageBeforeText;
         btnDeletar.UseVisualStyleBackColor = false;
@@ -267,7 +264,6 @@ partial class FormEndereco
         btnFechar.Name = "btnFechar";
         btnFechar.Size = new Size(168, 70);
         btnFechar.TabIndex = 11;
-        btnFechar.Text = Properties.Resources.ResourceManager.GetString("Fechar");
         btnFechar.TextAlign = ContentAlignment.MiddleLeft;
         btnFechar.TextImageRelation = TextImageRelation.ImageBeforeText;
         btnFechar.UseVisualStyleBackColor = false;
@@ -280,7 +276,7 @@ partial class FormEndereco
         // 
         // FormEndereco
         // 
-        AutoScaleDimensions = new SizeF(9F, 20F);
+        AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
         Controls.Add(btnFechar);
@@ -292,7 +288,6 @@ partial class FormEndereco
         Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
         FormBorderStyle = FormBorderStyle.FixedSingle;
         Name = "FormEndereco";
-        Text = Properties.Resources.ResourceManager.GetString("Endereço");
         Load += form_endereco_Load;
         ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
         panelEndereco.ResumeLayout(false);

@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ListViewItem listViewItem13 = new ListViewItem("Refrigerante");
-            ListViewItem listViewItem14 = new ListViewItem("Cerveja");
-            ListViewItem listViewItem15 = new ListViewItem("Suco");
-            ListViewItem listViewItem16 = new ListViewItem("Água");
-            ListViewItem listViewItem17 = new ListViewItem("Chocoleite");
-            ListViewItem listViewItem18 = new ListViewItem("Outros");
-            ListViewItem listViewItem19 = new ListViewItem("150");
-            ListViewItem listViewItem20 = new ListViewItem("300");
-            ListViewItem listViewItem21 = new ListViewItem("600");
-            ListViewItem listViewItem22 = new ListViewItem("1000");
-            ListViewItem listViewItem23 = new ListViewItem("1500");
-            ListViewItem listViewItem24 = new ListViewItem("2000");
+            ListViewItem listViewItem1 = new ListViewItem("Refrigerante");
+            ListViewItem listViewItem2 = new ListViewItem("Cerveja");
+            ListViewItem listViewItem3 = new ListViewItem("Suco");
+            ListViewItem listViewItem4 = new ListViewItem("Água");
+            ListViewItem listViewItem5 = new ListViewItem("Chocoleite");
+            ListViewItem listViewItem6 = new ListViewItem("Outros");
+            ListViewItem listViewItem7 = new ListViewItem("150");
+            ListViewItem listViewItem8 = new ListViewItem("300");
+            ListViewItem listViewItem9 = new ListViewItem("600");
+            ListViewItem listViewItem10 = new ListViewItem("1000");
+            ListViewItem listViewItem11 = new ListViewItem("1500");
+            ListViewItem listViewItem12 = new ListViewItem("2000");
             lblId = new Label();
             txtId = new TextBox();
             txtNome = new TextBox();
@@ -73,6 +73,7 @@
             txtId.Name = "txtId";
             txtId.Size = new Size(67, 23);
             txtId.TabIndex = 1;
+            txtId.KeyDown += txtId_KeyDown;
             // 
             // txtNome
             // 
@@ -80,6 +81,7 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(180, 23);
             txtNome.TabIndex = 2;
+            txtNome.KeyDown += txtNome_KeyDown;
             // 
             // txtValor
             // 
@@ -87,62 +89,61 @@
             txtValor.Name = "txtValor";
             txtValor.Size = new Size(180, 23);
             txtValor.TabIndex = 3;
+            txtValor.KeyDown += txtValor_KeyDown;
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
             lblNome.Location = new Point(46, 93);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(43, 15);
+            lblNome.Size = new Size(0, 15);
             lblNome.TabIndex = 4;
-            lblNome.Text = Properties.Resources.ResourceManager.GetString("Nome");
             // 
             // lblValor
             // 
             lblValor.AutoSize = true;
             lblValor.Location = new Point(46, 165);
             lblValor.Name = "lblValor";
-            lblValor.Size = new Size(36, 15);
+            lblValor.Size = new Size(0, 15);
             lblValor.TabIndex = 5;
-            lblValor.Text = Properties.Resources.ResourceManager.GetString("Valor");
             // 
             // groupBoxTipo
             // 
-            groupBoxTipo.Items.AddRange(new ListViewItem[] { listViewItem13, listViewItem14, listViewItem15, listViewItem16, listViewItem17, listViewItem18 });
+            groupBoxTipo.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3, listViewItem4, listViewItem5, listViewItem6 });
             groupBoxTipo.Location = new Point(268, 49);
             groupBoxTipo.Name = "groupBoxTipo";
             groupBoxTipo.Size = new Size(121, 157);
             groupBoxTipo.TabIndex = 6;
             groupBoxTipo.UseCompatibleStateImageBehavior = false;
             groupBoxTipo.View = View.List;
+            groupBoxTipo.KeyDown += groupBoxTipo_KeyDown;
             // 
             // groupBoxMl
             // 
-            groupBoxMl.Items.AddRange(new ListViewItem[] { listViewItem19, listViewItem20, listViewItem21, listViewItem22, listViewItem23, listViewItem24 });
+            groupBoxMl.Items.AddRange(new ListViewItem[] { listViewItem7, listViewItem8, listViewItem9, listViewItem10, listViewItem11, listViewItem12 });
             groupBoxMl.Location = new Point(405, 49);
             groupBoxMl.Name = "groupBoxMl";
             groupBoxMl.Size = new Size(121, 157);
             groupBoxMl.TabIndex = 7;
             groupBoxMl.UseCompatibleStateImageBehavior = false;
             groupBoxMl.View = View.List;
+            groupBoxMl.KeyDown += groupBoxMl_KeyDown;
             // 
             // lblTipo
             // 
             lblTipo.AutoSize = true;
             lblTipo.Location = new Point(268, 31);
             lblTipo.Name = "lblTipo";
-            lblTipo.Size = new Size(33, 15);
+            lblTipo.Size = new Size(0, 15);
             lblTipo.TabIndex = 8;
-            lblTipo.Text = Properties.Resources.ResourceManager.GetString("Tipo");
             // 
             // lblMl
             // 
             lblMl.AutoSize = true;
             lblMl.Location = new Point(405, 31);
             lblMl.Name = "lblMl";
-            lblMl.Size = new Size(27, 15);
+            lblMl.Size = new Size(0, 15);
             lblMl.TabIndex = 9;
-            lblMl.Text = Properties.Resources.ResourceManager.GetString("ML");
             // 
             // btnFechar
             // 
@@ -152,7 +153,6 @@
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(110, 33);
             btnFechar.TabIndex = 31;
-            btnFechar.Text = Properties.Resources.ResourceManager.GetString("Fechar");
             btnFechar.UseVisualStyleBackColor = false;
             // 
             // btnExcluir
@@ -163,7 +163,6 @@
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(110, 33);
             btnExcluir.TabIndex = 30;
-            btnExcluir.Text = Properties.Resources.ResourceManager.GetString("Excluir");
             btnExcluir.UseVisualStyleBackColor = false;
             // 
             // btnEditar
@@ -174,7 +173,6 @@
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(110, 33);
             btnEditar.TabIndex = 29;
-            btnEditar.Text = Properties.Resources.ResourceManager.GetString("Editar");
             btnEditar.UseVisualStyleBackColor = false;
             // 
             // btnSalvar
@@ -185,7 +183,6 @@
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(110, 33);
             btnSalvar.TabIndex = 28;
-            btnSalvar.Text = Properties.Resources.ResourceManager.GetString("Salvar");
             btnSalvar.UseVisualStyleBackColor = false;
             // 
             // FormProdutos

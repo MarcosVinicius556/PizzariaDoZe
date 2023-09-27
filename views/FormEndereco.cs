@@ -32,4 +32,88 @@ public partial class FormEndereco : Form
     {
 
     }
+
+    private void txtId_KeyDown(object sender, KeyEventArgs e)
+    {
+        if (e.KeyCode == Keys.Enter)
+        {
+            // Impede que o caractere "Enter" seja inserido no TextBox
+            e.SuppressKeyPress = true;
+
+            // Simula o pressionamento da tecla "Tab" para mover o foco para o próximo controle
+            SendKeys.Send("{Tab}");
+        }
+    }
+
+    private void txtCep_KeyDown(object sender, KeyEventArgs e)
+    {
+        if (e.KeyCode == Keys.Enter)
+        {
+            // Impede que o caractere "Enter" seja inserido no TextBox
+            e.SuppressKeyPress = true;
+
+            // Simula o pressionamento da tecla "Tab" para mover o foco para o próximo controle
+            SendKeys.Send("{Tab}");
+        }
+    }
+
+    private void txtLogradouro_KeyDown(object sender, KeyEventArgs e)
+    {
+        if (e.KeyCode == Keys.Enter)
+        {
+            // Impede que o caractere "Enter" seja inserido no TextBox
+            e.SuppressKeyPress = true;
+
+            // Simula o pressionamento da tecla "Tab" para mover o foco para o próximo controle
+            SendKeys.Send("{Tab}");
+        }
+    }
+
+    private void dropBoxPais_KeyDown(object sender, KeyEventArgs e)
+    {
+        if (e.KeyCode == Keys.Enter)
+        {
+            // Impede que o caractere "Enter" seja inserido no TextBox
+            e.SuppressKeyPress = true;
+
+            // Simula o pressionamento da tecla "Tab" para mover o foco para o próximo controle
+            SendKeys.Send("{Tab}");
+        }
+    }
+
+    private void dropBoxUf_KeyDown(object sender, KeyEventArgs e)
+    {
+        if (e.KeyCode == Keys.Enter)
+        {
+            // Impede que o caractere "Enter" seja inserido no TextBox
+            e.SuppressKeyPress = true;
+
+            // Simula o pressionamento da tecla "Tab" para mover o foco para o próximo controle
+            SendKeys.Send("{Tab}");
+        }
+    }
+
+    private void dropBoxCidade_KeyDown(object sender, KeyEventArgs e)
+    {
+        if (e.KeyCode == Keys.Enter)
+        {
+            // Impede que o caractere "Enter" seja inserido no TextBox
+            e.SuppressKeyPress = true;
+
+            // Simula o pressionamento da tecla "Tab" para mover o foco para o próximo controle
+            SendKeys.Send("{Tab}");
+        }
+    }
+
+    private void txtBairro_KeyDown(object sender, KeyEventArgs e)
+    {
+        if (e.KeyCode == Keys.Enter)
+        {
+            // Impede que o caractere "Enter" seja inserido no TextBox
+            e.SuppressKeyPress = true;
+
+            // Simula o pressionamento da tecla "Tab" para mover o foco para o próximo controle
+            SendKeys.Send("{Tab}");
+        }
+    }
 }

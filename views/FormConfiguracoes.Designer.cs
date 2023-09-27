@@ -52,6 +52,7 @@
             comboBoxIdioma.Name = "comboBoxIdioma";
             comboBoxIdioma.Size = new Size(278, 23);
             comboBoxIdioma.TabIndex = 1;
+            comboBoxIdioma.KeyDown += comboBoxIdioma_KeyDown;
             // 
             // SalvarIdioma
             // 
@@ -62,6 +63,7 @@
             SalvarIdioma.Text = "Salvar Idioma";
             SalvarIdioma.UseVisualStyleBackColor = true;
             SalvarIdioma.Click += SalvarIdioma_Click;
+            SalvarIdioma.KeyDown += SalvarIdioma_KeyDown;
             // 
             // FormConfiguracoes
             // 

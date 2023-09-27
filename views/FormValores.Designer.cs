@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ListViewItem listViewItem7 = new ListViewItem("Tradicional");
-            ListViewItem listViewItem8 = new ListViewItem("Especial");
-            ListViewItem listViewItem9 = new ListViewItem("Pequena");
-            ListViewItem listViewItem10 = new ListViewItem("Média");
-            ListViewItem listViewItem11 = new ListViewItem("Grande");
-            ListViewItem listViewItem12 = new ListViewItem("Familia");
+            ListViewItem listViewItem1 = new ListViewItem("Tradicional");
+            ListViewItem listViewItem2 = new ListViewItem("Especial");
+            ListViewItem listViewItem3 = new ListViewItem("Pequena");
+            ListViewItem listViewItem4 = new ListViewItem("Média");
+            ListViewItem listViewItem5 = new ListViewItem("Grande");
+            ListViewItem listViewItem6 = new ListViewItem("Familia");
             btnFechar = new Button();
             btnExcluir = new Button();
             btnEditar = new Button();
@@ -58,7 +58,6 @@
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(110, 33);
             btnFechar.TabIndex = 27;
-            btnFechar.Text = Properties.Resources.ResourceManager.GetString("Fechar");
             btnFechar.UseVisualStyleBackColor = false;
             // 
             // btnExcluir
@@ -69,7 +68,6 @@
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(110, 33);
             btnExcluir.TabIndex = 26;
-            btnExcluir.Text = Properties.Resources.ResourceManager.GetString("Excluir");
             btnExcluir.UseVisualStyleBackColor = false;
             // 
             // btnEditar
@@ -80,7 +78,6 @@
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(110, 33);
             btnEditar.TabIndex = 25;
-            btnEditar.Text = Properties.Resources.ResourceManager.GetString("Editar");
             btnEditar.UseVisualStyleBackColor = false;
             // 
             // btnSalvar
@@ -93,7 +90,6 @@
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(110, 33);
             btnSalvar.TabIndex = 24;
-            btnSalvar.Text = Properties.Resources.ResourceManager.GetString("Salvar");
             btnSalvar.UseVisualStyleBackColor = false;
             // 
             // lblCategoria
@@ -101,70 +97,70 @@
             lblCategoria.AutoSize = true;
             lblCategoria.Location = new Point(407, 31);
             lblCategoria.Name = "lblCategoria";
-            lblCategoria.Size = new Size(61, 15);
+            lblCategoria.Size = new Size(0, 15);
             lblCategoria.TabIndex = 23;
-            lblCategoria.Text = Properties.Resources.ResourceManager.GetString("Categoria");
             // 
             // lblTamanho
             // 
             lblTamanho.AutoSize = true;
             lblTamanho.Location = new Point(270, 31);
             lblTamanho.Name = "lblTamanho";
-            lblTamanho.Size = new Size(59, 15);
+            lblTamanho.Size = new Size(0, 15);
             lblTamanho.TabIndex = 22;
-            lblTamanho.Text = Properties.Resources.ResourceManager.GetString("tamanho");
             // 
             // txtCategoria
             // 
-            txtCategoria.Items.AddRange(new ListViewItem[] { listViewItem7, listViewItem8 });
+            txtCategoria.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2 });
             txtCategoria.Location = new Point(407, 49);
             txtCategoria.Name = "txtCategoria";
             txtCategoria.Size = new Size(121, 157);
             txtCategoria.TabIndex = 21;
             txtCategoria.UseCompatibleStateImageBehavior = false;
             txtCategoria.View = View.List;
+            txtCategoria.KeyDown += txtCategoria_KeyDown;
             // 
             // txtTamanho
             // 
-            txtTamanho.Items.AddRange(new ListViewItem[] { listViewItem9, listViewItem10, listViewItem11, listViewItem12 });
+            txtTamanho.Items.AddRange(new ListViewItem[] { listViewItem3, listViewItem4, listViewItem5, listViewItem6 });
             txtTamanho.Location = new Point(270, 49);
             txtTamanho.Name = "txtTamanho";
             txtTamanho.Size = new Size(121, 157);
             txtTamanho.TabIndex = 20;
             txtTamanho.UseCompatibleStateImageBehavior = false;
             txtTamanho.View = View.List;
+            txtTamanho.KeyDown += txtTamanho_KeyDown;
             // 
             // lblAdicionalBorda
             // 
             lblAdicionalBorda.AutoSize = true;
             lblAdicionalBorda.Location = new Point(48, 165);
             lblAdicionalBorda.Name = "lblAdicionalBorda";
-            lblAdicionalBorda.Size = new Size(121, 15);
-            lblAdicionalBorda.TabIndex = 19;
-            lblAdicionalBorda.Text = Properties.Resources.ResourceManager.GetString("Valor Adicional Borda");
+            lblAdicionalBorda.Size = new Size(0, 15);
+            lblAdicionalBorda.TabIndex = 5;
             // 
             // lblValor
             // 
             lblValor.AutoSize = true;
             lblValor.Location = new Point(48, 93);
             lblValor.Name = "lblValor";
-            lblValor.Size = new Size(36, 15);
-            lblValor.TabIndex = 18;
-            lblValor.Text = Properties.Resources.ResourceManager.GetString("Valor");
+            lblValor.Size = new Size(0, 15);
+            lblValor.TabIndex = 3;
             // 
             // txtAdicionalBorda
             // 
             txtAdicionalBorda.Location = new Point(48, 183);
             txtAdicionalBorda.Name = "txtAdicionalBorda";
             txtAdicionalBorda.Size = new Size(180, 23);
-            txtAdicionalBorda.TabIndex = 17;
+            txtAdicionalBorda.TabIndex = 6;
+            txtAdicionalBorda.KeyDown += txtAdicionalBorda_KeyDown;
             // 
             // txtValor
             // 
             txtValor.Location = new Point(48, 111);
             txtValor.Name = "txtValor";
             txtValor.Size = new Size(180, 23);
-            txtValor.TabIndex = 16;
+            txtValor.TabIndex = 4;
+            txtValor.KeyDown += txtValor_KeyDown;
             // 
             // txtId
             // 
@@ -173,7 +169,8 @@
             txtId.Location = new Point(48, 49);
             txtId.Name = "txtId";
             txtId.Size = new Size(67, 23);
-            txtId.TabIndex = 15;
+            txtId.TabIndex = 2;
+            txtId.KeyDown += txtId_KeyDown;
             // 
             // lblId
             // 
@@ -181,7 +178,7 @@
             lblId.Location = new Point(48, 31);
             lblId.Name = "lblId";
             lblId.Size = new Size(21, 15);
-            lblId.TabIndex = 14;
+            lblId.TabIndex = 1;
             lblId.Text = "ID:";
             // 
             // FormValores
