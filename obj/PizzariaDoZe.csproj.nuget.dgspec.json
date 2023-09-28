@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\55949\\Documents\\projetos\\PizzariaDoZe\\PizzariaDoZe.csproj": {}
+    "C:\\Users\\Cliente\\Documents\\Projetos\\PizzariaDoZe\\PizzariaDoZe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\55949\\Documents\\projetos\\PizzariaDoZe\\PizzariaDoZe.csproj": {
+    "C:\\Users\\Cliente\\Documents\\Projetos\\PizzariaDoZe\\PizzariaDoZe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\55949\\Documents\\projetos\\PizzariaDoZe\\PizzariaDoZe.csproj",
+        "projectUniqueName": "C:\\Users\\Cliente\\Documents\\Projetos\\PizzariaDoZe\\PizzariaDoZe.csproj",
         "projectName": "PizzariaDoZe",
-        "projectPath": "C:\\Users\\55949\\Documents\\projetos\\PizzariaDoZe\\PizzariaDoZe.csproj",
-        "packagesPath": "C:\\Users\\55949\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\55949\\Documents\\projetos\\PizzariaDoZe\\obj\\",
+        "projectPath": "C:\\Users\\Cliente\\Documents\\Projetos\\PizzariaDoZe\\PizzariaDoZe.csproj",
+        "packagesPath": "C:\\Users\\Cliente\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cliente\\Documents\\Projetos\\PizzariaDoZe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\55949\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Cliente\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

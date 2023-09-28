@@ -40,6 +40,7 @@ namespace PizzariaDoZe.views
 
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             ColumnId = new DataGridViewTextBoxColumn();
             ColumnDescription = new DataGridViewTextBoxColumn();
@@ -63,11 +64,24 @@ namespace PizzariaDoZe.views
             buttonConfirm = new Button();
             buttonPrint = new Button();
             panelInf = new Panel();
+            contextMenuStripPrincipal = new ContextMenuStrip(components);
+            inicioToolStripMenuItem = new ToolStripMenuItem();
+            funcionáriosToolStripMenuItem = new ToolStripMenuItem();
+            clientesToolStripMenuItem = new ToolStripMenuItem();
+            ingredientesToolStripMenuItem = new ToolStripMenuItem();
+            saboresToolStripMenuItem = new ToolStripMenuItem();
+            valoresPizzaToolStripMenuItem = new ToolStripMenuItem();
+            produtosToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
+            configuraçõesToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator2 = new ToolStripSeparator();
+            sairToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).BeginInit();
             panelSup.SuspendLayout();
             panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureUser).BeginInit();
             panelInf.SuspendLayout();
+            contextMenuStripPrincipal.SuspendLayout();
             SuspendLayout();
             // 
             // ColumnId
@@ -98,11 +112,11 @@ namespace PizzariaDoZe.views
             // 
             dataGridViewOrders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewOrders.Columns.AddRange(new DataGridViewColumn[] { ColumnId, ColumnDescription, ColumnValue });
-            dataGridViewOrders.Location = new Point(211, 66);
+            dataGridViewOrders.Location = new Point(211, 63);
             dataGridViewOrders.Name = "dataGridViewOrders";
             dataGridViewOrders.RowHeadersWidth = 51;
             dataGridViewOrders.RowTemplate.Height = 25;
-            dataGridViewOrders.Size = new Size(805, 490);
+            dataGridViewOrders.Size = new Size(805, 493);
             dataGridViewOrders.TabIndex = 3;
             // 
             // buttonSearch
@@ -121,6 +135,7 @@ namespace PizzariaDoZe.views
             textBoxSearch.Name = "textBoxSearch";
             textBoxSearch.Size = new Size(325, 39);
             textBoxSearch.TabIndex = 0;
+
             // 
             // panelSup
             // 
@@ -256,7 +271,7 @@ namespace PizzariaDoZe.views
             // pictureUser
             // 
             pictureUser.Image = (Image)resources.GetObject("pictureUser.Image");
-            pictureUser.Location = new Point(18, 18);
+            pictureUser.Location = new Point(17, 51);
             pictureUser.Margin = new Padding(3, 2, 3, 2);
             pictureUser.Name = "pictureUser";
             pictureUser.Size = new Size(78, 58);
@@ -270,8 +285,8 @@ namespace PizzariaDoZe.views
             buttonConfirm.Name = "buttonConfirm";
             buttonConfirm.Size = new Size(86, 26);
             buttonConfirm.TabIndex = 1;
-            buttonConfirm.UseVisualStyleBackColor = true;
             buttonConfirm.Text = "Confirm";
+            buttonConfirm.UseVisualStyleBackColor = true;
             // 
             // buttonPrint
             // 
@@ -292,11 +307,93 @@ namespace PizzariaDoZe.views
             panelInf.Size = new Size(805, 38);
             panelInf.TabIndex = 2;
             // 
+            // contextMenuStripPrincipal
+            // 
+            contextMenuStripPrincipal.Items.AddRange(new ToolStripItem[] { inicioToolStripMenuItem, funcionáriosToolStripMenuItem, clientesToolStripMenuItem, ingredientesToolStripMenuItem, saboresToolStripMenuItem, valoresPizzaToolStripMenuItem, produtosToolStripMenuItem, toolStripSeparator1, configuraçõesToolStripMenuItem, toolStripSeparator2, sairToolStripMenuItem });
+            contextMenuStripPrincipal.Name = "contextMenuStrip1";
+            contextMenuStripPrincipal.Size = new Size(152, 214);
+            contextMenuStripPrincipal.Opening += contextMenuStripPrincipal_Opening;
+            // 
+            // inicioToolStripMenuItem
+            // 
+            inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            inicioToolStripMenuItem.Size = new Size(151, 22);
+            inicioToolStripMenuItem.Text = "Inicio";
+            inicioToolStripMenuItem.Click += inicioToolStripMenuItem_Click;
+            // 
+            // funcionáriosToolStripMenuItem
+            // 
+            funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
+            funcionáriosToolStripMenuItem.Size = new Size(151, 22);
+            funcionáriosToolStripMenuItem.Text = "Funcionários";
+            funcionáriosToolStripMenuItem.Click += funcionáriosToolStripMenuItem_Click;
+            // 
+            // clientesToolStripMenuItem
+            // 
+            clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            clientesToolStripMenuItem.Size = new Size(151, 22);
+            clientesToolStripMenuItem.Text = "Clientes";
+            clientesToolStripMenuItem.Click += clientesToolStripMenuItem_Click;
+            // 
+            // ingredientesToolStripMenuItem
+            // 
+            ingredientesToolStripMenuItem.Name = "ingredientesToolStripMenuItem";
+            ingredientesToolStripMenuItem.Size = new Size(151, 22);
+            ingredientesToolStripMenuItem.Text = "Ingredientes";
+            ingredientesToolStripMenuItem.Click += ingredientesToolStripMenuItem_Click;
+            // 
+            // saboresToolStripMenuItem
+            // 
+            saboresToolStripMenuItem.Name = "saboresToolStripMenuItem";
+            saboresToolStripMenuItem.Size = new Size(151, 22);
+            saboresToolStripMenuItem.Text = "Sabores";
+            saboresToolStripMenuItem.Click += saboresToolStripMenuItem_Click;
+            // 
+            // valoresPizzaToolStripMenuItem
+            // 
+            valoresPizzaToolStripMenuItem.Name = "valoresPizzaToolStripMenuItem";
+            valoresPizzaToolStripMenuItem.Size = new Size(151, 22);
+            valoresPizzaToolStripMenuItem.Text = "Valores Pizza";
+            valoresPizzaToolStripMenuItem.Click += valoresPizzaToolStripMenuItem_Click;
+            // 
+            // produtosToolStripMenuItem
+            // 
+            produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
+            produtosToolStripMenuItem.Size = new Size(151, 22);
+            produtosToolStripMenuItem.Text = "Produtos";
+            produtosToolStripMenuItem.Click += produtosToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(148, 6);
+            // 
+            // configuraçõesToolStripMenuItem
+            // 
+            configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
+            configuraçõesToolStripMenuItem.Size = new Size(151, 22);
+            configuraçõesToolStripMenuItem.Text = "Configurações";
+            configuraçõesToolStripMenuItem.Click += configToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(148, 6);
+            // 
+            // sairToolStripMenuItem
+            // 
+            sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            sairToolStripMenuItem.Size = new Size(151, 22);
+            sairToolStripMenuItem.Text = "Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
+
+            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1015, 594);
+            ContextMenuStrip = contextMenuStripPrincipal;
             Controls.Add(dataGridViewOrders);
             Controls.Add(panelSup);
             Controls.Add(panelLeft);
@@ -310,6 +407,7 @@ namespace PizzariaDoZe.views
             panelLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureUser).EndInit();
             panelInf.ResumeLayout(false);
+            contextMenuStripPrincipal.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -362,6 +460,18 @@ namespace PizzariaDoZe.views
 
         private PictureBox pictureUser;
         private Button buttonOptions;
+        private ContextMenuStrip contextMenuStripPrincipal;
+        private ToolStripMenuItem inicioToolStripMenuItem;
+        private ToolStripMenuItem funcionáriosToolStripMenuItem;
+        private ToolStripMenuItem clientesToolStripMenuItem;
+        private ToolStripMenuItem ingredientesToolStripMenuItem;
+        private ToolStripMenuItem saboresToolStripMenuItem;
+        private ToolStripMenuItem valoresPizzaToolStripMenuItem;
+        private ToolStripMenuItem produtosToolStripMenuItem;
+        private ToolStripMenuItem configuraçõesToolStripMenuItem;
+        private ToolStripMenuItem sairToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripSeparator toolStripSeparator2;
     }
 
     #endregion
