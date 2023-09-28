@@ -30,6 +30,51 @@ namespace PizzariaDoZe.views
 
         }
 
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            notifyIcon1.BalloonTipTitle = "Pizzaria do Zé";
+            notifyIcon1.BalloonTipText = "Enviado para bandeja";
+            notifyIcon1.Text = "Pizzaria do Zé";
+        }
+
+        private void NotifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Show();
+            notifyIcon1.Visible = false;
+            WindowState = FormWindowState.Normal;
+        }
+
+        private void FormPrincipal_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                this.Hide();
+                notifyIcon1.Visible = true;
+                notifyIcon1.ShowBalloonTip(1000);
+            }
+            else if (FormWindowState.Normal == this.WindowState)
+            {
+                notifyIcon1.Visible = false;
+            }
+        }
+
+        private void SobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Você tem um shape completamente aesthetic, por quê ainda come pizza?");
+        }
+
+        private void FecharToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void AbrirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Show();
+            notifyIcon1.Visible = false;
+            WindowState = FormWindowState.Normal;
+        }
+
         private void contextMenuStripPrincipal_Opening(object sender, CancelEventArgs e)
         {
 

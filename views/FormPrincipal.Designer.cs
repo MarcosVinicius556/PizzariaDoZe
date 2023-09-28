@@ -1,4 +1,5 @@
 ﻿using System.Configuration;
+using System.Windows.Forms;
 
 namespace PizzariaDoZe.views
 {
@@ -64,7 +65,12 @@ namespace PizzariaDoZe.views
             buttonConfirm = new Button();
             buttonPrint = new Button();
             panelInf = new Panel();
+            notifyIcon1 = new NotifyIcon(components);
+            contextMenuStrip1 = new ContextMenuStrip(components);
             contextMenuStripPrincipal = new ContextMenuStrip(components);
+            abrirToolStripMenuItem = new ToolStripMenuItem();
+            sobreToolStripMenuItem = new ToolStripMenuItem();
+            fecharToolStripMenuItem = new ToolStripMenuItem();
             inicioToolStripMenuItem = new ToolStripMenuItem();
             funcionáriosToolStripMenuItem = new ToolStripMenuItem();
             clientesToolStripMenuItem = new ToolStripMenuItem();
@@ -82,6 +88,7 @@ namespace PizzariaDoZe.views
             ((System.ComponentModel.ISupportInitialize)pictureUser).BeginInit();
             panelInf.SuspendLayout();
             contextMenuStripPrincipal.SuspendLayout();
+            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // ColumnId
@@ -307,6 +314,40 @@ namespace PizzariaDoZe.views
             panelInf.Size = new Size(805, 38);
             panelInf.TabIndex = 2;
             // 
+            // notifyIcon1
+            // 
+            notifyIcon1.ContextMenuStrip = contextMenuStrip1;
+            notifyIcon1.Icon = (Icon)resources.GetObject("notifyIcon1.Icon");
+            notifyIcon1.Text = "notifyIcon1";
+            notifyIcon1.MouseDoubleClick += NotifyIcon1_MouseDoubleClick;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { abrirToolStripMenuItem, sobreToolStripMenuItem, fecharToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(181, 92);
+            // 
+            // abrirToolStripMenuItem
+            // 
+            abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
+            abrirToolStripMenuItem.Size = new Size(180, 22);
+            abrirToolStripMenuItem.Text = "Abrir";
+            abrirToolStripMenuItem.Click += AbrirToolStripMenuItem_Click;
+            // 
+            // sobreToolStripMenuItem
+            // 
+            sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            sobreToolStripMenuItem.Size = new Size(109, 22);
+            sobreToolStripMenuItem.Text = "Sobre";
+            sobreToolStripMenuItem.Click += SobreToolStripMenuItem_Click;
+            // 
+            // fecharToolStripMenuItem
+            // 
+            fecharToolStripMenuItem.Name = "fecharToolStripMenuItem";
+            fecharToolStripMenuItem.Size = new Size(109, 22);
+            fecharToolStripMenuItem.Text = "Fechar";
+            fecharToolStripMenuItem.Click += FecharToolStripMenuItem_Click;
+            // 
             // contextMenuStripPrincipal
             // 
             contextMenuStripPrincipal.Items.AddRange(new ToolStripItem[] { inicioToolStripMenuItem, funcionáriosToolStripMenuItem, clientesToolStripMenuItem, ingredientesToolStripMenuItem, saboresToolStripMenuItem, valoresPizzaToolStripMenuItem, produtosToolStripMenuItem, toolStripSeparator1, configuraçõesToolStripMenuItem, toolStripSeparator2, sairToolStripMenuItem });
@@ -409,6 +450,7 @@ namespace PizzariaDoZe.views
             ((System.ComponentModel.ISupportInitialize)pictureUser).EndInit();
             panelInf.ResumeLayout(false);
             contextMenuStripPrincipal.ResumeLayout(false);
+            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -473,6 +515,11 @@ namespace PizzariaDoZe.views
         private ToolStripMenuItem sairToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripSeparator toolStripSeparator2;
+        private NotifyIcon notifyIcon1;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem abrirToolStripMenuItem;
+        private ToolStripMenuItem sobreToolStripMenuItem;
+        private ToolStripMenuItem fecharToolStripMenuItem;
     }
 
     #endregion
