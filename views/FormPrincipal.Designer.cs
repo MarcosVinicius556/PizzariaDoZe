@@ -400,6 +400,7 @@ namespace PizzariaDoZe.views
             Controls.Add(panelInf);
             Name = "FormPrincipal";
             Text = "Form1";
+            FormClosing += FormPrincipal_FormClosing;
             ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).EndInit();
             panelSup.ResumeLayout(false);
             panelSup.PerformLayout();

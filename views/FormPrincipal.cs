@@ -35,6 +35,23 @@ namespace PizzariaDoZe.views
 
         }
 
+        private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            DialogResult resultado = MessageBox.Show("Deseja fechar o formulário?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.No)
+            {
+
+                e.Cancel = true;
+            }
+            else
+            {
+
+                e.Cancel = false;
+            }
+
+        }
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormPrincipal principal = new FormPrincipal();
