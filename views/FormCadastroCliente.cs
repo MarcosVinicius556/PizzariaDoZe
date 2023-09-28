@@ -86,7 +86,17 @@ namespace PizzariaDoZe.views
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-           this.Close();
+        }
+
+        /* Outros métodos */
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Escape))
+            {
+                Close();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }

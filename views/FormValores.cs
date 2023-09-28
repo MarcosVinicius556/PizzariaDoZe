@@ -27,7 +27,18 @@ namespace PizzariaDoZe.views
                 SendKeys.Send("{Tab}");
             }
         }
-    
+
+        /* Outros métodos */
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Escape))
+            {
+                Close();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
     }
 
 }
