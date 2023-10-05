@@ -1,34 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="views\FormCadastroCliente.cs">
+    <Compile Update="src\views\FormCadastroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="views\FormConfiguracoes.cs">
+    <Compile Update="src\views\FormConfiguracoes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="views\FormLogin.cs">
+    <Compile Update="src\views\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="views\FormProdutos.cs">
+    <Compile Update="src\views\FormProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="views\FormSabores.cs">
+    <Compile Update="src\views\FormSabores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="views\FormFuncionario.cs">
+    <Compile Update="src\views\FormFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="views\FormIngredientes.cs">
+    <Compile Update="src\views\FormIngredientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="views\FormPrincipal.cs">
+    <Compile Update="src\views\FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="views\FormEndereco.cs">
+    <Compile Update="src\views\FormEndereco.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="views\FormValores.cs">
+    <Compile Update="src\views\FormValores.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
