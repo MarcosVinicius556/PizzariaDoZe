@@ -48,15 +48,14 @@
             btnSalvar.ForeColor = Color.White;
             btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
             btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSalvar.Location = new Point(29, 427);
-            btnSalvar.Margin = new Padding(3, 4, 3, 4);
+            btnSalvar.Location = new Point(25, 320);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(192, 93);
+            btnSalvar.Size = new Size(168, 70);
             btnSalvar.TabIndex = 9;
-            btnSalvar.Text = Properties.Resources.ResourceManager.GetString("Salvar");
             btnSalvar.TextAlign = ContentAlignment.MiddleLeft;
             btnSalvar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSalvar.UseVisualStyleBackColor = false;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // btnEditar
             // 
@@ -64,12 +63,10 @@
             btnEditar.ForeColor = Color.White;
             btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
             btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEditar.Location = new Point(254, 427);
-            btnEditar.Margin = new Padding(3, 4, 3, 4);
+            btnEditar.Location = new Point(222, 320);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(192, 93);
+            btnEditar.Size = new Size(168, 70);
             btnEditar.TabIndex = 10;
-            btnEditar.Text = Properties.Resources.ResourceManager.GetString("Editar");
             btnEditar.TextAlign = ContentAlignment.MiddleLeft;
             btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnEditar.UseVisualStyleBackColor = false;
@@ -80,12 +77,10 @@
             btnDeletar.ForeColor = Color.White;
             btnDeletar.Image = (Image)resources.GetObject("btnDeletar.Image");
             btnDeletar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDeletar.Location = new Point(478, 427);
-            btnDeletar.Margin = new Padding(3, 4, 3, 4);
+            btnDeletar.Location = new Point(418, 320);
             btnDeletar.Name = "btnDeletar";
-            btnDeletar.Size = new Size(192, 93);
+            btnDeletar.Size = new Size(168, 70);
             btnDeletar.TabIndex = 11;
-            btnDeletar.Text = Properties.Resources.ResourceManager.GetString("Excluir");
             btnDeletar.TextAlign = ContentAlignment.MiddleLeft;
             btnDeletar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnDeletar.UseVisualStyleBackColor = false;
@@ -96,12 +91,10 @@
             btnFechar.ForeColor = Color.White;
             btnFechar.Image = (Image)resources.GetObject("btnFechar.Image");
             btnFechar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnFechar.Location = new Point(697, 427);
-            btnFechar.Margin = new Padding(3, 4, 3, 4);
+            btnFechar.Location = new Point(610, 320);
             btnFechar.Name = "btnFechar";
-            btnFechar.Size = new Size(192, 93);
+            btnFechar.Size = new Size(168, 70);
             btnFechar.TabIndex = 12;
-            btnFechar.Text = Properties.Resources.ResourceManager.GetString("Fechar");
             btnFechar.TextAlign = ContentAlignment.MiddleLeft;
             btnFechar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnFechar.UseVisualStyleBackColor = false;
@@ -110,18 +103,16 @@
             // 
             lblCadastroIngredientes.AutoSize = true;
             lblCadastroIngredientes.Font = new Font("Segoe UI", 24.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblCadastroIngredientes.Location = new Point(64, 52);
+            lblCadastroIngredientes.Location = new Point(56, 39);
             lblCadastroIngredientes.Name = "lblCadastroIngredientes";
-            lblCadastroIngredientes.Size = new Size(473, 57);
+            lblCadastroIngredientes.Size = new Size(0, 45);
             lblCadastroIngredientes.TabIndex = 13;
-            lblCadastroIngredientes.Text = Properties.Resources.ResourceManager.GetString("Cadastrar Ingredientes");
             // 
             // textId
             // 
-            textId.Location = new Point(62, 61);
-            textId.Margin = new Padding(3, 4, 3, 4);
+            textId.Location = new Point(54, 46);
             textId.Name = "textId";
-            textId.Size = new Size(122, 27);
+            textId.Size = new Size(107, 23);
             textId.TabIndex = 14;
             textId.KeyDown += TabEvent;
             // 
@@ -129,18 +120,17 @@
             // 
             lblId.AutoSize = true;
             lblId.ForeColor = Color.White;
-            lblId.Location = new Point(62, 20);
+            lblId.Location = new Point(54, 15);
             lblId.Name = "lblId";
-            lblId.Size = new Size(27, 20);
+            lblId.Size = new Size(21, 15);
             lblId.TabIndex = 15;
             lblId.Text = "ID:";
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(272, 61);
-            txtNome.Margin = new Padding(3, 4, 3, 4);
+            txtNome.Location = new Point(238, 46);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(294, 27);
+            txtNome.Size = new Size(258, 23);
             txtNome.TabIndex = 16;
             txtNome.KeyDown += TabEvent;
             // 
@@ -148,11 +138,10 @@
             // 
             lblNome.AutoSize = true;
             lblNome.ForeColor = Color.White;
-            lblNome.Location = new Point(272, 20);
+            lblNome.Location = new Point(238, 15);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(53, 20);
+            lblNome.Size = new Size(0, 15);
             lblNome.TabIndex = 17;
-            lblNome.Text = Properties.Resources.ResourceManager.GetString("Nome");
             // 
             // panelIngredientes
             // 
@@ -161,26 +150,23 @@
             panelIngredientes.Controls.Add(lblNome);
             panelIngredientes.Controls.Add(textId);
             panelIngredientes.Controls.Add(lblId);
-            panelIngredientes.Location = new Point(29, 184);
-            panelIngredientes.Margin = new Padding(3, 4, 3, 4);
+            panelIngredientes.Location = new Point(25, 138);
             panelIngredientes.Name = "panelIngredientes";
-            panelIngredientes.Size = new Size(861, 129);
+            panelIngredientes.Size = new Size(753, 97);
             panelIngredientes.TabIndex = 18;
             // 
             // FormIngredientes
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(800, 450);
             Controls.Add(panelIngredientes);
             Controls.Add(lblCadastroIngredientes);
             Controls.Add(btnFechar);
             Controls.Add(btnDeletar);
             Controls.Add(btnEditar);
             Controls.Add(btnSalvar);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "FormIngredientes";
-            Text = Properties.Resources.ResourceManager.GetString("Ingredientes");
             panelIngredientes.ResumeLayout(false);
             panelIngredientes.PerformLayout();
             ResumeLayout(false);

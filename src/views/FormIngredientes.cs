@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PizzariaDoZe.src.controllers;
+using PizzariaDoZe.src.entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace PizzariaDoZe.views;
 
 public partial class FormIngredientes : Form
 {
+    private FormIngredientesController controller = new FormIngredientesController();
     public FormIngredientes()
     {
         InitializeComponent();
@@ -38,5 +42,14 @@ public partial class FormIngredientes : Form
             return true;
         }
         return base.ProcessCmdKey(ref msg, keyData);
+    }
+
+    private void btnSalvar_Click(object sender, EventArgs e)
+    {
+        controller.LoadAll();
+        controller.LoadById(textId.Text);
+        controller.Save(txtNome.Text);
+        controller.Update(textId.Text, txtNome.Text);
+        controller.DeleteById(textId.Text);
     }
 }

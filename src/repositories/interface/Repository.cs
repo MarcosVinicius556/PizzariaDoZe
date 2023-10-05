@@ -1,4 +1,5 @@
-﻿using PizzariaDoZe.src.entities.@interface;
+﻿using PizzariaDoZe.src.entities;
+using PizzariaDoZe.src.entities.@interface;
 
 namespace PizzariaDoZe.src.repositories.@interface
 {
@@ -9,18 +10,15 @@ namespace PizzariaDoZe.src.repositories.@interface
      */
     internal interface Repository<E> where E : Entity
     {
-        E GetEntity();
-        void SetEntity(E entity);
 
-
-        E FindById(object id)
+        E FindById(E entity)
         {
             try
             {
                 Console.WriteLine("Executando: findById()");
-                Console.WriteLine($"Id: {GetEntity().getId()}");
-                Console.WriteLine($"Tabela: {GetEntity().getName()}");
-                Console.WriteLine($"Colunas do banco: {GetEntity().getFields()}");
+                Console.WriteLine($"Id: {entity.getId()}");
+                Console.WriteLine($"Tabela: {entity.getName()}");
+                Console.WriteLine($"Colunas do banco: {entity.getFields()}");
                 /**
                  * Transação do banco aqui
                  */
@@ -32,12 +30,10 @@ namespace PizzariaDoZe.src.repositories.@interface
                  */
             }
 
-            /**
-             * Remover após implementações estarem prontas
-             */
-            throw new Exception();
+            return entity;
+            
         }
-        List<E> FindAll()
+        List<E> FindAll(E entity)
         {
             try
             {
@@ -45,9 +41,9 @@ namespace PizzariaDoZe.src.repositories.@interface
                  * Transação do banco aqui
                  */
                 Console.WriteLine("Executando: findAll()");
-                Console.WriteLine($"Id: {GetEntity().getId()}");
-                Console.WriteLine($"Tabela: {GetEntity().getName()}");
-                Console.WriteLine($"Colunas do banco: {GetEntity().getFields()}");
+                Console.WriteLine($"Id: {entity.getId()}");
+                Console.WriteLine($"Tabela: {entity.getName()}");
+                Console.WriteLine($"Colunas do banco: {entity.getFields()}");
             }
             catch (Exception e)
             {
@@ -59,9 +55,9 @@ namespace PizzariaDoZe.src.repositories.@interface
             /**
              * Remover após implementações estarem prontas
              */
-            throw new Exception();
+            return new List<E>();
         }
-        void DeleteById(object id)
+        void DeleteById(E entity)
         {
             try
             {
@@ -69,9 +65,9 @@ namespace PizzariaDoZe.src.repositories.@interface
                  * Transação do banco aqui
                  */
                 Console.WriteLine("Executando: deleteById()");
-                Console.WriteLine($"Id: {GetEntity().getId()}");
-                Console.WriteLine($"Tabela: {GetEntity().getName()}");
-                Console.WriteLine($"Colunas do banco: { ().getFields()}");
+                Console.WriteLine($"Id: {entity.getId()}");
+                Console.WriteLine($"Tabela: {entity.getName()}");
+                Console.WriteLine($"Colunas do banco: {entity.getFields()}");
             }
             catch (Exception e)
             {
@@ -79,11 +75,6 @@ namespace PizzariaDoZe.src.repositories.@interface
                  * Tratativa personalizada para a exceção aqui
                  */
             }
-
-            /**
-             * Remover após implementações estarem prontas
-             */
-            throw new Exception();
         }
         abstract void Save(E entity);
         abstract void Update(E entity);

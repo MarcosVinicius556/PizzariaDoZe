@@ -290,6 +290,63 @@
               Consulta uma cadeia de caracteres localizada semelhante a Valores Pizza.
             </summary>
         </member>
+        <member name="T:PizzariaDoZe.src.controllers.FormIngredientesController">
+            Classe controller para ser a intermediadora entre o serviço e a view do usuário
+        </member>
+        <member name="T:PizzariaDoZe.src.entities.interface.Entity">
+            Define a base que toda classe que será um entidade do 
+            banco de dados deve possuir para funcionar com os default methods da aplicação
+        </member>
+        <member name="M:PizzariaDoZe.src.entities.interface.Entity.getName">
+            Retorna o nome da tabela a ser acessada no banco
+        </member>
+        <member name="M:PizzariaDoZe.src.entities.interface.Entity.getFields">
+            Retorna o nome dos campos da tabela
+        </member>
+        <member name="M:PizzariaDoZe.src.entities.interface.Entity.getId">
+            Retorna o id da tabela
+        </member>
+        <member name="T:PizzariaDoZe.src.repositories.factory.RepositoryFactory">
+            Classe global para facilitar e unificar as instancias de classes repository
+        </member>
+        <member name="T:PizzariaDoZe.src.repositories.IngredienteRepositoryImpl">
+            Esta interface herda tudo o que a repository já faz,
+            porém se precisar de algo muito específico,
+            o mesmo deverá ser criado aqui
+        </member>
+        <member name="T:PizzariaDoZe.src.repositories.interface.IngredienteRepository">
+            Utilizando interface para separar a abstração da implementação, reduzindo assim o acomplamento entre classes
+        </member>
+        <member name="T:PizzariaDoZe.src.repositories.interface.Repository`1">
+            Interface genérica utilizada para marcar todos os métodos
+            que todas as entidades do banco de dados terão implementadas
+            por padrão
+        </member>
+        <member name="T:PizzariaDoZe.src.repositories.singleton.DatabaseConnectionSingleton">
+            Instancia única do banco de dados
+        </member>
+        <member name="T:PizzariaDoZe.src.services.factory.ServiceFactory">
+            Classe no padão factory para unificar e facilitar o instanciar de cada objeto
+            Além de que devolve apenas a abstração de cada classe, escondendo a implementação 
+            e reduzindo ainda mais o acoplamente da aplicação
+        </member>
+        <member name="T:PizzariaDoZe.src.services.interface.IngredienteService">
+            Utilizando uma interface aqui para reduzir o acoplamento entre classes, 
+            e caso os default methods não sejam suficientes, podem ser implementados 
+            especificamente para cada entidade do banco de dados
+        </member>
+        <member name="T:PizzariaDoZe.src.services.interface.Service`1">
+            Classe de serviço, para caso algo além de uma busca no 
+            banco de dados precise ser executado, ou seja necessário 
+            uma tratativa diferente para algum retorno do banco
+            Default methods para as implementações do repository;
+        </member>
+        <member name="M:PizzariaDoZe.src.services.interface.Service`1.GetRepository">
+            Cada service será obrigado a implementar este método, 
+            que irá retornar um repositório responsável pela entidade 
+            a qual está sendo requisitado. Dessa forma podemos utilizar esta 
+            classe de forma ainda mais genérica
+        </member>
         <member name="F:PizzariaDoZe.views.FormCadastroCliente.components">
             <summary>
              Required designer variable.

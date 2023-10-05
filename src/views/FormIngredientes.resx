@@ -18,7 +18,7 @@
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
     <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing"">Blue</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
     <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
         <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
@@ -121,7 +121,7 @@
   <data name="btnSalvar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAFyRJREFUeF7tmnl01eWdxu8Z2zqdTs9pO1PtmZqG0JIYEIUESMhC9g2FBDBEAuJe
+        vAAADrwBlbxySQAAFyRJREFUeF7tmnl01eWdxu8Z2zqdTs9pO1PtmZqG0JIYEIUESMhC9g2FBDBEAuJe
         96WiCCoKKi6IIgZlEYQASQAT9h0CJJCQsO8hZCMhIQg6YxsdmS5+53ne5d7fvbkKWNvOH/Oe85x7c3+/
         3/t+P8/zfd97Oer6//EdjX37wr9/9OOcqOMXcseeuHD7/JMXRlbWXhjVVPfJqE/qPr39D/VQg9LoPzTi
         tRGvTf95B4TXT+9wf2bv4f31n4z+hHNwLghzjhpb8+moKK5llv3HjmWSfdXh87kZhz/OLcJrx9HzI+X4
@@ -255,7 +255,7 @@
   <data name="btnDeletar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAA5tJREFUeF7t21moTVEcx/GLyEzKmKHIPGR6MIZnQ17wYirkAZkepAzlQREiD8KD
+        vQAADr0BR/uQrQAAA5tJREFUeF7t21moTVEcx/GLyEzKmKHIPGR6MIZnQ17wYirkAZkepAzlQREiD8KD
         8UUiQjKXSCEy5MmU8cGQOTPf38O/Vrez9z7n3nWOs671q0/d/q1zzt7/u88+e5+zVkWJUx8zcBTP8B1f
         cA87MAo1NhPxFH8ynEcX1KiswW/k2uFc3qHGHA1L4O7cDxzENAzDGCzGTbjjPqAvgk4f6H1uO/UQg5Ar
         tTAfapCNv4U6CDZHYDvzEu2Rldmwx8h0BJk2+AnbkcnINxdgj7ukwr9OK3RHjwK47/1X6IVc43JZDnus
