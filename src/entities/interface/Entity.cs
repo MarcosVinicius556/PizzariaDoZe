@@ -28,5 +28,10 @@ namespace PizzariaDoZe.src.entities.@interface
          */
         object getId();
 
+        /**
+         * Retorna o nome do campo id da entidade
+         */
+        string idField();
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,30 @@ namespace PizzariaDoZe.src.repositories.singleton
      */
     internal class DatabaseConnectionSingleton
     {
+        private static MySqlConnection conn;
+
+        public static MySqlConnection getConnection()
+        {
+
+            if(conn == null)
+            {
+                string server = "server=localhost;";
+                string uid = "uid=root;";
+                string pwd = "pwd=admin;";
+                string db = "database=pizzaria";
+                string strConnection = server + uid + pwd + db;
+                try
+                {
+                    conn = new MySqlConnection(strConnection);
+                    Console.WriteLine("Conexão com o banco de dados OK!");
+                } catch(Exception e)
+                {
+                    MessageBox.Show("Erro ao se conecta ao banco de dados: " + e.Message);
+                }
+            }
+
+            return conn;
+        }
+        
     }
 }

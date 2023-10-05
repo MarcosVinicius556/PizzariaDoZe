@@ -306,6 +306,9 @@
         <member name="M:PizzariaDoZe.src.entities.interface.Entity.getId">
             Retorna o id da tabela
         </member>
+        <member name="M:PizzariaDoZe.src.entities.interface.Entity.idField">
+            Retorna o nome do campo id da entidade
+        </member>
         <member name="T:PizzariaDoZe.src.repositories.factory.RepositoryFactory">
             Classe global para facilitar e unificar as instancias de classes repository
         </member>

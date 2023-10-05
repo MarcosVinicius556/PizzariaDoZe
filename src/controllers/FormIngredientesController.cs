@@ -31,9 +31,10 @@ namespace PizzariaDoZe.src.controllers
                 Ingrediente ingrediente = new Ingrediente();
                 ingrediente.Id = long.Parse(text);
                 ingredienteService.DeleteById(ingrediente);
+                MessageBox.Show("Ingrediente removido com sucesso!");
             } catch(Exception e)
             {
-                Console.WriteLine("Ocorreu um erro ao deletar o ingrediente");
+                MessageBox.Show("Ocorreu um erro ao deletar o ingrediente");
             }
             
         }
@@ -43,9 +44,10 @@ namespace PizzariaDoZe.src.controllers
             try
             {
                 ingredienteService.FindAll(new Ingrediente());
+                MessageBox.Show("Busca de ingredientes efetuada com sucesso!");
             } catch(Exception e)
             {
-                Console.WriteLine("Ocorreu um erro ao buscar todos os ingredientes");
+                MessageBox.Show("Ocorreu um erro ao buscar todos os ingredientes");
             }
         }
 
@@ -56,9 +58,10 @@ namespace PizzariaDoZe.src.controllers
                 Ingrediente ingrediente = new Ingrediente();
                 ingrediente.Id = long.Parse(v);
                 ingredienteService.FindById(ingrediente);
+                MessageBox.Show($"Ingrediente {ingrediente.Nome} localizado!");
             } catch(Exception e)
             {
-                Console.WriteLine("Ocorreu um erro ao tentar buscar o Ingrediente");
+                MessageBox.Show("Ocorreu um erro ao tentar buscar o Ingrediente");
             }
         }
 
@@ -66,10 +69,13 @@ namespace PizzariaDoZe.src.controllers
         {
             try
             {
-                ingredienteService.Save(new Ingrediente());
+                Ingrediente ingrediente = new Ingrediente();
+                ingrediente.Nome = text;
+                ingredienteService.Save(ingrediente);
+                MessageBox.Show("Ingrediente salvo com sucesso!");
             } catch(Exception e)
             {
-                Console.WriteLine("Ocorreu um erro ao salvar o ingrediente");
+                MessageBox.Show("Ocorreu um erro ao salvar o ingrediente");
             }
             
         }
@@ -78,10 +84,17 @@ namespace PizzariaDoZe.src.controllers
         {
             try
             {
-                ingredienteService.Update(new Ingrediente());
+                if (text != null)
+                {
+                    Ingrediente temp = new Ingrediente(long.Parse(text), text1);
+                    ingredienteService.Update(temp);
+                } else
+                {
+                    MessageBox.Show("Informe um id para atualizar");
+                }
             } catch(Exception e)
             {
-
+                MessageBox.Show("Não foi possível atualizar o ingrediente!");
             }
             
         }

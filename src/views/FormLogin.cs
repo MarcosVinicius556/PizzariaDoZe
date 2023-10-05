@@ -1,4 +1,6 @@
-﻿namespace PizzariaDoZe.views
+﻿using PizzariaDoZe.src.repositories.singleton;
+
+namespace PizzariaDoZe.views
 {
     public partial class FormLogin : Form
     {
@@ -35,6 +37,14 @@
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            /**
+             * Ao iniciar o frame principal da aplicação já sobe a conexão com o banco de dados
+             */
+            DatabaseConnectionSingleton.getConnection();
         }
     }
 }

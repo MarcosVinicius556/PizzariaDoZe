@@ -46,10 +46,6 @@ public partial class FormIngredientes : Form
 
     private void btnSalvar_Click(object sender, EventArgs e)
     {
-        controller.LoadAll();
-        controller.LoadById(textId.Text);
         controller.Save(txtNome.Text);
-        controller.Update(textId.Text, txtNome.Text);
-        controller.DeleteById(textId.Text);
     }
 }

@@ -16,7 +16,7 @@ namespace PizzariaDoZe.src.entities
 
         public string getName()
         {
-            return "ingrediente";
+            return "ingredientes";
         }
         public object getId()
         {
@@ -28,5 +28,9 @@ namespace PizzariaDoZe.src.entities
             return "id, nome";
         }
 
+        public string idField()
+        {
+            return "id";
+        }
     }
 }
