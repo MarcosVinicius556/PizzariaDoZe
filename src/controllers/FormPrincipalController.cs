@@ -59,7 +59,7 @@ namespace PizzariaDoZe.src.controllers
             {
                 produtoService = ServiceFactory.createProdutoService();
             }
-            if (cidadeService == null)
+            if (saborService == null)
             {
                 saborService = ServiceFactory.createSaborService();
             }

@@ -47,7 +47,7 @@ namespace PizzariaDoZe.src.entities
 
         public string getName()
         {
-            return "cliente";
+            return "tb_clientes";
         }
 
         public string getFields()

@@ -16,7 +16,7 @@ namespace PizzariaDoZe.src.entities
 
         public string getName()
         {
-            return "ingredientes";
+            return "cad_ingredientes";
         }
         public object getId()
         {

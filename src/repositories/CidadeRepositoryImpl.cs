@@ -3,6 +3,8 @@ using PizzariaDoZe.src.entities;
 using PizzariaDoZe.src.repositories.@interface;
 using PizzariaDoZe.src.repositories.singleton;
 using PizzariaDoZe.src.services.factory;
+using System.Data.Common;
+using System.Data;
 
 namespace PizzariaDoZe.src.repositories
 {
@@ -21,7 +23,10 @@ namespace PizzariaDoZe.src.repositories
             string? sqlFindAll = $"SELECT * FROM {entity.getName()} e";
             try
             {
-                conn.Open();
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
                 command = new MySqlCommand(sqlFindAll, conn);
                 MySqlDataReader reader = command.ExecuteReader();
 
@@ -34,7 +39,7 @@ namespace PizzariaDoZe.src.repositories
                     int idUf = (int)reader["id_uf"];
                     Uf uf = new Uf();
                     uf.IdUf = idUf;
-                    uf = ServiceFactory.createUfService().FindById(uf);
+                    /*uf = ServiceFactory.createUfService().FindById(uf); */
                     cidade.Uf = uf;
 
                     list.Add(cidade);
@@ -58,7 +63,10 @@ namespace PizzariaDoZe.src.repositories
             string? sqlFindById = $"SELECT * FROM {entity.getName()} e WHERE {entity.idField()} = {entity.getId()}";
             try
             {
-                conn.Open() ;
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
                 command = new MySqlCommand(sqlFindById, conn);
                 MySqlDataReader reader = command.ExecuteReader();
 
@@ -91,7 +99,10 @@ namespace PizzariaDoZe.src.repositories
 
             try
             {
-                conn.Open();
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
                 command = new MySqlCommand(SQLInsert, conn);
                 command.ExecuteReader();
             }
@@ -112,7 +123,10 @@ namespace PizzariaDoZe.src.repositories
 
             try
             {
-                conn.Open();
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
                 command = new MySqlCommand(SQLUpdate, conn);
                 command.ExecuteReader();
             }

@@ -4,6 +4,8 @@ using PizzariaDoZe.src.entities.@interface;
 using PizzariaDoZe.src.repositories.@interface;
 using PizzariaDoZe.src.repositories.singleton;
 using PizzariaDoZe.src.services.factory;
+using System.Data.Common;
+using System.Data;
 using System.Runtime.ConstrainedExecution;
 
 namespace PizzariaDoZe.src.repositories
@@ -23,7 +25,10 @@ namespace PizzariaDoZe.src.repositories
             string? sqlFindAll = $"SELECT * FROM {entity.getName()} e";
             try
             {
-                conn.Open();
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
                 command = new MySqlCommand(sqlFindAll, conn);
                 MySqlDataReader reader = command.ExecuteReader();
 
@@ -31,16 +36,16 @@ namespace PizzariaDoZe.src.repositories
                 {
 
                     Endereco endereco = new Endereco();
-                    endereco.Id = (int)reader["id"];
+                    endereco.Id = (int)reader["id_endereco"];
                     endereco.Cep = (string)reader["cep"];
                     endereco.Logradouro = (string)reader["logradouro"];
                     endereco.Bairro = (string)reader["bairro"];
 
                     /* Busca os dados da cidade do endereco */
-                    int idCidade = (int)reader["id_cidade"];
+                    int idCidade = (int)reader["cidade_id"];
                     Cidade cidade = new Cidade();
-                    cidade.IdCidade = idCidade;
-                    cidade = ServiceFactory.createCidadeService().FindById(cidade);
+                    /*cidade.IdCidade = idCidade;
+                    cidade = ServiceFactory.createCidadeService().FindById(cidade);*/
 
                     endereco.Cidade = cidade;
 
@@ -66,7 +71,10 @@ namespace PizzariaDoZe.src.repositories
             string? sqlFindById = $"SELECT * FROM endereco e WHERE e.cep = '{cep}'";
             try
             {
-                conn.Open();
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
                 command = new MySqlCommand(sqlFindById, conn);
                 MySqlDataReader reader = command.ExecuteReader();
 
@@ -150,7 +158,10 @@ namespace PizzariaDoZe.src.repositories
 
             try
             {
-                conn.Open();
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
                 command = new MySqlCommand(SQLInsert, conn);
                 command.ExecuteReader();
             }
@@ -171,7 +182,10 @@ namespace PizzariaDoZe.src.repositories
 
             try
             {
-                conn.Open();
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
                 command = new MySqlCommand(SQLUpdate, conn);
                 command.ExecuteReader();
             }

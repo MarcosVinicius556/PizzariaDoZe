@@ -28,7 +28,7 @@ namespace PizzariaDoZe.src.entities
 
         public string getName()
         {
-            return "cidade";
+            return "cad_cidades";
         }
 
         public string getFields()

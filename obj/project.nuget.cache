@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TaxfrCp9mDcr7V8jr3FPo4FkoKCtPBYeDIgxnfdKKCOdss9STJAhUmspzrqCOhTESjwczOyItCgDj+U9EvIbTQ==",
+  "dgSpecHash": "Mt5CeA+eiel3hvuizAkHPfE/u1A9I7jaIo0He9qzyU2xW0RK3+zT/nSzfoUlHMlI7ZqFNC3b6H7fjQNA+UvRpg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Cliente\\Documents\\Projetos\\PizzariaDoZe\\PizzariaDoZe.csproj",
+  "projectFilePath": "C:\\Users\\Cliente\\Documents\\projetos\\PizzariaDoZe\\PizzariaDoZe.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cliente\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\Cliente\\.nuget\\packages\\k4os.compression.lz4\\1.3.5\\k4os.compression.lz4.1.3.5.nupkg.sha512",

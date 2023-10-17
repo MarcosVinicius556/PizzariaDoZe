@@ -27,7 +27,7 @@ namespace PizzariaDoZe.src.entities
 
         public string getName()
         {
-            return "pais";
+            return "cad_paises";
         }
 
         public string getFields()

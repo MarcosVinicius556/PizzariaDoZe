@@ -30,7 +30,7 @@ namespace PizzariaDoZe.src.entities
         }
         public string getFields()
         {
-            return "id, cep, logradouro, bairro, id_cidade";
+            return "id_endereco, cep, logradouro, bairro, cidade_id";
         }
 
         public object getId()
@@ -40,12 +40,12 @@ namespace PizzariaDoZe.src.entities
 
         public string getName()
         {
-            return "endereco";
+            return "tb_enderecos";
         }
 
         public string idField()
         {
-            return "id";
+            return "id_endereco";
         }
     }
 }

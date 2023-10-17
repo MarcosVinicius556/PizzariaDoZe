@@ -1783,11 +1783,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cliente\\Documents\\Projetos\\PizzariaDoZe\\PizzariaDoZe.csproj",
+      "projectUniqueName": "C:\\Users\\Cliente\\Documents\\projetos\\PizzariaDoZe\\PizzariaDoZe.csproj",
       "projectName": "PizzariaDoZe",
-      "projectPath": "C:\\Users\\Cliente\\Documents\\Projetos\\PizzariaDoZe\\PizzariaDoZe.csproj",
+      "projectPath": "C:\\Users\\Cliente\\Documents\\projetos\\PizzariaDoZe\\PizzariaDoZe.csproj",
       "packagesPath": "C:\\Users\\Cliente\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cliente\\Documents\\Projetos\\PizzariaDoZe\\obj\\",
+      "outputPath": "C:\\Users\\Cliente\\Documents\\projetos\\PizzariaDoZe\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Cliente\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1840,7 +1840,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
