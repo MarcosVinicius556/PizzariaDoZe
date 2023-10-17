@@ -20,5 +20,50 @@ namespace PizzariaDoZe.src.services.factory
             return new IngredienteServiceImpl();
         }
 
+        public static CidadeService createCidadeService() 
+        {
+            return new CidadeServiceImpl();
+        }
+
+        public static ClienteService createClienteService()
+        { 
+            return new ClienteServiceImpl();
+        }
+
+        public static EnderecoService createEnderecoService() 
+        {  
+            return new EnderecoServiceImpl(); 
+        }
+
+        public static FuncionarioService createFuncionarioService() 
+        { 
+            return new FuncionarioServiceImpl();
+        }
+
+        public static PaisService createPaisService()
+        { 
+            return new PaisServiceImpl();
+        }
+
+        public static ProdutoService createProdutoService() 
+        {
+            return new ProdutoServiceImpl();
+        }
+
+        public static SaborService createSaborService()
+        {
+            return new SaborServiceImpl();
+        }
+
+        public static UfService createUfService() 
+        { 
+            return new UfServiceImpl();
+        }
+
+        public static ValorService createValorService() 
+        { 
+            return new ValorServiceImpl();
+        }
+
     }
 }
