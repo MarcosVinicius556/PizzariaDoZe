@@ -2,6 +2,7 @@
 using PizzariaDoZe.src.entities;
 using PizzariaDoZe.src.repositories.@interface;
 using PizzariaDoZe.src.repositories.singleton;
+using PizzariaDoZe.src.services.factory;
 
 namespace PizzariaDoZe.src.repositories
 {
@@ -26,10 +27,31 @@ namespace PizzariaDoZe.src.repositories
 
                 while (reader.Read())
                 {
-                    /**
-                     * TODO Implementar quando for necessário utilizar algo que dependa da visualização da Funcionario
-                     */
+                    Funcionario func = new Funcionario();
+
+                    func.IdFuncionario = (int)reader["id_funcionario"];
+                    func.NomeFuncionario = (string)reader["nome_funcionario"];
+                    func.Cpf = (string)reader["cpf"];
+                    func.Matricula = (string)reader["matricula"];
+                    func.Senha = (string)reader["senha"];
+                    func.Grupo = (char)reader["grupo"];
+                    func.Motorista = (string)reader["motorista"];
+                    func.ValidadeMotorista = (DateTime)reader["validade_motorista"];
+                    func.Observacao = (string)reader["observacao"];
+                    func.Telefone = (string)reader["telefone"];
+                    func.Email = (string)reader["email"];
+                    func.Numero = (int)reader["numero"];
+                    func.Complemento = (string)reader["complemento"];
+
+                    Endereco endereco = new Endereco();
+                    endereco.Id = (int)reader["id_endereco"];
+                    endereco = ServiceFactory.createEnderecoService().FindById(endereco);
+
+                    func.Endereco = endereco;
+
+                    list.Add(func);
                 }
+
             }
             catch (Exception e)
             {

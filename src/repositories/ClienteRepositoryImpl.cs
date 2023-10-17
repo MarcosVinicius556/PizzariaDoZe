@@ -2,6 +2,7 @@
 using PizzariaDoZe.src.entities;
 using PizzariaDoZe.src.repositories.@interface;
 using PizzariaDoZe.src.repositories.singleton;
+using PizzariaDoZe.src.services.factory;
 
 namespace PizzariaDoZe.src.repositories
 {
@@ -26,10 +27,24 @@ namespace PizzariaDoZe.src.repositories
 
                 while (reader.Read())
                 {
-                    /**
-                     * TODO Implementar quando for necessário utilizar algo que dependa da visualização da Cliente
-                     */
-                }
+                    
+                    Cliente cliente = new Cliente();
+                    cliente.IdCliente = (int)reader["id_cliente"];
+                    cliente.NomeCliente = (string)reader["nome_cliente"];
+                    cliente.Cpf = (string)reader["cpf"];
+                    cliente.Telefone = (string)reader["telefone"];
+                    cliente.Email = (string)reader["email"];
+                    cliente.Numero = (int)reader["numero"];
+                    cliente.Complemento = (string)reader["complemento"];
+
+                    Endereco endereco = new Endereco();
+                    endereco.Id = (int)reader["id_endereco"];
+                    endereco = ServiceFactory.createEnderecoService().FindById(endereco);
+
+                    cliente.Endereco = endereco;
+
+                    list.Add(cliente);
+    }
             }
             catch (Exception e)
             {
@@ -55,9 +70,22 @@ namespace PizzariaDoZe.src.repositories
 
                 while (reader.Read())
                 {
-                    /**
-                     * TODO Implementar quando for necessário utilizar algo que dependa da visualização desta tabela
-                     */
+                    Cliente cliente = new Cliente();
+                    cliente.IdCliente = (int)reader["id_cliente"];
+                    cliente.NomeCliente = (string)reader["nome_cliente"];
+                    cliente.Cpf = (string)reader["cpf"];
+                    cliente.Telefone = (string)reader["telefone"];
+                    cliente.Email = (string)reader["email"];
+                    cliente.Numero = (int)reader["numero"];
+                    cliente.Complemento = (string)reader["complemento"];
+
+                    Endereco endereco = new Endereco();
+                    endereco.Id = (int)reader["id_endereco"];
+                    endereco = ServiceFactory.createEnderecoService().FindById(endereco);
+
+                    cliente.Endereco = endereco;
+
+                    entity = cliente;
                 }
             }
             catch (Exception e)

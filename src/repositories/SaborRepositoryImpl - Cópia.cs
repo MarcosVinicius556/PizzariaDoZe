@@ -26,9 +26,14 @@ namespace PizzariaDoZe.src.repositories
 
                 while (reader.Read())
                 {
-                    /**
-                     * TODO Implementar quando for necessário utilizar algo que dependa da visualização da Sabor
-                     */
+                    Sabor sabor = new Sabor();
+                    sabor.IdSabor = (int)reader["id_sabor"];
+                    sabor.DescricaoSabor = (string)reader["descricao_sabor"];
+                    sabor.Foto = (Bitmap)reader["foto"];
+                    sabor.Categoria = (char)reader["categoria"];
+                    sabor.Tipo = (char)reader["tipo"];
+
+                    list.Add(sabor);
                 }
             }
             catch (Exception e)
@@ -55,9 +60,15 @@ namespace PizzariaDoZe.src.repositories
 
                 while (reader.Read())
                 {
-                    /**
-                     * TODO Implementar quando for necessário utilizar algo que dependa da visualização desta tabela
-                     */
+                    Sabor sabor = new Sabor();
+
+                    sabor.IdSabor = (int)reader["id_sabor"];
+                    sabor.DescricaoSabor = (string)reader["descricao_sabor"];
+                    sabor.Foto = (Bitmap)reader["foto"];
+                    sabor.Categoria = (char)reader["categoria"];
+                    sabor.Tipo = (char)reader["tipo"];
+
+                    entity = sabor;
                 }
             }
             catch (Exception e)

@@ -26,9 +26,14 @@ namespace PizzariaDoZe.src.repositories
 
                 while (reader.Read())
                 {
-                    /**
-                     * TODO Implementar quando for necessário utilizar algo que dependa da visualização da Produto
-                     */
+                    Produto prod = new Produto();
+                    prod.IdProduto = (int)reader["id_produto"];
+                    prod.DescricaoProduto = (string)reader["descricao_produto"];
+                    prod.Valor = (Decimal)reader["valor"];
+                    prod.Tipo = (char)reader["tipo"];
+                    prod.MedidaUnitaria = (string)reader["medida_unitaria"];
+
+                    list.Add(prod);
                 }
             }
             catch (Exception e)
@@ -55,9 +60,14 @@ namespace PizzariaDoZe.src.repositories
 
                 while (reader.Read())
                 {
-                    /**
-                     * TODO Implementar quando for necessário utilizar algo que dependa da visualização desta tabela
-                     */
+                    Produto prod = new Produto();
+                    prod.IdProduto = (int)reader["id_produto"];
+                    prod.DescricaoProduto = (string)reader["descricao_produto"];
+                    prod.Valor = (Decimal)reader["valor"];
+                    prod.Tipo = (char)reader["tipo"];
+                    prod.MedidaUnitaria = (string)reader["medida_unitaria"];
+
+                    entity = prod;
                 }
             }
             catch (Exception e)
