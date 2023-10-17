@@ -99,16 +99,19 @@ namespace PizzariaDoZe.views
             // 
             // buttonSearch
             // 
-            buttonSearch.Location = new Point(727, 3);
+            buttonSearch.FlatAppearance.BorderSize = 0;
+            buttonSearch.FlatStyle = FlatStyle.Flat;
+            buttonSearch.Image = (Image)resources.GetObject("buttonSearch.Image");
+            buttonSearch.Location = new Point(670, 10);
             buttonSearch.Name = "buttonSearch";
-            buttonSearch.Size = new Size(75, 41);
+            buttonSearch.Size = new Size(52, 41);
             buttonSearch.TabIndex = 1;
             buttonSearch.UseVisualStyleBackColor = true;
             // 
             // textBoxSearch
             // 
             textBoxSearch.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxSearch.Location = new Point(396, 5);
+            textBoxSearch.Location = new Point(339, 12);
             textBoxSearch.Name = "textBoxSearch";
             textBoxSearch.Size = new Size(325, 39);
             textBoxSearch.TabIndex = 0;
@@ -136,81 +139,129 @@ namespace PizzariaDoZe.views
             // 
             // buttonRegisterOrders
             // 
+            buttonRegisterOrders.FlatAppearance.BorderColor = Color.Black;
             buttonRegisterOrders.FlatStyle = FlatStyle.Flat;
+            buttonRegisterOrders.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonRegisterOrders.ForeColor = SystemColors.ButtonHighlight;
+            buttonRegisterOrders.Image = (Image)resources.GetObject("buttonRegisterOrders.Image");
+            buttonRegisterOrders.ImageAlign = ContentAlignment.MiddleLeft;
             buttonRegisterOrders.Location = new Point(12, 492);
             buttonRegisterOrders.Name = "buttonRegisterOrders";
             buttonRegisterOrders.Size = new Size(188, 48);
             buttonRegisterOrders.TabIndex = 7;
+            buttonRegisterOrders.Text = "Pedidos";
             buttonRegisterOrders.UseVisualStyleBackColor = true;
             buttonRegisterOrders.Click += ButtonRegisterOrders_Click;
             // 
             // RegisterProducts
             // 
+            RegisterProducts.FlatAppearance.BorderColor = Color.Black;
             RegisterProducts.FlatStyle = FlatStyle.Flat;
+            RegisterProducts.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            RegisterProducts.ForeColor = SystemColors.ButtonHighlight;
+            RegisterProducts.Image = (Image)resources.GetObject("RegisterProducts.Image");
+            RegisterProducts.ImageAlign = ContentAlignment.MiddleLeft;
             RegisterProducts.Location = new Point(12, 438);
             RegisterProducts.Name = "RegisterProducts";
             RegisterProducts.Size = new Size(188, 48);
             RegisterProducts.TabIndex = 6;
+            RegisterProducts.Text = "Produtos";
             RegisterProducts.UseVisualStyleBackColor = true;
             RegisterProducts.Click += RegisterProducts_Click;
             // 
             // buttonPizzaValues
             // 
+            buttonPizzaValues.FlatAppearance.BorderColor = Color.Black;
             buttonPizzaValues.FlatStyle = FlatStyle.Flat;
+            buttonPizzaValues.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonPizzaValues.ForeColor = SystemColors.ButtonHighlight;
+            buttonPizzaValues.Image = (Image)resources.GetObject("buttonPizzaValues.Image");
+            buttonPizzaValues.ImageAlign = ContentAlignment.MiddleLeft;
             buttonPizzaValues.Location = new Point(12, 384);
             buttonPizzaValues.Name = "buttonPizzaValues";
             buttonPizzaValues.Size = new Size(188, 48);
             buttonPizzaValues.TabIndex = 5;
+            buttonPizzaValues.Text = "Valores";
             buttonPizzaValues.UseVisualStyleBackColor = true;
             buttonPizzaValues.Click += ButtonPizzaValues_Click;
             // 
             // buttonRegisterFlavors
             // 
+            buttonRegisterFlavors.FlatAppearance.BorderColor = Color.Black;
             buttonRegisterFlavors.FlatStyle = FlatStyle.Flat;
+            buttonRegisterFlavors.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonRegisterFlavors.ForeColor = SystemColors.ButtonHighlight;
+            buttonRegisterFlavors.Image = (Image)resources.GetObject("buttonRegisterFlavors.Image");
+            buttonRegisterFlavors.ImageAlign = ContentAlignment.MiddleLeft;
             buttonRegisterFlavors.Location = new Point(12, 330);
             buttonRegisterFlavors.Name = "buttonRegisterFlavors";
             buttonRegisterFlavors.Size = new Size(188, 48);
             buttonRegisterFlavors.TabIndex = 4;
+            buttonRegisterFlavors.Text = "Sabores";
             buttonRegisterFlavors.UseVisualStyleBackColor = true;
             buttonRegisterFlavors.Click += ButtonRegisterFlavors_Click;
             // 
             // buttonRegisterIngredients
             // 
+            buttonRegisterIngredients.FlatAppearance.BorderColor = Color.Black;
             buttonRegisterIngredients.FlatStyle = FlatStyle.Flat;
+            buttonRegisterIngredients.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonRegisterIngredients.ForeColor = SystemColors.ButtonHighlight;
+            buttonRegisterIngredients.Image = (Image)resources.GetObject("buttonRegisterIngredients.Image");
+            buttonRegisterIngredients.ImageAlign = ContentAlignment.MiddleLeft;
             buttonRegisterIngredients.Location = new Point(12, 276);
             buttonRegisterIngredients.Name = "buttonRegisterIngredients";
             buttonRegisterIngredients.Size = new Size(188, 48);
             buttonRegisterIngredients.TabIndex = 3;
+            buttonRegisterIngredients.Text = "Ingredientes";
             buttonRegisterIngredients.UseVisualStyleBackColor = true;
             buttonRegisterIngredients.Click += ButtonRegisterIngredients_Click;
             // 
             // buttonRegisterClient
             // 
+            buttonRegisterClient.FlatAppearance.BorderColor = Color.Black;
             buttonRegisterClient.FlatStyle = FlatStyle.Flat;
+            buttonRegisterClient.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonRegisterClient.ForeColor = SystemColors.ButtonHighlight;
+            buttonRegisterClient.Image = (Image)resources.GetObject("buttonRegisterClient.Image");
+            buttonRegisterClient.ImageAlign = ContentAlignment.MiddleLeft;
             buttonRegisterClient.Location = new Point(12, 222);
             buttonRegisterClient.Name = "buttonRegisterClient";
             buttonRegisterClient.Size = new Size(188, 48);
             buttonRegisterClient.TabIndex = 2;
+            buttonRegisterClient.Text = "Clientes";
             buttonRegisterClient.UseVisualStyleBackColor = true;
             buttonRegisterClient.Click += ButtonRegisterClient_Click;
             // 
             // buttonRegisterEmployees
             // 
+            buttonRegisterEmployees.FlatAppearance.BorderColor = Color.Black;
             buttonRegisterEmployees.FlatStyle = FlatStyle.Flat;
+            buttonRegisterEmployees.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonRegisterEmployees.ForeColor = SystemColors.ButtonHighlight;
+            buttonRegisterEmployees.Image = (Image)resources.GetObject("buttonRegisterEmployees.Image");
+            buttonRegisterEmployees.ImageAlign = ContentAlignment.MiddleLeft;
             buttonRegisterEmployees.Location = new Point(12, 168);
             buttonRegisterEmployees.Name = "buttonRegisterEmployees";
             buttonRegisterEmployees.Size = new Size(188, 48);
             buttonRegisterEmployees.TabIndex = 1;
+            buttonRegisterEmployees.Text = "Funcionários";
             buttonRegisterEmployees.UseVisualStyleBackColor = true;
             buttonRegisterEmployees.Click += Employees_Click;
             // 
             // buttonAdressRegister
             // 
+            buttonAdressRegister.FlatAppearance.BorderColor = Color.Black;
             buttonAdressRegister.FlatStyle = FlatStyle.Flat;
+            buttonAdressRegister.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonAdressRegister.ForeColor = SystemColors.ButtonHighlight;
+            buttonAdressRegister.Image = (Image)resources.GetObject("buttonAdressRegister.Image");
+            buttonAdressRegister.ImageAlign = ContentAlignment.MiddleLeft;
             buttonAdressRegister.Location = new Point(12, 114);
             buttonAdressRegister.Name = "buttonAdressRegister";
             buttonAdressRegister.Size = new Size(188, 48);
             buttonAdressRegister.TabIndex = 0;
+            buttonAdressRegister.Text = "Endereço";
             buttonAdressRegister.UseVisualStyleBackColor = true;
             buttonAdressRegister.Click += AdressClick_Click;
             // 
@@ -235,40 +286,61 @@ namespace PizzariaDoZe.views
             // 
             // buttonOptions
             // 
+            buttonOptions.FlatAppearance.BorderColor = Color.Black;
             buttonOptions.FlatStyle = FlatStyle.Flat;
+            buttonOptions.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonOptions.ForeColor = SystemColors.ButtonHighlight;
+            buttonOptions.Image = (Image)resources.GetObject("buttonOptions.Image");
+            buttonOptions.ImageAlign = ContentAlignment.MiddleLeft;
             buttonOptions.Location = new Point(12, 546);
             buttonOptions.Name = "buttonOptions";
-            buttonOptions.Size = new Size(96, 39);
+            buttonOptions.Size = new Size(188, 39);
             buttonOptions.TabIndex = 11;
+            buttonOptions.Text = "Configurações";
             buttonOptions.UseVisualStyleBackColor = true;
             buttonOptions.Click += buttonOptions_Click;
             // 
             // pictureUser
             // 
             pictureUser.Image = (Image)resources.GetObject("pictureUser.Image");
-            pictureUser.Location = new Point(17, 51);
+            pictureUser.Location = new Point(12, 15);
             pictureUser.Margin = new Padding(3, 2, 3, 2);
             pictureUser.Name = "pictureUser";
-            pictureUser.Size = new Size(78, 58);
+            pictureUser.Size = new Size(188, 94);
             pictureUser.SizeMode = PictureBoxSizeMode.Zoom;
             pictureUser.TabIndex = 10;
             pictureUser.TabStop = false;
             // 
             // buttonConfirm
             // 
-            buttonConfirm.Location = new Point(712, 6);
+            buttonConfirm.FlatAppearance.BorderColor = Color.Black;
+            buttonConfirm.FlatStyle = FlatStyle.Flat;
+            buttonConfirm.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonConfirm.ForeColor = SystemColors.ButtonFace;
+            buttonConfirm.Image = (Image)resources.GetObject("buttonConfirm.Image");
+            buttonConfirm.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonConfirm.Location = new Point(685, 1);
             buttonConfirm.Name = "buttonConfirm";
-            buttonConfirm.Size = new Size(86, 26);
+            buttonConfirm.Size = new Size(113, 35);
             buttonConfirm.TabIndex = 1;
-            buttonConfirm.Text = "Confirm";
+            buttonConfirm.Text = "Confirmar";
+            buttonConfirm.TextAlign = ContentAlignment.MiddleRight;
             buttonConfirm.UseVisualStyleBackColor = true;
             // 
             // buttonPrint
             // 
-            buttonPrint.Location = new Point(620, 6);
+            buttonPrint.FlatAppearance.BorderColor = Color.Black;
+            buttonPrint.FlatStyle = FlatStyle.Flat;
+            buttonPrint.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonPrint.ForeColor = SystemColors.ButtonFace;
+            buttonPrint.Image = (Image)resources.GetObject("buttonPrint.Image");
+            buttonPrint.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonPrint.Location = new Point(564, 1);
             buttonPrint.Name = "buttonPrint";
-            buttonPrint.Size = new Size(86, 26);
+            buttonPrint.Size = new Size(104, 35);
             buttonPrint.TabIndex = 0;
+            buttonPrint.Text = "Imprimir";
+            buttonPrint.TextAlign = ContentAlignment.MiddleRight;
             buttonPrint.UseVisualStyleBackColor = true;
             // 
             // panelInf
