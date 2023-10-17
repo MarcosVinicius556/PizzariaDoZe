@@ -68,7 +68,7 @@ namespace PizzariaDoZe.src.entities
 
         public string getFields()
         {
-            return "id_funcionario, nome_funcionario, " +
+            return "nome_funcionario, " +
                    "cpf, matricula, senha, grupo, " +
                    "motorista, observacao, telefone, " +
                    "email, endereco_id, numero, " +

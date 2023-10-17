@@ -39,18 +39,18 @@ namespace PizzariaDoZe.src.repositories
                     func.Cpf = (string)reader["cpf"];
                     func.Matricula = (string)reader["matricula"];
                     func.Senha = (string)reader["senha"];
-                    func.Grupo = (char)reader["grupo"];
+                    //func.Grupo = (char)reader["grupo"]; TODO
                     func.Motorista = (string)reader["motorista"];
-                    func.ValidadeMotorista = (DateTime)reader["validade_motorista"];
+                    //func.ValidadeMotorista = (DateTime)reader["validade_motorista"]; TODO
                     func.Observacao = (string)reader["observacao"];
                     func.Telefone = (string)reader["telefone"];
                     func.Email = (string)reader["email"];
-                    func.Numero = (int)reader["numero"];
+                    //func.Numero = (int)reader["numero"]; //TODO
                     func.Complemento = (string)reader["complemento"];
 
                     Endereco endereco = new Endereco();
-                    endereco.Id = (int)reader["id_endereco"];
-                    endereco = ServiceFactory.createEnderecoService().FindById(endereco);
+                    endereco.Id = (int)reader["endereco_id"];
+                    //endereco = ServiceFactory.createEnderecoService().FindById(endereco);
 
                     func.Endereco = endereco;
 
@@ -89,7 +89,7 @@ namespace PizzariaDoZe.src.repositories
                     func.Cpf = (string)reader["cpf"];
                     func.Matricula = (string)reader["matricula"];
                     func.Senha = (string)reader["senha"];
-                    func.Grupo = (char)reader["grupo"];
+                    //func.Grupo = (char)reader["grupo"]; TODO
                     func.Motorista = (string)reader["motorista"];
                     func.ValidadeMotorista = (DateTime)reader["validade_motorista"];
                     func.Observacao = (string)reader["observacao"];
@@ -100,7 +100,7 @@ namespace PizzariaDoZe.src.repositories
 
                     Endereco endereco = new Endereco();
                     endereco.Id = (int)reader["id_endereco"];
-                    endereco = ServiceFactory.createEnderecoService().FindById(endereco);
+                    //endereco = ServiceFactory.createEnderecoService().FindById(endereco);
 
                     func.Endereco = endereco;
 
@@ -130,8 +130,8 @@ namespace PizzariaDoZe.src.repositories
              * complemento
              */
             string SQLInsert = $"INSERT INTO {entity.getName()}({entity.getFields()}) VALUES(" +
-                $"{entity.IdFuncionario}" +
-                $", '{entity.NomeFuncionario}'" +
+                
+                $"'{entity.NomeFuncionario}'" +
                 $", '{entity.Cpf}'" +
                 $", '{entity.Matricula}'" +
                 $", '{entity.Senha}'" +
@@ -140,7 +140,8 @@ namespace PizzariaDoZe.src.repositories
                 $", '{entity.Observacao}'" +
                 $", '{entity.Telefone}'" +
                 $", '{entity.Email}'" +
-                $",  {(entity.Endereco != null ? entity.Endereco.Id : 0)}" +
+                
+                $"{(entity.Endereco != null ?", " + entity.Endereco.Id + "": "")}" +
                 $",  {entity.Numero}" +
                 $", '{entity.Complemento}'" +
                 $")";

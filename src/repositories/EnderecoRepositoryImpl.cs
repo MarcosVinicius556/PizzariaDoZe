@@ -68,7 +68,7 @@ namespace PizzariaDoZe.src.repositories
             MySqlCommand command;
             Endereco entity = new Endereco();
             var conn = DatabaseConnectionSingleton.getConnection();
-            string? sqlFindById = $"SELECT * FROM endereco e WHERE e.cep = '{cep}'";
+            string? sqlFindById = $"SELECT * FROM {entity.getName()} e WHERE e.cep = '{cep}'";
             try
             {
                 if (conn.State != ConnectionState.Open)
@@ -80,18 +80,19 @@ namespace PizzariaDoZe.src.repositories
 
                 while (reader.Read())
                 {
-                    entity.Id = (int)reader["id"];
+                    entity.Id = (int)reader["id_endereco"];
                     entity.Cep = (string)reader["cep"];
                     entity.Logradouro = (string)reader["logradouro"];
                     entity.Bairro = (string)reader["bairro"];
 
                     /* Busca os dados da cidade do endereco */
-                    int idCidade = (int)reader["id_cidade"];
+                    int idCidade = (int)reader["cidade_id"];
                     Cidade cidade = new Cidade();
                     cidade.IdCidade = idCidade;
-                    cidade  = ServiceFactory.createCidadeService().FindById(cidade);
+                    //cidade  = ServiceFactory.createCidadeService().FindById(cidade);
 
                     entity.Cidade = cidade;
+
                 }
             }
             catch (Exception e)

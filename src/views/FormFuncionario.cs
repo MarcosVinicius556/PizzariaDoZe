@@ -127,28 +127,32 @@ public partial class FormFuncionario : Form
         try
         {
             Funcionario funcionario = new Funcionario();
-            funcionario.IdFuncionario = int.Parse(txtId.Text);
+            //funcionario.IdFuncionario = int.Parse(txtId.Text);
             funcionario.NomeFuncionario = TextBoxNome.Text;
-            funcionario.Cpf = txtCpf.Text;
+            funcionario.Cpf = txtCpf.Text.Replace(",", "").Replace("-", "").Replace(".", "");
             funcionario.Matricula = txtMatricula.Text;
             funcionario.Senha = txtSenha.Text;
             funcionario.Grupo = 'N';
             funcionario.Motorista = textBoxCnh.Text;
             funcionario.ValidadeMotorista = calendarioCnh.Value.Date;
             funcionario.Observacao = txtObs.Text;
-            funcionario.Telefone = txtTelefone.Text;
+            //funcionario.Telefone = txtTelefone.Text.Replace("(", "").Replace(")", "").Replace("-", "").Trim(); //TODO
             funcionario.Email = textBoxEmail.Text;
 
             Endereco endereco = new Endereco();
+            if (textBoxEnderecoId.Text != "")
+                endereco.Id = int.Parse(textBoxEnderecoId.Text);
             endereco.Logradouro = txtLogradouro.Text;
             endereco.Bairro = txtBairro.Text;
-            endereco.Cep = txtCep.Text;
+            endereco.Cep = maskedTextBoxCep.Text.Replace("-", "");
             funcionario.Endereco = endereco;
 
-            funcionario.Numero = int.Parse(textBoxNumero.Text);
+            if (textBoxNumero.Text != "")
+                funcionario.Numero = int.Parse(textBoxNumero.Text, 0);
             funcionario.Complemento = textBoxComplemento.Text;
 
             controller.Save(funcionario);
+            this.Close();
         }
         catch (Exception ex)
         {
@@ -159,5 +163,28 @@ public partial class FormFuncionario : Form
     private void btnVoltar_Click(object sender, EventArgs e)
     {
         this.Dispose();
+    }
+
+    private void txtCep_Leave(object sender, EventArgs e)
+    {
+        string cep = maskedTextBoxCep.Text.Replace("-", "");
+        Endereco endereco = controller.findEnderecoByCep(cep);
+        if (endereco != null)
+        {
+            textBoxEnderecoId.Text = endereco.Id != 0 ? endereco.Id + "" : "";
+            txtLogradouro.Text = endereco.Logradouro != null ? endereco.Logradouro : ""; ;
+            txtBairro.Text = endereco.Bairro != null ? endereco.Bairro : ""; ;
+            dropBoxUf.Select(); //TODO
+                                //            textBoxPais.Text = endereco.Cidade.Uf.Pais.NomePais != null ? endereco.Cidade.Uf.Pais.NomePais : ""; ;
+        }
+        else
+        {
+            MessageBox.Show("Nenhum endereço encontrado com este CEP");
+        }
+    }
+
+    private void btnExcluir_Click(object sender, EventArgs e)
+    {
+        controller.remove();
     }
 }

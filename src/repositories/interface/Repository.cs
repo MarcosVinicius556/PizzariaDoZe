@@ -1,6 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 using PizzariaDoZe.src.entities;
 using PizzariaDoZe.src.entities.@interface;
+using PizzariaDoZe.src.repositories.singleton;
+using System.Data;
 
 namespace PizzariaDoZe.src.repositories.@interface
 {
@@ -19,21 +21,33 @@ namespace PizzariaDoZe.src.repositories.@interface
 
         void DeleteById(E entity)
         {
+            MySqlCommand command;
+            var conn = DatabaseConnectionSingleton.getConnection();
+            /*
+             * id_funcionario, nome_funcionario, 
+             * cpf, matricula, senha, grupo,
+             * motorista, observacao, telefone,
+             * email, endereco_id, numero,
+             * complemento
+             */
+            string SQLInsert = $"DELETE FROM {entity.getName()} WHERE {entity.idField} = {entity.getId()}";
+
             try
             {
-                /**
-                 * Transação do banco aqui
-                 */
-                Console.WriteLine("Executando: deleteById()");
-                Console.WriteLine($"Id: {entity.getId()}");
-                Console.WriteLine($"Tabela: {entity.getName()}");
-                Console.WriteLine($"Colunas do banco: {entity.getFields()}");
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
+                command = new MySqlCommand(SQLInsert, conn);
+                command.ExecuteReader();
             }
             catch (Exception e)
             {
-                /**
-                 * Tratativa personalizada para a exceção aqui
-                 */
+                MessageBox.Show("Ocorreu um erro ao remover o registro no banco! " + e.Message);
+            }
+            finally
+            {
+                conn.Close();
             }
         }
         

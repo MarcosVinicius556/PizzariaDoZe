@@ -42,12 +42,13 @@
             lblSenha = new Label();
             panelFuncionarios = new Panel();
             panelEndereco = new Panel();
+            maskedTextBoxCep = new MaskedTextBox();
             labelNumero = new Label();
             labelComplemento = new Label();
             textBoxComplemento = new TextBox();
             textBoxNumero = new TextBox();
             labelPais = new Label();
-            textBox1 = new TextBox();
+            textBoxPais = new TextBox();
             labelUf = new Label();
             labelLogradouro = new Label();
             labelCep = new Label();
@@ -60,8 +61,7 @@
             lblPais = new Label();
             lblLogradouro = new Label();
             txtLogradouro = new TextBox();
-            txtCep = new TextBox();
-            textBoxId = new TextBox();
+            textBoxEnderecoId = new TextBox();
             lblCep = new Label();
             labelId = new Label();
             labelObs = new Label();
@@ -244,12 +244,13 @@
             // 
             panelEndereco.BackColor = SystemColors.AppWorkspace;
             panelEndereco.BorderStyle = BorderStyle.FixedSingle;
+            panelEndereco.Controls.Add(maskedTextBoxCep);
             panelEndereco.Controls.Add(labelNumero);
             panelEndereco.Controls.Add(labelComplemento);
             panelEndereco.Controls.Add(textBoxComplemento);
             panelEndereco.Controls.Add(textBoxNumero);
             panelEndereco.Controls.Add(labelPais);
-            panelEndereco.Controls.Add(textBox1);
+            panelEndereco.Controls.Add(textBoxPais);
             panelEndereco.Controls.Add(labelUf);
             panelEndereco.Controls.Add(labelLogradouro);
             panelEndereco.Controls.Add(labelCep);
@@ -262,14 +263,22 @@
             panelEndereco.Controls.Add(lblPais);
             panelEndereco.Controls.Add(lblLogradouro);
             panelEndereco.Controls.Add(txtLogradouro);
-            panelEndereco.Controls.Add(txtCep);
-            panelEndereco.Controls.Add(textBoxId);
+            panelEndereco.Controls.Add(textBoxEnderecoId);
             panelEndereco.Controls.Add(lblCep);
             panelEndereco.Controls.Add(labelId);
             panelEndereco.Location = new Point(565, 21);
             panelEndereco.Name = "panelEndereco";
             panelEndereco.Size = new Size(370, 207);
             panelEndereco.TabIndex = 35;
+            // 
+            // maskedTextBoxCep
+            // 
+            maskedTextBoxCep.Location = new Point(99, 90);
+            maskedTextBoxCep.Mask = "00000-000";
+            maskedTextBoxCep.Name = "maskedTextBoxCep";
+            maskedTextBoxCep.Size = new Size(147, 23);
+            maskedTextBoxCep.TabIndex = 36;
+            maskedTextBoxCep.Leave += txtCep_Leave;
             // 
             // labelNumero
             // 
@@ -313,12 +322,12 @@
             labelPais.TabIndex = 22;
             labelPais.Text = "Pais:";
             // 
-            // textBox1
+            // textBoxPais
             // 
-            textBox1.Location = new Point(196, 115);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(160, 23);
-            textBox1.TabIndex = 21;
+            textBoxPais.Location = new Point(196, 115);
+            textBoxPais.Name = "textBoxPais";
+            textBoxPais.Size = new Size(160, 23);
+            textBoxPais.TabIndex = 21;
             // 
             // labelUf
             // 
@@ -421,20 +430,13 @@
             txtLogradouro.Size = new Size(257, 23);
             txtLogradouro.TabIndex = 6;
             // 
-            // txtCep
+            // textBoxEnderecoId
             // 
-            txtCep.Location = new Point(99, 90);
-            txtCep.Name = "txtCep";
-            txtCep.Size = new Size(191, 23);
-            txtCep.TabIndex = 4;
-            // 
-            // textBoxId
-            // 
-            textBoxId.Enabled = false;
-            textBoxId.Location = new Point(99, 15);
-            textBoxId.Name = "textBoxId";
-            textBoxId.Size = new Size(33, 23);
-            textBoxId.TabIndex = 1;
+            textBoxEnderecoId.Enabled = false;
+            textBoxEnderecoId.Location = new Point(99, 15);
+            textBoxEnderecoId.Name = "textBoxEnderecoId";
+            textBoxEnderecoId.Size = new Size(33, 23);
+            textBoxEnderecoId.TabIndex = 1;
             // 
             // lblCep
             // 
@@ -550,6 +552,7 @@
             btnExcluir.Text = "Deletar";
             btnExcluir.TextAlign = ContentAlignment.MiddleRight;
             btnExcluir.UseVisualStyleBackColor = false;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // btnVoltar
             // 
@@ -590,7 +593,7 @@
             // txtCpf
             // 
             txtCpf.Location = new Point(214, 21);
-            txtCpf.Mask = "00000-000";
+            txtCpf.Mask = "000.000.000-00";
             txtCpf.Name = "txtCpf";
             txtCpf.Size = new Size(147, 23);
             txtCpf.TabIndex = 15;
@@ -779,7 +782,7 @@
         private Label lblLogradouro;
         private TextBox txtLogradouro;
         private TextBox txtCep;
-        private TextBox textBoxId;
+        private TextBox textBoxEnderecoId;
         private Label lblCep;
         private Label labelId;
         private Label labelBairro;
@@ -787,10 +790,11 @@
         private Label labelLogradouro;
         private Label labelUf;
         private Label labelPais;
-        private TextBox textBox1;
+        private TextBox textBoxPais;
         private Label labelNumero;
         private Label labelComplemento;
         private TextBox textBoxComplemento;
         private TextBox textBoxNumero;
+        private MaskedTextBox maskedTextBoxCep;
     }
 }

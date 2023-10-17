@@ -16,11 +16,17 @@ namespace PizzariaDoZe.src.controllers
     {
 
         private FuncionarioService service;
+        private EnderecoService enderService;
 
         public FormFuncionariosController() { 
             if(service == null) 
             {
                 service = ServiceFactory.createFuncionarioService();
+            }
+
+            if (enderService == null)
+            {
+                enderService = ServiceFactory.createEnderecoService();
             }
         }
 
@@ -78,6 +84,19 @@ namespace PizzariaDoZe.src.controllers
             
         }
 
+        internal void remove(string id)
+        {
+            Funcionario func = new Funcionario();
+            if(id != "")
+            {
+                func.IdFuncionario = int.Parse(id);
+                service.DeleteById(func);
+            } else
+            {
+                MessageBox.Show("Este registro não possui ID e por isso não pode ser removido!");
+            }
+        }
+
         internal void Update(string text, string text1)
         {
             try
@@ -95,6 +114,11 @@ namespace PizzariaDoZe.src.controllers
                 MessageBox.Show("Não foi possível atualizar o registro!");
             }
             
+        }
+
+        public Endereco findEnderecoByCep(string cep)
+        {
+            return enderService.FindByCep(cep);
         }
     }
 }

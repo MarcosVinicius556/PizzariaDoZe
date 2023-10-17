@@ -121,7 +121,7 @@
   <data name="btnSalvar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        6AAAAOgBhtX2rwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAObSURBVFhH1ZfZ
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAObSURBVFhH1ZfZ
         T1NREIdxidE3Y/wzFAViwgPKLvqgkrA8qA9GYoTWuIMQfWhc4gIaH3w3iiAtVTaxLSCoIIuaEKMYjUZk
         uTsgXaAI6Dj33tPa3p620DYxTvI9wJ2Z3+k5M+fOjftvzAQFq2yifodV0N+0ibo+RHgqFC08EQ4sNAr5
         02Z296iRTR0wizl69F1DwqK33rFT61CsHBERCIVFPAKPuX1Qw2xbNHLprdaxgg0kTWRmFfWFmHhcKxQO
@@ -143,7 +143,7 @@
   <data name="btnExcluir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        6AAAAOgBhtX2rwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKMSURBVFhH7Zbv
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKMSURBVFhH7Zbv
         axJhAMfvRfS+V73sLwiEmLYYZTKFusytmEzvbnqn5/R+qKe3NYWBi4Te1Ite9AN616vqD4hBEDQI9mYY
         RcLWttxc011upi6nDJ7u0btYeLiRjhH4hc+L5/v8+H557uAOOaqMicQpIya+MBGTqyZ8ImPCJpa1uIpF
         U5ftgl3Z1j2ZMPGDhYyDAXsIGGz+w6j123znla3dkdk9tW92x8BF7cAW5HVJZWt3BMPhDRidIhgYCYJL
@@ -161,7 +161,7 @@
   <data name="btnVoltar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        6AAAAOgBhtX2rwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFTSURBVFhH7Za9
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFTSURBVFhH7Za9
         SgNBFIXHHxBtrZQgkr0L8S1SK2oVLXRnrOy0tU1l5ZNkZ7UQbFQEX8AHEAuj8TXiTDgRc7OzrJAbCewH
         tzn3zrkH9ldVVMw0Z3e0pFO6MCld6U59A/J0OL1dX3HLH7Wlvq/E0lvzqbmIdnncwV1toy9fJot3IBfC
         lw/r5KaxiZHyuIOfv0y6kIOElhsbPbfbah5j5eFGkHMZLLfxAz/j6kVfN1Yx9je4GeQxRJZ7uCHkEcSW
