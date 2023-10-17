@@ -2,6 +2,7 @@
 using PizzariaDoZe.src.entities;
 using PizzariaDoZe.src.repositories.@interface;
 using PizzariaDoZe.src.repositories.singleton;
+using PizzariaDoZe.src.services.factory;
 
 namespace PizzariaDoZe.src.repositories
 {
@@ -26,9 +27,17 @@ namespace PizzariaDoZe.src.repositories
 
                 while (reader.Read())
                 {
-                    /**
-                     * TODO Implementar quando for necessário utilizar algo que dependa da visualização da cidade
-                     */
+                    Cidade cidade = new Cidade();
+                    cidade.IdCidade = (int)reader["id_cidade"];
+                    cidade.NomeCidade = (string)reader["nome_cidade"];
+
+                    int idUf = (int)reader["id_uf"];
+                    Uf uf = new Uf();
+                    uf.IdUf = idUf;
+                    uf = ServiceFactory.createUfService().FindById(uf);
+                    cidade.Uf = uf;
+
+                    list.Add(cidade);
                 }
             }
             catch (Exception e)
@@ -55,10 +64,13 @@ namespace PizzariaDoZe.src.repositories
 
                 while (reader.Read())
                 {
-                    /**
-                     * TODO Implementar quando for necessário utilizar algo que dependa da visualização desta tabela
-                     */
-                }
+                    entity.IdCidade = (int)reader["id_cidade"];
+                    entity.NomeCidade = (string)reader["nome_cidade"];
+                    int idUf = (int)reader["id_uf"];
+                    Uf uf = new Uf();
+                    uf.IdUf = idUf;
+                    uf = ServiceFactory.createUfService().FindById(uf);
+    }
             }
             catch (Exception e)
             {

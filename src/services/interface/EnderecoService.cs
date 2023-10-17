@@ -13,6 +13,9 @@ namespace PizzariaDoZe.src.services.@interface
      * especificamente para cada entidade do banco de dados
      */
     internal interface EnderecoService : Service<Endereco>
-{
-}
+    {
+
+        Endereco FindByCep(string cep);
+
+    }
 }

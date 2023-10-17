@@ -24,13 +24,13 @@ namespace PizzariaDoZe.src.services
 
         public void Save(Uf entity)
         {
-            this.repository.Save(entity);
+            this.repository!.Save(entity);
         }
 
         public void Update(Uf entity)
         {
-            this.repository.Update(entity);
+            this.repository!.Update(entity);
         }
-        public Repository<Uf> GetRepository() => repository;
+        public Repository<Uf> GetRepository() => repository!;
     }
 }

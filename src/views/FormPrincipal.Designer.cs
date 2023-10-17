@@ -24,9 +24,6 @@ namespace PizzariaDoZe.views
         private Button buttonConfirm;
         private Button buttonPrint;
         private DataGridView dataGridViewOrders;
-        private DataGridViewTextBoxColumn ColumnId;
-        private DataGridViewTextBoxColumn ColumnDescription;
-        private DataGridViewTextBoxColumn ColumnValue;
 
         protected override void Dispose(bool disposing)
         {
@@ -43,9 +40,6 @@ namespace PizzariaDoZe.views
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
-            ColumnId = new DataGridViewTextBoxColumn();
-            ColumnDescription = new DataGridViewTextBoxColumn();
-            ColumnValue = new DataGridViewTextBoxColumn();
             dataGridViewOrders = new DataGridView();
             buttonSearch = new Button();
             textBoxSearch = new TextBox();
@@ -67,10 +61,10 @@ namespace PizzariaDoZe.views
             panelInf = new Panel();
             notifyIcon1 = new NotifyIcon(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
-            contextMenuStripPrincipal = new ContextMenuStrip(components);
             abrirToolStripMenuItem = new ToolStripMenuItem();
             sobreToolStripMenuItem = new ToolStripMenuItem();
             fecharToolStripMenuItem = new ToolStripMenuItem();
+            contextMenuStripPrincipal = new ContextMenuStrip(components);
             inicioToolStripMenuItem = new ToolStripMenuItem();
             funcionáriosToolStripMenuItem = new ToolStripMenuItem();
             clientesToolStripMenuItem = new ToolStripMenuItem();
@@ -82,43 +76,29 @@ namespace PizzariaDoZe.views
             configuraçõesToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
             sairToolStripMenuItem = new ToolStripMenuItem();
+            ColumnId = new DataGridViewTextBoxColumn();
+            ColumnCep = new DataGridViewTextBoxColumn();
+            ColumnLogradouro = new DataGridViewTextBoxColumn();
+            Bairro = new DataGridViewTextBoxColumn();
+            ColumnIDCidade = new DataGridViewTextBoxColumn();
+            ColumnCidade = new DataGridViewTextBoxColumn();
+            ColumnIdUf = new DataGridViewTextBoxColumn();
+            ColumnUf = new DataGridViewTextBoxColumn();
+            ColumnIdPais = new DataGridViewTextBoxColumn();
+            ColumnPais = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).BeginInit();
             panelSup.SuspendLayout();
             panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureUser).BeginInit();
             panelInf.SuspendLayout();
-            contextMenuStripPrincipal.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
+            contextMenuStripPrincipal.SuspendLayout();
             SuspendLayout();
-            // 
-            // ColumnId
-            // 
-            ColumnId.MinimumWidth = 6;
-            ColumnId.Name = "ColumnId";
-            ColumnId.ReadOnly = true;
-            ColumnId.Width = 200;
-            ColumnId.Tag = Properties.Resources.ResourceManager.GetString("Id");
-            // 
-            // ColumnDescription
-            // 
-            ColumnDescription.MinimumWidth = 6;
-            ColumnDescription.Name = "ColumnDescription";
-            ColumnDescription.ReadOnly = true;
-            ColumnDescription.Width = 350;
-            ColumnDescription.Tag = Properties.Resources.ResourceManager.GetString("Descrição");
-            // 
-            // ColumnValue
-            // 
-            ColumnValue.MinimumWidth = 6;
-            ColumnValue.Name = "ColumnValue";
-            ColumnValue.ReadOnly = true;
-            ColumnValue.Width = 200;
-            ColumnValue.Tag = Properties.Resources.ResourceManager.GetString("Preço");
             // 
             // dataGridViewOrders
             // 
             dataGridViewOrders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewOrders.Columns.AddRange(new DataGridViewColumn[] { ColumnId, ColumnDescription, ColumnValue });
+            dataGridViewOrders.Columns.AddRange(new DataGridViewColumn[] { ColumnId, ColumnCep, ColumnLogradouro, Bairro, ColumnIDCidade, ColumnCidade, ColumnIdUf, ColumnUf, ColumnIdPais, ColumnPais });
             dataGridViewOrders.Location = new Point(211, 63);
             dataGridViewOrders.Name = "dataGridViewOrders";
             dataGridViewOrders.RowHeadersWidth = 51;
@@ -133,7 +113,6 @@ namespace PizzariaDoZe.views
             buttonSearch.Size = new Size(75, 41);
             buttonSearch.TabIndex = 1;
             buttonSearch.UseVisualStyleBackColor = true;
-            buttonSearch.Text = Properties.Resources.ResourceManager.GetString("Buscar");
             // 
             // textBoxSearch
             // 
@@ -142,7 +121,6 @@ namespace PizzariaDoZe.views
             textBoxSearch.Name = "textBoxSearch";
             textBoxSearch.Size = new Size(325, 39);
             textBoxSearch.TabIndex = 0;
-
             // 
             // panelSup
             // 
@@ -164,7 +142,6 @@ namespace PizzariaDoZe.views
             lblUserName.Name = "lblUserName";
             lblUserName.Size = new Size(0, 25);
             lblUserName.TabIndex = 9;
-            lblUserName.Text = Properties.Resources.ResourceManager.GetString("Username");
             // 
             // buttonRegisterOrders
             // 
@@ -174,7 +151,6 @@ namespace PizzariaDoZe.views
             buttonRegisterOrders.TabIndex = 7;
             buttonRegisterOrders.UseVisualStyleBackColor = true;
             buttonRegisterOrders.Click += ButtonRegisterOrders_Click;
-            buttonRegisterOrders.Text = Properties.Resources.ResourceManager.GetString("Pedidos");
             // 
             // RegisterProducts
             // 
@@ -184,7 +160,6 @@ namespace PizzariaDoZe.views
             RegisterProducts.TabIndex = 6;
             RegisterProducts.UseVisualStyleBackColor = true;
             RegisterProducts.Click += RegisterProducts_Click;
-            RegisterProducts.Text = Properties.Resources.ResourceManager.GetString("Produtos");
             // 
             // buttonPizzaValues
             // 
@@ -194,7 +169,6 @@ namespace PizzariaDoZe.views
             buttonPizzaValues.TabIndex = 5;
             buttonPizzaValues.UseVisualStyleBackColor = true;
             buttonPizzaValues.Click += ButtonPizzaValues_Click;
-            buttonPizzaValues.Text = Properties.Resources.ResourceManager.GetString("Valores Pizza");
             // 
             // buttonRegisterFlavors
             // 
@@ -204,7 +178,6 @@ namespace PizzariaDoZe.views
             buttonRegisterFlavors.TabIndex = 4;
             buttonRegisterFlavors.UseVisualStyleBackColor = true;
             buttonRegisterFlavors.Click += ButtonRegisterFlavors_Click;
-            buttonRegisterFlavors.Text = Properties.Resources.ResourceManager.GetString("Sabores");
             // 
             // buttonRegisterIngredients
             // 
@@ -214,7 +187,6 @@ namespace PizzariaDoZe.views
             buttonRegisterIngredients.TabIndex = 3;
             buttonRegisterIngredients.UseVisualStyleBackColor = true;
             buttonRegisterIngredients.Click += ButtonRegisterIngredients_Click;
-            buttonRegisterIngredients.Text = Properties.Resources.ResourceManager.GetString("Ingredientes");
             // 
             // buttonRegisterClient
             // 
@@ -224,7 +196,6 @@ namespace PizzariaDoZe.views
             buttonRegisterClient.TabIndex = 2;
             buttonRegisterClient.UseVisualStyleBackColor = true;
             buttonRegisterClient.Click += ButtonRegisterClient_Click;
-            buttonRegisterClient.Text = Properties.Resources.ResourceManager.GetString("Cadastro Cliente");
             // 
             // buttonRegisterEmployees
             // 
@@ -234,7 +205,6 @@ namespace PizzariaDoZe.views
             buttonRegisterEmployees.TabIndex = 1;
             buttonRegisterEmployees.UseVisualStyleBackColor = true;
             buttonRegisterEmployees.Click += Employees_Click;
-            buttonRegisterEmployees.Text = Properties.Resources.ResourceManager.GetString("Funcionários");
             // 
             // buttonAdressRegister
             // 
@@ -244,7 +214,6 @@ namespace PizzariaDoZe.views
             buttonAdressRegister.TabIndex = 0;
             buttonAdressRegister.UseVisualStyleBackColor = true;
             buttonAdressRegister.Click += AdressClick_Click;
-            buttonAdressRegister.Text = Properties.Resources.ResourceManager.GetString("Cadastro de Endereço");
             // 
             // panelLeft
             // 
@@ -273,7 +242,6 @@ namespace PizzariaDoZe.views
             buttonOptions.TabIndex = 11;
             buttonOptions.UseVisualStyleBackColor = true;
             buttonOptions.Click += buttonOptions_Click;
-            buttonOptions.Text = Properties.Resources.ResourceManager.GetString("Opções");
             // 
             // pictureUser
             // 
@@ -302,7 +270,6 @@ namespace PizzariaDoZe.views
             buttonPrint.Size = new Size(86, 26);
             buttonPrint.TabIndex = 0;
             buttonPrint.UseVisualStyleBackColor = true;
-            buttonPrint.Text = Properties.Resources.ResourceManager.GetString("Imprimir");
             // 
             // panelInf
             // 
@@ -317,7 +284,6 @@ namespace PizzariaDoZe.views
             // notifyIcon1
             // 
             notifyIcon1.ContextMenuStrip = contextMenuStrip1;
-            notifyIcon1.Icon = (Icon)resources.GetObject("notifyIcon1.Icon");
             notifyIcon1.Text = "notifyIcon1";
             notifyIcon1.MouseDoubleClick += NotifyIcon1_MouseDoubleClick;
             // 
@@ -325,12 +291,12 @@ namespace PizzariaDoZe.views
             // 
             contextMenuStrip1.Items.AddRange(new ToolStripItem[] { abrirToolStripMenuItem, sobreToolStripMenuItem, fecharToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(181, 92);
+            contextMenuStrip1.Size = new Size(110, 70);
             // 
             // abrirToolStripMenuItem
             // 
             abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            abrirToolStripMenuItem.Size = new Size(180, 22);
+            abrirToolStripMenuItem.Size = new Size(109, 22);
             abrirToolStripMenuItem.Text = "Abrir";
             abrirToolStripMenuItem.Click += AbrirToolStripMenuItem_Click;
             // 
@@ -427,7 +393,66 @@ namespace PizzariaDoZe.views
             sairToolStripMenuItem.Size = new Size(151, 22);
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
-
+            // 
+            // ColumnId
+            // 
+            ColumnId.HeaderText = "Id";
+            ColumnId.MinimumWidth = 6;
+            ColumnId.Name = "ColumnId";
+            ColumnId.ReadOnly = true;
+            ColumnId.Width = 50;
+            // 
+            // ColumnCep
+            // 
+            ColumnCep.HeaderText = "Cep";
+            ColumnCep.MinimumWidth = 6;
+            ColumnCep.Name = "ColumnCep";
+            ColumnCep.ReadOnly = true;
+            // 
+            // ColumnLogradouro
+            // 
+            ColumnLogradouro.HeaderText = "Logradouro";
+            ColumnLogradouro.MinimumWidth = 6;
+            ColumnLogradouro.Name = "ColumnLogradouro";
+            ColumnLogradouro.ReadOnly = true;
+            // 
+            // Bairro
+            // 
+            Bairro.HeaderText = "Bairro";
+            Bairro.Name = "Bairro";
+            // 
+            // ColumnIDCidade
+            // 
+            ColumnIDCidade.HeaderText = "ID Cidade";
+            ColumnIDCidade.Name = "ColumnIDCidade";
+            ColumnIDCidade.Width = 50;
+            // 
+            // ColumnCidade
+            // 
+            ColumnCidade.HeaderText = "Cidade";
+            ColumnCidade.Name = "ColumnCidade";
+            // 
+            // ColumnIdUf
+            // 
+            ColumnIdUf.HeaderText = "Id UF";
+            ColumnIdUf.Name = "ColumnIdUf";
+            ColumnIdUf.Width = 50;
+            // 
+            // ColumnUf
+            // 
+            ColumnUf.HeaderText = "UF";
+            ColumnUf.Name = "ColumnUf";
+            // 
+            // ColumnIdPais
+            // 
+            ColumnIdPais.HeaderText = "ID Pais";
+            ColumnIdPais.Name = "ColumnIdPais";
+            ColumnIdPais.Width = 50;
+            // 
+            // ColumnPais
+            // 
+            ColumnPais.HeaderText = "Pais";
+            ColumnPais.Name = "ColumnPais";
             // 
             // FormPrincipal
             // 
@@ -449,8 +474,8 @@ namespace PizzariaDoZe.views
             panelLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureUser).EndInit();
             panelInf.ResumeLayout(false);
-            contextMenuStripPrincipal.ResumeLayout(false);
             contextMenuStrip1.ResumeLayout(false);
+            contextMenuStripPrincipal.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -520,6 +545,16 @@ namespace PizzariaDoZe.views
         private ToolStripMenuItem abrirToolStripMenuItem;
         private ToolStripMenuItem sobreToolStripMenuItem;
         private ToolStripMenuItem fecharToolStripMenuItem;
+        private DataGridViewTextBoxColumn ColumnId;
+        private DataGridViewTextBoxColumn ColumnCep;
+        private DataGridViewTextBoxColumn ColumnLogradouro;
+        private DataGridViewTextBoxColumn Bairro;
+        private DataGridViewTextBoxColumn ColumnIDCidade;
+        private DataGridViewTextBoxColumn ColumnCidade;
+        private DataGridViewTextBoxColumn ColumnIdUf;
+        private DataGridViewTextBoxColumn ColumnUf;
+        private DataGridViewTextBoxColumn ColumnIdPais;
+        private DataGridViewTextBoxColumn ColumnPais;
     }
 
     #endregion

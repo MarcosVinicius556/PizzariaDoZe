@@ -26,10 +26,11 @@ namespace PizzariaDoZe.src.repositories
 
                 while (reader.Read())
                 {
-                    /**
-                     * TODO Implementar quando for necessário utilizar algo que dependa da visualização da Pais
-                     */
-                }
+                    Pais pais = new Pais();
+                    pais.IdPais = (int)reader["id_pais"];
+                    pais.NomePais = (string)reader["nome_pais"];
+                    list.Add(pais);
+    }
             }
             catch (Exception e)
             {
@@ -55,9 +56,11 @@ namespace PizzariaDoZe.src.repositories
 
                 while (reader.Read())
                 {
-                    /**
-                     * TODO Implementar quando for necessário utilizar algo que dependa da visualização desta tabela
-                     */
+                    Pais pais = new Pais();
+                    pais.IdPais = (int)reader["id_pais"];
+                    pais.NomePais = (string)reader["nome_pais"];
+
+                    entity = pais;
                 }
             }
             catch (Exception e)

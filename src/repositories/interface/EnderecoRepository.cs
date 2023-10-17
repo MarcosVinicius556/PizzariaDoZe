@@ -12,5 +12,8 @@ namespace PizzariaDoZe.src.repositories.@interface
      */
     internal interface EnderecoRepository : Repository<Endereco>
     {
+
+        Endereco findByCEP(string cep);
+
     }
 }

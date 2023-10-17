@@ -24,13 +24,18 @@ namespace PizzariaDoZe.src.services
 
         public void Save(Endereco entity)
         {
-            this.repository.Save(entity);
+            this.repository!.Save(entity);
         }
 
         public void Update(Endereco entity)
         {
-            this.repository.Update(entity);
+            this.repository!.Update(entity);
         }
         public Repository<Endereco> GetRepository() => repository;
+
+        public Endereco FindByCep(string cep)
+        {
+            return this.repository!.findByCEP(cep);
+        }
     }
 }

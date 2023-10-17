@@ -1,7 +1,9 @@
 ﻿using MySql.Data.MySqlClient;
 using PizzariaDoZe.src.entities;
+using PizzariaDoZe.src.entities.@interface;
 using PizzariaDoZe.src.repositories.@interface;
 using PizzariaDoZe.src.repositories.singleton;
+using PizzariaDoZe.src.services.factory;
 
 namespace PizzariaDoZe.src.repositories
 {
@@ -26,9 +28,22 @@ namespace PizzariaDoZe.src.repositories
 
                 while (reader.Read())
                 {
-                    /**
-                     * TODO Implementar quando for necessário utilizar algo que dependa da visualização da Endereco
-                     */
+
+                    Endereco endereco = new Endereco();
+                    endereco.Id = (int)reader["id"];
+                    endereco.Cep = (string)reader["cep"];
+                    endereco.Logradouro = (string)reader["logradouro"];
+                    endereco.Bairro = (string)reader["bairro"];
+
+                    /* Busca os dados da cidade do endereco */
+                    int idCidade = (int)reader["id_cidade"];
+                    Cidade cidade = new Cidade();
+                    cidade.IdCidade = idCidade;
+                    cidade = ServiceFactory.createCidadeService().FindById(cidade);
+
+                    endereco.Cidade = cidade;
+
+                    list.Add(endereco);
                 }
             }
             catch (Exception e)
@@ -40,6 +55,46 @@ namespace PizzariaDoZe.src.repositories
             }
 
             return list;
+        }
+
+        public Endereco findByCEP(string cep)
+        {
+            MySqlCommand command;
+            Endereco entity = new Endereco();
+            var conn = DatabaseConnectionSingleton.getConnection();
+            string? sqlFindById = $"SELECT * FROM endereco e WHERE e.cep = '{cep}'";
+            try
+            {
+                conn.Open();
+                command = new MySqlCommand(sqlFindById, conn);
+                MySqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    entity.Id = (int)reader["id"];
+                    entity.Cep = (string)reader["cep"];
+                    entity.Logradouro = (string)reader["logradouro"];
+                    entity.Bairro = (string)reader["bairro"];
+
+                    /* Busca os dados da cidade do endereco */
+                    int idCidade = (int)reader["id_cidade"];
+                    Cidade cidade = new Cidade();
+                    cidade.IdCidade = idCidade;
+                    cidade  = ServiceFactory.createCidadeService().FindById(cidade);
+
+                    entity.Cidade = cidade;
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ocorreu um erro ao buscar o registro no banco! " + e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return entity;
         }
 
         public Endereco FindById(Endereco entity)
@@ -55,9 +110,18 @@ namespace PizzariaDoZe.src.repositories
 
                 while (reader.Read())
                 {
-                    /**
-                     * TODO Implementar quando for necessário utilizar algo que dependa da visualização desta tabela
-                     */
+                    entity.Id = (int)reader["id"];
+                    entity.Cep = (string)reader["cep"];
+                    entity.Logradouro = (string)reader["logradouro"];
+                    entity.Bairro = (string)reader["bairro"];
+
+                    /* Busca os dados da cidade do endereco */
+                    int idCidade = (int)reader["id_cidade"];
+                    Cidade cidade = new Cidade();
+                    cidade.IdCidade = idCidade;
+                    cidade = ServiceFactory.createCidadeService().FindById(cidade);
+
+                    entity.Cidade = cidade;
                 }
             }
             catch (Exception e)
