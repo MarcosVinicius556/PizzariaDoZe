@@ -1,4 +1,5 @@
 ﻿using PizzariaDoZe.src.controllers;
+using PizzariaDoZe.src.views.enums;
 using System.Configuration;
 using System.Windows.Forms;
 
@@ -46,6 +47,7 @@ namespace PizzariaDoZe.views
             buttonSearch = new Button();
             textBoxSearch = new TextBox();
             panelSup = new Panel();
+            buttonNovoRegistro = new Button();
             lblUserName = new Label();
             buttonRegisterOrders = new Button();
             RegisterProducts = new Button();
@@ -120,12 +122,31 @@ namespace PizzariaDoZe.views
             // panelSup
             // 
             panelSup.BackColor = SystemColors.ControlDarkDark;
+            panelSup.Controls.Add(buttonNovoRegistro);
             panelSup.Controls.Add(buttonSearch);
             panelSup.Controls.Add(textBoxSearch);
             panelSup.Location = new Point(211, 0);
             panelSup.Name = "panelSup";
             panelSup.Size = new Size(805, 66);
             panelSup.TabIndex = 1;
+            // 
+            // buttonNovoRegistro
+            // 
+            buttonNovoRegistro.BackColor = SystemColors.ActiveBorder;
+            buttonNovoRegistro.FlatAppearance.BorderColor = Color.Black;
+            buttonNovoRegistro.FlatStyle = FlatStyle.Flat;
+            buttonNovoRegistro.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonNovoRegistro.ForeColor = SystemColors.ButtonHighlight;
+            buttonNovoRegistro.Image = (Image)resources.GetObject("buttonNovoRegistro.Image");
+            buttonNovoRegistro.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonNovoRegistro.Location = new Point(0, 10);
+            buttonNovoRegistro.Name = "buttonNovoRegistro";
+            buttonNovoRegistro.Size = new Size(104, 48);
+            buttonNovoRegistro.TabIndex = 12;
+            buttonNovoRegistro.Text = "Novo";
+            buttonNovoRegistro.TextAlign = ContentAlignment.MiddleRight;
+            buttonNovoRegistro.UseVisualStyleBackColor = false;
+            buttonNovoRegistro.Click += buttonNovoRegistro_Click;
             // 
             // lblUserName
             // 
@@ -510,11 +531,13 @@ namespace PizzariaDoZe.views
             form.ShowDialog();
             */
             dataGridView.DataSource = controller.BuscarClientes();
+            formSelected = FormSelected.CLIENTE;
         }
 
         private void ButtonRegisterOrders_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Função ainda não implementada!");
+            formSelected = FormSelected.PEDIDO;
         }
 
         private void RegisterProducts_Click(object sender, EventArgs e)
@@ -523,6 +546,7 @@ namespace PizzariaDoZe.views
             form.ShowDialog();
             */
             dataGridView.DataSource = controller.BuscarProdutos();
+            formSelected = FormSelected.PRODUTO;
         }
 
         private void ButtonPizzaValues_Click(object sender, EventArgs e)
@@ -530,6 +554,7 @@ namespace PizzariaDoZe.views
             /*FormValores form = new FormValores();
             form.ShowDialog(); */
             dataGridView.DataSource = controller.BuscarValores();
+            formSelected = FormSelected.VALOR;
         }
 
         private void ButtonRegisterFlavors_Click(object sender, EventArgs e)
@@ -537,6 +562,7 @@ namespace PizzariaDoZe.views
             /*FormSabores form = new FormSabores();
             form.ShowDialog();*/
             dataGridView.DataSource = controller.BuscarSabores();
+            formSelected = FormSelected.SABOR;
         }
 
         private void ButtonRegisterIngredients_Click(object sender, EventArgs e)
@@ -544,6 +570,7 @@ namespace PizzariaDoZe.views
             /*FormIngredientes form = new FormIngredientes();
             form.ShowDialog();*/
             dataGridView.DataSource = controller.BuscarIngredientes();
+            formSelected = FormSelected.INGREDIENTE;
         }
 
         private void AdressClick_Click(object sender, EventArgs e)
@@ -551,6 +578,7 @@ namespace PizzariaDoZe.views
             /*FormEndereco form = new FormEndereco();
             form.ShowDialog();*/
             dataGridView.DataSource = controller.BuscarEnderecos();
+            formSelected = FormSelected.ENDERECO;
         }
 
         private void Employees_Click(object sender, EventArgs e)
@@ -558,6 +586,7 @@ namespace PizzariaDoZe.views
             /*FormFuncionario form = new FormFuncionario();
             form.ShowDialog();*/
             dataGridView.DataSource = controller.BuscarFuncionarios();
+            formSelected = FormSelected.FUNCIONARIO;
         }
 
         private PictureBox pictureUser;
@@ -579,6 +608,7 @@ namespace PizzariaDoZe.views
         private ToolStripMenuItem abrirToolStripMenuItem;
         private ToolStripMenuItem sobreToolStripMenuItem;
         private ToolStripMenuItem fecharToolStripMenuItem;
+        private Button buttonNovoRegistro;
     }
 
     #endregion

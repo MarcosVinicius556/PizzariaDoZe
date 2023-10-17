@@ -470,6 +470,9 @@
             e caso os default methods não sejam suficientes, podem ser implementados 
             especificamente para cada entidade do banco de dados
         </member>
+        <member name="T:PizzariaDoZe.src.views.enums.FormSelected">
+            Enum para marcação de qual form está selecionado na view principal
+        </member>
         <member name="F:PizzariaDoZe.views.FormCadastroCliente.components">
             <summary>
              Required designer variable.

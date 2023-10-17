@@ -1,4 +1,8 @@
-﻿using PizzariaDoZe.src.controllers;
+﻿using Google.Protobuf.WellKnownTypes;
+using MySqlX.XDevAPI;
+using PizzariaDoZe.src.controllers;
+using PizzariaDoZe.src.entities;
+using PizzariaDoZe.src.views.enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,11 +12,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Org.BouncyCastle.Math.EC.ECCurve;
 
 namespace PizzariaDoZe.views
 {
     public partial class FormPrincipal : Form
     {
+
+        private static FormSelected formSelected;
 
         public FormPrincipal()
         {
@@ -165,6 +172,46 @@ namespace PizzariaDoZe.views
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void buttonNovoRegistro_Click(object sender, EventArgs e)
+        {
+            switch(formSelected)
+            {
+                case FormSelected.ENDERECO:
+                    FormEndereco formEnder = new FormEndereco();
+                    formEnder.ShowDialog();
+                    break;
+                case FormSelected.FUNCIONARIO:
+                    FormFuncionario formFunc = new FormFuncionario();
+                    formFunc.ShowDialog();
+                    break;
+                case FormSelected.CLIENTE:
+                    FormCadastroCliente formCliente = new FormCadastroCliente();
+                    formCliente.ShowDialog();
+                    break;
+                case FormSelected.INGREDIENTE:
+                    FormIngredientes formIngredientes = new FormIngredientes();
+                    formIngredientes.ShowDialog();
+                    break;
+                case FormSelected.SABOR:
+                    FormSabores formSabor = new FormSabores();
+                    formSabor.ShowDialog();
+                    break;
+                case FormSelected.VALOR:
+                    FormValores formValor = new FormValores();
+                    formValor.ShowDialog();
+                    break;
+                case FormSelected.PRODUTO:
+                    FormProdutos formProduto = new FormProdutos();
+                    formProduto.ShowDialog();
+                    break;
+                case FormSelected.PEDIDO:
+                    break;
+                default:
+                    MessageBox.Show("Nenhum tipo de registro selecionado para criar!");
+                    break;
+            }
         }
     }
 
