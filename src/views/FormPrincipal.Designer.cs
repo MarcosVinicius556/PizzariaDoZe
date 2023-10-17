@@ -99,14 +99,15 @@ namespace PizzariaDoZe.views
             // 
             // buttonSearch
             // 
+            buttonSearch.BackColor = SystemColors.ActiveBorder;
             buttonSearch.FlatAppearance.BorderSize = 0;
             buttonSearch.FlatStyle = FlatStyle.Flat;
             buttonSearch.Image = (Image)resources.GetObject("buttonSearch.Image");
-            buttonSearch.Location = new Point(670, 10);
+            buttonSearch.Location = new Point(670, 12);
             buttonSearch.Name = "buttonSearch";
-            buttonSearch.Size = new Size(52, 41);
+            buttonSearch.Size = new Size(52, 39);
             buttonSearch.TabIndex = 1;
-            buttonSearch.UseVisualStyleBackColor = true;
+            buttonSearch.UseVisualStyleBackColor = false;
             // 
             // textBoxSearch
             // 
@@ -139,6 +140,7 @@ namespace PizzariaDoZe.views
             // 
             // buttonRegisterOrders
             // 
+            buttonRegisterOrders.BackColor = SystemColors.ActiveBorder;
             buttonRegisterOrders.FlatAppearance.BorderColor = Color.Black;
             buttonRegisterOrders.FlatStyle = FlatStyle.Flat;
             buttonRegisterOrders.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -150,11 +152,12 @@ namespace PizzariaDoZe.views
             buttonRegisterOrders.Size = new Size(188, 48);
             buttonRegisterOrders.TabIndex = 7;
             buttonRegisterOrders.Text = "Pedidos";
-            buttonRegisterOrders.UseVisualStyleBackColor = true;
+            buttonRegisterOrders.UseVisualStyleBackColor = false;
             buttonRegisterOrders.Click += ButtonRegisterOrders_Click;
             // 
             // RegisterProducts
             // 
+            RegisterProducts.BackColor = SystemColors.ActiveBorder;
             RegisterProducts.FlatAppearance.BorderColor = Color.Black;
             RegisterProducts.FlatStyle = FlatStyle.Flat;
             RegisterProducts.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -166,11 +169,12 @@ namespace PizzariaDoZe.views
             RegisterProducts.Size = new Size(188, 48);
             RegisterProducts.TabIndex = 6;
             RegisterProducts.Text = "Produtos";
-            RegisterProducts.UseVisualStyleBackColor = true;
+            RegisterProducts.UseVisualStyleBackColor = false;
             RegisterProducts.Click += RegisterProducts_Click;
             // 
             // buttonPizzaValues
             // 
+            buttonPizzaValues.BackColor = SystemColors.ActiveBorder;
             buttonPizzaValues.FlatAppearance.BorderColor = Color.Black;
             buttonPizzaValues.FlatStyle = FlatStyle.Flat;
             buttonPizzaValues.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -182,11 +186,12 @@ namespace PizzariaDoZe.views
             buttonPizzaValues.Size = new Size(188, 48);
             buttonPizzaValues.TabIndex = 5;
             buttonPizzaValues.Text = "Valores";
-            buttonPizzaValues.UseVisualStyleBackColor = true;
+            buttonPizzaValues.UseVisualStyleBackColor = false;
             buttonPizzaValues.Click += ButtonPizzaValues_Click;
             // 
             // buttonRegisterFlavors
             // 
+            buttonRegisterFlavors.BackColor = SystemColors.ActiveBorder;
             buttonRegisterFlavors.FlatAppearance.BorderColor = Color.Black;
             buttonRegisterFlavors.FlatStyle = FlatStyle.Flat;
             buttonRegisterFlavors.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -198,11 +203,12 @@ namespace PizzariaDoZe.views
             buttonRegisterFlavors.Size = new Size(188, 48);
             buttonRegisterFlavors.TabIndex = 4;
             buttonRegisterFlavors.Text = "Sabores";
-            buttonRegisterFlavors.UseVisualStyleBackColor = true;
+            buttonRegisterFlavors.UseVisualStyleBackColor = false;
             buttonRegisterFlavors.Click += ButtonRegisterFlavors_Click;
             // 
             // buttonRegisterIngredients
             // 
+            buttonRegisterIngredients.BackColor = SystemColors.ActiveBorder;
             buttonRegisterIngredients.FlatAppearance.BorderColor = Color.Black;
             buttonRegisterIngredients.FlatStyle = FlatStyle.Flat;
             buttonRegisterIngredients.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -214,11 +220,12 @@ namespace PizzariaDoZe.views
             buttonRegisterIngredients.Size = new Size(188, 48);
             buttonRegisterIngredients.TabIndex = 3;
             buttonRegisterIngredients.Text = "Ingredientes";
-            buttonRegisterIngredients.UseVisualStyleBackColor = true;
+            buttonRegisterIngredients.UseVisualStyleBackColor = false;
             buttonRegisterIngredients.Click += ButtonRegisterIngredients_Click;
             // 
             // buttonRegisterClient
             // 
+            buttonRegisterClient.BackColor = SystemColors.ActiveBorder;
             buttonRegisterClient.FlatAppearance.BorderColor = Color.Black;
             buttonRegisterClient.FlatStyle = FlatStyle.Flat;
             buttonRegisterClient.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -230,11 +237,12 @@ namespace PizzariaDoZe.views
             buttonRegisterClient.Size = new Size(188, 48);
             buttonRegisterClient.TabIndex = 2;
             buttonRegisterClient.Text = "Clientes";
-            buttonRegisterClient.UseVisualStyleBackColor = true;
+            buttonRegisterClient.UseVisualStyleBackColor = false;
             buttonRegisterClient.Click += ButtonRegisterClient_Click;
             // 
             // buttonRegisterEmployees
             // 
+            buttonRegisterEmployees.BackColor = SystemColors.ActiveBorder;
             buttonRegisterEmployees.FlatAppearance.BorderColor = Color.Black;
             buttonRegisterEmployees.FlatStyle = FlatStyle.Flat;
             buttonRegisterEmployees.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -246,11 +254,12 @@ namespace PizzariaDoZe.views
             buttonRegisterEmployees.Size = new Size(188, 48);
             buttonRegisterEmployees.TabIndex = 1;
             buttonRegisterEmployees.Text = "Funcionários";
-            buttonRegisterEmployees.UseVisualStyleBackColor = true;
+            buttonRegisterEmployees.UseVisualStyleBackColor = false;
             buttonRegisterEmployees.Click += Employees_Click;
             // 
             // buttonAdressRegister
             // 
+            buttonAdressRegister.BackColor = SystemColors.ActiveBorder;
             buttonAdressRegister.FlatAppearance.BorderColor = Color.Black;
             buttonAdressRegister.FlatStyle = FlatStyle.Flat;
             buttonAdressRegister.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -262,7 +271,7 @@ namespace PizzariaDoZe.views
             buttonAdressRegister.Size = new Size(188, 48);
             buttonAdressRegister.TabIndex = 0;
             buttonAdressRegister.Text = "Endereço";
-            buttonAdressRegister.UseVisualStyleBackColor = true;
+            buttonAdressRegister.UseVisualStyleBackColor = false;
             buttonAdressRegister.Click += AdressClick_Click;
             // 
             // panelLeft
@@ -286,6 +295,7 @@ namespace PizzariaDoZe.views
             // 
             // buttonOptions
             // 
+            buttonOptions.BackColor = SystemColors.ActiveBorder;
             buttonOptions.FlatAppearance.BorderColor = Color.Black;
             buttonOptions.FlatStyle = FlatStyle.Flat;
             buttonOptions.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
@@ -297,11 +307,12 @@ namespace PizzariaDoZe.views
             buttonOptions.Size = new Size(188, 39);
             buttonOptions.TabIndex = 11;
             buttonOptions.Text = "Configurações";
-            buttonOptions.UseVisualStyleBackColor = true;
+            buttonOptions.UseVisualStyleBackColor = false;
             buttonOptions.Click += buttonOptions_Click;
             // 
             // pictureUser
             // 
+            pictureUser.BackColor = SystemColors.ActiveBorder;
             pictureUser.Image = (Image)resources.GetObject("pictureUser.Image");
             pictureUser.Location = new Point(12, 15);
             pictureUser.Margin = new Padding(3, 2, 3, 2);
@@ -313,6 +324,7 @@ namespace PizzariaDoZe.views
             // 
             // buttonConfirm
             // 
+            buttonConfirm.BackColor = SystemColors.ActiveBorder;
             buttonConfirm.FlatAppearance.BorderColor = Color.Black;
             buttonConfirm.FlatStyle = FlatStyle.Flat;
             buttonConfirm.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
@@ -325,10 +337,11 @@ namespace PizzariaDoZe.views
             buttonConfirm.TabIndex = 1;
             buttonConfirm.Text = "Confirmar";
             buttonConfirm.TextAlign = ContentAlignment.MiddleRight;
-            buttonConfirm.UseVisualStyleBackColor = true;
+            buttonConfirm.UseVisualStyleBackColor = false;
             // 
             // buttonPrint
             // 
+            buttonPrint.BackColor = SystemColors.ActiveBorder;
             buttonPrint.FlatAppearance.BorderColor = Color.Black;
             buttonPrint.FlatStyle = FlatStyle.Flat;
             buttonPrint.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
@@ -341,7 +354,7 @@ namespace PizzariaDoZe.views
             buttonPrint.TabIndex = 0;
             buttonPrint.Text = "Imprimir";
             buttonPrint.TextAlign = ContentAlignment.MiddleRight;
-            buttonPrint.UseVisualStyleBackColor = true;
+            buttonPrint.UseVisualStyleBackColor = false;
             // 
             // panelInf
             // 

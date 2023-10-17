@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             btnEntrar = new Button();
             txtLogin = new TextBox();
             txtSenha = new TextBox();
@@ -39,31 +40,42 @@
             // 
             // btnEntrar
             // 
-            btnEntrar.BackColor = Color.ForestGreen;
-            btnEntrar.Location = new Point(176, 139);
+            btnEntrar.BackColor = SystemColors.ActiveBorder;
+            btnEntrar.FlatAppearance.BorderColor = Color.Black;
+            btnEntrar.FlatStyle = FlatStyle.Flat;
+            btnEntrar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEntrar.ForeColor = SystemColors.ButtonHighlight;
+            btnEntrar.Image = (Image)resources.GetObject("btnEntrar.Image");
+            btnEntrar.ImageAlign = ContentAlignment.MiddleRight;
+            btnEntrar.Location = new Point(173, 158);
             btnEntrar.Margin = new Padding(2);
             btnEntrar.Name = "btnEntrar";
-            btnEntrar.Size = new Size(156, 43);
+            btnEntrar.Size = new Size(170, 45);
             btnEntrar.TabIndex = 0;
+            btnEntrar.Text = "Entrar";
+            btnEntrar.TextAlign = ContentAlignment.MiddleLeft;
             btnEntrar.UseVisualStyleBackColor = false;
             btnEntrar.Click += btnEntrar_Click;
-            btnEntrar.Text = Properties.Resources.ResourceManager.GetString("Entrar");
             // 
             // txtLogin
             // 
-            txtLogin.Location = new Point(146, 34);
+            txtLogin.Location = new Point(121, 49);
             txtLogin.Margin = new Padding(2);
+            txtLogin.MaximumSize = new Size(300, 300);
+            txtLogin.MinimumSize = new Size(50, 35);
             txtLogin.Name = "txtLogin";
-            txtLogin.Size = new Size(224, 23);
+            txtLogin.Size = new Size(280, 35);
             txtLogin.TabIndex = 1;
             txtLogin.KeyDown += TabEvent;
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(146, 92);
+            txtSenha.Location = new Point(121, 103);
             txtSenha.Margin = new Padding(2);
+            txtSenha.MaximumSize = new Size(300, 300);
+            txtSenha.MinimumSize = new Size(0, 35);
             txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(224, 23);
+            txtSenha.Size = new Size(280, 35);
             txtSenha.TabIndex = 2;
             txtSenha.KeyDown += TabEvent;
             // 
@@ -74,9 +86,8 @@
             lblLogin.Location = new Point(146, 7);
             lblLogin.Margin = new Padding(2, 0, 2, 0);
             lblLogin.Name = "lblLogin";
-            lblLogin.Size = new Size(40, 15);
+            lblLogin.Size = new Size(0, 15);
             lblLogin.TabIndex = 3;
-            lblLogin.Text = Properties.Resources.ResourceManager.GetString("Login");
             // 
             // lblSenha
             // 
@@ -87,7 +98,6 @@
             lblSenha.Name = "lblSenha";
             lblSenha.Size = new Size(0, 15);
             lblSenha.TabIndex = 4;
-            lblSenha.Text = Properties.Resources.ResourceManager.GetString("Senha");
             // 
             // panelLogin
             // 
@@ -100,14 +110,14 @@
             panelLogin.Location = new Point(19, 20);
             panelLogin.Margin = new Padding(2);
             panelLogin.Name = "panelLogin";
-            panelLogin.Size = new Size(522, 201);
+            panelLogin.Size = new Size(522, 239);
             panelLogin.TabIndex = 5;
             // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkSlateGray;
+            BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(560, 270);
             Controls.Add(panelLogin);
             Margin = new Padding(2);
