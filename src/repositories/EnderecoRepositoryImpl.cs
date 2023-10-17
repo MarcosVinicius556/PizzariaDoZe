@@ -4,6 +4,7 @@ using PizzariaDoZe.src.entities.@interface;
 using PizzariaDoZe.src.repositories.@interface;
 using PizzariaDoZe.src.repositories.singleton;
 using PizzariaDoZe.src.services.factory;
+using System.Runtime.ConstrainedExecution;
 
 namespace PizzariaDoZe.src.repositories
 {
@@ -138,8 +139,14 @@ namespace PizzariaDoZe.src.repositories
         public void Save(Endereco entity)
         {
             MySqlCommand command;
-            var conn = DatabaseConnectionSingleton.getConnection();
-            string SQLInsert = $"INSERT INTO {entity.getName()}({entity.getFields()}) VALUES('?')"; //TODO Implementar os campos quando for necessário
+            var conn = DatabaseConnectionSingleton.getConnection(); //id, cep, logradouro, bairro, id_cidade
+            string SQLInsert = $"INSERT INTO {entity.getName()}({entity.getFields()}) VALUES(" +
+                $"{entity.Id}" +
+                $", '{entity.Cep}'" +
+                $", '{entity.Logradouro}'" +
+                $", '{entity.Bairro}'" +
+                $", {(entity.Cidade != null ? entity.Cidade.IdCidade : 0)}" +
+                $")";
 
             try
             {

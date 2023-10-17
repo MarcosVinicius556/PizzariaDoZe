@@ -3,6 +3,7 @@ using PizzariaDoZe.src.entities;
 using PizzariaDoZe.src.repositories.@interface;
 using PizzariaDoZe.src.repositories.singleton;
 using PizzariaDoZe.src.services.factory;
+using System;
 
 namespace PizzariaDoZe.src.repositories
 {
@@ -77,9 +78,29 @@ namespace PizzariaDoZe.src.repositories
 
                 while (reader.Read())
                 {
-                    /**
-                     * TODO Implementar quando for necessário utilizar algo que dependa da visualização desta tabela
-                     */
+                    Funcionario func = new Funcionario();
+
+                    func.IdFuncionario = (int)reader["id_funcionario"];
+                    func.NomeFuncionario = (string)reader["nome_funcionario"];
+                    func.Cpf = (string)reader["cpf"];
+                    func.Matricula = (string)reader["matricula"];
+                    func.Senha = (string)reader["senha"];
+                    func.Grupo = (char)reader["grupo"];
+                    func.Motorista = (string)reader["motorista"];
+                    func.ValidadeMotorista = (DateTime)reader["validade_motorista"];
+                    func.Observacao = (string)reader["observacao"];
+                    func.Telefone = (string)reader["telefone"];
+                    func.Email = (string)reader["email"];
+                    func.Numero = (int)reader["numero"];
+                    func.Complemento = (string)reader["complemento"];
+
+                    Endereco endereco = new Endereco();
+                    endereco.Id = (int)reader["id_endereco"];
+                    endereco = ServiceFactory.createEnderecoService().FindById(endereco);
+
+                    func.Endereco = endereco;
+
+                    entity = func;
                 }
             }
             catch (Exception e)
@@ -97,7 +118,28 @@ namespace PizzariaDoZe.src.repositories
         {
             MySqlCommand command;
             var conn = DatabaseConnectionSingleton.getConnection();
-            string SQLInsert = $"INSERT INTO {entity.getName()}({entity.getFields()}) VALUES('?')"; //TODO Implementar os campos quando for necessário
+            /*
+             * id_funcionario, nome_funcionario, 
+             * cpf, matricula, senha, grupo,
+             * motorista, observacao, telefone,
+             * email, endereco_id, numero,
+             * complemento
+             */
+            string SQLInsert = $"INSERT INTO {entity.getName()}({entity.getFields()}) VALUES(" +
+                $"{entity.IdFuncionario}" +
+                $", '{entity.NomeFuncionario}'" +
+                $", '{entity.Cpf}'" +
+                $", '{entity.Matricula}'" +
+                $", '{entity.Senha}'" +
+                $", '{entity.Grupo}'" +
+                $", '{entity.Motorista}'" +
+                $", '{entity.Observacao}'" +
+                $", '{entity.Telefone}'" +
+                $", '{entity.Email}'" +
+                $",  {(entity.Endereco != null ? entity.Endereco.Id : 0)}" +
+                $",  {entity.Numero}" +
+                $", '{entity.Complemento}'" +
+                $")";
 
             try
             {

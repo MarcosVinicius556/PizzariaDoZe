@@ -86,8 +86,8 @@ namespace PizzariaDoZe.src.repositories
         public void Save(Cidade entity)
         {
             MySqlCommand command;
-            var conn = DatabaseConnectionSingleton.getConnection();
-            string SQLInsert = $"INSERT INTO {entity.getName()}({entity.getFields()}) VALUES('?')"; //TODO Implementar os campos quando for necessário
+            var conn = DatabaseConnectionSingleton.getConnection();                   //id,                       nome_cidade,          uf_id
+            string SQLInsert = $"INSERT INTO {entity.getName()}({entity.getFields()}) VALUES({entity.IdCidade}, '{entity.NomeCidade}', {(entity.Uf != null ? entity.Uf.IdUf : 0)})";
 
             try
             {
@@ -108,7 +108,7 @@ namespace PizzariaDoZe.src.repositories
         {
             MySqlCommand command;
             var conn = DatabaseConnectionSingleton.getConnection();
-            string SQLUpdate = $"UPDATE {entity.getName()} SET nome = '?' WHERE id = {entity.getId()}";
+            string SQLUpdate = $"UPDATE {entity.getName()} SET ? = '?' WHERE id = {entity.getId()}";
 
             try
             {

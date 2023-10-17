@@ -33,7 +33,7 @@ namespace PizzariaDoZe.src.entities
 
         public string getFields()
         {
-            return "id, nome_cidade, uf_id";
+            return "id_cidade, nome_cidade, uf_id";
         }
 
         public object getId()

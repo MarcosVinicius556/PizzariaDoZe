@@ -86,7 +86,16 @@ namespace PizzariaDoZe.src.repositories
         {
             MySqlCommand command;
             var conn = DatabaseConnectionSingleton.getConnection();
-            string SQLInsert = $"INSERT INTO {entity.getName()}({entity.getFields()}) VALUES('?')"; //TODO Implementar os campos quando for necessário
+            /**
+             * id, tamanho, categoria, valor, valor_borda
+             */
+            string SQLInsert = $"INSERT INTO {entity.getName()}({entity.getFields()}) VALUES(" +
+                $"{entity.Id}" +
+                $", '{entity.Tamanho}'" +
+                $", '{entity.Categoria}'" +
+                $", '{entity.ValorPizza}'" +
+                $", '{entity.ValorBorda}'" +
+                $")";
 
             try
             {
