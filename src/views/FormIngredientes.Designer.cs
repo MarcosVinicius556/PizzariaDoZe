@@ -167,6 +167,7 @@
             Controls.Add(btnEditar);
             Controls.Add(btnSalvar);
             Name = "FormIngredientes";
+            Text = "Cadastro de Ingrediente";
             panelIngredientes.ResumeLayout(false);
             panelIngredientes.PerformLayout();
             ResumeLayout(false);

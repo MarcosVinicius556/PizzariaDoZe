@@ -290,6 +290,9 @@
               Consulta uma cadeia de caracteres localizada semelhante a Valores Pizza.
             </summary>
         </member>
+        <member name="T:PizzariaDoZe.src.controllers.FormFuncionariosController">
+            Classe controller para ser a intermediadora entre o serviço e a view do usuário
+        </member>
         <member name="T:PizzariaDoZe.src.controllers.FormIngredientesController">
             Classe controller para ser a intermediadora entre o serviço e a view do usuário
         </member>

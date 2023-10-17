@@ -1,9 +1,16 @@
-﻿namespace PizzariaDoZe.views;
+﻿using PizzariaDoZe.src.controllers;
+using PizzariaDoZe.src.entities;
+
+namespace PizzariaDoZe.views;
 
 public partial class FormFuncionario : Form
 {
+    private FormFuncionariosController controller;
     public FormFuncionario()
     {
+        if (controller == null)
+            controller = new FormFuncionariosController();
+
         InitializeComponent();
     }
 
@@ -93,5 +100,64 @@ public partial class FormFuncionario : Form
             return true;
         }
         return base.ProcessCmdKey(ref msg, keyData);
+    }
+
+    private void labelBairro_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void txtBairro_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    private void label3_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void labelComplemento_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    private void btnSalvar_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            Funcionario funcionario = new Funcionario();
+            funcionario.IdFuncionario = int.Parse(txtId.Text);
+            funcionario.NomeFuncionario = TextBoxNome.Text;
+            funcionario.Cpf = txtCpf.Text;
+            funcionario.Matricula = txtMatricula.Text;
+            funcionario.Senha = txtSenha.Text;
+            funcionario.Grupo = 'N';
+            funcionario.Motorista = textBoxCnh.Text;
+            funcionario.ValidadeMotorista = calendarioCnh.Value.Date;
+            funcionario.Observacao = txtObs.Text;
+            funcionario.Telefone = txtTelefone.Text;
+            funcionario.Email = textBoxEmail.Text;
+
+            Endereco endereco = new Endereco();
+            endereco.Logradouro = txtLogradouro.Text;
+            endereco.Bairro = txtBairro.Text;
+            endereco.Cep = txtCep.Text;
+            funcionario.Endereco = endereco;
+
+            funcionario.Numero = int.Parse(textBoxNumero.Text);
+            funcionario.Complemento = textBoxComplemento.Text;
+
+            controller.Save(funcionario);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"Ocorreu um erro ao processar os dados do funcionário. Erro: {ex.Message}");
+        }
+    }
+
+    private void btnVoltar_Click(object sender, EventArgs e)
+    {
+        this.Dispose();
     }
 }

@@ -59,6 +59,7 @@
             // 
             // txtLogin
             // 
+            txtLogin.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtLogin.Location = new Point(121, 49);
             txtLogin.Margin = new Padding(2);
             txtLogin.MaximumSize = new Size(300, 300);
@@ -70,6 +71,7 @@
             // 
             // txtSenha
             // 
+            txtSenha.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             txtSenha.Location = new Point(121, 103);
             txtSenha.Margin = new Padding(2);
             txtSenha.MaximumSize = new Size(300, 300);

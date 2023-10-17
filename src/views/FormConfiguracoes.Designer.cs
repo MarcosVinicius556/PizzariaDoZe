@@ -73,7 +73,7 @@
             Controls.Add(comboBoxIdioma);
             Controls.Add(label1);
             Name = "FormConfiguracoes";
-            Text = "FormConfiguracoes";
+            Text = "Configurações";
             ResumeLayout(false);
             PerformLayout();
         }

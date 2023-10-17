@@ -301,7 +301,7 @@
             Controls.Add(panelClientes);
             Controls.Add(btnSalvar);
             Name = "FormCadastroCliente";
-            Text = "FormCadastroClientes";
+            Text = "Cadastro de Clientes";
             Load += Form1_Load;
             panelClientes.ResumeLayout(false);
             panelClientes.PerformLayout();

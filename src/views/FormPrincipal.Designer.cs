@@ -490,7 +490,7 @@ namespace PizzariaDoZe.views
             Controls.Add(panelLeft);
             Controls.Add(panelInf);
             Name = "FormPrincipal";
-            Text = "Form1";
+            Text = "Pizzaria do Zé App";
             FormClosing += FormPrincipal_FormClosing;
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             panelSup.ResumeLayout(false);
