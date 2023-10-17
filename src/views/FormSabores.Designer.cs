@@ -42,7 +42,6 @@ namespace PizzariaDoZe.views
             txtNome = new TextBox();
             txtId = new TextBox();
             lblId = new Label();
-            btnEditar = new Button();
             btnExcluir = new Button();
             btnSalvar = new Button();
             panel1.SuspendLayout();
@@ -52,7 +51,9 @@ namespace PizzariaDoZe.views
             // panel1
             // 
             panel1.BackColor = SystemColors.ActiveBorder;
+            panel1.Controls.Add(btnSalvar);
             panel1.Controls.Add(pictureBoxFoto);
+            panel1.Controls.Add(btnExcluir);
             panel1.Controls.Add(txtTipo);
             panel1.Controls.Add(txtCategoria);
             panel1.Controls.Add(lblCategoria);
@@ -63,14 +64,14 @@ namespace PizzariaDoZe.views
             panel1.Controls.Add(txtNome);
             panel1.Controls.Add(txtId);
             panel1.Controls.Add(lblId);
-            panel1.Location = new Point(12, 12);
+            panel1.Location = new Point(12, 19);
             panel1.Name = "panel1";
-            panel1.Size = new Size(776, 426);
+            panel1.Size = new Size(776, 461);
             panel1.TabIndex = 0;
             // 
             // pictureBoxFoto
             // 
-            pictureBoxFoto.Location = new Point(28, 327);
+            pictureBoxFoto.Location = new Point(36, 295);
             pictureBoxFoto.Name = "pictureBoxFoto";
             pictureBoxFoto.Size = new Size(206, 91);
             pictureBoxFoto.TabIndex = 12;
@@ -80,7 +81,7 @@ namespace PizzariaDoZe.views
             // 
             // txtTipo
             // 
-            txtTipo.Location = new Point(237, 169);
+            txtTipo.Location = new Point(237, 155);
             txtTipo.Multiline = true;
             txtTipo.Name = "txtTipo";
             txtTipo.Size = new Size(141, 112);
@@ -90,7 +91,7 @@ namespace PizzariaDoZe.views
             // 
             // txtCategoria
             // 
-            txtCategoria.Location = new Point(22, 169);
+            txtCategoria.Location = new Point(35, 155);
             txtCategoria.Multiline = true;
             txtCategoria.Name = "txtCategoria";
             txtCategoria.Size = new Size(141, 112);
@@ -101,7 +102,7 @@ namespace PizzariaDoZe.views
             // lblCategoria
             // 
             lblCategoria.AutoSize = true;
-            lblCategoria.Location = new Point(22, 151);
+            lblCategoria.Location = new Point(34, 137);
             lblCategoria.Name = "lblCategoria";
             lblCategoria.Size = new Size(72, 15);
             lblCategoria.TabIndex = 7;
@@ -111,7 +112,7 @@ namespace PizzariaDoZe.views
             // lblTipo
             // 
             lblTipo.AutoSize = true;
-            lblTipo.Location = new Point(237, 151);
+            lblTipo.Location = new Point(237, 137);
             lblTipo.Name = "lblTipo";
             lblTipo.Size = new Size(35, 15);
             lblTipo.TabIndex = 6;
@@ -120,7 +121,8 @@ namespace PizzariaDoZe.views
             // 
             // txtIngredientes
             // 
-            txtIngredientes.Location = new Point(574, 30);
+            txtIngredientes.BackColor = SystemColors.Window;
+            txtIngredientes.Location = new Point(571, 33);
             txtIngredientes.Multiline = true;
             txtIngredientes.Name = "txtIngredientes";
             txtIngredientes.Size = new Size(171, 358);
@@ -130,7 +132,7 @@ namespace PizzariaDoZe.views
             // lblIngredientes
             // 
             lblIngredientes.AutoSize = true;
-            lblIngredientes.Location = new Point(574, 10);
+            lblIngredientes.Location = new Point(569, 13);
             lblIngredientes.Name = "lblIngredientes";
             lblIngredientes.Size = new Size(84, 15);
             lblIngredientes.TabIndex = 4;
@@ -139,7 +141,7 @@ namespace PizzariaDoZe.views
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Location = new Point(27, 86);
+            lblNome.Location = new Point(34, 72);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(45, 15);
             lblNome.TabIndex = 3;
@@ -148,7 +150,7 @@ namespace PizzariaDoZe.views
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(22, 104);
+            txtNome.Location = new Point(35, 90);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(405, 23);
             txtNome.TabIndex = 2;
@@ -157,7 +159,7 @@ namespace PizzariaDoZe.views
             // 
             // txtId
             // 
-            txtId.Location = new Point(27, 30);
+            txtId.Location = new Point(37, 33);
             txtId.Name = "txtId";
             txtId.Size = new Size(69, 23);
             txtId.TabIndex = 1;
@@ -167,27 +169,18 @@ namespace PizzariaDoZe.views
             // lblId
             // 
             lblId.AutoSize = true;
-            lblId.Location = new Point(27, 10);
+            lblId.Location = new Point(37, 13);
             lblId.Name = "lblId";
             lblId.Size = new Size(21, 15);
             lblId.TabIndex = 0;
             lblId.Text = "ID:";
             lblId.Click += label1_Click;
             // 
-            // btnEditar
-            // 
-            btnEditar.BackColor = Color.CornflowerBlue;
-            btnEditar.Location = new Point(315, 454);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(75, 32);
-            btnEditar.TabIndex = 17;
-            btnEditar.Text = "EDITAR";
-            btnEditar.UseVisualStyleBackColor = false;
-            // 
             // btnExcluir
             // 
-            btnExcluir.BackColor = Color.LightCoral;
-            btnExcluir.Location = new Point(415, 454);
+            btnExcluir.BackColor = SystemColors.ControlDarkDark;
+            btnExcluir.ForeColor = SystemColors.Control;
+            btnExcluir.Location = new Point(670, 408);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(75, 32);
             btnExcluir.TabIndex = 16;
@@ -196,8 +189,9 @@ namespace PizzariaDoZe.views
             // 
             // btnSalvar
             // 
-            btnSalvar.BackColor = Color.LimeGreen;
-            btnSalvar.Location = new Point(209, 454);
+            btnSalvar.BackColor = SystemColors.ControlDarkDark;
+            btnSalvar.ForeColor = SystemColors.Control;
+            btnSalvar.Location = new Point(336, 408);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(75, 32);
             btnSalvar.TabIndex = 15;
@@ -208,13 +202,11 @@ namespace PizzariaDoZe.views
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(800, 498);
-            Controls.Add(btnEditar);
-            Controls.Add(btnExcluir);
-            Controls.Add(btnSalvar);
             Controls.Add(panel1);
             Name = "FormSabores";
-            Text = "Cadastro de Sabores";
+            Text = "Form1";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxFoto).EndInit();
@@ -239,7 +231,6 @@ namespace PizzariaDoZe.views
         private TextBox txtIngredientes;
         private PictureBox pictureBoxFoto;
         private Label lblIngredientes;
-        private Button btnEditar;
         private Button btnExcluir;
     }
 }

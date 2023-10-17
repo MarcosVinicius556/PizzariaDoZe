@@ -52,13 +52,14 @@
             lblMl = new Label();
             btnFechar = new Button();
             btnExcluir = new Button();
-            btnEditar = new Button();
             btnSalvar = new Button();
             SuspendLayout();
             // 
             // lblId
             // 
             lblId.AutoSize = true;
+            lblId.BackColor = SystemColors.ControlDarkDark;
+            lblId.ForeColor = SystemColors.Control;
             lblId.Location = new Point(46, 31);
             lblId.Name = "lblId";
             lblId.Size = new Size(21, 15);
@@ -109,6 +110,7 @@
             // 
             // groupBoxTipo
             // 
+            groupBoxTipo.BackColor = SystemColors.Control;
             groupBoxTipo.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3, listViewItem4, listViewItem5, listViewItem6 });
             groupBoxTipo.Location = new Point(268, 49);
             groupBoxTipo.Name = "groupBoxTipo";
@@ -120,6 +122,8 @@
             // 
             // groupBoxMl
             // 
+            groupBoxMl.BackColor = SystemColors.Control;
+            groupBoxMl.ForeColor = SystemColors.WindowText;
             groupBoxMl.Items.AddRange(new ListViewItem[] { listViewItem7, listViewItem8, listViewItem9, listViewItem10, listViewItem11, listViewItem12 });
             groupBoxMl.Location = new Point(405, 49);
             groupBoxMl.Name = "groupBoxMl";
@@ -147,53 +151,45 @@
             // 
             // btnFechar
             // 
-            btnFechar.BackColor = Color.MediumBlue;
+            btnFechar.BackColor = SystemColors.ControlDarkDark;
             btnFechar.ForeColor = SystemColors.Control;
-            btnFechar.Location = new Point(416, 233);
+            btnFechar.Location = new Point(279, 233);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(110, 33);
             btnFechar.TabIndex = 31;
+            btnFechar.Text = "Fechar";
             btnFechar.UseVisualStyleBackColor = false;
             // 
             // btnExcluir
             // 
-            btnExcluir.BackColor = Color.Red;
+            btnExcluir.BackColor = SystemColors.ControlDarkDark;
             btnExcluir.ForeColor = SystemColors.Control;
-            btnExcluir.Location = new Point(293, 233);
+            btnExcluir.Location = new Point(416, 233);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(110, 33);
             btnExcluir.TabIndex = 30;
+            btnExcluir.Text = "Deletar";
             btnExcluir.UseVisualStyleBackColor = false;
-            // 
-            // btnEditar
-            // 
-            btnEditar.BackColor = Color.Turquoise;
-            btnEditar.ForeColor = SystemColors.Control;
-            btnEditar.Location = new Point(170, 233);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(110, 33);
-            btnEditar.TabIndex = 29;
-            btnEditar.UseVisualStyleBackColor = false;
             // 
             // btnSalvar
             // 
-            btnSalvar.BackColor = Color.Lime;
+            btnSalvar.BackColor = SystemColors.ControlDarkDark;
             btnSalvar.ForeColor = SystemColors.Control;
             btnSalvar.Location = new Point(46, 233);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(110, 33);
             btnSalvar.TabIndex = 28;
+            btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
             // 
             // FormProdutos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.AppWorkspace;
+            BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(572, 297);
             Controls.Add(btnFechar);
             Controls.Add(btnExcluir);
-            Controls.Add(btnEditar);
             Controls.Add(btnSalvar);
             Controls.Add(lblMl);
             Controls.Add(lblTipo);
@@ -209,7 +205,7 @@
             MinimizeBox = false;
             Name = "FormProdutos";
             ShowIcon = false;
-            Text = "Cadastro de Produtos";
+            Text = "Cadastro de produtos";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -228,7 +224,6 @@
         private Label lblMl;
         private Button btnFechar;
         private Button btnExcluir;
-        private Button btnEditar;
         private Button btnSalvar;
     }
 }

@@ -52,23 +52,45 @@
             txtNome = new TextBox();
             txtMatricula = new TextBox();
             btnExcluir = new Button();
-            btnEditar = new Button();
+            btnVoltar = new Button();
+            panelClienteEndereco = new Panel();
+            txtIdEndereco = new TextBox();
+            txtCep = new TextBox();
+            txtLogradouro = new TextBox();
+            txtBairro = new TextBox();
+            txtCidade = new TextBox();
+            txtPais = new TextBox();
+            txtNumero = new TextBox();
+            txtComplemento = new TextBox();
+            lblIdEndereco = new Label();
+            lblCep = new Label();
+            lblLogradouro = new Label();
+            lblBairro = new Label();
+            lblCidade = new Label();
+            lblUf = new Label();
+            lblPais = new Label();
+            lblNumero = new Label();
+            lblComplemento = new Label();
+            DropBoxUf = new ComboBox();
             panelClientes.SuspendLayout();
+            panelClienteEndereco.SuspendLayout();
             SuspendLayout();
             // 
             // btnSalvar
             // 
-            btnSalvar.BackColor = Color.LimeGreen;
-            btnSalvar.Location = new Point(73, 383);
+            btnSalvar.BackColor = SystemColors.ControlDarkDark;
+            btnSalvar.ForeColor = SystemColors.Control;
+            btnSalvar.Location = new Point(457, 383);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(75, 32);
             btnSalvar.TabIndex = 0;
+            btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
             // 
             // lblId
             // 
             lblId.AutoSize = true;
-            lblId.Location = new Point(21, 19);
+            lblId.Location = new Point(21, 10);
             lblId.Name = "lblId";
             lblId.Size = new Size(21, 15);
             lblId.TabIndex = 1;
@@ -76,7 +98,7 @@
             // 
             // txtId
             // 
-            txtId.Location = new Point(21, 37);
+            txtId.Location = new Point(21, 28);
             txtId.Name = "txtId";
             txtId.Size = new Size(42, 23);
             txtId.TabIndex = 2;
@@ -171,9 +193,9 @@
             panelClientes.Controls.Add(txtId);
             panelClientes.Controls.Add(lblCpf);
             panelClientes.Controls.Add(lblMatricula);
-            panelClientes.Location = new Point(17, 21);
+            panelClientes.Location = new Point(40, 21);
             panelClientes.Name = "panelClientes";
-            panelClientes.Size = new Size(544, 356);
+            panelClientes.Size = new Size(492, 356);
             panelClientes.TabIndex = 11;
             panelClientes.Paint += panel1_Paint;
             // 
@@ -188,7 +210,7 @@
             // 
             // txtTelefone
             // 
-            txtTelefone.Location = new Point(21, 176);
+            txtTelefone.Location = new Point(21, 167);
             txtTelefone.Mask = "(99) 00000-0000";
             txtTelefone.Name = "txtTelefone";
             txtTelefone.Size = new Size(168, 23);
@@ -197,7 +219,7 @@
             // 
             // txtCpf
             // 
-            txtCpf.Location = new Point(126, 37);
+            txtCpf.Location = new Point(126, 28);
             txtCpf.Mask = "00000-000";
             txtCpf.Name = "txtCpf";
             txtCpf.Size = new Size(147, 23);
@@ -207,7 +229,7 @@
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(312, 234);
+            txtSenha.Location = new Point(312, 225);
             txtSenha.Name = "txtSenha";
             txtSenha.PasswordChar = '*';
             txtSenha.Size = new Size(100, 23);
@@ -224,7 +246,7 @@
             // 
             // txtObs
             // 
-            txtObs.Location = new Point(15, 285);
+            txtObs.Location = new Point(15, 276);
             txtObs.Multiline = true;
             txtObs.Name = "txtObs";
             txtObs.Size = new Size(461, 68);
@@ -234,7 +256,7 @@
             // calendarioCnh
             // 
             calendarioCnh.Format = DateTimePickerFormat.Short;
-            calendarioCnh.Location = new Point(186, 231);
+            calendarioCnh.Location = new Point(186, 222);
             calendarioCnh.Name = "calendarioCnh";
             calendarioCnh.Size = new Size(110, 23);
             calendarioCnh.TabIndex = 19;
@@ -242,7 +264,7 @@
             // 
             // txtCnh
             // 
-            txtCnh.Location = new Point(21, 231);
+            txtCnh.Location = new Point(21, 222);
             txtCnh.Name = "txtCnh";
             txtCnh.Size = new Size(150, 23);
             txtCnh.TabIndex = 18;
@@ -250,7 +272,7 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(195, 176);
+            txtEmail.Location = new Point(195, 167);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(281, 23);
             txtEmail.TabIndex = 17;
@@ -258,7 +280,7 @@
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(21, 101);
+            txtNome.Location = new Point(21, 92);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(455, 23);
             txtNome.TabIndex = 15;
@@ -266,7 +288,7 @@
             // 
             // txtMatricula
             // 
-            txtMatricula.Location = new Point(302, 37);
+            txtMatricula.Location = new Point(302, 28);
             txtMatricula.Name = "txtMatricula";
             txtMatricula.Size = new Size(174, 23);
             txtMatricula.TabIndex = 14;
@@ -274,38 +296,218 @@
             // 
             // btnExcluir
             // 
-            btnExcluir.BackColor = Color.LightCoral;
-            btnExcluir.Location = new Point(302, 383);
+            btnExcluir.BackColor = SystemColors.ControlDarkDark;
+            btnExcluir.ForeColor = SystemColors.Control;
+            btnExcluir.Location = new Point(931, 383);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(75, 32);
             btnExcluir.TabIndex = 13;
+            btnExcluir.Text = "Deletar";
             btnExcluir.UseVisualStyleBackColor = false;
             btnExcluir.Click += btnExcluir_Click;
             // 
-            // btnEditar
+            // btnVoltar
             // 
-            btnEditar.BackColor = Color.CornflowerBlue;
-            btnEditar.Location = new Point(189, 383);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(75, 32);
-            btnEditar.TabIndex = 14;
-            btnEditar.UseVisualStyleBackColor = false;
+            btnVoltar.BackColor = SystemColors.ControlDarkDark;
+            btnVoltar.ForeColor = SystemColors.Control;
+            btnVoltar.Location = new Point(553, 383);
+            btnVoltar.Name = "btnVoltar";
+            btnVoltar.Size = new Size(75, 32);
+            btnVoltar.TabIndex = 14;
+            btnVoltar.Text = "Voltar";
+            btnVoltar.UseVisualStyleBackColor = false;
+            // 
+            // panelClienteEndereco
+            // 
+            panelClienteEndereco.BackColor = SystemColors.ActiveBorder;
+            panelClienteEndereco.Controls.Add(DropBoxUf);
+            panelClienteEndereco.Controls.Add(lblPais);
+            panelClienteEndereco.Controls.Add(lblUf);
+            panelClienteEndereco.Controls.Add(lblCidade);
+            panelClienteEndereco.Controls.Add(lblBairro);
+            panelClienteEndereco.Controls.Add(lblLogradouro);
+            panelClienteEndereco.Controls.Add(lblCep);
+            panelClienteEndereco.Controls.Add(lblIdEndereco);
+            panelClienteEndereco.Controls.Add(txtPais);
+            panelClienteEndereco.Controls.Add(txtCidade);
+            panelClienteEndereco.Controls.Add(txtBairro);
+            panelClienteEndereco.Controls.Add(txtLogradouro);
+            panelClienteEndereco.Controls.Add(txtCep);
+            panelClienteEndereco.Controls.Add(txtIdEndereco);
+            panelClienteEndereco.Location = new Point(553, 21);
+            panelClienteEndereco.Name = "panelClienteEndereco";
+            panelClienteEndereco.Size = new Size(453, 190);
+            panelClienteEndereco.TabIndex = 15;
+            // 
+            // txtIdEndereco
+            // 
+            txtIdEndereco.Location = new Point(20, 28);
+            txtIdEndereco.Name = "txtIdEndereco";
+            txtIdEndereco.Size = new Size(73, 23);
+            txtIdEndereco.TabIndex = 0;
+            // 
+            // txtCep
+            // 
+            txtCep.Location = new Point(131, 28);
+            txtCep.Name = "txtCep";
+            txtCep.Size = new Size(153, 23);
+            txtCep.TabIndex = 1;
+            // 
+            // txtLogradouro
+            // 
+            txtLogradouro.Location = new Point(290, 28);
+            txtLogradouro.Name = "txtLogradouro";
+            txtLogradouro.Size = new Size(137, 23);
+            txtLogradouro.TabIndex = 2;
+            // 
+            // txtBairro
+            // 
+            txtBairro.Location = new Point(20, 92);
+            txtBairro.Name = "txtBairro";
+            txtBairro.Size = new Size(200, 23);
+            txtBairro.TabIndex = 3;
+            // 
+            // txtCidade
+            // 
+            txtCidade.Location = new Point(226, 92);
+            txtCidade.Name = "txtCidade";
+            txtCidade.Size = new Size(201, 23);
+            txtCidade.TabIndex = 4;
+            // 
+            // txtPais
+            // 
+            txtPais.Location = new Point(99, 150);
+            txtPais.Name = "txtPais";
+            txtPais.Size = new Size(328, 23);
+            txtPais.TabIndex = 6;
+            // 
+            // txtNumero
+            // 
+            txtNumero.Location = new Point(553, 243);
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(73, 23);
+            txtNumero.TabIndex = 16;
+            // 
+            // txtComplemento
+            // 
+            txtComplemento.Location = new Point(632, 243);
+            txtComplemento.Name = "txtComplemento";
+            txtComplemento.Size = new Size(328, 23);
+            txtComplemento.TabIndex = 17;
+            // 
+            // lblIdEndereco
+            // 
+            lblIdEndereco.AutoSize = true;
+            lblIdEndereco.Location = new Point(19, 13);
+            lblIdEndereco.Name = "lblIdEndereco";
+            lblIdEndereco.Size = new Size(21, 15);
+            lblIdEndereco.TabIndex = 7;
+            lblIdEndereco.Text = "ID:";
+            // 
+            // lblCep
+            // 
+            lblCep.AutoSize = true;
+            lblCep.Location = new Point(130, 11);
+            lblCep.Name = "lblCep";
+            lblCep.Size = new Size(31, 15);
+            lblCep.TabIndex = 8;
+            lblCep.Text = "CEP:";
+            // 
+            // lblLogradouro
+            // 
+            lblLogradouro.AutoSize = true;
+            lblLogradouro.Location = new Point(287, 11);
+            lblLogradouro.Name = "lblLogradouro";
+            lblLogradouro.Size = new Size(72, 15);
+            lblLogradouro.TabIndex = 9;
+            lblLogradouro.Text = "Logradouro:";
+            // 
+            // lblBairro
+            // 
+            lblBairro.AutoSize = true;
+            lblBairro.Location = new Point(17, 75);
+            lblBairro.Name = "lblBairro";
+            lblBairro.Size = new Size(41, 15);
+            lblBairro.TabIndex = 10;
+            lblBairro.Text = "Bairro:";
+            // 
+            // lblCidade
+            // 
+            lblCidade.AutoSize = true;
+            lblCidade.Location = new Point(224, 75);
+            lblCidade.Name = "lblCidade";
+            lblCidade.Size = new Size(44, 15);
+            lblCidade.TabIndex = 11;
+            lblCidade.Text = "Cidade";
+            // 
+            // lblUf
+            // 
+            lblUf.AutoSize = true;
+            lblUf.Location = new Point(18, 133);
+            lblUf.Name = "lblUf";
+            lblUf.Size = new Size(24, 15);
+            lblUf.TabIndex = 12;
+            lblUf.Text = "UF:";
+            // 
+            // lblPais
+            // 
+            lblPais.AutoSize = true;
+            lblPais.Location = new Point(96, 133);
+            lblPais.Name = "lblPais";
+            lblPais.Size = new Size(31, 15);
+            lblPais.TabIndex = 13;
+            lblPais.Text = "País:";
+            // 
+            // lblNumero
+            // 
+            lblNumero.AutoSize = true;
+            lblNumero.Location = new Point(551, 226);
+            lblNumero.Name = "lblNumero";
+            lblNumero.Size = new Size(54, 15);
+            lblNumero.TabIndex = 18;
+            lblNumero.Text = "Número:";
+            // 
+            // lblComplemento
+            // 
+            lblComplemento.AutoSize = true;
+            lblComplemento.Location = new Point(630, 226);
+            lblComplemento.Name = "lblComplemento";
+            lblComplemento.Size = new Size(87, 15);
+            lblComplemento.TabIndex = 19;
+            lblComplemento.Text = "Complemento:";
+            // 
+            // DropBoxUf
+            // 
+            DropBoxUf.FormattingEnabled = true;
+            DropBoxUf.Location = new Point(20, 150);
+            DropBoxUf.Name = "DropBoxUf";
+            DropBoxUf.Size = new Size(73, 23);
+            DropBoxUf.TabIndex = 14;
             // 
             // FormCadastroCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(581, 419);
-            Controls.Add(btnEditar);
+            BackColor = SystemColors.ControlDarkDark;
+            ClientSize = new Size(1037, 419);
+            Controls.Add(lblComplemento);
+            Controls.Add(lblNumero);
+            Controls.Add(txtComplemento);
+            Controls.Add(txtNumero);
+            Controls.Add(panelClienteEndereco);
+            Controls.Add(btnVoltar);
             Controls.Add(btnExcluir);
             Controls.Add(panelClientes);
             Controls.Add(btnSalvar);
             Name = "FormCadastroCliente";
-            Text = "Cadastro de Clientes";
+            Text = "FormCadastroClientes";
             Load += Form1_Load;
             panelClientes.ResumeLayout(false);
             panelClientes.PerformLayout();
+            panelClienteEndereco.ResumeLayout(false);
+            panelClienteEndereco.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -323,7 +525,7 @@
         private Label lblSenha;
         private Panel panelClientes;
         private Button btnExcluir;
-        private Button btnEditar;
+        private Button btnVoltar;
         private TextBox txtEmail;
         private TextBox txtNome;
         private TextBox txtMatricula;
@@ -335,5 +537,24 @@
         private MaskedTextBox txtCpf;
         private MaskedTextBox txtTelefone;
         private Label lblTitulo;
+        private Panel panelClienteEndereco;
+        private TextBox txtPais;
+        private TextBox txtCidade;
+        private TextBox txtBairro;
+        private TextBox txtLogradouro;
+        private TextBox txtCep;
+        private TextBox txtIdEndereco;
+        private TextBox txtNumero;
+        private Label lblPais;
+        private Label lblUf;
+        private Label lblCidade;
+        private Label lblBairro;
+        private Label lblLogradouro;
+        private Label lblCep;
+        private Label lblIdEndereco;
+        private TextBox txtComplemento;
+        private Label lblNumero;
+        private Label lblComplemento;
+        private ComboBox DropBoxUf;
     }
 }

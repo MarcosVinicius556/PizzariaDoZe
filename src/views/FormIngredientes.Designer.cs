@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIngredientes));
             btnSalvar = new Button();
-            btnEditar = new Button();
             btnDeletar = new Button();
             btnFechar = new Button();
             lblCadastroIngredientes = new Label();
@@ -44,42 +42,26 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.BackColor = Color.Green;
+            btnSalvar.BackColor = SystemColors.ControlDarkDark;
             btnSalvar.ForeColor = Color.White;
-            btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
             btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSalvar.Location = new Point(25, 320);
+            btnSalvar.Location = new Point(273, 364);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(168, 70);
+            btnSalvar.Size = new Size(113, 48);
             btnSalvar.TabIndex = 9;
             btnSalvar.TextAlign = ContentAlignment.MiddleLeft;
             btnSalvar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSalvar.UseVisualStyleBackColor = false;
             btnSalvar.Click += btnSalvar_Click;
             // 
-            // btnEditar
-            // 
-            btnEditar.BackColor = Color.FromArgb(0, 0, 192);
-            btnEditar.ForeColor = Color.White;
-            btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
-            btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEditar.Location = new Point(222, 320);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(168, 70);
-            btnEditar.TabIndex = 10;
-            btnEditar.TextAlign = ContentAlignment.MiddleLeft;
-            btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnEditar.UseVisualStyleBackColor = false;
-            // 
             // btnDeletar
             // 
-            btnDeletar.BackColor = Color.Maroon;
+            btnDeletar.BackColor = SystemColors.ControlDarkDark;
             btnDeletar.ForeColor = Color.White;
-            btnDeletar.Image = (Image)resources.GetObject("btnDeletar.Image");
             btnDeletar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDeletar.Location = new Point(418, 320);
+            btnDeletar.Location = new Point(421, 364);
             btnDeletar.Name = "btnDeletar";
-            btnDeletar.Size = new Size(168, 70);
+            btnDeletar.Size = new Size(113, 48);
             btnDeletar.TabIndex = 11;
             btnDeletar.TextAlign = ContentAlignment.MiddleLeft;
             btnDeletar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -87,13 +69,12 @@
             // 
             // btnFechar
             // 
-            btnFechar.BackColor = Color.Black;
+            btnFechar.BackColor = SystemColors.ControlDarkDark;
             btnFechar.ForeColor = Color.White;
-            btnFechar.Image = (Image)resources.GetObject("btnFechar.Image");
             btnFechar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnFechar.Location = new Point(610, 320);
+            btnFechar.Location = new Point(665, 364);
             btnFechar.Name = "btnFechar";
-            btnFechar.Size = new Size(168, 70);
+            btnFechar.Size = new Size(113, 48);
             btnFechar.TabIndex = 12;
             btnFechar.TextAlign = ContentAlignment.MiddleLeft;
             btnFechar.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -110,7 +91,7 @@
             // 
             // textId
             // 
-            textId.Location = new Point(54, 46);
+            textId.Location = new Point(195, 40);
             textId.Name = "textId";
             textId.Size = new Size(107, 23);
             textId.TabIndex = 14;
@@ -119,8 +100,9 @@
             // lblId
             // 
             lblId.AutoSize = true;
+            lblId.BackColor = SystemColors.ActiveBorder;
             lblId.ForeColor = Color.White;
-            lblId.Location = new Point(54, 15);
+            lblId.Location = new Point(193, 23);
             lblId.Name = "lblId";
             lblId.Size = new Size(21, 15);
             lblId.TabIndex = 15;
@@ -128,7 +110,7 @@
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(238, 46);
+            txtNome.Location = new Point(328, 40);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(258, 23);
             txtNome.TabIndex = 16;
@@ -145,7 +127,7 @@
             // 
             // panelIngredientes
             // 
-            panelIngredientes.BackColor = Color.FromArgb(64, 64, 64);
+            panelIngredientes.BackColor = SystemColors.ActiveBorder;
             panelIngredientes.Controls.Add(txtNome);
             panelIngredientes.Controls.Add(lblNome);
             panelIngredientes.Controls.Add(textId);
@@ -159,15 +141,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(800, 450);
             Controls.Add(panelIngredientes);
             Controls.Add(lblCadastroIngredientes);
             Controls.Add(btnFechar);
             Controls.Add(btnDeletar);
-            Controls.Add(btnEditar);
             Controls.Add(btnSalvar);
             Name = "FormIngredientes";
-            Text = "Cadastro de Ingrediente";
             panelIngredientes.ResumeLayout(false);
             panelIngredientes.PerformLayout();
             ResumeLayout(false);
@@ -177,7 +158,6 @@
         #endregion
 
         private Button btnSalvar;
-        private Button btnEditar;
         private Button btnDeletar;
         private Button btnFechar;
         private Label lblCadastroIngredientes;

@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ListViewItem listViewItem1 = new ListViewItem("Tradicional");
-            ListViewItem listViewItem2 = new ListViewItem("Especial");
-            ListViewItem listViewItem3 = new ListViewItem("Pequena");
-            ListViewItem listViewItem4 = new ListViewItem("Média");
-            ListViewItem listViewItem5 = new ListViewItem("Grande");
-            ListViewItem listViewItem6 = new ListViewItem("Familia");
+            ListViewItem listViewItem7 = new ListViewItem("Tradicional");
+            ListViewItem listViewItem8 = new ListViewItem("Especial");
+            ListViewItem listViewItem9 = new ListViewItem("Pequena");
+            ListViewItem listViewItem10 = new ListViewItem("Média");
+            ListViewItem listViewItem11 = new ListViewItem("Grande");
+            ListViewItem listViewItem12 = new ListViewItem("Familia");
             btnFechar = new Button();
             btnExcluir = new Button();
-            btnEditar = new Button();
             btnSalvar = new Button();
             lblCategoria = new Label();
             lblTamanho = new Label();
@@ -48,41 +47,35 @@
             txtValor = new TextBox();
             txtId = new TextBox();
             lblId = new Label();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnFechar
             // 
-            btnFechar.BackColor = Color.MediumBlue;
+            btnFechar.BackColor = SystemColors.ControlDarkDark;
             btnFechar.ForeColor = SystemColors.Control;
-            btnFechar.Location = new Point(418, 232);
+            btnFechar.Location = new Point(267, 219);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(110, 33);
             btnFechar.TabIndex = 27;
+            btnFechar.Text = "Fechar";
             btnFechar.UseVisualStyleBackColor = false;
             // 
             // btnExcluir
             // 
-            btnExcluir.BackColor = Color.Red;
+            btnExcluir.BackColor = SystemColors.ControlDarkDark;
             btnExcluir.ForeColor = SystemColors.Control;
-            btnExcluir.Location = new Point(295, 232);
+            btnExcluir.Location = new Point(404, 219);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(110, 33);
             btnExcluir.TabIndex = 26;
+            btnExcluir.Text = "Deletar";
             btnExcluir.UseVisualStyleBackColor = false;
-            // 
-            // btnEditar
-            // 
-            btnEditar.BackColor = Color.LightSeaGreen;
-            btnEditar.ForeColor = SystemColors.Control;
-            btnEditar.Location = new Point(172, 232);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(110, 33);
-            btnEditar.TabIndex = 25;
-            btnEditar.UseVisualStyleBackColor = false;
             // 
             // btnSalvar
             // 
-            btnSalvar.BackColor = Color.Lime;
+            btnSalvar.BackColor = SystemColors.ControlDarkDark;
             btnSalvar.ForeColor = SystemColors.Control;
             btnSalvar.ImageAlign = ContentAlignment.MiddleLeft;
             btnSalvar.Location = new Point(48, 232);
@@ -90,6 +83,7 @@
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(110, 33);
             btnSalvar.TabIndex = 24;
+            btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
             // 
             // lblCategoria
@@ -110,7 +104,7 @@
             // 
             // txtCategoria
             // 
-            txtCategoria.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2 });
+            txtCategoria.Items.AddRange(new ListViewItem[] { listViewItem7, listViewItem8 });
             txtCategoria.Location = new Point(407, 49);
             txtCategoria.Name = "txtCategoria";
             txtCategoria.Size = new Size(121, 157);
@@ -121,7 +115,7 @@
             // 
             // txtTamanho
             // 
-            txtTamanho.Items.AddRange(new ListViewItem[] { listViewItem3, listViewItem4, listViewItem5, listViewItem6 });
+            txtTamanho.Items.AddRange(new ListViewItem[] { listViewItem9, listViewItem10, listViewItem11, listViewItem12 });
             txtTamanho.Location = new Point(270, 49);
             txtTamanho.Name = "txtTamanho";
             txtTamanho.Size = new Size(121, 157);
@@ -164,7 +158,7 @@
             // 
             // txtId
             // 
-            txtId.BackColor = SystemColors.InactiveCaption;
+            txtId.BackColor = SystemColors.Control;
             txtId.Enabled = false;
             txtId.Location = new Point(48, 49);
             txtId.Name = "txtId";
@@ -175,21 +169,29 @@
             // lblId
             // 
             lblId.AutoSize = true;
+            lblId.BackColor = SystemColors.ActiveBorder;
             lblId.Location = new Point(48, 31);
             lblId.Name = "lblId";
             lblId.Size = new Size(21, 15);
             lblId.TabIndex = 14;
             lblId.Text = "ID:";
             // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.ActiveBorder;
+            panel1.Controls.Add(btnFechar);
+            panel1.Controls.Add(btnExcluir);
+            panel1.Location = new Point(14, 13);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(541, 272);
+            panel1.TabIndex = 28;
+            // 
             // FormValores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.AppWorkspace;
+            BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(572, 297);
-            Controls.Add(btnFechar);
-            Controls.Add(btnExcluir);
-            Controls.Add(btnEditar);
             Controls.Add(btnSalvar);
             Controls.Add(lblCategoria);
             Controls.Add(lblTamanho);
@@ -201,11 +203,13 @@
             Controls.Add(txtValor);
             Controls.Add(txtId);
             Controls.Add(lblId);
+            Controls.Add(panel1);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormValores";
             ShowIcon = false;
-            Text = "Cadastro de Valores de Pizza";
+            Text = "Cadastrar valor pizza";
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -214,7 +218,6 @@
 
         private Button btnFechar;
         private Button btnExcluir;
-        private Button btnEditar;
         private Button btnSalvar;
         private Label lblCategoria;
         private Label lblTamanho;
@@ -226,5 +229,6 @@
         private TextBox txtValor;
         private TextBox txtId;
         private Label lblId;
+        private Panel panel1;
     }
 }
