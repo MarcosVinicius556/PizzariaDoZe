@@ -2,7 +2,9 @@
 using PizzariaDoZe.src.repositories.@interface;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,6 +42,12 @@ namespace PizzariaDoZe.src.services.@interface
         }
         abstract void Save(E entity);
         abstract void Update(E entity);
+
+        /* 
+         * Função para criar um DataTable a partir de uma lista 
+         */
+        public DataTable CreateDataTableFromList<Entity>(List<Entity> data);
+        
 
     }
 

@@ -4,7 +4,9 @@ using PizzariaDoZe.src.repositories.@interface;
 using PizzariaDoZe.src.services.@interface;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,6 +38,32 @@ namespace PizzariaDoZe.src.services
         public Endereco FindByCep(string cep)
         {
             return this.repository!.findByCEP(cep);
+        }
+
+        public DataTable CreateDataTableFromList<Endereco>(List<Endereco> data)
+        {
+            {
+                DataTable dataTable = new DataTable();
+
+                PropertyInfo[] properties = typeof(Endereco).GetProperties();
+
+                foreach (PropertyInfo property in properties)
+                {
+                    dataTable.Columns.Add(property.Name, property.PropertyType);
+                }
+
+                foreach (Endereco item in data)
+                {
+                    DataRow row = dataTable.NewRow();
+                    foreach (PropertyInfo property in properties)
+                    {
+                        row[property.Name] = property.GetValue(item);
+                    }
+                    dataTable.Rows.Add(row);
+                }
+
+                return dataTable;
+            }
         }
     }
 }

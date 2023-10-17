@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using PizzariaDoZe.src.controllers;
+using System.Configuration;
 using System.Windows.Forms;
 
 namespace PizzariaDoZe.views
@@ -23,7 +24,8 @@ namespace PizzariaDoZe.views
         private Panel panelInf;
         private Button buttonConfirm;
         private Button buttonPrint;
-        private DataGridView dataGridViewOrders;
+        private DataGridView dataGridView;
+        private FormPrincipalController controller;
 
         protected override void Dispose(bool disposing)
         {
@@ -40,7 +42,7 @@ namespace PizzariaDoZe.views
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
-            dataGridViewOrders = new DataGridView();
+            dataGridView = new DataGridView();
             buttonSearch = new Button();
             textBoxSearch = new TextBox();
             panelSup = new Panel();
@@ -76,17 +78,7 @@ namespace PizzariaDoZe.views
             configuraçõesToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
             sairToolStripMenuItem = new ToolStripMenuItem();
-            ColumnId = new DataGridViewTextBoxColumn();
-            ColumnCep = new DataGridViewTextBoxColumn();
-            ColumnLogradouro = new DataGridViewTextBoxColumn();
-            Bairro = new DataGridViewTextBoxColumn();
-            ColumnIDCidade = new DataGridViewTextBoxColumn();
-            ColumnCidade = new DataGridViewTextBoxColumn();
-            ColumnIdUf = new DataGridViewTextBoxColumn();
-            ColumnUf = new DataGridViewTextBoxColumn();
-            ColumnIdPais = new DataGridViewTextBoxColumn();
-            ColumnPais = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             panelSup.SuspendLayout();
             panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureUser).BeginInit();
@@ -95,16 +87,15 @@ namespace PizzariaDoZe.views
             contextMenuStripPrincipal.SuspendLayout();
             SuspendLayout();
             // 
-            // dataGridViewOrders
+            // dataGridView
             // 
-            dataGridViewOrders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewOrders.Columns.AddRange(new DataGridViewColumn[] { ColumnId, ColumnCep, ColumnLogradouro, Bairro, ColumnIDCidade, ColumnCidade, ColumnIdUf, ColumnUf, ColumnIdPais, ColumnPais });
-            dataGridViewOrders.Location = new Point(211, 63);
-            dataGridViewOrders.Name = "dataGridViewOrders";
-            dataGridViewOrders.RowHeadersWidth = 51;
-            dataGridViewOrders.RowTemplate.Height = 25;
-            dataGridViewOrders.Size = new Size(805, 493);
-            dataGridViewOrders.TabIndex = 3;
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView.Location = new Point(211, 63);
+            dataGridView.Name = "dataGridView";
+            dataGridView.RowHeadersWidth = 51;
+            dataGridView.RowTemplate.Height = 25;
+            dataGridView.Size = new Size(805, 493);
+            dataGridView.TabIndex = 3;
             // 
             // buttonSearch
             // 
@@ -145,6 +136,7 @@ namespace PizzariaDoZe.views
             // 
             // buttonRegisterOrders
             // 
+            buttonRegisterOrders.FlatStyle = FlatStyle.Flat;
             buttonRegisterOrders.Location = new Point(12, 492);
             buttonRegisterOrders.Name = "buttonRegisterOrders";
             buttonRegisterOrders.Size = new Size(188, 48);
@@ -154,6 +146,7 @@ namespace PizzariaDoZe.views
             // 
             // RegisterProducts
             // 
+            RegisterProducts.FlatStyle = FlatStyle.Flat;
             RegisterProducts.Location = new Point(12, 438);
             RegisterProducts.Name = "RegisterProducts";
             RegisterProducts.Size = new Size(188, 48);
@@ -163,6 +156,7 @@ namespace PizzariaDoZe.views
             // 
             // buttonPizzaValues
             // 
+            buttonPizzaValues.FlatStyle = FlatStyle.Flat;
             buttonPizzaValues.Location = new Point(12, 384);
             buttonPizzaValues.Name = "buttonPizzaValues";
             buttonPizzaValues.Size = new Size(188, 48);
@@ -172,6 +166,7 @@ namespace PizzariaDoZe.views
             // 
             // buttonRegisterFlavors
             // 
+            buttonRegisterFlavors.FlatStyle = FlatStyle.Flat;
             buttonRegisterFlavors.Location = new Point(12, 330);
             buttonRegisterFlavors.Name = "buttonRegisterFlavors";
             buttonRegisterFlavors.Size = new Size(188, 48);
@@ -181,6 +176,7 @@ namespace PizzariaDoZe.views
             // 
             // buttonRegisterIngredients
             // 
+            buttonRegisterIngredients.FlatStyle = FlatStyle.Flat;
             buttonRegisterIngredients.Location = new Point(12, 276);
             buttonRegisterIngredients.Name = "buttonRegisterIngredients";
             buttonRegisterIngredients.Size = new Size(188, 48);
@@ -190,6 +186,7 @@ namespace PizzariaDoZe.views
             // 
             // buttonRegisterClient
             // 
+            buttonRegisterClient.FlatStyle = FlatStyle.Flat;
             buttonRegisterClient.Location = new Point(12, 222);
             buttonRegisterClient.Name = "buttonRegisterClient";
             buttonRegisterClient.Size = new Size(188, 48);
@@ -199,6 +196,7 @@ namespace PizzariaDoZe.views
             // 
             // buttonRegisterEmployees
             // 
+            buttonRegisterEmployees.FlatStyle = FlatStyle.Flat;
             buttonRegisterEmployees.Location = new Point(12, 168);
             buttonRegisterEmployees.Name = "buttonRegisterEmployees";
             buttonRegisterEmployees.Size = new Size(188, 48);
@@ -208,6 +206,7 @@ namespace PizzariaDoZe.views
             // 
             // buttonAdressRegister
             // 
+            buttonAdressRegister.FlatStyle = FlatStyle.Flat;
             buttonAdressRegister.Location = new Point(12, 114);
             buttonAdressRegister.Name = "buttonAdressRegister";
             buttonAdressRegister.Size = new Size(188, 48);
@@ -236,6 +235,7 @@ namespace PizzariaDoZe.views
             // 
             // buttonOptions
             // 
+            buttonOptions.FlatStyle = FlatStyle.Flat;
             buttonOptions.Location = new Point(12, 546);
             buttonOptions.Name = "buttonOptions";
             buttonOptions.Size = new Size(96, 39);
@@ -394,80 +394,20 @@ namespace PizzariaDoZe.views
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
-            // ColumnId
-            // 
-            ColumnId.HeaderText = "Id";
-            ColumnId.MinimumWidth = 6;
-            ColumnId.Name = "ColumnId";
-            ColumnId.ReadOnly = true;
-            ColumnId.Width = 50;
-            // 
-            // ColumnCep
-            // 
-            ColumnCep.HeaderText = "Cep";
-            ColumnCep.MinimumWidth = 6;
-            ColumnCep.Name = "ColumnCep";
-            ColumnCep.ReadOnly = true;
-            // 
-            // ColumnLogradouro
-            // 
-            ColumnLogradouro.HeaderText = "Logradouro";
-            ColumnLogradouro.MinimumWidth = 6;
-            ColumnLogradouro.Name = "ColumnLogradouro";
-            ColumnLogradouro.ReadOnly = true;
-            // 
-            // Bairro
-            // 
-            Bairro.HeaderText = "Bairro";
-            Bairro.Name = "Bairro";
-            // 
-            // ColumnIDCidade
-            // 
-            ColumnIDCidade.HeaderText = "ID Cidade";
-            ColumnIDCidade.Name = "ColumnIDCidade";
-            ColumnIDCidade.Width = 50;
-            // 
-            // ColumnCidade
-            // 
-            ColumnCidade.HeaderText = "Cidade";
-            ColumnCidade.Name = "ColumnCidade";
-            // 
-            // ColumnIdUf
-            // 
-            ColumnIdUf.HeaderText = "Id UF";
-            ColumnIdUf.Name = "ColumnIdUf";
-            ColumnIdUf.Width = 50;
-            // 
-            // ColumnUf
-            // 
-            ColumnUf.HeaderText = "UF";
-            ColumnUf.Name = "ColumnUf";
-            // 
-            // ColumnIdPais
-            // 
-            ColumnIdPais.HeaderText = "ID Pais";
-            ColumnIdPais.Name = "ColumnIdPais";
-            ColumnIdPais.Width = 50;
-            // 
-            // ColumnPais
-            // 
-            ColumnPais.HeaderText = "Pais";
-            ColumnPais.Name = "ColumnPais";
-            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1015, 594);
             ContextMenuStrip = contextMenuStripPrincipal;
-            Controls.Add(dataGridViewOrders);
+            Controls.Add(dataGridView);
             Controls.Add(panelSup);
             Controls.Add(panelLeft);
             Controls.Add(panelInf);
             Name = "FormPrincipal";
             Text = "Form1";
             FormClosing += FormPrincipal_FormClosing;
-            ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             panelSup.ResumeLayout(false);
             panelSup.PerformLayout();
             panelLeft.ResumeLayout(false);
@@ -481,8 +421,10 @@ namespace PizzariaDoZe.views
 
         private void ButtonRegisterClient_Click(object sender, EventArgs e)
         {
-            FormCadastroCliente form = new FormCadastroCliente();
+            /* FormCadastroCliente form = new FormCadastroCliente();
             form.ShowDialog();
+            */
+            dataGridView.DataSource = controller.BuscarClientes();
         }
 
         private void ButtonRegisterOrders_Click(object sender, EventArgs e)
@@ -492,38 +434,45 @@ namespace PizzariaDoZe.views
 
         private void RegisterProducts_Click(object sender, EventArgs e)
         {
-            FormProdutos form = new FormProdutos();
+            /* FormProdutos form = new FormProdutos();
             form.ShowDialog();
+            */
+            dataGridView.DataSource = controller.BuscarProdutos();
         }
 
         private void ButtonPizzaValues_Click(object sender, EventArgs e)
         {
-            FormValores form = new FormValores();
-            form.ShowDialog();
+            /*FormValores form = new FormValores();
+            form.ShowDialog(); */
+            dataGridView.DataSource = controller.BuscarValores();
         }
 
         private void ButtonRegisterFlavors_Click(object sender, EventArgs e)
         {
-            FormSabores form = new FormSabores();
-            form.ShowDialog();
+            /*FormSabores form = new FormSabores();
+            form.ShowDialog();*/
+            dataGridView.DataSource = controller.BuscarSabores();
         }
 
         private void ButtonRegisterIngredients_Click(object sender, EventArgs e)
         {
-            FormIngredientes form = new FormIngredientes();
-            form.ShowDialog();
+            /*FormIngredientes form = new FormIngredientes();
+            form.ShowDialog();*/
+            dataGridView.DataSource = controller.BuscarIngredientes();
         }
 
         private void AdressClick_Click(object sender, EventArgs e)
         {
-            FormEndereco form = new FormEndereco();
-            form.ShowDialog();
+            /*FormEndereco form = new FormEndereco();
+            form.ShowDialog();*/
+            dataGridView.DataSource = controller.BuscarEnderecos();
         }
 
         private void Employees_Click(object sender, EventArgs e)
         {
-            FormFuncionario form = new FormFuncionario();
-            form.ShowDialog();
+            /*FormFuncionario form = new FormFuncionario();
+            form.ShowDialog();*/
+            dataGridView.DataSource = controller.BuscarFuncionarios();
         }
 
         private PictureBox pictureUser;
@@ -545,16 +494,6 @@ namespace PizzariaDoZe.views
         private ToolStripMenuItem abrirToolStripMenuItem;
         private ToolStripMenuItem sobreToolStripMenuItem;
         private ToolStripMenuItem fecharToolStripMenuItem;
-        private DataGridViewTextBoxColumn ColumnId;
-        private DataGridViewTextBoxColumn ColumnCep;
-        private DataGridViewTextBoxColumn ColumnLogradouro;
-        private DataGridViewTextBoxColumn Bairro;
-        private DataGridViewTextBoxColumn ColumnIDCidade;
-        private DataGridViewTextBoxColumn ColumnCidade;
-        private DataGridViewTextBoxColumn ColumnIdUf;
-        private DataGridViewTextBoxColumn ColumnUf;
-        private DataGridViewTextBoxColumn ColumnIdPais;
-        private DataGridViewTextBoxColumn ColumnPais;
     }
 
     #endregion

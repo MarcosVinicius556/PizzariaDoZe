@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PizzariaDoZe.src.controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,11 @@ namespace PizzariaDoZe.views
 {
     public partial class FormPrincipal : Form
     {
+
         public FormPrincipal()
         {
+            if (controller == null)
+                controller = new FormPrincipalController();
             InitializeComponent();
         }
 
