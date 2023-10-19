@@ -27,6 +27,7 @@ namespace PizzariaDoZe.src.repositories.singleton
                 try
                 {
                     conn = new MySqlConnection(strConnection);
+                    conn.Open();
                     Console.WriteLine("Conexão com o banco de dados OK!");
                 } catch(Exception e)
                 {
