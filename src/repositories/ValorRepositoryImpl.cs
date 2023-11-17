@@ -31,9 +31,9 @@ namespace PizzariaDoZe.src.repositories
                 while (reader.Read())
                 {
                     Valor valor = new Valor();
-                    valor.Id = (int)reader["id"];
-                    valor.Tamanho = (char)reader["tamanho"];
-                    valor.Categoria = (char)reader["categoria"];
+                    valor.Id = (int)reader["id_valor"];
+                    valor.Tamanho = 'G';//(char)reader["tamanho"];to do
+                    valor.Categoria = 'G';//(char)reader["categoria"];to do
                     valor.ValorPizza = (Decimal)reader["valor"];
                     valor.ValorBorda = (Decimal)reader["valor_borda"];
 
@@ -66,7 +66,7 @@ namespace PizzariaDoZe.src.repositories
                 {
                     Valor valor = new Valor();
 
-                    valor.Id = (int)reader["id"];
+                    valor.Id = (int)reader["id_valor"];
                     valor.Tamanho = (char)reader["tamanho"];
                     valor.Categoria = (char)reader["categoria"];
                     valor.ValorPizza = (Decimal)reader["valor"];
@@ -101,17 +101,23 @@ namespace PizzariaDoZe.src.repositories
                 $", '{entity.ValorBorda}'" +
                 $")";
 
+
+            if (conn.State != ConnectionState.Open)
+            {
+                conn.Open();
+            }
+
             try
             {
-                if (conn.State != ConnectionState.Open)
-                {
-                    conn.Open();
-                }
+
                 command = new MySqlCommand(SQLInsert, conn);
                 command.ExecuteReader();
+
+
             }
             catch (Exception e)
             {
+
                 MessageBox.Show("Ocorreu um erro ao inserir o registro no banco! " + e.Message);
             }
             finally

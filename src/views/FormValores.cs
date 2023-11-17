@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PizzariaDoZe.src.controllers;
+using PizzariaDoZe.src.entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace PizzariaDoZe.views
 {
     public partial class FormValores : Form
     {
+        private FormValorController controller =  new FormValorController();
         public FormValores()
         {
             InitializeComponent();
@@ -39,6 +42,13 @@ namespace PizzariaDoZe.views
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Valor valor = new Valor();
+            valor.ValorPizza = decimal.Parse(txtValor.Text);
+            valor.ValorBorda = decimal.Parse(txtAdicionalBorda.Text);
+            controller.Save(valor);
+        }
     }
 
 }

@@ -41,7 +41,7 @@ namespace PizzariaDoZe.src.entities
 
         public string getFields()
         {
-            return "id, tamanho, categoria, valor, valor_borda";
+            return "id_valor, tamanho, categoria, valor, valor_borda";
         }
 
         public object getId()

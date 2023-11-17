@@ -68,13 +68,12 @@ namespace PizzariaDoZe.src.repositories
             MySqlCommand command;
             Endereco entity = new Endereco();
             var conn = DatabaseConnectionSingleton.getConnection();
+            DbTransaction transaction = null;
             string? sqlFindById = $"SELECT * FROM {entity.getName()} e WHERE e.cep = '{cep}'";
             try
             {
-                if (conn.State != ConnectionState.Open)
-                {
-                    conn.Open();
-                }
+
+                transaction = conn.BeginTransaction();
                 command = new MySqlCommand(sqlFindById, conn);
                 MySqlDataReader reader = command.ExecuteReader();
 
@@ -94,14 +93,13 @@ namespace PizzariaDoZe.src.repositories
                     entity.Cidade = cidade;
 
                 }
+
+                transaction.Commit();
             }
             catch (Exception e)
             {
                 MessageBox.Show("Ocorreu um erro ao buscar o registro no banco! " + e.Message);
-            }
-            finally
-            {
-                conn.Close();
+                transaction.Rollback(); 
             }
 
             return entity;

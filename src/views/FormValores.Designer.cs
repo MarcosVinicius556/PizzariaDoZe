@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ListViewItem listViewItem7 = new ListViewItem("Tradicional");
-            ListViewItem listViewItem8 = new ListViewItem("Especial");
-            ListViewItem listViewItem9 = new ListViewItem("Pequena");
-            ListViewItem listViewItem10 = new ListViewItem("Média");
-            ListViewItem listViewItem11 = new ListViewItem("Grande");
-            ListViewItem listViewItem12 = new ListViewItem("Familia");
+            ListViewItem listViewItem1 = new ListViewItem("Tradicional");
+            ListViewItem listViewItem2 = new ListViewItem("Especial");
+            ListViewItem listViewItem3 = new ListViewItem("Pequena");
+            ListViewItem listViewItem4 = new ListViewItem("Média");
+            ListViewItem listViewItem5 = new ListViewItem("Grande");
+            ListViewItem listViewItem6 = new ListViewItem("Familia");
             btnFechar = new Button();
             btnExcluir = new Button();
             btnSalvar = new Button();
@@ -85,6 +85,7 @@
             btnSalvar.TabIndex = 24;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // lblCategoria
             // 
@@ -104,7 +105,7 @@
             // 
             // txtCategoria
             // 
-            txtCategoria.Items.AddRange(new ListViewItem[] { listViewItem7, listViewItem8 });
+            txtCategoria.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2 });
             txtCategoria.Location = new Point(407, 49);
             txtCategoria.Name = "txtCategoria";
             txtCategoria.Size = new Size(121, 157);
@@ -115,7 +116,7 @@
             // 
             // txtTamanho
             // 
-            txtTamanho.Items.AddRange(new ListViewItem[] { listViewItem9, listViewItem10, listViewItem11, listViewItem12 });
+            txtTamanho.Items.AddRange(new ListViewItem[] { listViewItem3, listViewItem4, listViewItem5, listViewItem6 });
             txtTamanho.Location = new Point(270, 49);
             txtTamanho.Name = "txtTamanho";
             txtTamanho.Size = new Size(121, 157);
