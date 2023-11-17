@@ -34,7 +34,7 @@ namespace PizzariaDoZe.src.repositories
                     prod.IdProduto = (int)reader["id_produto"];
                     prod.DescricaoProduto = (string)reader["descricao_produto"];
                     prod.Valor = (Decimal)reader["valor"];
-                    prod.Tipo = (char)reader["tipo"];
+                    prod.Tipo = 'G';//(char)reader["tipo"];
                     prod.MedidaUnitaria = (string)reader["medida_unitaria"];
 
                     list.Add(prod);
@@ -103,14 +103,16 @@ namespace PizzariaDoZe.src.repositories
                 $", '{entity.MedidaUnitaria}'" +
                 $")";
 
+            if (conn.State != ConnectionState.Open)
+            {
+                conn.Open();
+            }
             try
             {
-                if (conn.State != ConnectionState.Open)
-                {
-                    conn.Open();
-                }
+
                 command = new MySqlCommand(SQLInsert, conn);
                 command.ExecuteReader();
+
             }
             catch (Exception e)
             {

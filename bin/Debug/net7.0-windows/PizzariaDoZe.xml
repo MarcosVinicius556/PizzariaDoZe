@@ -296,6 +296,9 @@
         <member name="T:PizzariaDoZe.src.controllers.FormIngredientesController">
             Classe controller para ser a intermediadora entre o serviço e a view do usuário
         </member>
+        <member name="T:PizzariaDoZe.src.controllers.FormProdutosController">
+            Classe controller para ser a intermediadora entre o serviço e a view do usuário
+        </member>
         <member name="T:PizzariaDoZe.src.entities.interface.Entity">
             Define a base que toda classe que será um entidade do 
             banco de dados deve possuir para funcionar com os default methods da aplicação

@@ -185,6 +185,9 @@ public partial class FormFuncionario : Form
 
     private void btnExcluir_Click(object sender, EventArgs e)
     {
-        controller.remove();
+        if(txtId.Text != "")
+        {
+            controller.remove(txtId.Text);
+        }
     }
 }

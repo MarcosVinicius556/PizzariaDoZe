@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PizzariaDoZe.src.controllers;
+using PizzariaDoZe.src.entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace PizzariaDoZe.views
 {
     public partial class FormProdutos : Form
     {
+        private FormProdutosController controller = new FormProdutosController();
         public FormProdutos()
         {
             InitializeComponent();
@@ -39,6 +42,16 @@ namespace PizzariaDoZe.views
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Produto produto = new Produto();
+            produto.DescricaoProduto = txtNome.Text.Substring(0, 1);
+            produto.Valor = decimal.Parse(txtValor.Text);
+            produto.MedidaUnitaria = "UN";
+            produto.Tipo = 'C';
+
+            controller.Save(produto);
+        }
     }
 
 }

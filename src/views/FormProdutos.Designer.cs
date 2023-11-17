@@ -181,6 +181,7 @@
             btnSalvar.TabIndex = 28;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // FormProdutos
             // 
