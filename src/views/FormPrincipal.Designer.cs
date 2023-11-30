@@ -80,6 +80,7 @@ namespace PizzariaDoZe.views
             configuraçõesToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
             sairToolStripMenuItem = new ToolStripMenuItem();
+            buttonEditar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             panelSup.SuspendLayout();
             panelLeft.SuspendLayout();
@@ -96,7 +97,7 @@ namespace PizzariaDoZe.views
             dataGridView.Name = "dataGridView";
             dataGridView.RowHeadersWidth = 51;
             dataGridView.RowTemplate.Height = 25;
-            dataGridView.Size = new Size(805, 493);
+            dataGridView.Size = new Size(686, 493);
             dataGridView.TabIndex = 3;
             // 
             // buttonSearch
@@ -500,12 +501,32 @@ namespace PizzariaDoZe.views
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
+            // buttonEditar
+            // 
+            buttonEditar.BackColor = SystemColors.ActiveBorder;
+            buttonEditar.FlatAppearance.BorderColor = Color.Black;
+            buttonEditar.FlatStyle = FlatStyle.Flat;
+            buttonEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonEditar.ForeColor = SystemColors.ButtonHighlight;
+            buttonEditar.Image = (Image)resources.GetObject("buttonEditar.Image");
+            buttonEditar.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonEditar.Location = new Point(901, 63);
+            buttonEditar.Name = "buttonEditar";
+            buttonEditar.Size = new Size(108, 48);
+            buttonEditar.TabIndex = 12;
+            buttonEditar.Text = "Editar";
+            buttonEditar.TextAlign = ContentAlignment.MiddleRight;
+            buttonEditar.UseVisualStyleBackColor = false;
+            buttonEditar.Click += buttonEditar_Click;
+            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(1015, 594);
             ContextMenuStrip = contextMenuStripPrincipal;
+            Controls.Add(buttonEditar);
             Controls.Add(dataGridView);
             Controls.Add(panelSup);
             Controls.Add(panelLeft);
@@ -609,6 +630,7 @@ namespace PizzariaDoZe.views
         private ToolStripMenuItem sobreToolStripMenuItem;
         private ToolStripMenuItem fecharToolStripMenuItem;
         private Button buttonNovoRegistro;
+        private Button buttonEditar;
     }
 
     #endregion

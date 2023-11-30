@@ -2,6 +2,7 @@
 using MySqlX.XDevAPI;
 using PizzariaDoZe.src.controllers;
 using PizzariaDoZe.src.entities;
+using PizzariaDoZe.src.entities.@interface;
 using PizzariaDoZe.src.views.enums;
 using System;
 using System.Collections.Generic;
@@ -176,7 +177,7 @@ namespace PizzariaDoZe.views
 
         private void buttonNovoRegistro_Click(object sender, EventArgs e)
         {
-            switch(formSelected)
+            switch (formSelected)
             {
                 case FormSelected.ENDERECO:
                     FormEndereco formEnder = new FormEndereco();
@@ -211,6 +212,28 @@ namespace PizzariaDoZe.views
                 default:
                     MessageBox.Show("Nenhum tipo de registro selecionado para criar!");
                     break;
+            }
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            // Verifica se há alguma linha selecionada no DataGridView
+            if (dataGridView.SelectedRows.Count > 0)
+            {
+                // Obtém a linha selecionada
+                DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
+
+                // Obtém o objeto associado a essa linha (supondo que o objeto é do tipo 'SeuTipoDeObjeto')
+                Entity objetoSelecionado = (Entity)selectedRow.DataBoundItem;
+
+                // Faça o que precisar com o objeto selecionado
+                // Por exemplo, exiba o valor de uma propriedade do objeto
+                Console.WriteLine("Valor da propriedade do objeto selecionado: " + objetoSelecionado.getName);
+            }
+            else
+            {
+                // Caso não haja linhas selecionadas, faça algo aqui, como exibir uma mensagem
+                Console.WriteLine("Nenhuma linha selecionada");
             }
         }
     }
