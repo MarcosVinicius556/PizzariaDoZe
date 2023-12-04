@@ -52,7 +52,7 @@ namespace PizzariaDoZe.src.entities
 
         public string getFields()
         {
-            return "id_cliente, nome_cliente, cpf, telefone, email, endereco_id, numero, complemento";
+            return "id_cliente, nome_cliente, cpf, telefone, email, endereco_id_cliente, numero, complemento";
         }
 
         public object getId()

@@ -587,6 +587,9 @@
              the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="M:PizzariaDoZe.views.FormPrincipal.buttonEditar_Click(System.Object,System.EventArgs)">
+            Centralizando as chamadas das telas de edições....
+        </member>
         <member name="F:PizzariaDoZe.views.FormProdutos.components">
             <summary>
             Required designer variable.

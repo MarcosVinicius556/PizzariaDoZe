@@ -32,8 +32,9 @@ namespace PizzariaDoZe.src.repositories
                 {
                     long id = (long) reader["id"];
                     string nome = (string) reader["nome"];
+                    string descricaoIngrediente = (string)reader["descricao_ingrediente"];
 
-                    entity = new Ingrediente(id, nome);
+                    entity = new Ingrediente(id, nome, descricaoIngrediente);
                     ingredientes.Add(entity);
                 }
             }
@@ -63,8 +64,9 @@ namespace PizzariaDoZe.src.repositories
                 {
                     long id = (long) reader["id"];
                     string nome = (string) reader["nome"];
+                    string descricaoIngrediente = (string)reader["descricao_ingrediente"];
 
-                    entity = new Ingrediente(id, nome);
+                    entity = new Ingrediente(id, nome, descricaoIngrediente);
                 }
             }
             catch (Exception e)
@@ -82,7 +84,7 @@ namespace PizzariaDoZe.src.repositories
         {
             MySqlCommand command;
             var conn = DatabaseConnectionSingleton.getConnection();
-            string SQLInsert = $"INSERT INTO ingredientes(nome) VALUES('{entity.Nome}')";
+            string SQLInsert = $"INSERT INTO {entity.getName()}({entity.getFields()}) VALUES('{entity.Nome}, {entity.descricaoIngrediente}')";
 
             try
             {
@@ -106,7 +108,7 @@ namespace PizzariaDoZe.src.repositories
         {
             MySqlCommand command;
             var conn = DatabaseConnectionSingleton.getConnection();
-            string SQLUpdate = $"UPDATE ingredientes SET nome = '{entity.Nome}' WHERE id = {entity.getId()}";
+            string SQLUpdate = $"UPDATE {entity.getName()} SET nome = '{entity.Nome}, {entity.descricaoIngrediente}' WHERE id = {entity.getId()}";
 
             try
             {

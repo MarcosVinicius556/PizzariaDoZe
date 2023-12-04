@@ -21,7 +21,7 @@ namespace PizzariaDoZe.src.repositories.singleton
             {
                 string server = "server=localhost;";
                 string uid = "uid=root;";
-                string pwd = "pwd=admin;";
+                string pwd = "pwd=root;";
                 string db = "database=pizzaria";
                 string strConnection = server + uid + pwd + db;
                 try

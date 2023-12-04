@@ -34,7 +34,7 @@ namespace PizzariaDoZe.src.repositories
                     prod.IdProduto = (int)reader["id_produto"];
                     prod.DescricaoProduto = (string)reader["descricao_produto"];
                     prod.Valor = (Decimal)reader["valor"];
-                    prod.Tipo = 'G';//(char)reader["tipo"];
+                    prod.Tipo = (char)reader["tipo"];
                     prod.MedidaUnitaria = (string)reader["medida_unitaria"];
 
                     list.Add(prod);
@@ -127,7 +127,11 @@ namespace PizzariaDoZe.src.repositories
         {
             MySqlCommand command;
             var conn = DatabaseConnectionSingleton.getConnection();
-            string SQLUpdate = $"UPDATE {entity.getName()} SET nome = '?' WHERE id = {entity.getId()}";
+            string SQLUpdate = $"UPDATE {entity.getName()} SET descricao_produto = {entity.getDescricao}," +
+                $"valor = {entity.getValor}," +
+                $"tipo = {entity.getTipo}," +
+                $"medida_unitaria = {entity.getMedidaUnitaria}" +
+                $" WHERE id_produto = {entity.getId()}";
 
             try
             {

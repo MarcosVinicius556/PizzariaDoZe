@@ -110,7 +110,7 @@ namespace PizzariaDoZe.src.repositories
         {
             MySqlCommand command;
             var conn = DatabaseConnectionSingleton.getConnection();
-            string SQLUpdate = $"UPDATE {entity.getName()} SET nome = '?' WHERE id = {entity.getId()}";
+            string SQLUpdate = $"UPDATE {entity.getName()} SET nome_pais = {entity.NomePais} WHERE id_pais = {entity.getId()}";
 
             try
             {

@@ -33,6 +33,7 @@ namespace PizzariaDoZe.src.entities
             this.Matricula = "";
             this.Senha = "";
             this.Grupo = 'N';
+            this.ValidadeMotorista = DateTime.Now;
             this.Motorista = "";
             this.Observacao = "";
             this.Telefone = "";
@@ -43,7 +44,7 @@ namespace PizzariaDoZe.src.entities
     }
 
         public Funcionario(int idFuncionario, string nomeFuncionario, string cpf, string matricula,
-                           string senha, char grupo, string motorista, string observacao, string telefone,
+                           string senha, char grupo, DateTime validadeMotorista, string motorista, string observacao, string telefone,
                            string email, int numero, string complemento)
         {
             this.IdFuncionario = idFuncionario;
@@ -52,6 +53,7 @@ namespace PizzariaDoZe.src.entities
             this.Matricula = matricula;
             this.Senha = senha;
             this.Grupo = grupo;
+            this.ValidadeMotorista = validadeMotorista;
             this.Motorista = motorista;
             this.Observacao = observacao;
             this.Telefone = telefone;
@@ -68,9 +70,9 @@ namespace PizzariaDoZe.src.entities
 
         public string getFields()
         {
-            return "nome_funcionario, " +
+            return "id_funcionario, nome_funcionario, " +
                    "cpf, matricula, senha, grupo, " +
-                   "motorista, observacao, telefone, " +
+                   "motorista, validade_motorista, observacao, telefone, " +
                    "email, endereco_id, numero, " +
                    "complemento";
         }

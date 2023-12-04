@@ -6,12 +6,14 @@ namespace PizzariaDoZe.src.entities
     {
         public long Id { get; set; }
         public string? Nome { get; set; }
+        public string? descricaoIngrediente { get; set; }
 
-        public Ingrediente() { }
-
-        public Ingrediente(long id, string nome) {
+        public Ingrediente(long id, string nome, string descricaoIngrediente)
+        {
             this.Id = id;
             this.Nome = nome;
+            this.descricaoIngrediente = descricaoIngrediente;
+
         }
 
         public string getName()
@@ -25,7 +27,7 @@ namespace PizzariaDoZe.src.entities
         
         public string getFields()
         {
-            return "id, nome";
+            return "id, nome, descricao_ingrediente";
         }
 
         public string idField()

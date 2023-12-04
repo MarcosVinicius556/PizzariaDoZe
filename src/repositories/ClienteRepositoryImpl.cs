@@ -85,7 +85,7 @@ namespace PizzariaDoZe.src.repositories
 
                     Endereco endereco = new Endereco();
                     endereco.Id = (int)reader["id_endereco"];
-                    endereco = ServiceFactory.createEnderecoService().FindById(endereco);
+                    //endereco = ServiceFactory.createEnderecoService().FindById(endereco);
 
                     cliente.Endereco = endereco;
 
@@ -141,7 +141,9 @@ namespace PizzariaDoZe.src.repositories
         {
             MySqlCommand command;
             var conn = DatabaseConnectionSingleton.getConnection();
-            string SQLUpdate = $"UPDATE {entity.getName()} SET nome = '?' WHERE id = {entity.getId()}";
+            string SQLUpdate = $"UPDATE {entity.getName()} SET nome = {entity.NomeCliente}, cpf = {entity.Cpf}" +
+                $", telefone = {entity.Telefone}, email = {entity.Email}, id_endereco = {entity.Endereco}" +
+                $", numero = {entity.Numero}, complemento = {entity.Complemento}  WHERE id = {entity.getId()}";
 
             try
             {

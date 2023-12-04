@@ -8,6 +8,7 @@ using System.Data;
 
 namespace PizzariaDoZe.src.repositories
 {
+    //PARA FAZER DEPOIS ALGUNS AJUSTES TU QUE DISSE ASS:Alan
     /**
      * Esta interface herda tudo o que a repository já faz,
      * porém se precisar de algo muito específico,
@@ -39,13 +40,13 @@ namespace PizzariaDoZe.src.repositories
                     func.Cpf = (string)reader["cpf"];
                     func.Matricula = (string)reader["matricula"];
                     func.Senha = (string)reader["senha"];
-                    //func.Grupo = (char)reader["grupo"]; TODO
+                    //func.Grupo = (char)reader["grupo"]; TO DO
                     func.Motorista = (string)reader["motorista"];
-                    //func.ValidadeMotorista = (DateTime)reader["validade_motorista"]; TODO
+                    //func.ValidadeMotorista = (DateTime)reader["validade_motorista"]; TO DO
                     func.Observacao = (string)reader["observacao"];
                     func.Telefone = (string)reader["telefone"];
                     func.Email = (string)reader["email"];
-                    //func.Numero = (int)reader["numero"]; //TODO
+                    //func.Numero = (int)reader["numero"]; //TO DO
                     func.Complemento = (string)reader["complemento"];
 
                     Endereco endereco = new Endereco();
@@ -137,10 +138,10 @@ namespace PizzariaDoZe.src.repositories
                 $", '{entity.Senha}'" +
                 $", '{entity.Grupo}'" +
                 $", '{entity.Motorista}'" +
+                $", '{entity.ValidadeMotorista}'" +
                 $", '{entity.Observacao}'" +
                 $", '{entity.Telefone}'" +
                 $", '{entity.Email}'" +
-                
                 $"{(entity.Endereco != null ?", " + entity.Endereco.Id + "": "")}" +
                 $",  {entity.Numero}" +
                 $", '{entity.Complemento}'" +
@@ -168,7 +169,11 @@ namespace PizzariaDoZe.src.repositories
         {
             MySqlCommand command;
             var conn = DatabaseConnectionSingleton.getConnection();
-            string SQLUpdate = $"UPDATE {entity.getName()} SET nome = '?' WHERE id = {entity.getId()}";
+            string SQLUpdate = $"UPDATE {entity.getName()} SET nome = {entity.NomeFuncionario}, cpf = {entity.Cpf}" +
+                $", matricula = {entity.Matricula} senha = {entity.Senha}, grupo = {entity.Grupo}, motorista = {entity.Motorista}" +
+                $", validade_motorista = {entity.ValidadeMotorista}, observacao = {entity.Observacao}, telefone = {entity.Telefone}" +
+                $", email = {entity.Email}, endereco_id = {entity.Endereco}, numero = {entity.Numero}, complemento = {entity.Complemento}" +
+                $"WHERE id = {entity.getId()}";
 
             try
             {

@@ -215,6 +215,9 @@ namespace PizzariaDoZe.views
             }
         }
 
+        /**
+         * Centralizando as chamadas das telas de edições....
+         */
         private void buttonEditar_Click(object sender, EventArgs e)
         {
             // Verifica se há alguma linha selecionada no DataGridView
@@ -223,12 +226,27 @@ namespace PizzariaDoZe.views
                 // Obtém a linha selecionada
                 DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
 
-                // Obtém o objeto associado a essa linha (supondo que o objeto é do tipo 'SeuTipoDeObjeto')
-                Entity objetoSelecionado = (Entity)selectedRow.DataBoundItem;
+                // Verifica se o DataGridView está vinculado a um DataTable
+                if (selectedRow.DataBoundItem is System.Data.DataRowView rowView)
+                {
+                    // Acessa os valores das células para construir o objeto Endereco
+                    int id = Convert.ToInt32(rowView.Row["Id"]);
+                    string rua = rowView.Row["Cep"].ToString();
+                    string cidade = rowView.Row["Logradouro"].ToString();
+                    // ... outras propriedades
 
-                // Faça o que precisar com o objeto selecionado
-                // Por exemplo, exiba o valor de uma propriedade do objeto
-                Console.WriteLine("Valor da propriedade do objeto selecionado: " + objetoSelecionado.getName);
+                    // Crie um objeto Endereco com os valores das células
+                    //Endereco endereco = new Endereco
+                    //{
+                       // Id = id,
+                       // Rua = rua,
+                       // Cidade = cidade
+                        // ... atribua outras propriedades conforme necessário
+                    // };
+
+                    // Faça o que precisar com o objeto endereco
+                    //Console.WriteLine("Objeto Endereco criado com os valores das células: " + endereco);
+                }
             }
             else
             {

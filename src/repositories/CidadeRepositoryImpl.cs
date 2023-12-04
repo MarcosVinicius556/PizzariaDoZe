@@ -20,11 +20,9 @@ namespace PizzariaDoZe.src.repositories
             List<Cidade> list = new List<Cidade>();
             var conn = DatabaseConnectionSingleton.getConnection();
             MySqlCommand command;
-            DbTransaction transaction = null;
             string? sqlFindAll = $"SELECT * FROM {entity.getName()} e";
             try
             {
-                transaction = conn.BeginTransaction();
                 command = new MySqlCommand(sqlFindAll, conn);
                 MySqlDataReader reader = command.ExecuteReader();
 
@@ -42,12 +40,10 @@ namespace PizzariaDoZe.src.repositories
 
                     list.Add(cidade);
                 }
-                transaction.Commit();
             }
             catch (Exception e)
             {
                 MessageBox.Show("Ocorreu um erro ao buscar os registros no banco! " + e.Message);
-                transaction.Rollback();
             } finally
             {
                 conn.Close();
@@ -60,11 +56,9 @@ namespace PizzariaDoZe.src.repositories
         {
             MySqlCommand command;
             var conn = DatabaseConnectionSingleton.getConnection();
-            DbTransaction transaction = null;
             string? sqlFindById = $"SELECT * FROM {entity.getName()} e WHERE {entity.idField()} = {entity.getId()}";
             try
             {
-                transaction = conn.BeginTransaction();
                 command = new MySqlCommand(sqlFindById, conn);
                 MySqlDataReader reader = command.ExecuteReader();
 
@@ -94,18 +88,14 @@ namespace PizzariaDoZe.src.repositories
             MySqlCommand command;
             var conn = DatabaseConnectionSingleton.getConnection();                   //id,                       nome_cidade,          uf_id
             string SQLInsert = $"INSERT INTO {entity.getName()}({entity.getFields()}) VALUES({entity.IdCidade}, '{entity.NomeCidade}', {(entity.Uf != null ? entity.Uf.IdUf : 0)})";
-            DbTransaction transaction = null;
             try
             {
-                transaction = conn.BeginTransaction();
                 command = new MySqlCommand(SQLInsert, conn);
                 command.ExecuteReader();
-                transaction.Commit();
             }
             catch (Exception e)
             {
                 MessageBox.Show("Ocorreu um erro ao inserir o registro no banco! " + e.Message);
-                transaction.Rollback();
             }
             finally
             {
@@ -116,7 +106,7 @@ namespace PizzariaDoZe.src.repositories
         {
             MySqlCommand command;
             var conn = DatabaseConnectionSingleton.getConnection();
-            string SQLUpdate = $"UPDATE {entity.getName()} SET nomeCidade = ${entity.NomeCidade}, idUf = ${entity.IdCidade} WHERE id = {entity.getId()}";
+            string SQLUpdate = $"UPDATE {entity.getName()} SET nome_cidade = {entity.NomeCidade}, id_uf = {entity.Uf} WHERE id = {entity.getId()}";
 
             try
             {

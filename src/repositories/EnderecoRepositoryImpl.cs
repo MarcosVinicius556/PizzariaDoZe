@@ -68,12 +68,9 @@ namespace PizzariaDoZe.src.repositories
             MySqlCommand command;
             Endereco entity = new Endereco();
             var conn = DatabaseConnectionSingleton.getConnection();
-            DbTransaction transaction = null;
             string? sqlFindById = $"SELECT * FROM {entity.getName()} e WHERE e.cep = '{cep}'";
             try
             {
-
-                transaction = conn.BeginTransaction();
                 command = new MySqlCommand(sqlFindById, conn);
                 MySqlDataReader reader = command.ExecuteReader();
 
@@ -93,13 +90,10 @@ namespace PizzariaDoZe.src.repositories
                     entity.Cidade = cidade;
 
                 }
-
-                transaction.Commit();
             }
             catch (Exception e)
             {
                 MessageBox.Show("Ocorreu um erro ao buscar o registro no banco! " + e.Message);
-                transaction.Rollback(); 
             }
 
             return entity;
@@ -118,7 +112,7 @@ namespace PizzariaDoZe.src.repositories
 
                 while (reader.Read())
                 {
-                    entity.Id = (int)reader["id"];
+                    entity.Id = (int)reader["id_endereco"];
                     entity.Cep = (string)reader["cep"];
                     entity.Logradouro = (string)reader["logradouro"];
                     entity.Bairro = (string)reader["bairro"];
@@ -177,7 +171,8 @@ namespace PizzariaDoZe.src.repositories
         {
             MySqlCommand command;
             var conn = DatabaseConnectionSingleton.getConnection();
-            string SQLUpdate = $"UPDATE {entity.getName()} SET nome = '?' WHERE id = {entity.getId()}";
+            string SQLUpdate = $"UPDATE {entity.getName()} SET cep = {entity.Cep}, logradouro = {entity.Logradouro}" +
+                $", bairro = {entity.Bairro}, id_cidade = {entity.Cidade}  WHERE id = {entity.getId()}";
 
             try
             {
