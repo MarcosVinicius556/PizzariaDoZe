@@ -1,10 +1,21 @@
-﻿namespace PizzariaDoZe.views;
+﻿using PizzariaDoZe.src.entities;
+
+namespace PizzariaDoZe.views;
 
 public partial class FormEndereco : Form
 {
-    public FormEndereco()
+    /**
+     * Caso seja alteração, esta flag será marcada como true, e então o form irá executar um "update" ao invés de um "save"
+     */
+    private Boolean isNewRecord = true;
+    public FormEndereco(Endereco endereco)
     {
         InitializeComponent();
+        if(endereco != null)
+        {
+            MessageBox.Show("MODO DE EDIÇÃO ATIVO!");
+            isNewRecord = true;
+        }
     }
 
     private void form_endereco_Load(object sender, EventArgs e)

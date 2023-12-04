@@ -14,10 +14,17 @@ namespace PizzariaDoZe.views
 {
     public partial class FormProdutos : Form
     {
+        private Boolean isNewRecord = true;
+
         private FormProdutosController controller = new FormProdutosController();
-        public FormProdutos()
+        public FormProdutos(Produto produto)
         {
             InitializeComponent();
+
+            if(produto != null)
+            {
+                isNewRecord = false;
+            }
         }
         private void TabEvent(object sender, KeyEventArgs e)
         {

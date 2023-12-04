@@ -14,10 +14,16 @@ namespace PizzariaDoZe.views
 {
     public partial class FormValores : Form
     {
+        public Boolean isNewRecord = true;
+
         private FormValorController controller =  new FormValorController();
-        public FormValores()
+        public FormValores(Valor valor)
         {
             InitializeComponent();
+            if(valor != null)
+            {
+                isNewRecord = false;
+            }
         }
         private void TabEvent(object sender, KeyEventArgs e)
         {

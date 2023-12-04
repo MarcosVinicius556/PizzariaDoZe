@@ -2,11 +2,13 @@
 
 namespace PizzariaDoZe.src.entities
 {
-    internal class Ingrediente : Entity
+    public class Ingrediente : Entity
     {
         public long Id { get; set; }
         public string? Nome { get; set; }
         public string? descricaoIngrediente { get; set; }
+
+        public Ingrediente() { }
 
         public Ingrediente(long id, string nome, string descricaoIngrediente)
         {

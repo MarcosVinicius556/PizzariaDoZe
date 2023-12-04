@@ -1,10 +1,18 @@
+using PizzariaDoZe.src.entities;
+
 namespace PizzariaDoZe.views
 {
     public partial class FormCadastroCliente : Form
     {
-        public FormCadastroCliente()
+        private Boolean isNewRecord = true;
+        public FormCadastroCliente(Cliente cliente)
         {
             InitializeComponent();
+
+            if(cliente != null)
+            {
+                isNewRecord = false;
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

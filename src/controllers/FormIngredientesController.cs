@@ -86,7 +86,7 @@ namespace PizzariaDoZe.src.controllers
             {
                 if (text != null)
                 {
-                    Ingrediente temp = new Ingrediente(long.Parse(text), text1);
+                    Ingrediente temp = new Ingrediente(long.Parse(text), text1, "");
                     ingredienteService.Update(temp);
                 } else
                 {

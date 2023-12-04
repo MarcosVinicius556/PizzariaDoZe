@@ -519,6 +519,9 @@
             the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="F:PizzariaDoZe.views.FormEndereco.isNewRecord">
+            Caso seja alteração, esta flag será marcada como true, e então o form irá executar um "update" ao invés de um "save"
+        </member>
         <member name="F:PizzariaDoZe.views.FormEndereco.components">
             <summary>
              Required designer variable.

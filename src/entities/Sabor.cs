@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PizzariaDoZe.src.entities
 {
-    internal class Sabor : Entity
+    public class Sabor : Entity
     {
 
         public int IdSabor { get; set; }

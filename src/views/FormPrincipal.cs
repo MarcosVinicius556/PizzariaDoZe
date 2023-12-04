@@ -117,37 +117,37 @@ namespace PizzariaDoZe.views
 
         private void funcionáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormFuncionario funcionario = new FormFuncionario();
+            FormFuncionario funcionario = new FormFuncionario(null);
             funcionario.Show();
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormCadastroCliente Cadastro_Cliente = new FormCadastroCliente();
+            FormCadastroCliente Cadastro_Cliente = new FormCadastroCliente(null);
             Cadastro_Cliente.Show();
         }
 
         private void ingredientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormIngredientes Ingredientes = new FormIngredientes();
+            FormIngredientes Ingredientes = new FormIngredientes(null);
             Ingredientes.Show();
         }
 
         private void saboresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormSabores Sabores = new FormSabores();
+            FormSabores Sabores = new FormSabores(null);
             Sabores.Show();
         }
 
         private void valoresPizzaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormValores Valores = new FormValores();
+            FormValores Valores = new FormValores(null);
             Valores.Show();
         }
 
         private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormProdutos Produtos = new FormProdutos();
+            FormProdutos Produtos = new FormProdutos(null);
             Produtos.Show();
         }
 
@@ -180,31 +180,31 @@ namespace PizzariaDoZe.views
             switch (formSelected)
             {
                 case FormSelected.ENDERECO:
-                    FormEndereco formEnder = new FormEndereco();
+                    FormEndereco formEnder = new FormEndereco(null);
                     formEnder.ShowDialog();
                     break;
                 case FormSelected.FUNCIONARIO:
-                    FormFuncionario formFunc = new FormFuncionario();
+                    FormFuncionario formFunc = new FormFuncionario(null);
                     formFunc.ShowDialog();
                     break;
                 case FormSelected.CLIENTE:
-                    FormCadastroCliente formCliente = new FormCadastroCliente();
+                    FormCadastroCliente formCliente = new FormCadastroCliente(null);
                     formCliente.ShowDialog();
                     break;
                 case FormSelected.INGREDIENTE:
-                    FormIngredientes formIngredientes = new FormIngredientes();
+                    FormIngredientes formIngredientes = new FormIngredientes(null);
                     formIngredientes.ShowDialog();
                     break;
                 case FormSelected.SABOR:
-                    FormSabores formSabor = new FormSabores();
+                    FormSabores formSabor = new FormSabores(null);
                     formSabor.ShowDialog();
                     break;
                 case FormSelected.VALOR:
-                    FormValores formValor = new FormValores();
+                    FormValores formValor = new FormValores(null);
                     formValor.ShowDialog();
                     break;
                 case FormSelected.PRODUTO:
-                    FormProdutos formProduto = new FormProdutos();
+                    FormProdutos formProduto = new FormProdutos(null);
                     formProduto.ShowDialog();
                     break;
                 case FormSelected.PEDIDO:
@@ -221,37 +221,80 @@ namespace PizzariaDoZe.views
         private void buttonEditar_Click(object sender, EventArgs e)
         {
             // Verifica se há alguma linha selecionada no DataGridView
+            int id = -1;
             if (dataGridView.SelectedRows.Count > 0)
             {
                 // Obtém a linha selecionada
                 DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
 
                 // Verifica se o DataGridView está vinculado a um DataTable
+                // Não é a melhor alternativa, mas... está funcional
                 if (selectedRow.DataBoundItem is System.Data.DataRowView rowView)
                 {
-                    // Acessa os valores das células para construir o objeto Endereco
-                    int id = Convert.ToInt32(rowView.Row["Id"]);
-                    string rua = rowView.Row["Cep"].ToString();
-                    string cidade = rowView.Row["Logradouro"].ToString();
-                    // ... outras propriedades
+                    switch (formSelected)
+                    {
+                        case FormSelected.ENDERECO:
 
-                    // Crie um objeto Endereco com os valores das células
-                    //Endereco endereco = new Endereco
-                    //{
-                       // Id = id,
-                       // Rua = rua,
-                       // Cidade = cidade
-                        // ... atribua outras propriedades conforme necessário
-                    // };
+                            id = Convert.ToInt32(rowView.Row["Id"]);
+                            Endereco endereco = new Endereco { Id = id };
 
-                    // Faça o que precisar com o objeto endereco
-                    //Console.WriteLine("Objeto Endereco criado com os valores das células: " + endereco);
+                            FormEndereco formEnder = new FormEndereco(endereco);
+                            formEnder.ShowDialog();
+                            break;
+                        case FormSelected.FUNCIONARIO:
+                            id = Convert.ToInt32(rowView.Row["Id"]);
+                            Funcionario func = new Funcionario { IdFuncionario = id };
+
+                            FormFuncionario formFunc = new FormFuncionario(func);
+                            formFunc.ShowDialog();
+                            break;
+                        case FormSelected.CLIENTE:
+                            id = Convert.ToInt32(rowView.Row["Id"]);
+                            Cliente cli = new Cliente { IdCliente = id };
+
+                            FormCadastroCliente formCliente = new FormCadastroCliente(cli);
+                            formCliente.ShowDialog();
+                            break;
+                        case FormSelected.INGREDIENTE:
+                            id = Convert.ToInt32(rowView.Row["Id"]);
+                            Ingrediente ingrediente = new Ingrediente { Id = id };
+
+                            FormIngredientes formIngredientes = new FormIngredientes(ingrediente);
+                            formIngredientes.ShowDialog();
+                            break;
+                        case FormSelected.SABOR:
+                            id = Convert.ToInt32(rowView.Row["Id"]);
+                            Sabor sab = new Sabor { IdSabor = id };
+
+                            FormSabores formSabor = new FormSabores(sab);
+                            formSabor.ShowDialog();
+                            break;
+                        case FormSelected.VALOR:
+                            id = Convert.ToInt32(rowView.Row["Id"]);
+                            Valor val = new Valor{ Id = id };
+
+                            FormValores formValor = new FormValores(val);
+                            formValor.ShowDialog();
+                            break;
+                        case FormSelected.PRODUTO:
+                            id = Convert.ToInt32(rowView.Row["Id"]);
+                            Produto prod = new Produto { IdProduto = id };
+
+                            FormProdutos formProduto = new FormProdutos(prod);
+                            formProduto.ShowDialog();
+                            break;
+                        case FormSelected.PEDIDO:
+                            break;
+                        default:
+                            MessageBox.Show("Nenhum tipo de registro selecionado para criar!");
+                            break;
+                    }
                 }
-            }
-            else
-            {
-                // Caso não haja linhas selecionadas, faça algo aqui, como exibir uma mensagem
-                Console.WriteLine("Nenhuma linha selecionada");
+                else
+                {
+                    // Caso não haja linhas selecionadas, faça algo aqui, como exibir uma mensagem
+                    Console.WriteLine("Nenhuma linha selecionada");
+                }
             }
         }
     }

@@ -127,10 +127,10 @@ namespace PizzariaDoZe.src.repositories
         {
             MySqlCommand command;
             var conn = DatabaseConnectionSingleton.getConnection();
-            string SQLUpdate = $"UPDATE {entity.getName()} SET descricao_produto = {entity.getDescricao}," +
-                $"valor = {entity.getValor}," +
-                $"tipo = {entity.getTipo}," +
-                $"medida_unitaria = {entity.getMedidaUnitaria}" +
+            string SQLUpdate = $"UPDATE {entity.getName()} SET descricao_produto = {entity.DescricaoProduto}," +
+                $"valor = {entity.Valor}," +
+                $"tipo = {entity.Tipo}," +
+                $"medida_unitaria = {entity.MedidaUnitaria}" +
                 $" WHERE id_produto = {entity.getId()}";
 
             try

@@ -1,10 +1,18 @@
-﻿namespace PizzariaDoZe.views
+﻿using PizzariaDoZe.src.entities;
+
+namespace PizzariaDoZe.views
 {
     public partial class FormSabores : Form
     {
-        public FormSabores()
+        private Boolean isNewRecord = true;
+        public FormSabores(Sabor sabor)
         {
             InitializeComponent();
+
+            if(sabor != null)
+            {
+                isNewRecord = false;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

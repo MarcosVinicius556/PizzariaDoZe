@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PizzariaDoZe.src.entities
 {
-    internal class Valor : Entity
+    public class Valor : Entity
     {
 
         public int Id { get; set; }

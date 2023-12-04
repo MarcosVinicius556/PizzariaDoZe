@@ -5,11 +5,19 @@ namespace PizzariaDoZe.views;
 
 public partial class FormFuncionario : Form
 {
+
+    private Boolean isNewRecord = true;
+
     private FormFuncionariosController controller;
-    public FormFuncionario()
+    public FormFuncionario(Funcionario funcionario)
     {
         if (controller == null)
             controller = new FormFuncionariosController();
+
+        if(funcionario != null)
+        {
+            isNewRecord = false;
+        }
 
         InitializeComponent();
     }
