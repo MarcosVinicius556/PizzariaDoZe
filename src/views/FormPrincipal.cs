@@ -241,6 +241,11 @@ namespace PizzariaDoZe.views
 
                             FormEndereco formEnder = new FormEndereco(endereco);
                             formEnder.ShowDialog();
+
+                            /* Refresh */
+                            dataGridView.DataSource = controller.BuscarEnderecos();
+                            formSelected = FormSelected.ENDERECO;
+
                             break;
                         case FormSelected.FUNCIONARIO:
                             id = Convert.ToInt32(rowView.Row["Id"]);
@@ -248,6 +253,10 @@ namespace PizzariaDoZe.views
 
                             FormFuncionario formFunc = new FormFuncionario(func);
                             formFunc.ShowDialog();
+
+                            /* Refresh */
+                            dataGridView.DataSource = controller.BuscarFuncionarios();
+                            formSelected = FormSelected.FUNCIONARIO;
                             break;
                         case FormSelected.CLIENTE:
                             id = Convert.ToInt32(rowView.Row["Id"]);
@@ -255,6 +264,10 @@ namespace PizzariaDoZe.views
 
                             FormCadastroCliente formCliente = new FormCadastroCliente(cli);
                             formCliente.ShowDialog();
+
+                            /* Refresh */
+                            dataGridView.DataSource = controller.BuscarClientes();
+                            formSelected = FormSelected.CLIENTE;
                             break;
                         case FormSelected.INGREDIENTE:
                             id = Convert.ToInt32(rowView.Row["Id"]);
@@ -262,6 +275,10 @@ namespace PizzariaDoZe.views
 
                             FormIngredientes formIngredientes = new FormIngredientes(ingrediente);
                             formIngredientes.ShowDialog();
+
+                            /* Refresh */
+                            dataGridView.DataSource = controller.BuscarIngredientes();
+                            formSelected = FormSelected.INGREDIENTE;
                             break;
                         case FormSelected.SABOR:
                             id = Convert.ToInt32(rowView.Row["Id"]);
@@ -269,6 +286,10 @@ namespace PizzariaDoZe.views
 
                             FormSabores formSabor = new FormSabores(sab);
                             formSabor.ShowDialog();
+
+                            /* Refresh */
+                            dataGridView.DataSource = controller.BuscarSabores();
+                            formSelected = FormSelected.SABOR;
                             break;
                         case FormSelected.VALOR:
                             id = Convert.ToInt32(rowView.Row["Id"]);
@@ -276,6 +297,10 @@ namespace PizzariaDoZe.views
 
                             FormValores formValor = new FormValores(val);
                             formValor.ShowDialog();
+
+                            /* Refresh */
+                            dataGridView.DataSource = controller.BuscarValores();
+                            formSelected = FormSelected.VALOR;
                             break;
                         case FormSelected.PRODUTO:
                             id = Convert.ToInt32(rowView.Row["Id"]);
@@ -283,6 +308,10 @@ namespace PizzariaDoZe.views
 
                             FormProdutos formProduto = new FormProdutos(prod);
                             formProduto.ShowDialog();
+
+                            /* Refresh */
+                            dataGridView.DataSource = controller.BuscarProdutos();
+                            formSelected = FormSelected.PRODUTO;
                             break;
                         case FormSelected.PEDIDO:
                             break;
