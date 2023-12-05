@@ -3,6 +3,7 @@ using MySqlX.XDevAPI;
 using PizzariaDoZe.src.controllers;
 using PizzariaDoZe.src.entities;
 using PizzariaDoZe.src.entities.@interface;
+using PizzariaDoZe.src.services.factory;
 using PizzariaDoZe.src.views.enums;
 using System;
 using System.Collections.Generic;
@@ -271,7 +272,7 @@ namespace PizzariaDoZe.views
                             break;
                         case FormSelected.VALOR:
                             id = Convert.ToInt32(rowView.Row["Id"]);
-                            Valor val = new Valor{ Id = id };
+                            Valor val = new Valor { Id = id };
 
                             FormValores formValor = new FormValores(val);
                             formValor.ShowDialog();
@@ -282,6 +283,100 @@ namespace PizzariaDoZe.views
 
                             FormProdutos formProduto = new FormProdutos(prod);
                             formProduto.ShowDialog();
+                            break;
+                        case FormSelected.PEDIDO:
+                            break;
+                        default:
+                            MessageBox.Show("Nenhum tipo de registro selecionado para criar!");
+                            break;
+                    }
+                }
+                else
+                {
+                    // Caso não haja linhas selecionadas, faça algo aqui, como exibir uma mensagem
+                    Console.WriteLine("Nenhuma linha selecionada");
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Verifica se há alguma linha selecionada no DataGridView
+            int id = -1;
+            if (dataGridView.SelectedRows.Count > 0)
+            {
+                // Obtém a linha selecionada
+                DataGridViewRow selectedRow = dataGridView.SelectedRows[0];
+
+                // Verifica se o DataGridView está vinculado a um DataTable
+                // Não é a melhor alternativa, mas... está funcional
+                if (selectedRow.DataBoundItem is System.Data.DataRowView rowView)
+                {
+                    switch (formSelected)
+                    {
+                        case FormSelected.ENDERECO:
+
+                            id = Convert.ToInt32(rowView.Row["Id"]);
+                            Endereco endereco = new Endereco { Id = id };
+                            ServiceFactory.createEnderecoService().DeleteById(endereco);
+
+                            /* Refresh */
+                            dataGridView.DataSource = controller.BuscarEnderecos();
+                            formSelected = FormSelected.ENDERECO;
+                            break;
+                        case FormSelected.FUNCIONARIO:
+                            id = Convert.ToInt32(rowView.Row["IdFuncionario"]);
+                            Funcionario func = new Funcionario { IdFuncionario = id };
+                            ServiceFactory.createFuncionarioService().DeleteById(func);
+
+                            /* Refresh */
+                            dataGridView.DataSource = controller.BuscarFuncionarios();
+                            formSelected = FormSelected.FUNCIONARIO;
+                            break;
+                        case FormSelected.CLIENTE:
+                            id = Convert.ToInt32(rowView.Row["IdCliente"]);
+                            Cliente cli = new Cliente { IdCliente = id };
+                            ServiceFactory.createClienteService().DeleteById(cli);
+
+                            /* Refresh */
+                            dataGridView.DataSource = controller.BuscarClientes();
+                            formSelected = FormSelected.CLIENTE;
+                            break;
+                        case FormSelected.INGREDIENTE:
+                            id = Convert.ToInt32(rowView.Row["Id"]);
+                            Ingrediente ingrediente = new Ingrediente { Id = id };
+                            ServiceFactory.createIngredienteService().DeleteById(ingrediente);
+
+                            /* Refresh */
+                            dataGridView.DataSource = controller.BuscarIngredientes();
+                            formSelected = FormSelected.INGREDIENTE;
+                            break;
+                        case FormSelected.SABOR:
+                            id = Convert.ToInt32(rowView.Row["IdSabor"]);
+                            Sabor sabor = new Sabor { IdSabor = id };
+                            ServiceFactory.createSaborService().DeleteById(sabor);
+
+                            /* Refresh */
+                            dataGridView.DataSource = controller.BuscarSabores();
+                            formSelected = FormSelected.SABOR;
+                            break;
+                        case FormSelected.VALOR:
+                            id = Convert.ToInt32(rowView.Row["Id"]);
+                            Valor valor = new Valor { Id = id };
+                            ServiceFactory.createValorService().DeleteById(valor);
+
+                            /* Refresh */
+                            dataGridView.DataSource = controller.BuscarValores();
+                            formSelected = FormSelected.VALOR;
+                            break;
+                        case FormSelected.PRODUTO:
+                            id = Convert.ToInt32(rowView.Row["IdProduto"]);
+                            Produto prod = new Produto { IdProduto = id };
+                            ServiceFactory.createProdutoService().DeleteById(prod);
+
+                            /* Refresh */
+                            dataGridView.DataSource = controller.BuscarProdutos();
+                            formSelected = FormSelected.PRODUTO;
                             break;
                         case FormSelected.PEDIDO:
                             break;

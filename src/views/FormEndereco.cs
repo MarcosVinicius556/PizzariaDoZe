@@ -1,4 +1,5 @@
-﻿using PizzariaDoZe.src.entities;
+﻿using PizzariaDoZe.src.controllers;
+using PizzariaDoZe.src.entities;
 
 namespace PizzariaDoZe.views;
 
@@ -8,14 +9,34 @@ public partial class FormEndereco : Form
      * Caso seja alteração, esta flag será marcada como true, e então o form irá executar um "update" ao invés de um "save"
      */
     private Boolean isNewRecord = true;
+    private Endereco enderecoToUpdate = null;
+    private FormEnderecoController controller = null;
     public FormEndereco(Endereco endereco)
     {
         InitializeComponent();
+        if(controller == null)
+        {
+            controller = new FormEnderecoController();
+        }
         if(endereco != null)
         {
-            MessageBox.Show("MODO DE EDIÇÃO ATIVO!");
-            isNewRecord = true;
+            isNewRecord = false;
+            enderecoToUpdate = controller.LoadById(endereco.Id+"");
+            displayValues();
         }
+
+    }
+
+    private void displayValues()
+    {
+        txtId.Text = enderecoToUpdate.Id+"";
+        txtCep.Text = enderecoToUpdate.Cep;
+        txtBairro.Text = enderecoToUpdate.Bairro;
+        txtLogradouro.Text = enderecoToUpdate.Logradouro;
+        /* TODO FIXME verificar como popula estes carinhas....... */
+        //dropBoxUf = new ComboBox();
+        //dropBoxCidade = new ComboBox();
+        //dropBoxPais = new ComboBox();
     }
 
     private void form_endereco_Load(object sender, EventArgs e)

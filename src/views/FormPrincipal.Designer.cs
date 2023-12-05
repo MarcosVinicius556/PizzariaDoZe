@@ -81,6 +81,7 @@ namespace PizzariaDoZe.views
             toolStripSeparator2 = new ToolStripSeparator();
             sairToolStripMenuItem = new ToolStripMenuItem();
             buttonEditar = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             panelSup.SuspendLayout();
             panelLeft.SuspendLayout();
@@ -519,6 +520,24 @@ namespace PizzariaDoZe.views
             buttonEditar.UseVisualStyleBackColor = false;
             buttonEditar.Click += buttonEditar_Click;
             // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.ActiveBorder;
+            button1.FlatAppearance.BorderColor = Color.Black;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(901, 117);
+            button1.Name = "button1";
+            button1.Size = new Size(108, 48);
+            button1.TabIndex = 13;
+            button1.Text = "Apagar";
+            button1.TextAlign = ContentAlignment.MiddleRight;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -526,6 +545,7 @@ namespace PizzariaDoZe.views
             BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(1015, 594);
             ContextMenuStrip = contextMenuStripPrincipal;
+            Controls.Add(button1);
             Controls.Add(buttonEditar);
             Controls.Add(dataGridView);
             Controls.Add(panelSup);
@@ -631,6 +651,7 @@ namespace PizzariaDoZe.views
         private ToolStripMenuItem fecharToolStripMenuItem;
         private Button buttonNovoRegistro;
         private Button buttonEditar;
+        private Button button1;
     }
 
     #endregion
