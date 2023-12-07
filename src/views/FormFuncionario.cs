@@ -1,4 +1,5 @@
-﻿using PizzariaDoZe.src.controllers;
+﻿using MySqlX.XDevAPI;
+using PizzariaDoZe.src.controllers;
 using PizzariaDoZe.src.entities;
 
 namespace PizzariaDoZe.views;
@@ -7,19 +8,56 @@ public partial class FormFuncionario : Form
 {
 
     private Boolean isNewRecord = true;
-
+    private Funcionario funcToUpdate = null;
     private FormFuncionariosController controller;
     public FormFuncionario(Funcionario funcionario)
     {
+        InitializeComponent();
         if (controller == null)
             controller = new FormFuncionariosController();
 
         if(funcionario != null)
         {
             isNewRecord = false;
+            clienteToUpdate = controller.LoadById(cliente.IdCliente + "");
+            Endereco enderTemp = controller.loadEnderecoById(cliente.Endereco.Id);
+            clienteToUpdate.Endereco = enderTemp;
+
+            displayValues();
         }
 
-        InitializeComponent();
+    }
+
+
+    private void displayValues()
+    {
+        Funcionario funcionario = new Funcionario();
+        txtId.Text = funcionario.IdFuncionario+"";
+        TextBoxNome.Text = funcionario.NomeFuncionario;
+        txtCpf.Text = funcionario.Cpf;
+        txtMatricula.Text = funcionario.Matricula;
+        txtSenha.Text = funcionario.Senha;
+        textBoxCnh.Text = funcionario.Motorista;
+        txtObs.Text = funcionario.Observacao;
+        txtTelefone.Text = funcionario.Telefone;
+        funcionario.Email = textBoxEmail.Text;
+
+        Endereco endereco = new Endereco();
+        if (textBoxEnderecoId.Text != "")
+            endereco.Id = int.Parse(textBoxEnderecoId.Text);
+        endereco.Logradouro = txtLogradouro.Text;
+        endereco.Bairro = txtBairro.Text;
+        endereco.Cep = maskedTextBoxCep.Text.Replace("-", "");
+        funcionario.Endereco = endereco;
+
+        if (textBoxNumero.Text != "")
+            funcionario.Numero = int.Parse(textBoxNumero.Text, 0);
+        funcionario.Complemento = textBoxComplemento.Text;
+
+        /* TODO FIXME verificar como popula estes carinhas....... */
+        //dropBoxUf = new ComboBox();
+        //dropBoxCidade = new ComboBox();
+        //dropBoxPais = new ComboBox();
     }
 
     private void Form1_Load(object sender, EventArgs e)
@@ -134,38 +172,53 @@ public partial class FormFuncionario : Form
     {
         try
         {
-            Funcionario funcionario = new Funcionario();
-            //funcionario.IdFuncionario = int.Parse(txtId.Text);
-            funcionario.NomeFuncionario = TextBoxNome.Text;
-            funcionario.Cpf = txtCpf.Text.Replace(",", "").Replace("-", "").Replace(".", "");
-            funcionario.Matricula = txtMatricula.Text;
-            funcionario.Senha = txtSenha.Text;
-            funcionario.Grupo = 'N';
-            funcionario.Motorista = textBoxCnh.Text;
-            funcionario.ValidadeMotorista = calendarioCnh.Value.Date;
-            funcionario.Observacao = txtObs.Text;
-            //funcionario.Telefone = txtTelefone.Text.Replace("(", "").Replace(")", "").Replace("-", "").Trim(); //TODO
-            funcionario.Email = textBoxEmail.Text;
+            Funcionario func = assignData();
+            if (isNewRecord)
+            {
+                controller.Save(func);
+            }
+            else
+            {
+                func.IdFuncionario = funcToUpdate.IdFuncionario;
+                controller.Update(func);
 
-            Endereco endereco = new Endereco();
-            if (textBoxEnderecoId.Text != "")
-                endereco.Id = int.Parse(textBoxEnderecoId.Text);
-            endereco.Logradouro = txtLogradouro.Text;
-            endereco.Bairro = txtBairro.Text;
-            endereco.Cep = maskedTextBoxCep.Text.Replace("-", "");
-            funcionario.Endereco = endereco;
-
-            if (textBoxNumero.Text != "")
-                funcionario.Numero = int.Parse(textBoxNumero.Text, 0);
-            funcionario.Complemento = textBoxComplemento.Text;
-
-            controller.Save(funcionario);
+            }
             this.Close();
         }
         catch (Exception ex)
         {
             MessageBox.Show($"Ocorreu um erro ao processar os dados do funcionário. Erro: {ex.Message}");
         }
+    }
+
+    private Funcionario assignData()
+    {
+        Funcionario funcionario = new Funcionario();
+        //funcionario.IdFuncionario = int.Parse(txtId.Text);
+        funcionario.NomeFuncionario = TextBoxNome.Text;
+        funcionario.Cpf = txtCpf.Text.Replace(",", "").Replace("-", "").Replace(".", "");
+        funcionario.Matricula = txtMatricula.Text;
+        funcionario.Senha = txtSenha.Text;
+        funcionario.Grupo = 'N';
+        funcionario.Motorista = textBoxCnh.Text;
+        funcionario.ValidadeMotorista = calendarioCnh.Value.Date;
+        funcionario.Observacao = txtObs.Text;
+        //funcionario.Telefone = txtTelefone.Text.Replace("(", "").Replace(")", "").Replace("-", "").Trim(); //TODO
+        funcionario.Email = textBoxEmail.Text;
+
+        Endereco endereco = new Endereco();
+        if (textBoxEnderecoId.Text != "")
+            endereco.Id = int.Parse(textBoxEnderecoId.Text);
+        endereco.Logradouro = txtLogradouro.Text;
+        endereco.Bairro = txtBairro.Text;
+        endereco.Cep = maskedTextBoxCep.Text.Replace("-", "");
+        funcionario.Endereco = endereco;
+
+        if (textBoxNumero.Text != "")
+            funcionario.Numero = int.Parse(textBoxNumero.Text, 0);
+        funcionario.Complemento = textBoxComplemento.Text;
+
+        return funcionario;
     }
 
     private void btnVoltar_Click(object sender, EventArgs e)

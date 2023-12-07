@@ -1,5 +1,6 @@
 ﻿using PizzariaDoZe.src.controllers;
 using PizzariaDoZe.src.entities;
+using System.Runtime.ConstrainedExecution;
 
 namespace PizzariaDoZe.views;
 
@@ -52,12 +53,35 @@ public partial class FormEndereco : Form
     private void btn_salvar_Click(object sender, EventArgs e)
     {
         errorProvider1.Clear();
+        Endereco endereco = assignData();
         if (txtId.Text.Trim().Equals(""))
         {
             errorProvider1.SetError(txtId, "Digite um e-mail registrado");
             txtId.Focus();
             return;
         }
+
+        if (isNewRecord)
+        {
+            controller.Save(endereco);
+        } else
+        {
+            endereco.Id = enderecoToUpdate.Id;
+            controller.Update(endereco);
+
+        }
+    }
+
+    private Endereco assignData()
+    {
+        Endereco endereco = new Endereco 
+        {
+            Cep = txtCep.Text,
+            Logradouro = txtLogradouro.Text,
+            Bairro = txtBairro.Text
+        };
+
+        return endereco;
     }
 
     private void lista_paises_SelectedIndexChanged(object sender, EventArgs e)

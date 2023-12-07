@@ -1,18 +1,53 @@
+using PizzariaDoZe.src.controllers;
 using PizzariaDoZe.src.entities;
+using System.Windows.Forms;
 
 namespace PizzariaDoZe.views
 {
     public partial class FormCadastroCliente : Form
     {
         private Boolean isNewRecord = true;
+        Cliente clienteToUpdate = null;
+        private FormClienteController controller = null;
         public FormCadastroCliente(Cliente cliente)
         {
             InitializeComponent();
 
-            if(cliente != null)
+            if(controller == null)
+            {
+                controller = new FormClienteController();
+            }
+
+            if (cliente != null)
             {
                 isNewRecord = false;
+                clienteToUpdate = controller.LoadById(cliente.IdCliente+"");
+                Endereco enderTemp = controller.loadEnderecoById(cliente.Endereco.Id);
+                clienteToUpdate.Endereco = enderTemp;
+
+                displayValues();
             }
+        }
+
+        private void displayValues()
+        {
+            txtId.Text = clienteToUpdate.IdCliente + "";
+            txtCep.Text = clienteToUpdate.Endereco.Cep;
+            txtBairro.Text = clienteToUpdate.Endereco.Bairro;
+            txtLogradouro.Text = clienteToUpdate.Endereco.Logradouro;
+            txtObs.Text = "Sem obs";
+            txtSenha.Text = ""; //TODO
+            txtCnh.Text = ""; //TODO
+            txtEmail.Text = clienteToUpdate.Email;
+            txtTelefone.Text = clienteToUpdate.Telefone;
+            txtNome.Text = clienteToUpdate.NomeCliente;
+            txtCpf.Text = clienteToUpdate.Cpf;
+            txtMatricula.Text = ""; //TODO
+
+            /* TODO FIXME verificar como popula estes carinhas....... */
+            //dropBoxUf = new ComboBox();
+            //dropBoxCidade = new ComboBox();
+            //dropBoxPais = new ComboBox();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -105,6 +140,40 @@ namespace PizzariaDoZe.views
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = assignData();
+            if (txtId.Text.Trim().Equals(""))
+            {
+                txtId.Focus();
+                return;
+            }
+
+            if (isNewRecord)
+            {
+                controller.Save(cliente);
+            }
+            else
+            {
+                cliente.IdCliente = clienteToUpdate.IdCliente;
+                controller.Update(cliente);
+
+            }
+        }
+
+        private Cliente assignData()
+        {
+            Cliente cliente = new Cliente
+            {
+                Email = txtEmail.Text ,
+                Telefone = txtTelefone.Text,
+                NomeCliente = txtNome.Text,
+                Cpf = txtCpf.Text 
+        };
+
+            return cliente;
         }
     }
 }

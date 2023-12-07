@@ -54,24 +54,24 @@
             btnExcluir = new Button();
             btnVoltar = new Button();
             panelClienteEndereco = new Panel();
-            txtIdEndereco = new TextBox();
-            txtCep = new TextBox();
-            txtLogradouro = new TextBox();
-            txtBairro = new TextBox();
-            txtCidade = new TextBox();
+            DropBoxUf = new ComboBox();
+            lblPais = new Label();
+            lblUf = new Label();
+            lblCidade = new Label();
+            lblBairro = new Label();
+            lblLogradouro = new Label();
+            lblCep = new Label();
+            lblIdEndereco = new Label();
             txtPais = new TextBox();
+            txtCidade = new TextBox();
+            txtBairro = new TextBox();
+            txtLogradouro = new TextBox();
+            txtCep = new TextBox();
+            txtIdEndereco = new TextBox();
             txtNumero = new TextBox();
             txtComplemento = new TextBox();
-            lblIdEndereco = new Label();
-            lblCep = new Label();
-            lblLogradouro = new Label();
-            lblBairro = new Label();
-            lblCidade = new Label();
-            lblUf = new Label();
-            lblPais = new Label();
             lblNumero = new Label();
             lblComplemento = new Label();
-            DropBoxUf = new ComboBox();
             panelClientes.SuspendLayout();
             panelClienteEndereco.SuspendLayout();
             SuspendLayout();
@@ -86,6 +86,7 @@
             btnSalvar.TabIndex = 0;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // lblId
             // 
@@ -339,33 +340,83 @@
             panelClienteEndereco.Size = new Size(453, 190);
             panelClienteEndereco.TabIndex = 15;
             // 
-            // txtIdEndereco
+            // DropBoxUf
             // 
-            txtIdEndereco.Location = new Point(20, 28);
-            txtIdEndereco.Name = "txtIdEndereco";
-            txtIdEndereco.Size = new Size(73, 23);
-            txtIdEndereco.TabIndex = 0;
+            DropBoxUf.FormattingEnabled = true;
+            DropBoxUf.Location = new Point(20, 150);
+            DropBoxUf.Name = "DropBoxUf";
+            DropBoxUf.Size = new Size(73, 23);
+            DropBoxUf.TabIndex = 14;
             // 
-            // txtCep
+            // lblPais
             // 
-            txtCep.Location = new Point(131, 28);
-            txtCep.Name = "txtCep";
-            txtCep.Size = new Size(153, 23);
-            txtCep.TabIndex = 1;
+            lblPais.AutoSize = true;
+            lblPais.Location = new Point(96, 133);
+            lblPais.Name = "lblPais";
+            lblPais.Size = new Size(31, 15);
+            lblPais.TabIndex = 13;
+            lblPais.Text = "País:";
             // 
-            // txtLogradouro
+            // lblUf
             // 
-            txtLogradouro.Location = new Point(290, 28);
-            txtLogradouro.Name = "txtLogradouro";
-            txtLogradouro.Size = new Size(137, 23);
-            txtLogradouro.TabIndex = 2;
+            lblUf.AutoSize = true;
+            lblUf.Location = new Point(18, 133);
+            lblUf.Name = "lblUf";
+            lblUf.Size = new Size(24, 15);
+            lblUf.TabIndex = 12;
+            lblUf.Text = "UF:";
             // 
-            // txtBairro
+            // lblCidade
             // 
-            txtBairro.Location = new Point(20, 92);
-            txtBairro.Name = "txtBairro";
-            txtBairro.Size = new Size(200, 23);
-            txtBairro.TabIndex = 3;
+            lblCidade.AutoSize = true;
+            lblCidade.Location = new Point(224, 75);
+            lblCidade.Name = "lblCidade";
+            lblCidade.Size = new Size(44, 15);
+            lblCidade.TabIndex = 11;
+            lblCidade.Text = "Cidade";
+            // 
+            // lblBairro
+            // 
+            lblBairro.AutoSize = true;
+            lblBairro.Location = new Point(17, 75);
+            lblBairro.Name = "lblBairro";
+            lblBairro.Size = new Size(41, 15);
+            lblBairro.TabIndex = 10;
+            lblBairro.Text = "Bairro:";
+            // 
+            // lblLogradouro
+            // 
+            lblLogradouro.AutoSize = true;
+            lblLogradouro.Location = new Point(287, 11);
+            lblLogradouro.Name = "lblLogradouro";
+            lblLogradouro.Size = new Size(72, 15);
+            lblLogradouro.TabIndex = 9;
+            lblLogradouro.Text = "Logradouro:";
+            // 
+            // lblCep
+            // 
+            lblCep.AutoSize = true;
+            lblCep.Location = new Point(130, 11);
+            lblCep.Name = "lblCep";
+            lblCep.Size = new Size(31, 15);
+            lblCep.TabIndex = 8;
+            lblCep.Text = "CEP:";
+            // 
+            // lblIdEndereco
+            // 
+            lblIdEndereco.AutoSize = true;
+            lblIdEndereco.Location = new Point(19, 13);
+            lblIdEndereco.Name = "lblIdEndereco";
+            lblIdEndereco.Size = new Size(21, 15);
+            lblIdEndereco.TabIndex = 7;
+            lblIdEndereco.Text = "ID:";
+            // 
+            // txtPais
+            // 
+            txtPais.Location = new Point(99, 150);
+            txtPais.Name = "txtPais";
+            txtPais.Size = new Size(328, 23);
+            txtPais.TabIndex = 6;
             // 
             // txtCidade
             // 
@@ -374,12 +425,33 @@
             txtCidade.Size = new Size(201, 23);
             txtCidade.TabIndex = 4;
             // 
-            // txtPais
+            // txtBairro
             // 
-            txtPais.Location = new Point(99, 150);
-            txtPais.Name = "txtPais";
-            txtPais.Size = new Size(328, 23);
-            txtPais.TabIndex = 6;
+            txtBairro.Location = new Point(20, 92);
+            txtBairro.Name = "txtBairro";
+            txtBairro.Size = new Size(200, 23);
+            txtBairro.TabIndex = 3;
+            // 
+            // txtLogradouro
+            // 
+            txtLogradouro.Location = new Point(290, 28);
+            txtLogradouro.Name = "txtLogradouro";
+            txtLogradouro.Size = new Size(137, 23);
+            txtLogradouro.TabIndex = 2;
+            // 
+            // txtCep
+            // 
+            txtCep.Location = new Point(131, 28);
+            txtCep.Name = "txtCep";
+            txtCep.Size = new Size(153, 23);
+            txtCep.TabIndex = 1;
+            // 
+            // txtIdEndereco
+            // 
+            txtIdEndereco.Location = new Point(20, 28);
+            txtIdEndereco.Name = "txtIdEndereco";
+            txtIdEndereco.Size = new Size(73, 23);
+            txtIdEndereco.TabIndex = 0;
             // 
             // txtNumero
             // 
@@ -394,69 +466,6 @@
             txtComplemento.Name = "txtComplemento";
             txtComplemento.Size = new Size(328, 23);
             txtComplemento.TabIndex = 17;
-            // 
-            // lblIdEndereco
-            // 
-            lblIdEndereco.AutoSize = true;
-            lblIdEndereco.Location = new Point(19, 13);
-            lblIdEndereco.Name = "lblIdEndereco";
-            lblIdEndereco.Size = new Size(21, 15);
-            lblIdEndereco.TabIndex = 7;
-            lblIdEndereco.Text = "ID:";
-            // 
-            // lblCep
-            // 
-            lblCep.AutoSize = true;
-            lblCep.Location = new Point(130, 11);
-            lblCep.Name = "lblCep";
-            lblCep.Size = new Size(31, 15);
-            lblCep.TabIndex = 8;
-            lblCep.Text = "CEP:";
-            // 
-            // lblLogradouro
-            // 
-            lblLogradouro.AutoSize = true;
-            lblLogradouro.Location = new Point(287, 11);
-            lblLogradouro.Name = "lblLogradouro";
-            lblLogradouro.Size = new Size(72, 15);
-            lblLogradouro.TabIndex = 9;
-            lblLogradouro.Text = "Logradouro:";
-            // 
-            // lblBairro
-            // 
-            lblBairro.AutoSize = true;
-            lblBairro.Location = new Point(17, 75);
-            lblBairro.Name = "lblBairro";
-            lblBairro.Size = new Size(41, 15);
-            lblBairro.TabIndex = 10;
-            lblBairro.Text = "Bairro:";
-            // 
-            // lblCidade
-            // 
-            lblCidade.AutoSize = true;
-            lblCidade.Location = new Point(224, 75);
-            lblCidade.Name = "lblCidade";
-            lblCidade.Size = new Size(44, 15);
-            lblCidade.TabIndex = 11;
-            lblCidade.Text = "Cidade";
-            // 
-            // lblUf
-            // 
-            lblUf.AutoSize = true;
-            lblUf.Location = new Point(18, 133);
-            lblUf.Name = "lblUf";
-            lblUf.Size = new Size(24, 15);
-            lblUf.TabIndex = 12;
-            lblUf.Text = "UF:";
-            // 
-            // lblPais
-            // 
-            lblPais.AutoSize = true;
-            lblPais.Location = new Point(96, 133);
-            lblPais.Name = "lblPais";
-            lblPais.Size = new Size(31, 15);
-            lblPais.TabIndex = 13;
-            lblPais.Text = "País:";
             // 
             // lblNumero
             // 
@@ -475,14 +484,6 @@
             lblComplemento.Size = new Size(87, 15);
             lblComplemento.TabIndex = 19;
             lblComplemento.Text = "Complemento:";
-            // 
-            // DropBoxUf
-            // 
-            DropBoxUf.FormattingEnabled = true;
-            DropBoxUf.Location = new Point(20, 150);
-            DropBoxUf.Name = "DropBoxUf";
-            DropBoxUf.Size = new Size(73, 23);
-            DropBoxUf.TabIndex = 14;
             // 
             // FormCadastroCliente
             // 
